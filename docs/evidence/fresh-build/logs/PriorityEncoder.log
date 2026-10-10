@@ -1,0 +1,53 @@
+/root/interactive/lean/phase5/PriorityEncoder.lean:161:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase5/PriorityEncoder.lean:169:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase5/PriorityEncoder.lean:176:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase5/PriorityEncoder.lean:343:47: warning: unused variable `hlen`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'NimAudit.PriorityEncoder.binReadoutOf_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.flags_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.firstF_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.totalSize_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.encode_bound_sel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.encode_bound_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.bbound_of_bin' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.width_log' depends on axioms: [propext]
+'NimAudit.PriorityEncoder.width_small' does not depend on any axioms
+'NimAudit.PriorityEncoder.attainBin_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.attainBin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.succCountRO_boards' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.attainBin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.restBin_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.restBin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.polBin_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.polBin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.mhBin_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.mhBin_outcomes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.mhBin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.varBin_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.PriorityEncoder.encode_invalid' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_noflag' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_least' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_zero' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.encode_one' depends on axioms: [propext, Quot.sound]
+'NimAudit.PriorityEncoder.attainBin_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]

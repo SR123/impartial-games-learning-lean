@@ -1,0 +1,58 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase6/BoardStore.lean:345:54: warning: This simp argument is unused:
+  tok_row
+
+Hint: Omit it from the simp argument list.
+  simp [tokB, bsStep, Nat.testBit_xor,̵ ̵t̵o̵k̵_̵r̵o̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase6/BoardStore.lean:556:54: warning: This simp argument is unused:
+  bsInit
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵b̵s̵I̵n̵i̵t̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.BoardStore.btoks_length' depends on axioms: [propext]
+'NimAudit.BoardStore.bsRun_append' depends on axioms: [propext]
+'NimAudit.BoardStore.bsRun_rows' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.take_set_succ' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.writes_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bs_decision' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bs_reset' depends on axioms: [propext]
+'NimAudit.BoardStore.storeWins_sound' depends on axioms: [propext]
+'NimAudit.BoardStore.store_wins' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsForms_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsForms_board' depends on axioms: [propext]
+'NimAudit.BoardStore.bsForms_acc' depends on axioms: [propext]
+'NimAudit.BoardStore.bsForms_idx' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.eqI_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.eq_of_low_bits' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.boardBits_set'' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.boardBits_zero' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsBitStep_spec' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsDecode_sep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsBitRun_append' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bits_rows' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bits_decision' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bits_reset' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bs_counts' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bitStoreWins_sound' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bits_store_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bits_store_game' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.eqI_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.mux_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.xor2_res'' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.inp_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.cst_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsForms_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsOuts_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsLen_pos' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bs_leaves' depends on axioms: [propext, Quot.sound]
+'NimAudit.BoardStore.bsSizeE_eval' does not depend on any axioms
+'NimAudit.BoardStore.bsAll_tsize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bs_ac0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsNet_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsNet_evalD' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsNet_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bsNet_outputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.BoardStore.bs_net' depends on axioms: [propext, Classical.choice, Quot.sound]

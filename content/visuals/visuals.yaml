@@ -1,0 +1,131 @@
+# Illustrations of the interactive edition.
+#
+# Each illustration is shown in the "Explain this" level of the claims listed under `attach`, after the
+# written explanation and before the formalisation level: on the claim's own page and in the article's
+# panel.  The article text itself is never changed.
+#
+# Fields
+#   title    heading of the illustration
+#   kind     exact      an exact trace: every value is computed from the definitions for the example shown
+#            schematic  boxes group operations; they are not gates, layers or measured quantities
+#            mixed      contains both an exact trace and a hand-made teaching example, each labelled
+#   type     widget type in tools/visuals (restore, compile, rollout, recurrence, overview)
+#   prose    Markdown file with the sections <!-- intro --> and <!-- notes -->
+#   lean     the Lean declarations the illustration depicts (checked to exist; listed under the widget)
+#   figures  paper figures that the illustration explains rather than duplicates
+#   attach   claim records; optional `config` selects the example or opens a detail by default
+#
+# The build records the statement sources of the attached claims and the statements of the listed Lean
+# declarations in content/visuals/visuals.lock.json.  If any of them changes, the build stops until the
+# illustration has been reviewed (python3 tools/build_site.py --pin-visuals after review).
+
+visuals:
+  bypasses:
+    title: "The three bypasses side by side"
+    kind: schematic
+    type: overview
+    prose: content/visuals/bypasses.md
+    lean: [NimAudit.Bypass.prop_bypass_interfaces, NimAudit.Bypass.bypass_barriers]
+    figures: [fig:rollout_gap]
+    config:
+      # claim id, optionally followed by #vis-<illustration>; the build turns these into page links
+      links:
+        barrier: "thm:singleframe-impossible.b"
+        restore: "par:construction-example#vis-restore"
+        rollout: "prop:rollout-sufficiency#vis-rollout"
+        recurrence: "c-replay#vis-recurrence"
+    attach:
+      - claim: prop:bypass-interfaces
+      - claim: fig:rollout_gap
+      - claim: c-bypass-not-ac0
+      - claim: c-conclusion-bypasses
+
+  restore:
+    title: "Two-frame restoration, step by step"
+    kind: exact
+    type: restore
+    prose: content/visuals/restore.md
+    lean: [NimAudit.Family.rest_semantics, NimAudit.LocalRestore.restore_equiv, NimAudit.LocalRestore.localDelta_eq,
+           NimAudit.LocalRestore.restC_eval, NimAudit.SelectCircuit.varSel_correct, NimAudit.AttainCircuit.cancel_iff_bit,
+           NimAudit.PriorityEncoder.encode_correct, NimAudit.Family.rest_ac0, NimAudit.Family.rest_net]
+    figures: [fig:restoration-example, fig:construction-pipeline]
+    attach:
+      - claim: par:construction-example
+      - claim: fig:construction-pipeline
+      - claim: prop:restore
+      - claim: fig:restoration-example
+      - claim: c-restore-selector
+      - claim: c-mirror-delta
+      - claim: c-impl-overview
+      - claim: lem:nimber-diff-ac0
+      - claim: c-candidate-moves
+        config: {open: compare}
+      - claim: c-binary-index
+        config: {open: priority}
+      - claim: thm:search-gap.iii
+
+  compile:
+    title: "From Boolean formulas to threshold layers"
+    kind: mixed
+    type: compile
+    prose: content/visuals/compile.md
+    lean: [NimAudit.ThresholdNet.orGate_eval, NimAudit.ThresholdNet.constGate_eval, NimAudit.ThresholdNet.layerAt,
+           NimAudit.ThresholdNet.compileF, NimAudit.ThresholdNet.compileF_spec, NimAudit.ThresholdNet.compileF_fixed_grid,
+           NimAudit.Family.rest_ac0, NimAudit.Family.rest_net]
+    figures: [fig:threshold-compilation]
+    attach:
+      - claim: c-threshold-realisation
+      - claim: fig:threshold-compilation
+      - claim: par:depth-accounting
+      - claim: c-depth-table
+
+  rollout:
+    title: "Multi-head rollouts and the outer controller, tick by tick"
+    kind: exact
+    type: rollout
+    prose: content/visuals/rollout.md
+    lean: [NimAudit.SelectCircuit.policyIdx, NimAudit.RolloutExec.rsStep, NimAudit.Shootout.ostep, NimAudit.Shootout.initOS,
+           NimAudit.Shootout.query_step, NimAudit.Rollout.run_parity, NimAudit.Game.recoverBit, NimAudit.Game.reconstruct_eq,
+           NimAudit.Shootout.ahMove_eq, NimAudit.Shootout.ah_counts, NimAudit.Shootout.ahL_counts, NimAudit.Shootout.ee_spec,
+           NimAudit.Shootout.ee_counts]
+    figures: [fig:fsm-shootout-controller]
+    attach:
+      - claim: prop:rollout-sufficiency
+      - claim: def:rollout-policy
+      - claim: rem:why-multi-head
+      - claim: thm:search-gap.ii
+      - claim: c-depth-amplification
+      - claim: c-outer-controller
+      - claim: par:controller-costs
+      - claim: c-controller-evals
+      - claim: par:shootout-controller
+        config: {schedule: early}
+      - claim: fig:fsm-shootout-controller
+        config: {schedule: early}
+      - claim: c-fsm-definition
+        config: {schedule: early}
+
+  recurrence:
+    title: "Row-wise recurrence: registers, separators and replay"
+    kind: exact
+    type: recurrence
+    prose: content/visuals/recurrence.md
+    lean: [NimAudit.Controller.cstep, NimAudit.Controller.dtoks, NimAudit.Recurrent.replayStep, NimAudit.Recurrent.step,
+           NimAudit.Recurrent.sep_resets, NimAudit.ControllerBits.bstep_reset, NimAudit.BoardStore.bsStep, NimAudit.BoardStore.btoks,
+           NimAudit.Controller.crun_decision, NimAudit.Controller.stream_fits, NimAudit.WholeGame.replay_wins,
+           NimAudit.BoardStore.bits_store_wins, NimAudit.Bypass.diff_with_postMove, NimAudit.Bypass.diff_decision_only,
+           NimAudit.Recurrent.circuit_resources, NimAudit.BoardStore.bsForms_res, NimAudit.BoardStore.bsOuts_res,
+           NimAudit.BoardStore.bs_net]
+    figures: []
+    attach:
+      - claim: c-replay
+      - claim: prop:streaming-nimsum
+        config: {protocol: summary, scenario: game}
+      - claim: c-stream
+        config: {scenario: separator}
+      - claim: c-board-storage
+        config: {protocol: store, scenario: decision, compare: false}
+      - claim: c-recurrent-update
+      - claim: c-recurrence-history
+      - claim: c-lower-bound-respected
+        config: {scenario: decision}

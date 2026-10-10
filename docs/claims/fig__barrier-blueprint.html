@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Figure 1: Schematic of the barrier and the three bypasses</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/fig__barrier-blueprint.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#fig:barrier-blueprint">Back to Figure 1 in the paper</a>
+· <a href="coverage.html#c-fig__barrier-blueprint">Coverage table</a></nav>
+<h1 data-title="Figure 1: Schematic of the barrier and the three bypasses">Figure 1<span class="claim-h-short">Schematic of the barrier and the three bypasses</span></h1>
+<p class="cat-line"><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span> <span class="cat-desc">Motivation, interpretation or scope; not a formal claim.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><figure class="paper-figure" id="x-fig:barrier-blueprint"><img class="fig-img fig-barrier-blueprint" src="assets/figures/barrier-blueprint.svg" alt="Four rows of boxes and arrows. (a) Barrier, single-frame, single-head: input P_t (global) feeds a single-head network whose output is marked with a cross, labelled &quot;Cannot compute global parity under FSQI/AC0&quot;. (b) Bypass 1, multi-frame input: input (P_{t-1}, P_t) (transition) feeds a single-head network whose output is marked with a check, labelled &quot;Computes local difference Delta&quot;. (c) Bypass 2, multiple rollout heads: input P_t splits into heads pi_0 through pi_{B-1}, which join at a check mark labelled &quot;Rollout outcomes recover B bits&quot;. (d) Bypass 3, persistent recurrence: rows of P_t then P_{t+1} feed a recurrent state s &lt;- s XOR x_i, ending at a check mark labelled &quot;Nim-sum after N row updates (growing latency)&quot;." width="720" loading="lazy"><figcaption><span class="cap-label">Figure 1:</span> The parity barrier and three structural bypasses. (a) Fixed-latency FSQI inference cannot compute global parity. (b) Two frames expose <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\Delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span></span></span></span></span> for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span>.</figcaption></figure></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 99–210.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>The figure is a map of the paper. Row (a) is the obstruction: a single network that sees one board cannot
+compute global parity under the fixed-scale model. Rows (b)–(d) are the three bypasses, each supplying something
+different: (b) the transition between two boards, given a zero-nim-sum predecessor; (c) the outcomes of complete rollouts under several policy
+heads; (d) a recurrent state carried over many row updates, so that total latency grows with the number of heaps.</p>
+<p>Caveat: a check mark in the figure means "this computation becomes available", not "learning succeeds".</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>A schematic, not a formal statement. Each row corresponds to checked results: (a)
+<a class="claim-ref" href="claims/thm__singleframe-impossible.b.html">Theorem 5.2 (barrier)</a>; (b) <a class="claim-ref" href="claims/prop__restore.html">Proposition 5.5</a> and <a class="claim-ref" href="claims/c-restore-selector.html">Section 5.3.1, paragraph 2</a>; (c)
+<a class="claim-ref" href="claims/prop__rollout-sufficiency.html">Proposition 5.9</a>; (d) <a class="claim-ref" href="claims/prop__streaming-nimsum.html">Proposition 5.13</a> and <a class="claim-ref" href="claims/c-replay.html">Section 5.5, “From a summary to a move”</a>.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#fig:barrier-blueprint"><code>fig:barrier-blueprint</code></a> (manuscript label)</td></tr><tr><th scope="row">Displayed as</th><td>Figure 1</td></tr><tr><th scope="row">Claim</th><td>Schematic of the barrier and the three bypasses</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 99–210; SHA-256 of the normalised block source <code class="hash">8be67364875748f5…</code></td></tr><tr><th scope="row">Depends on</th><td><a href="claims/thm__singleframe-impossible.b.html">Theorem 5.2 (barrier)</a>, <a href="claims/prop__restore.html">Proposition 5.5</a>, <a href="claims/prop__rollout-sufficiency.html">Proposition 5.9</a>, <a href="claims/prop__streaming-nimsum.html">Proposition 5.13</a></td></tr><tr><th scope="row">Explanations</th><td><code>explain/fig:barrier-blueprint</code>, <code>formal/fig:barrier-blueprint</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is interpretation or motivation, not a formal mathematical claim.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

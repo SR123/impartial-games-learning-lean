@@ -1,0 +1,393 @@
+{
+  "summary": {
+    "theorems": 1588,
+    "definitions": 632,
+    "lines": 24493,
+    "nonblank": 21813,
+    "code_lines": 17689,
+    "modules": 38,
+    "suspicious": []
+  },
+  "modules": [
+    {
+      "path": "lean/NimCore.lean",
+      "sha256": "b07db6c505210d5ad7ad88b7e36d2599664e8e05084cfeaac17403484e8b5dcf",
+      "theorems": 18,
+      "definitions": 6,
+      "lines": 139,
+      "nonblank": 112,
+      "code_lines": 90,
+      "suspicious": []
+    },
+    {
+      "path": "lean/NimRollout.lean",
+      "sha256": "1a99428d71573d31743735c16158a22c7810e16d85fc484d4091842eb7b5ad34",
+      "theorems": 22,
+      "definitions": 5,
+      "lines": 349,
+      "nonblank": 310,
+      "code_lines": 243,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase2/NimGame.lean",
+      "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724",
+      "theorems": 47,
+      "definitions": 17,
+      "lines": 634,
+      "nonblank": 554,
+      "code_lines": 425,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase2/NimProbability.lean",
+      "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0",
+      "theorems": 73,
+      "definitions": 22,
+      "lines": 1074,
+      "nonblank": 960,
+      "code_lines": 800,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/AttainCircuit.lean",
+      "sha256": "13b98daabaa917e5ae4265bd2bca5a4fcceec8d89e2903cbae9da4a348715f6f",
+      "theorems": 28,
+      "definitions": 14,
+      "lines": 935,
+      "nonblank": 878,
+      "code_lines": 795,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/BitBridge.lean",
+      "sha256": "000644dc271d27f9dccbe1f8a1f914a22136276940dd10547f59b4b89bb52bb4",
+      "theorems": 36,
+      "definitions": 17,
+      "lines": 560,
+      "nonblank": 497,
+      "code_lines": 418,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/Circuit.lean",
+      "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6",
+      "theorems": 86,
+      "definitions": 33,
+      "lines": 1151,
+      "nonblank": 1034,
+      "code_lines": 857,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/NimAttain.lean",
+      "sha256": "dd978aa0cd3d6fe5d81a02728ea1c2ddccefe9d2124fa5391c240166b72ade10",
+      "theorems": 34,
+      "definitions": 6,
+      "lines": 673,
+      "nonblank": 621,
+      "code_lines": 532,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/NimCorrBridge.lean",
+      "sha256": "d3fb2e4a64db3e9249eeda1f54b991aca1f40c8b4664a091de255c5d9c1689d6",
+      "theorems": 36,
+      "definitions": 14,
+      "lines": 922,
+      "nonblank": 852,
+      "code_lines": 769,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase3/NimRecurrent.lean",
+      "sha256": "1f2994aefc75e7f500afbeffb1644cb960ffe68454744cdba79a353418584f35",
+      "theorems": 38,
+      "definitions": 24,
+      "lines": 555,
+      "nonblank": 483,
+      "code_lines": 366,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/BinaryReadout.lean",
+      "sha256": "17ef1a62ba9edafb290fa989f6e0a01466dee2fd92069ba40b17a0cd74c16a5d",
+      "theorems": 14,
+      "definitions": 5,
+      "lines": 333,
+      "nonblank": 303,
+      "code_lines": 245,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/Controller.lean",
+      "sha256": "63d0e09c002db91e720e89ed258df6b00b397d02f63059350686923dd3723fad",
+      "theorems": 17,
+      "definitions": 12,
+      "lines": 401,
+      "nonblank": 359,
+      "code_lines": 291,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/ControllerBits.lean",
+      "sha256": "4e23680da471fd6963593cebfa82294bf1c0d01306d93a0961ceda160b001e22",
+      "theorems": 81,
+      "definitions": 50,
+      "lines": 1148,
+      "nonblank": 1024,
+      "code_lines": 869,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/Coverage.lean",
+      "sha256": "7db0789bffd2ff8fd36beff3bbbe567a3a87d9b222d83a8f97e7737037cfdd86",
+      "theorems": 5,
+      "definitions": 0,
+      "lines": 77,
+      "nonblank": 65,
+      "code_lines": 44,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/FiniteNet.lean",
+      "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac",
+      "theorems": 14,
+      "definitions": 6,
+      "lines": 220,
+      "nonblank": 192,
+      "code_lines": 134,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/Foundation.lean",
+      "sha256": "37580abf2525427f04bb2595439c47d111f0591b30897fd363c6c2cdd327bb80",
+      "theorems": 24,
+      "definitions": 11,
+      "lines": 450,
+      "nonblank": 399,
+      "code_lines": 327,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/LocalRestore.lean",
+      "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f",
+      "theorems": 34,
+      "definitions": 12,
+      "lines": 587,
+      "nonblank": 526,
+      "code_lines": 442,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/ParityCircuit.lean",
+      "sha256": "03525bcfcb9f3acdd99b2cbabb2e3d4582705d8b9609e4983bdb2354ac302aac",
+      "theorems": 13,
+      "definitions": 5,
+      "lines": 259,
+      "nonblank": 232,
+      "code_lines": 181,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/SelectCircuit.lean",
+      "sha256": "922ee44ce0ababa90716fe7f351c1c4ead7a67e1b82968f265fcd7c7d822989c",
+      "theorems": 53,
+      "definitions": 23,
+      "lines": 1064,
+      "nonblank": 965,
+      "code_lines": 854,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase4/SharedCircuit.lean",
+      "sha256": "3ece90821677bbe974c3782cd489289fa79472a3dcfeee1f0ce8c39b4e7dce0b",
+      "theorems": 30,
+      "definitions": 21,
+      "lines": 510,
+      "nonblank": 446,
+      "code_lines": 369,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase5/PriorityEncoder.lean",
+      "sha256": "1be04943f5455fc119e177793bbe00de6aed8109e3ff0a55a3291c70aab29c69",
+      "theorems": 29,
+      "definitions": 10,
+      "lines": 430,
+      "nonblank": 380,
+      "code_lines": 297,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase5/ThresholdInst.lean",
+      "sha256": "c8c66599c8e2480456d76544e06c64378c9f10f19e77cd325b834179fad64a8e",
+      "theorems": 33,
+      "definitions": 16,
+      "lines": 475,
+      "nonblank": 415,
+      "code_lines": 326,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase5/ThresholdNet.lean",
+      "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b",
+      "theorems": 54,
+      "definitions": 17,
+      "lines": 780,
+      "nonblank": 692,
+      "code_lines": 583,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase5/WholeGame.lean",
+      "sha256": "809a74ad589db609136b97d1ca92b4e1faf296208e84a6d9a9614a4d61de6460",
+      "theorems": 23,
+      "definitions": 9,
+      "lines": 347,
+      "nonblank": 303,
+      "code_lines": 208,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Barrier.lean",
+      "sha256": "474ac44cf86dd7e72e8750ffa6c8aaab44f48ad34a5cebf57e34cc727b8911f2",
+      "theorems": 30,
+      "definitions": 10,
+      "lines": 496,
+      "nonblank": 442,
+      "code_lines": 345,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/BoardStore.lean",
+      "sha256": "c35ac76d5db6e833dd9c208f2fba0aa4963c035349f5f831e4da69c798ca2a39",
+      "theorems": 44,
+      "definitions": 33,
+      "lines": 824,
+      "nonblank": 733,
+      "code_lines": 617,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Bypass.lean",
+      "sha256": "d2e3ef2e71220448165f5498ca3778bc54b463fb902c4d506cce7a061c81c962",
+      "theorems": 18,
+      "definitions": 0,
+      "lines": 275,
+      "nonblank": 243,
+      "code_lines": 171,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Classical.lean",
+      "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23",
+      "theorems": 44,
+      "definitions": 12,
+      "lines": 587,
+      "nonblank": 525,
+      "code_lines": 410,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Family.lean",
+      "sha256": "7a647f0a667d5ede47f0e49473001e3e0c46b07c04bf20b6a0fdce7d1e3bf180",
+      "theorems": 54,
+      "definitions": 33,
+      "lines": 574,
+      "nonblank": 488,
+      "code_lines": 363,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Misc.lean",
+      "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975",
+      "theorems": 60,
+      "definitions": 13,
+      "lines": 912,
+      "nonblank": 821,
+      "code_lines": 657,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/RolloutExec.lean",
+      "sha256": "c7b63a6e02d1d425c00fb6b7d76899cbfcceaeb0e07772434c4875c15a468513",
+      "theorems": 50,
+      "definitions": 33,
+      "lines": 896,
+      "nonblank": 798,
+      "code_lines": 646,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase6/Windows.lean",
+      "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8",
+      "theorems": 16,
+      "definitions": 7,
+      "lines": 261,
+      "nonblank": 227,
+      "code_lines": 168,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase7/NoiseModel.lean",
+      "sha256": "bde0a1ff202682bd326df1a9c8306a190ee5811b4d009ccdd07b2b0efc85f6fd",
+      "theorems": 69,
+      "definitions": 22,
+      "lines": 1008,
+      "nonblank": 893,
+      "code_lines": 701,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase7/Shootout.lean",
+      "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b",
+      "theorems": 100,
+      "definitions": 63,
+      "lines": 1491,
+      "nonblank": 1327,
+      "code_lines": 1071,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase8/Fourier.lean",
+      "sha256": "afffe6072d707e408cbea6b7bceb45fbbaaf08c6a1ab6a61d76240532ef523be",
+      "theorems": 117,
+      "definitions": 19,
+      "lines": 1379,
+      "nonblank": 1216,
+      "code_lines": 972,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase8/RealFourier.lean",
+      "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be",
+      "theorems": 29,
+      "definitions": 5,
+      "lines": 275,
+      "nonblank": 231,
+      "code_lines": 170,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase8/RealNoise.lean",
+      "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760",
+      "theorems": 46,
+      "definitions": 6,
+      "lines": 483,
+      "nonblank": 419,
+      "code_lines": 290,
+      "suspicious": []
+    },
+    {
+      "path": "lean/phase8/WeakMastery.lean",
+      "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26",
+      "theorems": 69,
+      "definitions": 21,
+      "lines": 959,
+      "nonblank": 848,
+      "code_lines": 643,
+      "suspicious": []
+    }
+  ]
+}

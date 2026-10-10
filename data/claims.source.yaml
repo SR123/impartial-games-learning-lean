@@ -1,0 +1,1127 @@
+# Claim map of the interactive edition: handwritten metadata.  The prose for levels 2 and 3
+# lives in content/explanations/*.md (entries "explain/<id>" and "formal/<id>").
+#
+# Fields
+#   id            claim id; equals the manuscript label when the claim is a labelled statement
+#   target        block or label the claim attaches to (default: id)
+#   snippet, in   for unlabelled prose: a unique source fragment and the heading id to search;
+#                 the claim id then becomes a website-side anchor
+#   part          for statements split into parts of different kinds
+#   short         one-line claim
+#   category      checked-theorem | checked-definition | checked-conditional |
+#                 classical-external | empirical | informal | open
+#   lean          principal Lean declarations (fully qualified), checked against the fresh export
+#   lean_defs     further definitions to display
+#   named_inputs  named classical hypotheses used (conditional claims)
+#   assumptions   assumptions and domain (markdown)
+#   correspondence  prose-to-formal notes (markdown)
+#   depends_on    claim ids
+#   audit_rows    labels of rows in the audited correspondence map (input/paper_proof_correspondence.json)
+claims:
+
+# ------------------------------------------------------------------ front matter, Section 1
+- id: c-abstract
+  target: abstract
+  short: "Summary of the results; each is stated and qualified in the body of the paper"
+  category: informal
+  depends_on: [thm:sim-ac0, thm:singleframe-impossible.b, prop:restore, prop:rollout-sufficiency, prop:streaming-nimsum, prop:bypass-interfaces, c-exp-result-1f2f, c-fsm-results]
+
+- id: c-intro-zhou
+  snippet: "Our earlier work with Bei Zhou provides the empirical starting point."
+  in: sec:intro
+  short: "Earlier experiments (Zhou and Riis) found AlphaZero-style learning deteriorating on larger NIM boards"
+  category: classical-external
+
+- id: c-intro-ac0
+  snippet: "The class $\\AC^0$ consists of polynomial-size Boolean circuits"
+  in: sec:intro
+  short: "AC⁰ circuits cannot compute global parity; the connection is made for an explicitly restricted model"
+  category: classical-external
+  depends_on: [thm:sim-ac0, rem:local-vs-global-parity.global]
+
+- id: c-intro-necessary
+  snippet: "Representability in $\\AC^0$ is a necessary condition for a fixed-latency computation"
+  in: sec:intro
+  short: "AC⁰ representability is necessary within the restricted model, not sufficient for training and not universal"
+  category: informal
+  depends_on: [thm:sim-ac0]
+
+- id: c-intro-transition
+  snippet: "The central observation is that while the \\emph{state} can be hard to process"
+  in: sec:intro
+  short: "Shallow components versus the complete sequential computation in the three bypasses"
+  category: informal
+  depends_on: [prop:restore, prop:bypass-interfaces, c-bypass-not-ac0]
+
+- id: fig:barrier-blueprint
+  short: "Schematic of the barrier and the three bypasses"
+  category: informal
+  depends_on: [thm:singleframe-impossible.b, prop:restore, prop:rollout-sufficiency, prop:streaming-nimsum]
+
+- id: c-contributions
+  target: sec:contrib-list1
+  short: "List of contributions; each item points to a precise statement"
+  category: informal
+  depends_on: [thm:sim-ac0, thm:singleframe-impossible.b, lem:nimber-diff-ac0, prop:restore, prop:rollout-sufficiency, prop:single-policy-bound, thm:search-gap.i, prop:streaming-nimsum, c-exp-result-1f2f, c-fsm-results]
+
+- id: c-scope
+  target: sec:scope-list1
+  short: "Scope: worst-case representational statements under explicit constraints, not training results"
+  category: informal
+  depends_on: [thm:sim-ac0, def:agent-types, c-exp-result-1f2f]
+
+# ------------------------------------------------------------------ Section 2
+- id: c-qset
+  snippet: "a finite set independent of input length. The threshold bound applies \\emph{after} choosing the literal representation."
+  in: sec:framework-fixedprecision
+  short: "The fixed grid Q_{W,D}; rewriting a negative term as a literal raises the threshold"
+  category: checked-definition
+  lean: [NimAudit.AC0.Gate.Valid, NimAudit.AC0.gate_rat_iff, NimAudit.Windows.literal_shift]
+  lean_defs: [NimAudit.AC0.Gate, NimAudit.AC0.ratFires]
+  assumptions: "Constants $W,D\\in\\mathbb N$ with $D>0$; weights $\\ell/D$ with $0\\le\\ell\\le W$."
+
+- id: def:quantised-inference
+  short: "Fixed-scale quantised NN, RNN and LTST models: constant depth, polynomial size, fixed grid, bounded unrolling"
+  category: checked-definition
+  lean: [NimAudit.AC0.gate_ac0, NimAudit.FiniteNet.netFormula_spec, NimAudit.AC0.NetValid]
+  lean_defs: [NimAudit.AC0.Gate, NimAudit.AC0.Gate.Valid, NimAudit.AC0.Layer, NimAudit.AC0.evalNet]
+  assumptions: "Nonnegative literal weights; threshold at most $W$ in units of $1/D$; Boolean intermediate states; for recurrent and attention-style models, at most $T$ updates in total from an input-independent initial state."
+  correspondence: "The Lean gate model is the literal-threshold gate of Definition A.1 after clearing denominators. It is not a model of arbitrary INT8 or floating-point inference."
+  depends_on: [def:NN-formal, def:RNN-formal, def:LTST-formal]
+  audit_rows: [def:quantised-inference]
+
+- id: c-window-insufficient
+  snippet: "A bound on the number of preceding states consulted by one update is insufficient"
+  in: sec:framework-fixedprecision
+  short: "A one-step recurrence h_{r+1}=h_r⊕x_r accumulates parity over an arbitrarily long stream"
+  category: checked-theorem
+  lean: [NimAudit.scan_invariant, NimAudit.Recurrent.circuit_resources]
+  lean_defs: [NimAudit.scan]
+  depends_on: [prop:streaming-nimsum, def:RNN-formal]
+
+- id: c-witness
+  snippet: "Consequently, whenever a threshold unit outputs $1$, there is a satisfying \\emph{witness}"
+  in: par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction
+  short: "Fixed scale gives a witness of at most W literals, hence a constant-width DNF for each unit"
+  category: checked-theorem
+  lean: [NimAudit.AC0.Gate.bounded_witness, NimAudit.AC0.gate_ac0]
+  depends_on: [lem:unit-ac0]
+  audit_rows: [app:oneunit]
+
+- id: c-not-floating
+  snippet: "We emphasise that this is not a statement about floating-point arithmetic per se."
+  in: par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction
+  short: "The abstraction excludes scale-adaptive regimes, which move towards TC⁰"
+  category: informal
+  depends_on: [rem:ac0-scope.model]
+
+- id: rem:ac0-scope.model
+  target: rem:ac0-scope
+  part: "(model scope)"
+  short: "The model has bounded thresholds; a fan-in-dependent threshold such as majority lies outside it"
+  category: checked-definition
+  lean: [NimAudit.Windows.majGate_not_valid]
+  lean_defs: [NimAudit.Windows.majGate, NimAudit.AC0.Gate.Valid]
+  correspondence: "The remark describes what the model leaves out. Lean checks the precise boundary case: a majority gate with coefficients in $\\{0,1\\}$ has threshold $\\lceil m/2\\rceil$, which exceeds every fixed $W$ once $m>2W$."
+  audit_rows: [rem:ac0-scope]
+
+- id: rem:ac0-scope.tc0
+  target: rem:ac0-scope
+  part: "(TC⁰)"
+  short: "Scale-adaptive threshold circuits (TC⁰) can represent parity-like computations"
+  category: classical-external
+
+- id: rem:local-vs-global-parity.local
+  target: rem:local-vs-global-parity
+  part: "(local XOR)"
+  short: "XOR of a constant number of bits or B-bit blocks is computable in AC⁰"
+  category: checked-theorem
+  lean: [NimAudit.Windows.blockXor_res, NimAudit.Windows.xorChain_res]
+  lean_defs: [NimAudit.Windows.blockXor, NimAudit.Windows.xorChain]
+  audit_rows: [rem:local-vs-global-parity]
+
+- id: rem:local-vs-global-parity.global
+  target: rem:local-vs-global-parity
+  part: "(global parity)"
+  short: "Global parity of n = NB bits is not in AC⁰"
+  category: checked-conditional
+  lean: [NimAudit.ClassicalBoundary.parityNotAC0_of_hastad]
+  lean_defs: [NimAudit.ClassicalBoundary.HastadNegl, NimAudit.Barrier.ParityNotAC0]
+  named_inputs: [HastadNegl]
+  correspondence: "The worst-case statement `ParityNotAC0` is derived in Lean from the named external input `HastadNegl` (Håstad 2014, Corollary 3.2, in negligible-family form). The classical theorem itself is not proved."
+  audit_rows: [rem:local-vs-global-parity]
+
+- id: c-model-table
+  target: par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction-table1
+  short: "What the model captures and does not capture about deployed inference"
+  category: informal
+  depends_on: [def:quantised-inference, thm:sim-ac0, lem:unit-ac0]
+
+- id: c-primer
+  snippet: "A classical result is that $\\mathrm{PARITY}\\notin\\AC^0$."
+  in: par-circuit-complexity-primer
+  short: "Circuit-complexity background: PARITY ∉ AC⁰, TC⁰ computes parity, fixed scale collapses to AC⁰"
+  category: classical-external
+  depends_on: [thm:sim-ac0, rem:local-vs-global-parity.global]
+
+- id: thm:sim-ac0
+  short: "Fixed-depth, fixed-grid literal-threshold networks (and bounded-unrolling extensions) are simulated by AC⁰ circuit families"
+  category: checked-theorem
+  lean: [NimAudit.AC0.network_ac0, NimAudit.FiniteNet.family_finite, NimAudit.Family.netFam_ac0, NimAudit.Windows.window_ac0, NimAudit.Windows.staged_ac0]
+  lean_defs: [NimAudit.Family.AC0Fam, NimAudit.Family.NetFam]
+  assumptions: "Fixed $W,D$, a fixed number $L$ of layers, polynomially bounded widths and fan-ins, all weights and thresholds on the grid; for recurrent and attention-style models a fixed total number $T$ of updates, each stage itself a valid gate network."
+  correspondence: "Lean uses formulas (trees) as circuits; size counts every node and depth counts NOT gates, which is conservative. The attention-style extension is covered only in the gate-realised form of Definition A.3."
+  depends_on: [lem:unit-ac0, lem:layer-ac0, def:NN-formal, def:RNN-formal, def:LTST-formal]
+  audit_rows: [thm:sim-ac0, app:ac0proof]
+
+# ------------------------------------------------------------------ Section 3
+- id: c-rw-circuits
+  target: par-circuit-complexity-and-neural-networks-p1
+  short: "Related results on parity, threshold circuits and attention models"
+  category: classical-external
+
+- id: c-rw-quant
+  target: par-quantised-inference-and-deployment-constraints-p1
+  short: "The proof needs nonnegative literal weights, bounded thresholds and Boolean states, not just a quantisation format"
+  category: informal
+  depends_on: [thm:sim-ac0]
+
+- id: c-rw-rl
+  target: par-reinforcement-learning-in-combinatorial-games-p1
+  short: "Prior work on RL difficulties in impartial games; the lower bound is about a restricted model"
+  category: classical-external
+
+- id: c-rw-history
+  target: par-history-and-memory-in-rl-p1
+  short: "History can reduce computational complexity even in fully observable games, given the zero-nim-sum promise"
+  category: informal
+  depends_on: [prop:restore, c-init-boundary]
+
+# ------------------------------------------------------------------ Section 4
+- id: def:impartial
+  short: "Finite terminating impartial games under normal play"
+  category: classical-external
+  audit_rows: [def:impartial]
+
+- id: c-terminal
+  target: sec-impartial-games-p1
+  short: "A position with no legal moves is terminal"
+  category: checked-definition
+  lean: [NimAudit.Game.terminal_iff_no_move]
+  lean_defs: [NimAudit.Game.Terminal]
+
+- id: def:nim
+  short: "NIM positions and legal moves"
+  category: checked-definition
+  lean: [NimAudit.Game.Move, NimAudit.Game.move_sum_lt]
+  audit_rows: [def:nim]
+
+- id: c-sprague-grundy
+  target: sec-sprague-grundy-theory-and-nim-sum-p1
+  short: "Sprague–Grundy theorem; for NIM the Grundy value is the XOR of the heaps"
+  category: classical-external
+  depends_on: [thm:nim-win]
+
+- id: def:nimsum
+  short: "The nim-sum is the bitwise XOR of the heap sizes"
+  category: checked-definition
+  lean: [NimAudit.nimSum, NimAudit.nimSum_append]
+  audit_rows: [def:nimsum]
+
+- id: thm:nim-win
+  short: "A NIM position is losing iff its nim-sum is zero; from a nonzero nim-sum there is a move to zero"
+  category: checked-theorem
+  lean: [NimAudit.Game.lose_iff, NimAudit.Game.win_iff, NimAudit.Game.exists_move_to_zero, NimAudit.Game.move_from_zero]
+  lean_defs: [NimAudit.Game.Win, NimAudit.Game.Lose]
+  assumptions: "Finite normal-play NIM; heap sizes are natural numbers; any number of heaps."
+  audit_rows: [thm:nim-win]
+
+- id: c-why-nim
+  target: par-why-nim-is-a-useful-barrier-example-p1
+  short: "NIM isolates the XOR aggregation obstruction; extensions to other games need explicit reductions"
+  category: informal
+
+# ------------------------------------------------------------------ Section 5.1–5.3
+- id: def:mastery
+  short: "Strong, weak and restoration mastery"
+  category: checked-definition
+  lean: [NimAudit.Mastery.StrongMastery, NimAudit.Mastery.WeakMastery, NimAudit.Mastery.Guarantee, NimAudit.Mastery.Cons, NimAudit.Mastery.weakMastery_vacuous, NimAudit.Game.restore_correct]
+  lean_defs: [NimAudit.Mastery.Hist, NimAudit.Mastery.Strat, NimAudit.Mastery.RoleWinnable]
+  assumptions: "A designated role (first or second player) and a family of initial boards; deterministic, history-dependent strategies; legal opponents; a missing or illegal agent move is a loss."
+  correspondence: "Weak mastery quantifies over histories consistent with the agent's own earlier actions; strong mastery over all legal histories. On an initially losing board the weak-mastery condition is vacuous, and Lean states this explicitly."
+  audit_rows: [def:mastery]
+
+- id: c-weak-mastery-histories
+  target: sec-mastery-notions-p2
+  short: "Weak mastery = moving to a P-position at every decision history consistent with the agent's own play"
+  category: checked-theorem
+  lean: [NimAudit.Mastery.secure_iff_guarantee, NimAudit.Mastery.weakMastery_iff_optimal, NimAudit.Mastery.roleWinnable_first]
+  depends_on: [def:mastery, thm:nim-win]
+  audit_rows: [def:mastery]
+
+- id: thm:singleframe-impossible.a
+  target: thm:singleframe-impossible
+  part: "(reduction)"
+  short: "Strong mastery on the boards (2,b₁,…,b_m) forces the winning move to reveal the parity of b"
+  category: checked-theorem
+  lean: [NimAudit.Game.unique_zero_move, NimAudit.Game.winning_selector_parity, NimAudit.ParityCircuit.extraction]
+  lean_defs: [NimAudit.Game.encode, NimAudit.Game.reduced]
+  assumptions: "Boards $(2,b_1,\\dots,b_m)$ with $b_i\\in\\{0,1\\}$, two bits per heap; all such boards are winning."
+  audit_rows: [thm:singleframe-impossible]
+
+- id: thm:singleframe-impossible.b
+  target: thm:singleframe-impossible
+  part: "(barrier)"
+  short: "No polynomial-size, constant-depth fixed-scale network family strongly masters NIM"
+  category: checked-conditional
+  lean: [NimAudit.Barrier.barrier_net, NimAudit.Barrier.barrier_fam, NimAudit.ClassicalBoundary.parityNotAC0_of_hastad]
+  lean_defs: [NimAudit.Barrier.ParityNotAC0, NimAudit.ClassicalBoundary.HastadNegl]
+  named_inputs: [HastadNegl]
+  assumptions: "Fixed grid $W$, a fixed number of layers, polynomial widths and fan-ins; the network's output is decoded as a binary move (valid bit, index bits, value bits)."
+  correspondence: "Lean proves: if `ParityNotAC0` holds, no such network family plays a winning move on every encoded board; and `HastadNegl` implies `ParityNotAC0`. Parity hardness itself is the external classical input."
+  depends_on: [thm:singleframe-impossible.a, thm:sim-ac0, rem:local-vs-global-parity.global]
+  audit_rows: [thm:singleframe-impossible]
+
+- id: def:nimber-difference
+  short: "The nimber difference Δ(P,P') = nim(P) ⊕ nim(P')"
+  category: checked-definition
+  lean: [NimAudit.one_heap_difference]
+  lean_defs: [NimAudit.nimSum]
+  correspondence: "Lean writes $\\Delta$ inline as `nimSum P ^^^ nimSum P'`; there is no separate named definition."
+  audit_rows: [def:nimber-difference]
+
+- id: c-delta-local
+  target: sec:multiframe-p2
+  short: "If one heap changes from x_i to x_i', then Δ = x_i ⊕ x_i'"
+  category: checked-theorem
+  lean: [NimAudit.one_heap_difference, NimAudit.Misc.delta_bit_local]
+  depends_on: [def:nimber-difference]
+
+- id: lem:nimber-diff-ac0
+  short: "With at most t changed heaps (t fixed), Δ is computed by polynomial-size constant-depth circuits"
+  category: checked-theorem
+  lean: [NimAudit.LocalRestore.bdC_eval, NimAudit.LocalRestore.bdDelta_eq, NimAudit.LocalRestore.bdC_res]
+  lean_defs: [NimAudit.LocalRestore.bdC, NimAudit.LocalRestore.tf]
+  assumptions: "Both boards have $N$ heaps of $B$ bits and differ in at most $t$ heaps; $t$ is a fixed constant (the depth bound $2t+8$ and the size exponent depend on $t$)."
+  audit_rows: [lem:nimber-diff-ac0, app:nimberdiff]
+
+- id: prop:restore
+  short: "Matching the opponent's nimber difference restores nim-sum zero"
+  category: checked-theorem
+  lean: [NimAudit.conditional_restoration, NimAudit.one_heap_difference]
+  assumptions: "The predecessor $Q$ has nim-sum zero and $Q\\to Q'$ is the opponent's move."
+  correspondence: "The proposition is the algebra in {{lean:NimAudit.conditional_restoration}}, stated for the three nim-sums $q=\\operatorname{nim}(Q)$, $q'=\\operatorname{nim}(Q')$, $r=\\operatorname{nim}(R)$. Legality of the reply is not needed for this step; the shallow selector in the next sentence is a separate record."
+  depends_on: [def:nimber-difference]
+  audit_rows: [prop:restore]
+
+- id: c-restore-selector
+  target: sec:restoration-p2
+  short: "A restoration move can be selected from (Q,Q') by a constant-depth circuit"
+  category: checked-theorem
+  lean: [NimAudit.LocalRestore.restore_equiv, NimAudit.LocalRestore.restC_bound, NimAudit.Family.rest_semantics, NimAudit.WholeGame.twoFrame_wins]
+  lean_defs: [NimAudit.LocalRestore.restC, NimAudit.Game.restore]
+  assumptions: "Equal lengths $N$, heaps below $2^B$, $\\operatorname{nim}(Q)=0$ and $Q\\to Q'$ legal."
+  depends_on: [prop:restore, c-candidate-moves]
+  audit_rows: [prop:restore]
+
+- id: fig:restoration-example
+  short: "Worked example: (3,5,6) → (3,4,6) → (2,4,6)"
+  category: checked-theorem
+  lean: [NimAudit.Misc.restoration_figure]
+
+- id: c-mirror-delta
+  target: par-interpretation-mirror-the-delta-p2
+  short: "Testing whether a candidate move realises δ is a local check on the heap being changed"
+  category: checked-theorem
+  lean: [NimAudit.AttainCircuit.cancel_iff_bit, NimAudit.LocalRestore.localDelta_eq]
+  depends_on: [prop:restore, c-delta-local]
+
+- id: c-mcts-sentence
+  target: par-interpretation-mirror-the-delta-p3
+  short: "The significance of two frames for learning is representational"
+  category: informal
+  depends_on: [prop:restore, thm:singleframe-impossible.b]
+
+- id: c-impl-overview
+  target: sec-implementation-overview-list1
+  short: "The two-frame components: encoding, changed-heap detection, Δ, and a move selector for a target δ"
+  category: checked-definition
+  lean: [NimAudit.LocalRestore.chgC_eval, NimAudit.LocalRestore.localDelta_eq, NimAudit.SelectCircuit.varSel_correct, NimAudit.PriorityEncoder.encode_correct]
+  depends_on: [lem:nimber-diff-ac0, c-binary-index]
+
+# ------------------------------------------------------------------ Section 5.4
+- id: c-search-intro
+  target: sec:search-gap-p1
+  short: "Restatement of the single-frame barrier as the motivation for rollouts"
+  category: informal
+  depends_on: [thm:singleframe-impossible.b]
+
+- id: def:rollout-policy
+  short: "Deterministic rollout policies and the rollout outcome bit"
+  category: checked-definition
+  lean: [NimAudit.Game.rolloutWinner, NimAudit.Rollout.policyStep, NimAudit.Rollout.PolicyMove, NimAudit.Prob.rollout_outcome_linear]
+  correspondence: "Lean defines the outcome of the structured policies $\\pi_j$ by executing the rollout (`rolloutWinner`). The general definition of an arbitrary $\\mathrm{AC}^0$-bounded rollout policy is not formalised as a separate object; the paper's results use only the structured family."
+  audit_rows: [def:rollout-policy]
+
+- id: def:agent-types
+  short: "The restricted measurement interface: root and one-heap queries to one fixed structured head, bounded readout"
+  category: checked-definition
+  lean: [NimAudit.Prob.single_policy_affine, NimAudit.Misc.single_policy_correction, NimAudit.Misc.bitBoard_query, NimAudit.BinReadout.BBound]
+  lean_defs: [NimAudit.Prob.CorrHyp]
+  correspondence: "In the conditional bound the readout is any family of bounded-depth, polynomial-size binary circuits receiving the board and the observed bit. Query corrections must be computed inside that readout."
+  audit_rows: [def:agent-types]
+
+- id: c-arbitrary-starts
+  target: sec:search-gap-p3
+  short: "With arbitrary start positions, one rollout of π₀ on the boards of k-th bits returns σ_k(P)"
+  category: checked-theorem
+  lean: [NimAudit.Misc.bitBoard_query, NimAudit.Misc.nimSum_bitBoard]
+  depends_on: [def:agent-types]
+
+- id: rem:why-multi-head
+  short: "Each rollout follows one policy and yields one bit; different heads give independent linear functionals"
+  category: checked-theorem
+  lean: [NimAudit.Game.rolloutWinner_channel, NimAudit.Prob.rollout_outcome_linear, NimAudit.Game.reconstruct_eq]
+  lean_defs: [NimAudit.channel]
+  audit_rows: [rem:why-multi-head]
+
+- id: par:shootout-controller
+  short: "Early stopping after a nonzero outcome leaves the decision (the OR of all channel bits) unchanged"
+  category: checked-theorem
+  lean: [NimAudit.Misc.shootout_spec, NimAudit.Misc.channels_or, NimAudit.Shootout.ee_spec]
+  depends_on: [prop:rollout-sufficiency]
+  audit_rows: [par:shootout-controller]
+
+- id: c-fsm-definition
+  target: par:shootout-controller-p2
+  short: "A finite-state shootout controller: states, head selection, transitions, halting states"
+  category: checked-definition
+  lean: [NimAudit.Misc.FSM, NimAudit.Misc.FSM.run, NimAudit.Misc.shootout]
+
+- id: c-fsm-power
+  target: par:shootout-controller-p3
+  short: "The controller organises which head is queried and when to stop; it adds no per-step power"
+  category: informal
+  depends_on: [c-outer-controller]
+
+- id: c-outer-controller
+  target: par:shootout-controller-p4
+  short: "The implemented outer controller: early-exit classifier and all-head schedule for move selection"
+  category: checked-theorem
+  lean: [NimAudit.Shootout.ee_spec, NimAudit.Shootout.ee_net, NimAudit.Shootout.ahSel_wins, NimAudit.Shootout.ahL_counts, NimAudit.Shootout.sh_ac0, NimAudit.Shootout.sh_net]
+  assumptions: "$B\\ge1$, heaps below $2^B$, head index in $r$ bits with $B\\le 2^r$; the original board is a read-only input at every tick."
+  depends_on: [par:controller-costs, prop:rollout-sufficiency]
+  audit_rows: [par:shootout-controller]
+
+- id: fig:fsm-shootout-controller
+  short: "The depicted controller decides whether σ(P) ≠ 0 using at most B queries"
+  category: checked-theorem
+  lean: [NimAudit.Misc.shootout_spec, NimAudit.Misc.shootout_decides]
+
+- id: c-integration
+  target: par:shootout-controller-p5
+  short: "Channels versus protocol: heads supply measurement channels, the FSM sequential control"
+  category: informal
+  depends_on: [prop:single-policy-bound, prop:rollout-sufficiency]
+
+- id: c-depth-amplification
+  target: par-depth-amplification-p1
+  short: "Iterating an AC⁰ policy for L game steps gives a depth-Θ(L) computation"
+  category: informal
+  depends_on: [prop:rollout-sufficiency, c-bypass-not-ac0]
+
+- id: prop:rollout-sufficiency
+  short: "B structured rollout heads recover all nim-sum bits; an AC⁰ readout then plays a winning move"
+  category: checked-theorem
+  lean: [NimAudit.Game.rolloutWinner_channel, NimAudit.Game.agent_wins, NimAudit.RolloutExec.mhExec_wins, NimAudit.RolloutExec.mhExec_evals, NimAudit.Game.totalRolloutMoves_le, NimAudit.Rollout.run_length, NimAudit.Mastery.mh_strong]
+  lean_defs: [NimAudit.Game.agent, NimAudit.Game.reconstruct]
+  assumptions: "Heaps below $2^B$; the opponent may play any legal move; rollouts are executed move by move (no outcome bit is supplied for free)."
+  correspondence: "Lean proves the outcome identities for the executed rollout under every tie-breaking rule, the reconstruction, the winning guarantee against every legal opponent, and the bound $BN(2^B-1)$ on simulated moves. Circuit resources of each policy step and of the readout are in the records for Appendix C and Proposition 5.14."
+  audit_rows: [prop:rollout-sufficiency, app:rollout-proofs]
+
+- id: prop:single-policy-bound
+  short: "One fixed structured head reveals only known affine functions of one linear functional of σ(P)"
+  category: checked-theorem
+  lean: [NimAudit.Prob.rollout_outcome_linear, NimAudit.Prob.single_policy_affine, NimAudit.Misc.single_policy_correction]
+  assumptions: "The head is one fixed member $\\pi_j$ of the structured family; queries are the root and boards differing from it in one known heap."
+  audit_rows: [prop:single-policy-bound]
+
+- id: rem:noisy-rollout-decay
+  short: "Independent outcome flips: agreement (1+(1−2ε)^L)/2 and Θ(a⁻²) repetitions with fresh randomness"
+  category: checked-theorem
+  lean: [NimAudit.RealNoise.flip_agree_real, NimAudit.RealNoise.flip_law, NimAudit.RealNoise.flip_repeated, NimAudit.RealNoise.flip_mMin, NimAudit.RealNoise.mMin_theta, NimAudit.RealNoise.reuse_any_rule, NimAudit.RealNoise.remark_real, NimAudit.Misc.flip_example, NimAudit.Misc.paired_flips_cancel]
+  assumptions: "$0\\le\\varepsilon<1/2$; flips independent within a block and fresh for each repetition; worst-case error at most $1/4$ for both values of the ideal bit; for the explicit bounds $0<a\\le1/2$."
+  correspondence: "This is a channel-noise model. Lean does not model erroneous game moves or learned heads, and neither does the remark."
+  depends_on: [prop:noise-samples]
+  audit_rows: [rem:noisy-rollout-decay]
+
+- id: c-init-boundary
+  target: par-the-initialisation-boundary-for-restoration-p1
+  short: "Matching deltas preserves nim(Q); a completed matching-delta policy loses from the winning position (2)"
+  category: checked-theorem
+  lean: [NimAudit.Misc.init_counterexample, NimAudit.Rollout.matching_deltas_do_not_force_zero, NimAudit.no_zero_without_zero_promise]
+  lean_defs: [NimAudit.Misc.mdPolicy]
+  depends_on: [prop:restore]
+
+- id: fig:rollout_gap
+  short: "Resource table for the three bypasses"
+  category: informal
+  depends_on: [prop:bypass-interfaces, prop:single-policy-bound, prop:rollout-sufficiency]
+
+- id: thm:search-gap.i
+  target: thm:search-gap
+  part: "(i)"
+  short: "One structured head plus an AC⁰ readout wins with probability at most 2/(2^B−1)+negl(N)"
+  category: checked-conditional
+  lean: [NimAudit.Prob.success_bound, NimAudit.CorrBridge.circuit_readout_bound, NimAudit.ClassicalBoundary.search_gap_asymptotic, NimAudit.ClassicalBoundary.search_gap_asymptotic_net, NimAudit.Attain.attain_exact]
+  lean_defs: [NimAudit.Prob.CorrHyp, NimAudit.ClassicalBoundary.HastadNegl, NimAudit.ClassicalBoundary.Negligible]
+  named_inputs: [HastadNegl]
+  assumptions: "Fixed $B\\ge2$; boards uniform on $\\{0,\\dots,2^B-1\\}^N$ conditioned on $\\sigma\\ne0$; one fixed structured head; readout circuits of fixed depth and polynomial size (or fixed-scale networks of fixed depth)."
+  correspondence: "The finite bound holds under the explicit correlation premise `CorrHyp` (proved without any classical input). The asymptotic form uses the named input `HastadNegl`, from which the premise is derived for the readout indicators; the analytic derivation of Håstad's bound is external. Attainability of $2/(2^B-1)$ is proved exactly."
+  depends_on: [def:agent-types, prop:single-policy-bound, eq:finite-correlation-bound]
+  audit_rows: [thm:search-gap]
+
+- id: thm:search-gap.ii
+  target: thm:search-gap
+  part: "(ii)"
+  short: "B structured heads and an AC⁰ readout select an optimal move with O(BN2^B) rollout steps"
+  category: checked-theorem
+  lean: [NimAudit.Game.agent_wins, NimAudit.RolloutExec.mhExec_wins, NimAudit.Game.totalRolloutMoves_le]
+  depends_on: [prop:rollout-sufficiency]
+  audit_rows: [thm:search-gap]
+
+- id: thm:search-gap.iii
+  target: thm:search-gap
+  part: "(iii)"
+  short: "From a known zero-nim-sum predecessor a two-frame AC⁰ selector restores zero and maintains it"
+  category: checked-theorem
+  lean: [NimAudit.Game.restore_correct, NimAudit.LocalRestore.restore_equiv, NimAudit.WholeGame.twoFrame_wins]
+  depends_on: [prop:restore, c-restore-selector]
+  audit_rows: [thm:search-gap]
+
+# ------------------------------------------------------------------ Sections 5.5–5.6 and verification coverage in Section 10
+- id: c-stream
+  target: par-serialising-positions-and-retaining-state-p1
+  short: "Serialisation: rows of each position, a separator, aligned indices; the separator resets only the accumulator"
+  category: checked-definition
+  lean: [NimAudit.Recurrent.serialize, NimAudit.Recurrent.step, NimAudit.Recurrent.sep_resets, NimAudit.Recurrent.fold_invariant]
+
+- id: prop:streaming-nimsum
+  short: "A constant-depth recurrent update computes the nim-sum after N row updates and reports consecutive differences"
+  category: checked-theorem
+  lean: [NimAudit.Recurrent.fold_invariant, NimAudit.Recurrent.stream_reports_delta, NimAudit.Recurrent.circuit_update, NimAudit.Recurrent.circuit_step_correct, NimAudit.Recurrent.circuit_resources, NimAudit.Recurrent.xorNet_correct]
+  assumptions: "Rows are $B$-bit numbers in a fixed heap order; state $(s,q,v)$ of $2B+1$ bits; a reset between games restores $(0,0,0)$."
+  correspondence: "Lean checks the per-update circuit (depth at most 4, size at most $28B+8$) and a fixed-scale XOR realisation. The summary mechanism stores summaries, not the history."
+  audit_rows: [prop:streaming-nimsum]
+
+- id: c-replay
+  snippet: "One implementation replays the current position after the first scan."
+  in: par-from-a-summary-to-a-move
+  short: "Replay protocol rows,SEP,rows,SEP: 2N+2 updates, 4+5B+3r state bits, a legal winning move"
+  category: checked-theorem
+  lean: [NimAudit.Recurrent.replay_correct, NimAudit.Controller.crun_decision, NimAudit.Controller.ctrl_wins, NimAudit.Controller.stream_fits, NimAudit.ThresholdInst.ctrl_counts, NimAudit.WholeGame.replay_counts, NimAudit.WholeGame.replay_wins, NimAudit.WholeGame.replay_game]
+  assumptions: "$N<2^r$ for the $r$-bit counter; heaps below $2^B$; the environment supplies the current board twice (the replay is an input-protocol assumption, not hidden memory)."
+  depends_on: [prop:streaming-nimsum]
+  audit_rows: [prop:bypass-interfaces]
+
+- id: c-board-storage
+  snippet: "Alternatively, store the current board in $O(NB)$ bits during the initial scan"
+  in: par-from-a-summary-to-a-move
+  short: "Board-storage variant: NB+B+r state bits, N+1 updates per decision, plus a reset"
+  category: checked-theorem
+  lean: [NimAudit.BoardStore.bs_decision, NimAudit.BoardStore.bits_decision, NimAudit.BoardStore.bits_store_wins, NimAudit.BoardStore.bs_counts, NimAudit.BoardStore.bs_ac0, NimAudit.BoardStore.bs_net]
+  assumptions: "$N<2^r$; heaps below $2^B$; each position is supplied once."
+  depends_on: [prop:streaming-nimsum]
+  audit_rows: [prop:bypass-interfaces]
+
+- id: c-recurrence-history
+  target: par-connecting-recurrence-to-the-history-bypass-p1
+  short: "Retained summaries give Δ of consecutive supplied boards; with decision-time boards only it spans two moves"
+  category: checked-theorem
+  lean: [NimAudit.Bypass.diff_of_transition, NimAudit.Bypass.diff_with_postMove, NimAudit.Bypass.diff_decision_only, NimAudit.Recurrent.stream_reports_delta]
+  depends_on: [prop:streaming-nimsum, prop:restore]
+
+- id: c-lower-bound-respected
+  target: par-why-the-lower-bound-is-respected-p1
+  short: "N sequential updates have depth O(N): outside Theorem 2.4; the complete recurrent map is not AC⁰"
+  category: checked-conditional
+  lean: [NimAudit.Barrier.no_ac0_rec, NimAudit.Bypass.bypass_barriers]
+  lean_defs: [NimAudit.Barrier.recMove, NimAudit.Barrier.ParityNotAC0]
+  named_inputs: [HastadNegl]
+  correspondence: "Lean proves that, under `ParityNotAC0` (derived from `HastadNegl`), no AC⁰ formula family or fixed-scale network family computes the complete recurrent board-to-move map, even on the encoding family. The sentences about training and fixed-width state are informal scope statements."
+  depends_on: [prop:streaming-nimsum, thm:sim-ac0, rem:local-vs-global-parity.global]
+
+- id: prop:bypass-interfaces
+  short: "Each bypass: shallow {0,1}-weight components and a complete strategy winning against every legal opponent"
+  category: checked-theorem
+  lean: [NimAudit.Bypass.prop_bypass_interfaces, NimAudit.WholeGame.twoFrame_wins, NimAudit.RolloutExec.mhExec_wins, NimAudit.WholeGame.replay_wins, NimAudit.BoardStore.bits_store_wins]
+  lean_defs: [NimAudit.Family.AC0Fam, NimAudit.Family.NetFam, NimAudit.WholeGame.TwoFrameWins, NimAudit.WholeGame.ReplayWins]
+  assumptions: "$N\\ge1$, $B\\ge1$; for (i) the established zero-nim-sum invariant with the opponent to move; for (iii) the replay protocol supplied by the environment, with $N<2^r$."
+  correspondence: "Polynomial size and constant depth are certified for one evaluation of each component; they do not bound the number of sequential evaluations. The recurrent winning guarantees (part iii) are proved in their own stateful game semantics (`ReplayWins`, `BitStoreWins`), not in the general history model of Definition 5.1; see the open item on that bridge."
+  depends_on: [c-restore-selector, prop:rollout-sufficiency, c-replay, c-board-storage, c-depth-table]
+  audit_rows: [prop:bypass-interfaces]
+
+- id: c-replay-bridge-open
+  target: prop:bypass-interfaces
+  part: "(open item)"
+  short: "Bridge from the recurrent strategies' game semantics to the general weak-mastery history model"
+  category: open
+  depends_on: [prop:bypass-interfaces, def:mastery]
+
+- id: c-bypass-not-ac0
+  target: sec:bypass-scope-p1
+  short: "The complete multi-head and recurrent board-to-move maps are not AC⁰ families"
+  category: checked-conditional
+  lean: [NimAudit.Bypass.bypass_barriers, NimAudit.Barrier.no_ac0_mh, NimAudit.Barrier.no_ac0_rec, NimAudit.Barrier.no_ac0_predecessor]
+  lean_defs: [NimAudit.Barrier.ParityNotAC0]
+  named_inputs: [HastadNegl]
+  depends_on: [thm:singleframe-impossible.b, prop:bypass-interfaces]
+  audit_rows: [prop:bypass-interfaces]
+
+- id: c-verification-extent
+  target: sec:development-p2
+  short: "What the Lean development covers, and its size (1,588 theorem and lemma declarations, 38 files)"
+  category: informal
+
+- id: c-verification-boundary
+  target: sec:development-p3
+  short: "The verification boundary: external classical inputs, conditional results, empirical runs"
+  category: informal
+  depends_on: [thm:search-gap.i, c-tailpremise-open]
+
+- id: c-tailpremise-open
+  target: sec:development-p3
+  part: "(open item)"
+  short: "The Fourier-tail premise is not connected to a precise LMN/Tal statement with reconciled conventions"
+  category: open
+  depends_on: [eq:tail-correlation]
+
+- id: c-no-discovery
+  target: sec:development-p6
+  short: "Neither the verification nor the experiments show that gradient descent or self-play discovers the constructions"
+  category: informal
+
+# ------------------------------------------------------------------ Section 6
+- id: c-takeaways
+  target: sec-practical-takeaways-list1
+  short: "Practical takeaways: single-frame brittleness, three bypasses, optimisation still hard"
+  category: informal
+  depends_on: [thm:singleframe-impossible.b, prop:bypass-interfaces]
+
+- id: c-noisy-teacher
+  target: sec:teacher-p1
+  short: "A noisy teacher plays optimally with probability 1−ε and otherwise uniformly at random"
+  category: informal
+
+- id: c-majority-objection
+  target: sec:majority-vs-parity-p1
+  short: "Scale-adaptive threshold models (TC⁰) can represent parity"
+  category: classical-external
+
+- id: c-majority-regime
+  target: sec:majority-vs-parity-p2
+  short: "In the restricted regime gates collapse to AC⁰; AC⁰ approximates counting but has tiny parity correlation"
+  category: classical-external
+  depends_on: [thm:sim-ac0]
+
+- id: c-fourier-basis
+  target: sec:spectral-view-p1
+  short: "Walsh–Hadamard characters are orthonormal; every f equals its Fourier expansion"
+  category: checked-theorem
+  lean: [NimAudit.RealFourier.chiF_formula, NimAudit.RealFourier.orthonormal_fin, NimAudit.RealFourier.inversion_fin, NimAudit.RealFourier.uniqueness_fin, NimAudit.RealFourier.parseval_fin]
+  lean_defs: [NimAudit.RealFourier.chiF, NimAudit.RealFourier.fhat]
+  audit_rows: [def:fourier-tail]
+
+- id: def:fourier-tail
+  short: "The degree->k Fourier tail and (k,ε)-spectral band-limitation"
+  category: checked-definition
+  lean: [NimAudit.RealFourier.tailF_eq, NimAudit.Fourier.tail, NimAudit.Fourier.BandLimited]
+  lean_defs: [NimAudit.RealFourier.tailF]
+  audit_rows: [def:fourier-tail]
+
+- id: eq:tail-correlation
+  short: "Parity is a single character; a (k,ε)-band-limited f has squared correlation ≤ ε with χ_S for |S|>k"
+  category: checked-theorem
+  lean: [NimAudit.Fourier.coef_chi, NimAudit.Fourier.chi_exactDeg, NimAudit.RealFourier.bandLimited_corr_real]
+  audit_rows: [eq:tail-correlation]
+
+- id: c-lmn
+  target: par-ac0-has-little-high-frequency-mass-p1
+  short: "Linial–Mansour–Nisan and Tal: AC⁰ functions have little Fourier mass above low degree"
+  category: classical-external
+  depends_on: [c-tailpremise-open]
+
+- id: c-nim-bit-character
+  snippet: "In our encoding, the $j$th bit of the nim-sum is the parity of the $j$th bits across all $N$ heaps"
+  in: par-local-vs-global-parity-in-nim
+  short: "A nim-sum bit is a degree-N character; for a known changed heap a delta bit is a two-coordinate character"
+  category: checked-theorem
+  lean: [NimAudit.RealFourier.nimBit_spectrum_real, NimAudit.RealFourier.delta_spectrum_real, NimAudit.Misc.nimsum_bit_character, NimAudit.Fourier.nimBit_corr_of_tail]
+  lean_defs: [NimAudit.Fourier.TailPremise]
+  correspondence: "{{lean:NimAudit.Fourier.nimBit_corr_of_tail}} applies the named `TailPremise`; that premise is not instantiated against a published theorem (see the open item)."
+  audit_rows: [sec:spectral-view]
+
+- id: eq:delta-extension
+  short: "The total OR-of-XORs extension equals Δ's bit on single-change pairs; not a character for N≥2; degree two for N=1"
+  category: checked-theorem
+  lean: [NimAudit.RealFourier.dSign_enc_real, NimAudit.RealFourier.dC_not_character_real, NimAudit.RealFourier.dC_one_exactDeg_real, NimAudit.Fourier.dC_not_character, NimAudit.Fourier.gMask_delta, NimAudit.Fourier.char_unique, NimAudit.Fourier.no_low_degree_extension]
+  lean_defs: [NimAudit.LocalRestore.dC, NimAudit.Fourier.dSign]
+  assumptions: "The promised domain is pairs of boards that differ in at most one heap. It contains more than legal decreases: increases and unchanged pairs are included."
+  correspondence: "The claim concerns the one specified extension $d_j$, not every extension of the partial delta function. A separate checked theorem shows that the degree-$2N$ global character is the unique character agreeing with the delta bit on all single-change pairs; it is not a statement about legal decreases only."
+  depends_on: [lem:nimber-diff-ac0]
+  audit_rows: [eq:delta-extension]
+
+- id: c-spectral-bias
+  target: par-connection-to-optimisation-informal-p1
+  short: "Spectral bias suggests an analogy for parity learning; a hypothesis requiring separate measurements"
+  category: informal
+
+- id: c-local-checks
+  target: sec-from-global-invariants-to-local-checks-p1
+  short: "Global invariant hard from one frame; transition quantity local from two frames"
+  category: informal
+  depends_on: [thm:singleframe-impossible.b, lem:nimber-diff-ac0]
+
+# ------------------------------------------------------------------ Section 7
+- id: c-exp-goal
+  target: sec:experiments-p1
+  short: "The experiments do not show that an AlphaZero-style learner discovers the bypasses by self-play"
+  category: informal
+
+- id: c-exp-repr
+  target: sec:state-action-repr-p1
+  short: "Experimental state and action representation (binary heaps, set-heap actions, unmasked restoration argmax)"
+  category: empirical
+
+- id: table:arch
+  short: "The policy-only MLP used in the experiments"
+  category: empirical
+
+- id: c-exp-loss
+  target: sec-training-targets-and-loss-p1
+  short: "Soft-target cross-entropy to the uniform distribution over optimal restoration moves"
+  category: empirical
+
+- id: c-exp-criteria
+  target: sec-evaluation-criteria-in-this-version-p1
+  short: "Evaluation by functional correctness on nonzero nim-sum positions and P/N classification"
+  category: empirical
+  depends_on: [thm:nim-win]
+
+- id: c-restoration-equivalence
+  snippet: "In Nim, this is equivalent to selecting an optimal (winning) move from the post-opponent position"
+  in: sec:supervised-restoration
+  short: "After any move from a zero-nim-sum position, every optimal reply restores nim-sum zero"
+  category: checked-theorem
+  lean: [NimAudit.Game.move_from_zero, NimAudit.Game.lose_iff, NimAudit.Game.exists_move_to_zero]
+  depends_on: [thm:nim-win]
+
+- id: c-exp-data
+  target: sec-dataset-generation-teacher-random-teacher-p1
+  short: "Teacher–random–teacher dataset of 10⁶ examples with soft optimal-move labels"
+  category: empirical
+
+- id: c-exp-training
+  target: sec-training-and-checkpoints-p1
+  short: "Training protocol and the ten saved checkpoints"
+  category: empirical
+
+- id: c-exp-metric
+  target: par-restoration-accuracy-validationtest-p1
+  short: "Restoration accuracy: unmasked argmax in the optimal support; batch-mean convention"
+  category: empirical
+
+- id: c-exp-result-1f2f
+  target: par-one-frame-does-not-learn-restoration-two-frame-eventually-do-p1
+  short: "1F stays near 0.075–0.081; 2F rises to 0.99998 test accuracy by epoch 178 (one saved run)"
+  category: empirical
+  audit_rows: [sec:supervised-restoration]
+
+- id: fig:valacc-H20k4
+  short: "Saved validation curve: 1F low; 2F plateau near 0.54, then near-perfect"
+  category: empirical
+
+- id: fig:testacc-H20k4
+  short: "Saved test accuracy at the ten checkpoints"
+  category: empirical
+
+- id: c-plateau
+  target: par-learning-in-stages-the-plateau-and-subsequent-improvement-p1
+  short: "The plateau and rise suggest a temporary learning bottleneck; its cause is not established"
+  category: empirical
+
+- id: c-diagnostic
+  target: par-learning-in-stages-the-plateau-and-subsequent-improvement-p2
+  short: "Checkpoint diagnostic: almost all remaining errors differ from the required change only in the lowest bit"
+  category: empirical
+
+- id: c-plateau-interpretation
+  target: par-learning-in-stages-the-plateau-and-subsequent-improvement-p3
+  short: "Staged acquisition at the output level; no internal mechanism and no 8/15 explanation are established"
+  category: informal
+  depends_on: [c-diagnostic, c-baseline-arith]
+
+- id: c-exp-provenance
+  target: par-scope-and-provenance-of-the-reported-result-p1
+  short: "Scope and provenance: one configuration, seed 0, run 20260214_120801_cd18fc9f"
+  category: empirical
+
+- id: c-fsm-setup
+  target: par-setup-p1
+  short: "FSM experiment setup: N=20, k=4, balanced test set of 2000 positions"
+  category: empirical
+
+- id: c-tie-breaking
+  snippet: "any choice among them produces a rollout with the same total move count and hence the same parity outcome"
+  in: par-training-the-rollout-heads
+  short: "Every tie-breaking rule gives the same rollout length, hence the same outcome bit"
+  category: checked-theorem
+  lean: [NimAudit.Rollout.run_length, NimAudit.Rollout.run_parity]
+  lean_defs: [NimAudit.Rollout.Run, NimAudit.Rollout.PolicyMove]
+
+- id: c-fsm-training
+  target: par-training-the-rollout-heads-p2
+  short: "Imitation training of the four heads (seed 7, 12 epochs, 2×10⁵ examples)"
+  category: empirical
+
+- id: c-fsm-metric
+  target: par-rollout-evaluation-p2
+  short: "Per-head accuracy compares channel bits with the exact teacher; the FSM uses the OR of queried outcomes"
+  category: empirical
+  depends_on: [prop:rollout-sufficiency, par:shootout-controller]
+
+- id: c-fsm-results
+  target: par-results-p2
+  short: "Multi-head FSM classifies all 2,000 test positions correctly, with imperfect per-head channel accuracy"
+  category: empirical
+  audit_rows: [sec:exp-fsm-shootout]
+
+- id: c-baseline-arith
+  target: par-results-p3
+  part: "(arithmetic)"
+  short: "For k=4, the r₀ classifier detects 8 of 15 nonzero nim-sums; balanced accuracy 23/30"
+  category: checked-theorem
+  lean: [NimAudit.Misc.detected_count, NimAudit.Misc.baseline_numbers, NimAudit.Misc.baseline_P, NimAudit.Misc.board_recall]
+  audit_rows: [sec:supervised-restoration, sec:exp-fsm-shootout]
+
+- id: c-baseline-observed
+  target: par-results-p3
+  part: "(observed)"
+  short: "Observed single-head accuracy 0.768 and recall 0.536 on the finite test set"
+  category: empirical
+  depends_on: [c-baseline-arith]
+
+- id: c-different-metrics
+  target: par-results-p4
+  short: "Recall 8/15 and restoration accuracy measure different things"
+  category: informal
+
+- id: c-early-stopping
+  target: par-results-p5
+  short: "Average 2.87 shootouts because positions with σ₀=1 stop at head 0; scope of the result"
+  category: empirical
+
+- id: tab:fsm-shootout
+  short: "Saved FSM shootout results for model and teacher heads"
+  category: empirical
+
+- id: c-reproducibility
+  target: par-reproducibility-status-p1
+  short: "No public reproducibility package yet; a versioned package and repeated evaluation are future work"
+  category: open
+
+# ------------------------------------------------------------------ Sections 8–9
+- id: c-discussion
+  target: sec:discussion-p1
+  short: "The three bypasses supply different resources for a global invariant"
+  category: informal
+  depends_on: [prop:bypass-interfaces]
+
+- id: c-idealisation
+  target: sec:idealisation-p1
+  short: "The experiments' networks differ from the theorem's gates; finite results do not settle asymptotic ones"
+  category: informal
+
+- id: c-condorcet
+  target: sec:math-p1
+  short: "Local restrictions in Condorcet-domain search: a motivating analogy, not a reduction"
+  category: informal
+
+- id: c-geography
+  target: sec:othergames-p1
+  short: "Some impartial games (Geography) have PSPACE-complete winner problems"
+  category: classical-external
+
+- id: c-othergames-scope
+  target: sec:othergames-p2
+  short: "NIM is a diagnostic starting point for harder self-play benchmarks"
+  category: informal
+
+- id: c-harder-benchmarks
+  target: sec:othergames-list1
+  short: "Sprouts, Chomp and Grundy's game offer distinct proposed self-play challenges"
+  category: informal
+  correspondence: "A research proposal supported by cited literature, not a Lean theorem or a new experiment. Open structural questions and known opening outcomes are distinguished from learning winning moves."
+
+- id: c-benchmark-evaluation
+  target: sec:othergames-p3
+  short: "Evaluate unseen sizes and positions with explicit computation budgets and solver baselines"
+  category: informal
+  depends_on: [c-harder-benchmarks]
+
+- id: c-development-disclosure
+  target: sec:development-p1
+  short: "AI-assisted development and sole author responsibility"
+  category: informal
+
+- id: c-author-verification-scope
+  target: sec:development-p4
+  short: "Author review of the paper–Lean correspondence is distinct from manual inspection of every proof"
+  category: informal
+
+- id: c-rollout-separation
+  target: sec:multipolicy-discussion-p1
+  short: "Theorem 5.12(i) bounds one restricted interface, not general single-policy search"
+  category: informal
+  depends_on: [thm:search-gap.i]
+
+- id: c-opt-gap
+  target: sec:opt-gap-p1
+  short: "Representability removes one obstacle; it does not determine whether training finds the computation"
+  category: informal
+
+- id: c-opt-gap-evidence
+  target: sec:opt-gap-p2
+  short: "Empirical evidence of a remaining learning bottleneck alongside the representational theorem"
+  category: informal
+  depends_on: [c-plateau, c-diagnostic]
+
+- id: c-selfplay-open
+  target: sec:opt-gap-p3
+  short: "Whether AlphaZero-style self-play discovers the constructions is open"
+  category: open
+
+- id: c-significance
+  target: sec-significance-and-impact-list1
+  short: "Broader implications for learning theory, architecture and practice"
+  category: informal
+
+- id: c-conclusion
+  target: sec:conclusion-p1
+  short: "Conclusion: AC⁰ simulation and the single-frame barrier, restated"
+  category: informal
+  depends_on: [thm:sim-ac0, thm:singleframe-impossible.b]
+
+- id: c-conclusion-bypasses
+  target: sec:conclusion-p2
+  short: "Conclusion: what the three constructions supply"
+  category: informal
+  depends_on: [prop:bypass-interfaces, thm:search-gap.i]
+
+- id: c-conclusion-experiments
+  target: sec:conclusion-p3
+  short: "Conclusion: what the saved experiments do and do not show"
+  category: informal
+  depends_on: [c-exp-result-1f2f, c-fsm-results]
+
+# ------------------------------------------------------------------ Appendix A
+- id: app:precision
+  short: "Representable parameters: a fixed finite grid independent of n; negations allowed on wires"
+  category: checked-definition
+  lean: [NimAudit.AC0.Gate.Valid, NimAudit.AC0.gate_rat_iff]
+  lean_defs: [NimAudit.AC0.Gate]
+  audit_rows: [app:defs, app:precision]
+
+- id: def:NN-formal
+  short: "Literal-threshold network: layers of gates with grid weights, grid thresholds and negation bits"
+  category: checked-definition
+  lean: [NimAudit.AC0.Gate, NimAudit.AC0.Layer, NimAudit.AC0.evalNet, NimAudit.AC0.NetValid, NimAudit.AC0.gate_rat_iff, NimAudit.FiniteNet.netFormula_spec]
+  correspondence: "Lean stores integer coefficients $a_j$ and threshold $b$ (weights $a_j/D$, threshold $b/D$) and proves that the rational Heaviside form fires exactly when the integer form does."
+  audit_rows: [def:NN-formal, app:NN]
+
+- id: def:RNN-formal
+  short: "Bounded-unrolling recurrence: at most T updates in total from an input-independent initial state"
+  category: checked-definition
+  lean: [NimAudit.Windows.window_ac0, NimAudit.Windows.window_size_closed, NimAudit.AC0.rnn_ac0]
+  lean_defs: [NimAudit.Windows.wState, NimAudit.Windows.winIn]
+  audit_rows: [def:RNN-formal, app:RNN]
+
+- id: def:LTST-formal
+  short: "Gate-realised attention-style model: every operation implemented in the permitted gates"
+  category: checked-definition
+  lean: [NimAudit.Windows.staged_ac0]
+  lean_defs: [NimAudit.Windows.runStages]
+  correspondence: "No claim is made about standard softmax attention; Lean covers a model given as a constant number of stages, each a valid gate network."
+  audit_rows: [def:LTST-formal, app:LTST]
+
+- id: x-remark-scope-of-the-simulation
+  short: "Theorem 2.4 applies because L, T, W, D are constants and parameters come from a finite grid"
+  category: informal
+  depends_on: [thm:sim-ac0]
+
+# ------------------------------------------------------------------ Appendix B
+- id: lem:unit-ac0
+  short: "One fixed-scale threshold gate is a depth-2 DNF of size O(m^W)"
+  category: checked-theorem
+  lean: [NimAudit.AC0.Gate.bounded_witness, NimAudit.AC0.gate_ac0, NimAudit.ClassicalBoundary.dnf_aoDepth]
+  lean_defs: [NimAudit.AC0.dnf]
+  correspondence: "Lean's depth counts NOT gates and gives depth at most 3; in the classical convention (negations on inputs not counted) the same DNF has AND/OR depth 2. The Lean size bound is $1+(m+1)^W(2W+1)$."
+  audit_rows: [lem:unit-ac0, app:oneunit]
+
+- id: x-remark-negations
+  short: "Negated inputs replace z_j by ¬z_j in each conjunction; the lemma still applies"
+  category: checked-theorem
+  lean: [NimAudit.AC0.gate_ac0, NimAudit.AC0.eval_dnf]
+  depends_on: [lem:unit-ac0]
+
+- id: lem:layer-ac0
+  short: "A layer of polynomially many fixed-scale units is simulated with constant depth and polynomial size"
+  category: checked-theorem
+  lean: [NimAudit.AC0.eval_compileLayer, NimAudit.AC0.compileLayer_size, NimAudit.AC0.compileLayer_depth]
+  lean_defs: [NimAudit.AC0.compileLayer]
+  audit_rows: [lem:layer-ac0, app:network]
+
+# ------------------------------------------------------------------ Appendix C
+- id: app:impl
+  short: "Shared shallow operations: candidate tests, binary index, recurrent update, threshold realisation"
+  category: checked-theorem
+  lean: [NimAudit.PriorityEncoder.encode_correct, NimAudit.ThresholdNet.compileF_spec, NimAudit.ThresholdNet.compileF_fixed_grid, NimAudit.BoardStore.bs_net]
+  depends_on: [c-candidate-moves, c-binary-index, c-recurrent-update, c-threshold-realisation, c-depth-table]
+  audit_rows: [app:impl]
+
+- id: c-candidate-moves
+  target: par-local-differences-and-candidate-moves-p1
+  short: "Delta bits by OR under the single-change promise; the shallow test y_i < x_i; the subtract-one fallback"
+  category: checked-theorem
+  lean: [NimAudit.LocalRestore.dC_eval, NimAudit.LocalRestore.localDelta_eq, NimAudit.AttainCircuit.cancel_iff_bit, NimAudit.SelectCircuit.genSel_correct, NimAudit.SelectCircuit.varSel_correct]
+  depends_on: [lem:nimber-diff-ac0]
+
+- id: c-binary-index
+  target: par-a-binary-index-is-part-of-the-circuit-p1
+  short: "The priority encoder produces the binary index of the first candidate, for every flag pattern"
+  category: checked-theorem
+  lean: [NimAudit.PriorityEncoder.encode_correct, NimAudit.PriorityEncoder.encode_bound, NimAudit.PriorityEncoder.encode_noflag, NimAudit.PriorityEncoder.encode_least, NimAudit.PriorityEncoder.encode_zero, NimAudit.PriorityEncoder.encode_one]
+  lean_defs: [NimAudit.PriorityEncoder.encode]
+  assumptions: "Index width $r$ with $N\\le 2^r$ (the replay counter needs $N<2^r$)."
+  audit_rows: [app:impl]
+
+- id: c-recurrent-update
+  target: par-the-recurrent-update-p1
+  short: "Scan and replay updates are shallow; bit-level refinement and register bounds hold on well-formed streams"
+  category: checked-theorem
+  lean: [NimAudit.ControllerBits.step_refines, NimAudit.ControllerBits.brun_refines, NimAudit.ControllerBits.bstep_reset, NimAudit.Controller.stream_fits, NimAudit.Family.ctrl_ac0]
+  depends_on: [c-replay]
+
+- id: c-threshold-realisation
+  target: par-realisation-with-fixed-scale-threshold-gates-p1
+  short: "Compiler from formulas to {0,1}-weight threshold networks: ≤2d+2 layers, ≤(2d+1)S+K gates, widths ≤ S+n"
+  category: checked-theorem
+  lean: [NimAudit.ThresholdNet.compileF_spec, NimAudit.ThresholdNet.compileF_fixed_grid, NimAudit.ThresholdNet.compileF_bounded]
+  lean_defs: [NimAudit.ThresholdNet.compileF]
+  audit_rows: [app:impl]
+
+- id: c-depth-table
+  target: par-realisation-with-fixed-scale-threshold-gates-table1
+  short: "Certified depth and layer bounds for one evaluation of each component"
+  category: checked-theorem
+  lean: [NimAudit.Family.rest_ac0, NimAudit.Family.rest_net, NimAudit.Family.mh_ac0, NimAudit.Family.mh_net, NimAudit.Family.pol_ac0, NimAudit.Family.pol_net, NimAudit.Family.ctrl_ac0, NimAudit.Family.ctrl_net, NimAudit.Shootout.sh_ac0, NimAudit.Shootout.sh_net]
+  correspondence: "Each bound is for one evaluation of the component (one move selection, one policy step, one controller update or tick). The time needed to repeat evaluations is part of the algorithm, not of these bounds."
+  audit_rows: [app:impl]
+
+- id: par:controller-costs
+  short: "Shootout controller: NB+4+r+B state bits plus the read-only original board"
+  category: checked-theorem
+  lean: [NimAudit.Shootout.sh_ac0, NimAudit.Shootout.sh_net, NimAudit.Shootout.ee_spec, NimAudit.Shootout.ahSel_wins]
+  lean_defs: [NimAudit.Shootout.enc, NimAudit.Shootout.IW]
+  correspondence: "The certified input width of one tick is $IW=2BN+B+r+5$: the $NB+4+r+B$ register bits, one reset bit and the $NB$ bits of the original board, which is held fixed."
+  audit_rows: [par:controller-costs]
+
+- id: c-controller-evals
+  target: par:controller-costs-p2
+  short: "All-head schedule: M+2B+2 component evaluations, with M ≤ BN(2^B−1)"
+  category: checked-theorem
+  lean: [NimAudit.Shootout.ahL_counts, NimAudit.Shootout.ah_counts, NimAudit.Shootout.ee_counts]
+  depends_on: [par:controller-costs]
+  audit_rows: [par:controller-costs]
+
+# ------------------------------------------------------------------ Appendix D
+- id: x-example-pairing-strategy
+  short: "Pairing strategy: a constant-depth mirror selector wins as second player on paired boards"
+  category: checked-theorem
+  lean: [NimAudit.Misc.pairing_wins, NimAudit.Misc.pairR_correct, NimAudit.Misc.pairBin_bound, NimAudit.Mastery.pairing_net_weak, NimAudit.Mastery.pairing_first_vacuous]
+  lean_defs: [NimAudit.Misc.Paired]
+  audit_rows: [app:weak]
+
+- id: c-weak-vs-strong
+  target: app:weak-p1
+  short: "From (3), taking all stones weakly masters the position but is not strong mastery"
+  category: checked-theorem
+  lean: [NimAudit.Mastery.sep3_weak, NimAudit.Mastery.sep3_not_strong, NimAudit.Mastery.strong_weak]
+  lean_defs: [NimAudit.Mastery.sep3]
+  audit_rows: [app:weak]
+
+# ------------------------------------------------------------------ Appendix F
+- id: c-noise-model
+  target: app:noise-samples-p1
+  short: "Symmetric channel with agreement (1+a)/2; m*(a) is the least sample count with both errors ≤ 1/4"
+  category: checked-definition
+  lean: [NimAudit.RealNoise.pOf, NimAudit.RealNoise.chan_law, NimAudit.RealNoise.Ach, NimAudit.RealNoise.mMin, NimAudit.RealNoise.mMin_spec]
+  audit_rows: [app:noise-samples]
+
+- id: prop:noise-samples
+  short: "3/(32a²) ≤ m*(a) ≤ ⌈4/a²⌉ ≤ 17/(4a²); majority with ties declared 0 attains the middle bound"
+  category: checked-theorem
+  lean: [NimAudit.RealNoise.mMin_spec, NimAudit.RealNoise.mMin_bounds, NimAudit.RealNoise.mMin_theta, NimAudit.RealNoise.majority_succeeds, NimAudit.RealNoise.any_rule_needs]
+  lean_defs: [NimAudit.RealNoise.mUp]
+  assumptions: "$0<a\\le1/2$; observations independent given $Y$; randomised decision rules allowed; error at most $1/4$ for each value of $Y$."
+  audit_rows: [prop:noise-samples, app:noise-samples]
+
+- id: c-flip-cases
+  target: app:noise-samples-p2
+  short: "The flip model gives a=(1−2ε)^L; small bias eventually; ε=0 or L=0 exact; a=0 hopeless; reuse gives nothing"
+  category: checked-theorem
+  lean: [NimAudit.RealNoise.flip_repeated, NimAudit.RealNoise.flip_mMin, NimAudit.RealNoise.eventually_small, NimAudit.RealNoise.flip_exact, NimAudit.RealNoise.zero_signal_never, NimAudit.Noise.no_signal, NimAudit.RealNoise.reuse_any_rule]
+  audit_rows: [app:noise-samples]
+
+# ------------------------------------------------------------------ Appendix G, H
+- id: app:rollout-proofs
+  short: "Full proof of Proposition 5.9: rollout counts, outcome identities, selector, winning, step bound"
+  category: checked-theorem
+  lean: [NimAudit.Rollout.run_length, NimAudit.Rollout.run_parity, NimAudit.Game.reconstruct_eq, NimAudit.Rollout.exists_decreasing_heap, NimAudit.Game.agent_wins, NimAudit.Game.totalRolloutMoves_le]
+  depends_on: [prop:rollout-sufficiency]
+  audit_rows: [app:rollout-proofs]
+
+- id: app:search-gap-proof
+  short: "Full proof of Theorem 5.12: uniform σ, character expansion, finite bound, Håstad input, attainability"
+  category: checked-conditional
+  lean: [NimAudit.Prob.success_bound, NimAudit.CorrBridge.circuit_readout_bound, NimAudit.ClassicalBoundary.search_gap_asymptotic, NimAudit.Attain.attain_exact, NimAudit.Attain.paper_example_two_thirds]
+  named_inputs: [HastadNegl]
+  depends_on: [thm:search-gap.i]
+  audit_rows: [app:search-gap-proof]
+
+- id: eq:finite-correlation-bound
+  short: "Under the stated correlation premise η_N: success ≤ 2/(q−1) + (q−1)η_N"
+  category: checked-theorem
+  lean: [NimAudit.Prob.success_bound]
+  lean_defs: [NimAudit.Prob.CorrHyp]
+  assumptions: "The premise: $|\\mathbb E_U[H_{b,a}\\chi_u]|\\le\\eta_N$ for all $b$, all $a$ and all nonzero $u$, under the unconditioned uniform distribution."
+  correspondence: "This inequality is proved outright from its stated premise. Only the step that supplies a negligible $\\eta_N$ for AC⁰ readouts uses the classical input."
+  audit_rows: [eq:finite-correlation-bound]
+
+# Construction illustrations added to Appendix C, 2026-10-10.
+- id: par:construction-example
+  short: "Worked two-frame construction: explicit weights and operations, not a trained network"
+  category: informal
+  depends_on: [c-candidate-moves, c-binary-index]
+- id: fig:construction-pipeline
+  short: "Schematic restoration pipeline on (3,5,6) to (3,4,6)"
+  category: informal
+  depends_on: [par:construction-example, c-candidate-moves, c-binary-index]
+- id: fig:threshold-compilation
+  short: "Schematic Boolean-to-threshold compiler with fixed weights and thresholds"
+  category: informal
+  depends_on: [c-threshold-realisation]
+- id: par:depth-accounting
+  short: "Origin and limitations of the 20-to-42 layer bound"
+  category: informal
+  depends_on: [c-depth-table, c-threshold-realisation]

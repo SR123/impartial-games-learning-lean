@@ -1,0 +1,10 @@
+# Phase 8: isolated, pinned Mathlib dependency (used only by the Real-instance files).
+# The 34 earlier local modules and the core-only phase-8 files are compiled directly
+# with `lean` (see build.sh); Lake is used only to fetch and build Mathlib.
+name = "NimPhase8"
+version = "0.1.0"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.26.0"

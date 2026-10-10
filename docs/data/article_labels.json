@@ -1,0 +1,566 @@
+{
+ "sec:intro": {
+  "number": "1",
+  "kind": "section",
+  "id": "sec:intro",
+  "heading": "sec:intro"
+ },
+ "fig:barrier-blueprint": {
+  "number": "1",
+  "kind": "figure",
+  "id": "fig:barrier-blueprint",
+  "heading": "sec:intro"
+ },
+ "sec:contrib": {
+  "number": "1.1",
+  "kind": "section",
+  "id": "sec:contrib",
+  "heading": "sec:contrib"
+ },
+ "sec:scope": {
+  "number": "1.2",
+  "kind": "section",
+  "id": "sec:scope",
+  "heading": "sec:scope"
+ },
+ "sec:framework": {
+  "number": "2",
+  "kind": "section",
+  "id": "sec:framework",
+  "heading": "sec:framework"
+ },
+ "sec:framework-fixedprecision": {
+  "number": "2.1",
+  "kind": "section",
+  "id": "sec:framework-fixedprecision",
+  "heading": "sec:framework-fixedprecision"
+ },
+ "def:quantised-inference": {
+  "number": "2.1",
+  "kind": "definition",
+  "id": "def:quantised-inference",
+  "heading": "sec:framework-fixedprecision"
+ },
+ "rem:ac0-scope": {
+  "number": "2.2",
+  "kind": "remark",
+  "id": "rem:ac0-scope",
+  "heading": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction"
+ },
+ "rem:local-vs-global-parity": {
+  "number": "2.3",
+  "kind": "remark",
+  "id": "rem:local-vs-global-parity",
+  "heading": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction"
+ },
+ "sec:simulation": {
+  "number": "2.2",
+  "kind": "section",
+  "id": "sec:simulation",
+  "heading": "sec:simulation"
+ },
+ "thm:sim-ac0": {
+  "number": "2.4",
+  "kind": "theorem",
+  "id": "thm:sim-ac0",
+  "heading": "sec:simulation"
+ },
+ "sec:related": {
+  "number": "3",
+  "kind": "section",
+  "id": "sec:related",
+  "heading": "sec:related"
+ },
+ "sec:impartial": {
+  "number": "4",
+  "kind": "section",
+  "id": "sec:impartial",
+  "heading": "sec:impartial"
+ },
+ "def:impartial": {
+  "number": "4.1",
+  "kind": "definition",
+  "id": "def:impartial",
+  "heading": "sec-impartial-games"
+ },
+ "def:nim": {
+  "number": "4.2",
+  "kind": "definition",
+  "id": "def:nim",
+  "heading": "sec-nim"
+ },
+ "def:nimsum": {
+  "number": "4.3",
+  "kind": "definition",
+  "id": "def:nimsum",
+  "heading": "sec-sprague-grundy-theory-and-nim-sum"
+ },
+ "thm:nim-win": {
+  "number": "4.4",
+  "kind": "theorem",
+  "id": "thm:nim-win",
+  "heading": "sec-sprague-grundy-theory-and-nim-sum"
+ },
+ "sec:main": {
+  "number": "5",
+  "kind": "section",
+  "id": "sec:main",
+  "heading": "sec:main"
+ },
+ "def:mastery": {
+  "number": "5.1",
+  "kind": "definition",
+  "id": "def:mastery",
+  "heading": "sec-mastery-notions"
+ },
+ "sec:impossibility": {
+  "number": "5.2",
+  "kind": "section",
+  "id": "sec:impossibility",
+  "heading": "sec:impossibility"
+ },
+ "thm:singleframe-impossible": {
+  "number": "5.2",
+  "kind": "theorem",
+  "id": "thm:singleframe-impossible",
+  "heading": "sec:impossibility"
+ },
+ "sec:multiframe": {
+  "number": "5.3",
+  "kind": "section",
+  "id": "sec:multiframe",
+  "heading": "sec:multiframe"
+ },
+ "def:nimber-difference": {
+  "number": "5.3",
+  "kind": "definition",
+  "id": "def:nimber-difference",
+  "heading": "sec:multiframe"
+ },
+ "lem:nimber-diff-ac0": {
+  "number": "5.4",
+  "kind": "lemma",
+  "id": "lem:nimber-diff-ac0",
+  "heading": "sec:multiframe"
+ },
+ "sec:restoration": {
+  "number": "5.3.1",
+  "kind": "section",
+  "id": "sec:restoration",
+  "heading": "sec:restoration"
+ },
+ "prop:restore": {
+  "number": "5.5",
+  "kind": "proposition",
+  "id": "prop:restore",
+  "heading": "sec:restoration"
+ },
+ "fig:restoration-example": {
+  "number": "2",
+  "kind": "figure",
+  "id": "fig:restoration-example",
+  "heading": "sec:restoration"
+ },
+ "sec:search-gap": {
+  "number": "5.4",
+  "kind": "section",
+  "id": "sec:search-gap",
+  "heading": "sec:search-gap"
+ },
+ "def:rollout-policy": {
+  "number": "5.6",
+  "kind": "definition",
+  "id": "def:rollout-policy",
+  "heading": "sec:search-gap"
+ },
+ "def:agent-types": {
+  "number": "5.7",
+  "kind": "definition",
+  "id": "def:agent-types",
+  "heading": "sec:search-gap"
+ },
+ "rem:why-multi-head": {
+  "number": "5.8",
+  "kind": "remark",
+  "id": "rem:why-multi-head",
+  "heading": "sec:search-gap"
+ },
+ "par:shootout-controller": {
+  "number": "5.4",
+  "kind": "paragraph",
+  "id": "par:shootout-controller",
+  "heading": "par:shootout-controller"
+ },
+ "fig:fsm-shootout-controller": {
+  "number": "3",
+  "kind": "figure",
+  "id": "fig:fsm-shootout-controller",
+  "heading": "par:shootout-controller"
+ },
+ "prop:rollout-sufficiency": {
+  "number": "5.9",
+  "kind": "proposition",
+  "id": "prop:rollout-sufficiency",
+  "heading": "par-depth-amplification"
+ },
+ "prop:single-policy-bound": {
+  "number": "5.10",
+  "kind": "proposition",
+  "id": "prop:single-policy-bound",
+  "heading": "par-a-single-policy-head-yields-only-one-bit"
+ },
+ "rem:noisy-rollout-decay": {
+  "number": "5.11",
+  "kind": "remark",
+  "id": "rem:noisy-rollout-decay",
+  "heading": "par-a-single-policy-head-yields-only-one-bit"
+ },
+ "fig:rollout_gap": {
+  "number": "4",
+  "kind": "figure",
+  "id": "fig:rollout_gap",
+  "heading": "par-the-initialisation-boundary-for-restoration"
+ },
+ "thm:search-gap": {
+  "number": "5.12",
+  "kind": "theorem",
+  "id": "thm:search-gap",
+  "heading": "par-the-initialisation-boundary-for-restoration"
+ },
+ "sec:recurrent-bypass": {
+  "number": "5.5",
+  "kind": "section",
+  "id": "sec:recurrent-bypass",
+  "heading": "sec:recurrent-bypass"
+ },
+ "prop:streaming-nimsum": {
+  "number": "5.13",
+  "kind": "proposition",
+  "id": "prop:streaming-nimsum",
+  "heading": "par-serialising-positions-and-retaining-state"
+ },
+ "sec:bypass-scope": {
+  "number": "5.6",
+  "kind": "section",
+  "id": "sec:bypass-scope",
+  "heading": "sec:bypass-scope"
+ },
+ "prop:bypass-interfaces": {
+  "number": "5.14",
+  "kind": "proposition",
+  "id": "prop:bypass-interfaces",
+  "heading": "sec:bypass-scope"
+ },
+ "sec:learnability": {
+  "number": "6",
+  "kind": "section",
+  "id": "sec:learnability",
+  "heading": "sec:learnability"
+ },
+ "sec:teacher": {
+  "number": "6.2",
+  "kind": "section",
+  "id": "sec:teacher",
+  "heading": "sec:teacher"
+ },
+ "sec:majority-vs-parity": {
+  "number": "6.3",
+  "kind": "section",
+  "id": "sec:majority-vs-parity",
+  "heading": "sec:majority-vs-parity"
+ },
+ "sec:spectral-view": {
+  "number": "6.4",
+  "kind": "section",
+  "id": "sec:spectral-view",
+  "heading": "sec:spectral-view"
+ },
+ "def:fourier-tail": {
+  "number": "6.1",
+  "kind": "definition",
+  "id": "def:fourier-tail",
+  "heading": "sec:spectral-view"
+ },
+ "eq:tail-correlation": {
+  "number": "6.1",
+  "kind": "equation",
+  "id": "eq:tail-correlation",
+  "heading": "par-parity-is-a-pure-high-frequency-character"
+ },
+ "eq:delta-extension": {
+  "number": "6.2",
+  "kind": "equation",
+  "id": "eq:delta-extension",
+  "heading": "par-local-vs-global-parity-in-nim"
+ },
+ "sec:experiments": {
+  "number": "7",
+  "kind": "section",
+  "id": "sec:experiments",
+  "heading": "sec:experiments"
+ },
+ "sec:arch": {
+  "number": "7.1",
+  "kind": "section",
+  "id": "sec:arch",
+  "heading": "sec:arch"
+ },
+ "sec:state-action-repr": {
+  "number": "7.1.1",
+  "kind": "section",
+  "id": "sec:state-action-repr",
+  "heading": "sec:state-action-repr"
+ },
+ "table:arch": {
+  "number": "1",
+  "kind": "table",
+  "id": "table:arch",
+  "heading": "sec-network-architecture"
+ },
+ "sec:supervised-restoration": {
+  "number": "7.2",
+  "kind": "section",
+  "id": "sec:supervised-restoration",
+  "heading": "sec:supervised-restoration"
+ },
+ "sec:exp-restoration": {
+  "number": "7.2",
+  "kind": "section",
+  "id": "sec:exp-restoration",
+  "heading": "sec:supervised-restoration"
+ },
+ "fig:valacc-H20k4": {
+  "number": "5",
+  "kind": "figure",
+  "id": "fig:valacc-H20k4",
+  "heading": "par-one-frame-does-not-learn-restoration-two-frame-eventually-do"
+ },
+ "fig:testacc-H20k4": {
+  "number": "6",
+  "kind": "figure",
+  "id": "fig:testacc-H20k4",
+  "heading": "par-one-frame-does-not-learn-restoration-two-frame-eventually-do"
+ },
+ "sec:exp-fsm-shootout": {
+  "number": "7.3",
+  "kind": "section",
+  "id": "sec:exp-fsm-shootout",
+  "heading": "sec:exp-fsm-shootout"
+ },
+ "tab:fsm-shootout": {
+  "number": "2",
+  "kind": "table",
+  "id": "tab:fsm-shootout",
+  "heading": "par-results"
+ },
+ "sec:discussion": {
+  "number": "8",
+  "kind": "section",
+  "id": "sec:discussion",
+  "heading": "sec:discussion"
+ },
+ "sec:idealisation": {
+  "number": "8.1",
+  "kind": "section",
+  "id": "sec:idealisation",
+  "heading": "sec:idealisation"
+ },
+ "sec:math": {
+  "number": "8.2",
+  "kind": "section",
+  "id": "sec:math",
+  "heading": "sec:math"
+ },
+ "sec:othergames": {
+  "number": "8.3",
+  "kind": "section",
+  "id": "sec:othergames",
+  "heading": "sec:othergames"
+ },
+ "sec:multipolicy-discussion": {
+  "number": "8.4",
+  "kind": "section",
+  "id": "sec:multipolicy-discussion",
+  "heading": "sec:multipolicy-discussion"
+ },
+ "sec:opt-gap": {
+  "number": "8.5",
+  "kind": "section",
+  "id": "sec:opt-gap",
+  "heading": "sec:opt-gap"
+ },
+ "sec:conclusion": {
+  "number": "9",
+  "kind": "section",
+  "id": "sec:conclusion",
+  "heading": "sec:conclusion"
+ },
+ "sec:development": {
+  "number": "10",
+  "kind": "section",
+  "id": "sec:development",
+  "heading": "sec:development"
+ },
+ "sec:verification": {
+  "number": "10",
+  "kind": "section",
+  "id": "sec:verification",
+  "heading": "sec:development"
+ },
+ "app:defs": {
+  "number": "A",
+  "kind": "section",
+  "id": "app:defs",
+  "heading": "app:defs"
+ },
+ "app:precision": {
+  "number": "A.1",
+  "kind": "section",
+  "id": "app:precision",
+  "heading": "app:precision"
+ },
+ "app:NN": {
+  "number": "A.2",
+  "kind": "section",
+  "id": "app:NN",
+  "heading": "app:NN"
+ },
+ "def:NN-formal": {
+  "number": "A.1",
+  "kind": "definition",
+  "id": "def:NN-formal",
+  "heading": "app:NN"
+ },
+ "app:RNN": {
+  "number": "A.3",
+  "kind": "section",
+  "id": "app:RNN",
+  "heading": "app:RNN"
+ },
+ "def:RNN-formal": {
+  "number": "A.2",
+  "kind": "definition",
+  "id": "def:RNN-formal",
+  "heading": "app:RNN"
+ },
+ "app:LTST": {
+  "number": "A.4",
+  "kind": "section",
+  "id": "app:LTST",
+  "heading": "app:LTST"
+ },
+ "def:LTST-formal": {
+  "number": "A.3",
+  "kind": "definition",
+  "id": "def:LTST-formal",
+  "heading": "app:LTST"
+ },
+ "app:ac0proof": {
+  "number": "B",
+  "kind": "section",
+  "id": "app:ac0proof",
+  "heading": "app:ac0proof"
+ },
+ "app:oneunit": {
+  "number": "B.1",
+  "kind": "section",
+  "id": "app:oneunit",
+  "heading": "app:oneunit"
+ },
+ "lem:unit-ac0": {
+  "number": "B.1",
+  "kind": "lemma",
+  "id": "lem:unit-ac0",
+  "heading": "app:oneunit"
+ },
+ "app:network": {
+  "number": "B.2",
+  "kind": "section",
+  "id": "app:network",
+  "heading": "app:network"
+ },
+ "lem:layer-ac0": {
+  "number": "B.3",
+  "kind": "lemma",
+  "id": "lem:layer-ac0",
+  "heading": "app:network"
+ },
+ "app:impl": {
+  "number": "C",
+  "kind": "section",
+  "id": "app:impl",
+  "heading": "app:impl"
+ },
+ "par:construction-example": {
+  "number": "C",
+  "kind": "paragraph",
+  "id": "par:construction-example",
+  "heading": "par:construction-example"
+ },
+ "fig:construction-pipeline": {
+  "number": "7",
+  "kind": "figure",
+  "id": "fig:construction-pipeline",
+  "heading": "par:construction-example"
+ },
+ "fig:threshold-compilation": {
+  "number": "8",
+  "kind": "figure",
+  "id": "fig:threshold-compilation",
+  "heading": "par-realisation-with-fixed-scale-threshold-gates"
+ },
+ "par:depth-accounting": {
+  "number": "C",
+  "kind": "paragraph",
+  "id": "par:depth-accounting",
+  "heading": "par:depth-accounting"
+ },
+ "par:controller-costs": {
+  "number": "C",
+  "kind": "paragraph",
+  "id": "par:controller-costs",
+  "heading": "par:controller-costs"
+ },
+ "app:weak": {
+  "number": "D",
+  "kind": "section",
+  "id": "app:weak",
+  "heading": "app:weak"
+ },
+ "app:nimberdiff": {
+  "number": "E",
+  "kind": "section",
+  "id": "app:nimberdiff",
+  "heading": "app:nimberdiff"
+ },
+ "app:noise-samples": {
+  "number": "F",
+  "kind": "section",
+  "id": "app:noise-samples",
+  "heading": "app:noise-samples"
+ },
+ "prop:noise-samples": {
+  "number": "F.1",
+  "kind": "proposition",
+  "id": "prop:noise-samples",
+  "heading": "app:noise-samples"
+ },
+ "app:rollout-proofs": {
+  "number": "G",
+  "kind": "section",
+  "id": "app:rollout-proofs",
+  "heading": "app:rollout-proofs"
+ },
+ "app:search-gap-proof": {
+  "number": "H",
+  "kind": "section",
+  "id": "app:search-gap-proof",
+  "heading": "app:search-gap-proof"
+ },
+ "eq:finite-correlation-bound": {
+  "number": "H.1",
+  "kind": "equation",
+  "id": "eq:finite-correlation-bound",
+  "heading": "app:search-gap-proof"
+ }
+}

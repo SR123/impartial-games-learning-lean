@@ -1,0 +1,211 @@
+{
+ "date_utc": "2026-10-10T22:47:41Z",
+ "all_passed": true,
+ "passed": 29,
+ "total": 29,
+ "claim_counts": {
+  "informal": 47,
+  "classical-external": 12,
+  "checked-definition": 19,
+  "checked-theorem": 53,
+  "checked-conditional": 6,
+  "open": 4,
+  "empirical": 20
+ },
+ "checks": [
+  {
+   "check": "input hash input/jmlr_source/paper_jmlr.tex",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "input hash input/canonical_paper.tex",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "input hash input/paper_jmlr.pdf",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "dist PDF is byte-identical to the input PDF",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "title, author and affiliation match the PDF",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "landing page: exact title and author, the three main links and the discreet Author’s perspective link",
+   "ok": true,
+   "detail": "{'Read the paper': 'paper.html', 'Download the identical PDF': 'paper/paper_jmlr.pdf', 'Proof coverage': 'coverage.html', 'Author’s perspective': 'author.html'}",
+   "data": null
+  },
+  {
+   "check": "all source LaTeX labels present with the .aux numbers",
+   "ok": true,
+   "detail": "94 labels in .aux; 94 in source; 0 number mismatches",
+   "data": []
+  },
+  {
+   "check": "every label is a direct anchor in paper.html",
+   "ok": true,
+   "detail": "0 missing",
+   "data": []
+  },
+  {
+   "check": "each contents entry has one link to its own section",
+   "ok": true,
+   "detail": "55 entries; 0 split or missing links",
+   "data": []
+  },
+  {
+   "check": "headings, statement headers, captions and equation numbers match the PDF text",
+   "ok": true,
+   "detail": "111 numbered items compared; 0 mismatches",
+   "data": []
+  },
+  {
+   "check": "bibliography: all source entries found in the PDF reference list, same order",
+   "ok": true,
+   "detail": "36 entries; missing []",
+   "data": null
+  },
+  {
+   "check": "every rendered citation string occurs in the PDF text",
+   "ok": true,
+   "detail": "31 citations",
+   "data": []
+  },
+  {
+   "check": "formula inventory: every source formula rendered once with its exact TeX",
+   "ok": true,
+   "detail": "1053 source formulas, 1053 rendered annotations",
+   "data": null
+  },
+  {
+   "check": "no KaTeX rendering errors in the article",
+   "ok": true,
+   "detail": "0 errors",
+   "data": null
+  },
+  {
+   "check": "article text equals the independent source-derived text (normalised words)",
+   "ok": true,
+   "detail": "17846 HTML words, 17846 source words, similarity 1.00000, 0 unexplained differences",
+   "data": []
+  },
+  {
+   "check": "article text against pdftotext of the supplied PDF: every difference classified",
+   "ok": true,
+   "detail": "similarity 0.9086; classified {'hyphenation': 11, 'math': 2457, 'math_adjacency': 1, 'figure_text': 130, 'reordered_words': 502} (reordered words: float and table placement); 0 unexplained words",
+   "data": {
+    "pdf_only_words": [],
+    "html_only_words": []
+   }
+  },
+  {
+   "check": "author's note text appears only on author.html",
+   "ok": true,
+   "detail": "{'leaks': [], 'missing_probes': []}",
+   "data": null
+  },
+  {
+   "check": "paper offers a separate history link outside the manuscript text",
+   "ok": true,
+   "detail": null,
+   "data": null
+  },
+  {
+   "check": "every internal link and asset resolves (files and fragment ids)",
+   "ok": true,
+   "detail": "50842 references in 208 pages; 0 broken; 13 external links (not fetched)",
+   "data": {
+    "broken": [],
+    "external": [
+     "https://arxiv.org/abs/2310.07923",
+     "https://arxiv.org/html/2411.06403v1#S1",
+     "https://doi.org/10.1007/s10994-026-06996-1",
+     "https://doi.org/10.1016/S0168-0072%2897%2900029-8",
+     "https://doi.org/10.1090/dimacs/039/02",
+     "https://doi.org/10.1109/SFCS.2001.959896",
+     "https://doi.org/10.1609/aaai.v40i43.41010",
+     "https://fomarchive.ugent.be/2017-October/020642.html",
+     "https://fomarchive.ugent.be/2017-October/020648.html",
+     "https://fomarchive.ugent.be/2017-September/020612.html",
+     "https://fomarchive.ugent.be/2017-September/020619.html",
+     "https://library.slmath.org/books/Book71/files/GONC6-04.pdf",
+     "https://sr123.github.io/impartial-games-learning-lean/"
+    ]
+   }
+  },
+  {
+   "check": "claim records: required fields, anchors, pages, Lean names in their source ranges, audited hashes",
+   "ok": true,
+   "detail": "161 records; by category {'informal': 47, 'classical-external': 12, 'checked-definition': 19, 'checked-theorem': 53, 'checked-conditional': 6, 'open': 4, 'empirical': 20}",
+   "data": []
+  },
+  {
+   "check": "every theorem-like environment has a claim record",
+   "ok": true,
+   "detail": "32 statements",
+   "data": []
+  },
+  {
+   "check": "every audited correspondence row is mapped to a claim record",
+   "ok": true,
+   "detail": "51 rows; unmapped []",
+   "data": null
+  },
+  {
+   "check": "illustration engine equals Lean's evaluation of the depicted definitions on every reference case",
+   "ok": true,
+   "detail": "cases ctrl 155, net 4, rest 12299, restsize 4, shoot 313, store 151, summ 260; mismatches 0",
+   "data": []
+  },
+  {
+   "check": "two-frame illustration equals the independent reference; inside the promise every reply is legal and restores 0",
+   "ok": true,
+   "detail": "3356 cases (329 inside the promise); 0 disagreements",
+   "data": []
+  },
+  {
+   "check": "rollout illustration: outcomes are the paper's channel bits, move counts follow the heap formula, evaluations are M + 2B + 2 (all heads) and the readout is the cancelling move",
+   "ok": true,
+   "detail": "1328 boards and schedules; 0 disagreements",
+   "data": []
+  },
+  {
+   "check": "recurrence illustration: summaries, differences, moves and update counts (2N + 2 replay, N + 1 storage) equal the independent reference over whole games",
+   "ok": true,
+   "detail": "600 games; 0 disagreements",
+   "data": []
+  },
+  {
+   "check": "reset and separator edge cases: reset restores the initial registers from any state; a separator clears only the accumulator, keeping the completed position's summary and validity (an extra separator, read as an empty position, reports the difference from it); after a reset there is no previous summary; decision-time differences span two moves",
+   "ok": true,
+   "detail": "200 random resets and 4 scenarios",
+   "data": []
+  },
+  {
+   "check": "illustration sections: inside the Explain level of every attached claim, labelled, showing their default example's values, with Lean links to the declaring source line and working claim links",
+   "ok": true,
+   "detail": "37 sections; 561 Lean links checked",
+   "data": []
+  },
+  {
+   "check": "site crawled over HTTP under the non-root prefix /nim-interactive/: every resource returns 200",
+   "ok": true,
+   "detail": "320 resources fetched; 0 failures",
+   "data": []
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+/root/interactive/lean/phase8/RealFourier.lean:85:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/root/interactive/lean/phase8/RealFourier.lean:155:14: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/root/interactive/lean/phase8/RealFourier.lean:155:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/root/interactive/lean/phase8/RealFourier.lean:155:14: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/root/interactive/lean/phase8/RealFourier.lean:155:26: warning: 'exact Subsingleton.elim _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'NimAudit.RealFourier.toL_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.toL_injective' depends on axioms: [propext, Quot.sound]
+'NimAudit.RealFourier.toL_surj' depends on axioms: [propext, Quot.sound]
+'NimAudit.RealFourier.image_toL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.gs_eq_fintype_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.selCount_toL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.chiF_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.ones_toL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.lift_toL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.fhat_eq_coef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.inversion_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.orthonormal_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.uniqueness_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.parseval_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dim_zero_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.tailF_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.parity_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.nimBit_spectrum_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.delta_spectrum_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.bandLimited_corr_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dC_not_character_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dC_two_coefs_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dSign_enc_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dSign_known_heap_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.dC_one_exactDeg_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.gMask_delta_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.char_unique_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.char_unique_signed_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.RealFourier.no_low_degree_extension_real' depends on axioms: [propext, Classical.choice, Quot.sound]

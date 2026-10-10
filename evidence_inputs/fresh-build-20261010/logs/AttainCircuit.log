@@ -1,0 +1,35 @@
+/root/interactive/lean/phase3/AttainCircuit.lean:322:37: warning: This simp argument is unused:
+  Function.comp
+
+Hint: Omit it from the simp argument list.
+  simp [List.any_map,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.AttainCircuit.cancel_iff_bit' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.testBit_pred' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.pos_iff_bit' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.cancelIdx_firstTrue' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.decIdx_firstTrue' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.range_map_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.firstTrue_or' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.firstTrue_lt' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.attainF_eq' depends on axioms: [propext]
+'NimAudit.AttainCircuit.firstC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.cancel_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.nz_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.toNatBE_of_bits' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.attR_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.succCount_attR' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.AttainCircuit.Ua_ge' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.mem_pair' depends on axioms: [propext]
+'NimAudit.AttainCircuit.attRC_depth_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.AttainCircuit.and_max'' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.or_max'' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.in_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.attRC_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.log2_lt' depends on axioms: [propext]
+'NimAudit.AttainCircuit.attRC_RBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.AttainCircuit.RBound_mono' depends on axioms: [propext, Quot.sound]
+'NimAudit.AttainCircuit.premise_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.AttainCircuit.conditional_sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.AttainCircuit.asymptotic_sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]

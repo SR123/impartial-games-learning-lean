@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 7.1.3, paragraph 1: Soft-target cross-entropy to the uniform distribution over optimal restoration moves</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-exp-loss.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#sec-training-targets-and-loss-p1">Back to Section 7.1.3, paragraph 1 in the paper</a>
+· <a href="coverage.html#c-c-exp-loss">Coverage table</a></nav>
+<h1 data-title="Section 7.1.3, paragraph 1: Soft-target cross-entropy to the uniform distribution over optimal restoration moves">Section 7.1.3, paragraph 1<span class="claim-h-short">Soft-target cross-entropy to the uniform distribution over optimal restoration moves</span></h1>
+<p class="cat-line"><span class="cat cat-empirical" title="Supported by saved experimental runs, not by a proof.">Empirical result</span> <span class="cat-desc">Supported by saved experimental runs, not by a proof.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec-training-targets-and-loss-p1">For each training input (single-frame state or two-frame state-pair), the target is a soft distribution <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mrow><mi mathvariant="normal">o</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow></msub><mo stretchy="false">(</mo><mo>⋅</mo><mo>∣</mo><msup><mi>p</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\pi_{\mathrm{opt}}(\cdot\mid p&#x27;)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">opt</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0019em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span> over optimal restoration moves. The policy head is trained with cross-entropy to this target. The soft-target cross-entropy also uses unmasked logits. No value loss is used in this supervised restoration experiment.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 1026–1029.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>The target for each input is a probability distribution spread evenly over all optimal restoration moves from the
+current position, and the network is trained with cross-entropy against that soft target (on unmasked logits). No value
+loss is used.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p><strong>How this is covered.</strong> Empirical setup; not formalised.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#sec-training-targets-and-loss-p1"><code>sec-training-targets-and-loss-p1</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 7.1.3, paragraph 1</td></tr><tr><th scope="row">Claim</th><td>Soft-target cross-entropy to the uniform distribution over optimal restoration moves</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-empirical" title="Supported by saved experimental runs, not by a proof.">Empirical result</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 1026–1029; SHA-256 of the normalised block source <code class="hash">68aa8bd326b0ab98…</code></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-exp-loss</code>, <code>formal/c-exp-loss</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is an empirical statement about saved experimental runs. Lean proofs do not certify training runs, curves or checkpoints.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 7.3, paragraph 4: Recall 8/15 and restoration accuracy measure different things</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-different-metrics.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#par-results-p4">Back to Section 7.3, paragraph 4 in the paper</a>
+· <a href="coverage.html#c-c-different-metrics">Coverage table</a></nav>
+<h1 data-title="Section 7.3, paragraph 4: Recall 8/15 and restoration accuracy measure different things">Section 7.3, paragraph 4<span class="claim-h-short">Recall 8/15 and restoration accuracy measure different things</span></h1>
+<p class="cat-line"><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span> <span class="cat-desc">Motivation, interpretation or scope; not a formal claim.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-par-results-p4"><em>Different metrics.</em> The recall <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi mathvariant="normal">/</mi><mn>15</mn></mrow><annotation encoding="application/x-tex">8/15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">8/15</span></span></span></span></span> measures the fraction of nonzero nim-sums detected by the exact least-significant-bit channel. Restoration accuracy instead measures whether a complete selected move cancels the full nim-sum. A resemblance between the recall and a training plateau is not evidence that the same learned mechanism produces both.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 1186–1187.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>Two numbers near 0.53 appear in the paper: the single-head recall <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi mathvariant="normal">/</mi><mn>15</mn></mrow><annotation encoding="application/x-tex">8/15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">8/15</span></span></span></span> and the restoration plateau near 0.54. They
+measure different things (detecting nonzero nim-sums through the lowest bit versus choosing a complete cancelling move),
+and their resemblance is not evidence of a shared mechanism.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>An interpretive caution; nothing is formalised.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#par-results-p4"><code>par-results-p4</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 7.3, paragraph 4</td></tr><tr><th scope="row">Claim</th><td>Recall 8/15 and restoration accuracy measure different things</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 1186–1187; SHA-256 of the normalised block source <code class="hash">9423c80bcc4f5067…</code></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-different-metrics</code>, <code>formal/c-different-metrics</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is interpretation or motivation, not a formal mathematical claim.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+[
+    node distance=0.8cm and 1.2cm,
+    auto,
+    block/.style={
+        rectangle,
+        draw,
+        fill=blue!5,
+        text width=2.2cm,
+        align=center,
+        rounded corners,
+        minimum height=1.0cm,
+        font=\small
+    },
+    head/.style={
+        rectangle,
+        draw,
+        fill=yellow!10,
+        text width=1.8cm,
+        align=center,
+        rounded corners,
+        minimum height=0.6cm,
+        font=\footnotesize
+    },
+    line/.style={
+        draw,
+        -{Latex[length=2.5mm]},
+        thick,
+        gray!80
+    },
+    barrier/.style={
+        circle,
+        draw=red!80,
+        fill=red!10,
+        very thick,
+        minimum size=0.6cm,
+        inner sep=0pt
+    },
+    success/.style={
+        circle,
+        draw=green!60!black,
+        fill=green!10,
+        very thick,
+        minimum size=0.6cm,
+        inner sep=0pt
+    },
+    labelnode/.style={
+        font=\bfseries\small,
+        anchor=west
+    }
+]
+
+    \node[block] (input1) {Input $P_t$\\ \textit{(Global)}};
+    \node[block, right=of input1] (net1) {Single-Head\\ Network};
+    \node[barrier, right=of net1] (out1) {\Large $\times$};
+    \node[right=0.1cm of out1, align=left, font=\footnotesize, text width=2.5cm] {Cannot compute\\ global parity\\ under FSQI/$\AC^0$};
+
+    \path[line] (input1) -- (net1);
+    \path[line] (net1) -- (out1);
+    \node[above=0.45cm of input1, labelnode] {(a) Barrier: Single-Frame, Single-Head};
+
+    \node[block, below=1.3cm of input1] (input2) {Input $(P_{t-1}, P_t)$\\ \textit{(Transition)}};
+    \node[block, right=of input2] (net2) {Single-Head\\ Network};
+    \node[success, right=of net2] (out2) {\Large $\checkmark$};
+    \node[right=0.1cm of out2, align=left, font=\footnotesize, text width=2.5cm] {Computes Local\\ Difference $\Delta$};
+
+    \path[line] (input2) -- (net2);
+    \path[line] (net2) -- (out2);
+    \node[above=0.45cm of input2, labelnode] {(b) Bypass 1: Multi-Frame Input};
+
+    \node[block, below=1.3cm of input2] (input3) {Input $P_t$\\ \textit{(Global)}};
+
+    \node[right=of input3, text width=0cm, inner sep=0] (split) {};
+    \node[head, right=0.2cm of split, yshift=0.4cm] (head1) {Head $\pi_0$};
+    \node[head, right=0.2cm of split, yshift=-0.4cm] (head2) {Head $\pi_{B-1}$};
+    \node[font=\footnotesize] at ($(head1)!0.5!(head2)$) {$\vdots$};
+
+    \node[success, right=0.8cm of head1, yshift=-0.4cm] (out3) {\Large $\checkmark$};
+    \node[right=0.1cm of out3, align=left, font=\footnotesize, text width=2.5cm] {Rollout outcomes\\ recover $B$ bits};
+
+    \path[line] (input3) -- (split);
+    \draw[line] (split.center) |- (head1.west);
+    \draw[line] (split.center) |- (head2.west);
+    \draw[line] (head1.east) -| (out3.north);
+    \draw[line] (head2.east) -| (out3.south);
+
+    \node[above=0.45cm of input3, labelnode] {(c) Bypass 2: Multiple Rollout Heads};
+
+    \node[block, below=1.3cm of input3] (input4) {Rows of $P_t$\\ then $P_{t+1}$};
+    \node[block, right=of input4] (net4) {Recurrent State\\ $s\leftarrow s\oplus x_i$};
+    \node[success, right=of net4] (out4) {\Large $\checkmark$};
+    \node[right=0.1cm of out4, align=left, font=\footnotesize, text width=2.5cm] {Nim-sum after\\ $N$ row updates\\ (growing latency)};
+    \path[line] (input4) -- (net4);
+    \path[line] (net4) -- (out4);
+    \node[above=0.45cm of input4, labelnode] {(d) Bypass 3: Persistent Recurrence};

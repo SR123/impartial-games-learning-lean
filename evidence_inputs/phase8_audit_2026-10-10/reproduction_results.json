@@ -1,0 +1,192 @@
+[
+  {
+    "module": "NimCore",
+    "exit_code": 0,
+    "seconds": 2.59
+  },
+  {
+    "module": "NimRollout",
+    "exit_code": 0,
+    "seconds": 1.1
+  },
+  {
+    "module": "NimGame",
+    "exit_code": 0,
+    "seconds": 1.84
+  },
+  {
+    "module": "NimProbability",
+    "exit_code": 0,
+    "seconds": 4.81
+  },
+  {
+    "module": "NimAttain",
+    "exit_code": 0,
+    "seconds": 2.49
+  },
+  {
+    "module": "Circuit",
+    "exit_code": 0,
+    "seconds": 3.8
+  },
+  {
+    "module": "NimRecurrent",
+    "exit_code": 0,
+    "seconds": 1.52
+  },
+  {
+    "module": "BitBridge",
+    "exit_code": 0,
+    "seconds": 1.83
+  },
+  {
+    "module": "NimCorrBridge",
+    "exit_code": 0,
+    "seconds": 2.64
+  },
+  {
+    "module": "AttainCircuit",
+    "exit_code": 0,
+    "seconds": 3.28
+  },
+  {
+    "module": "FiniteNet",
+    "exit_code": 0,
+    "seconds": 1.08
+  },
+  {
+    "module": "BinaryReadout",
+    "exit_code": 0,
+    "seconds": 1.3
+  },
+  {
+    "module": "ParityCircuit",
+    "exit_code": 0,
+    "seconds": 1.13
+  },
+  {
+    "module": "Controller",
+    "exit_code": 0,
+    "seconds": 1.05
+  },
+  {
+    "module": "ControllerBits",
+    "exit_code": 0,
+    "seconds": 11.3
+  },
+  {
+    "module": "SharedCircuit",
+    "exit_code": 0,
+    "seconds": 1.63
+  },
+  {
+    "module": "SelectCircuit",
+    "exit_code": 0,
+    "seconds": 4.56
+  },
+  {
+    "module": "LocalRestore",
+    "exit_code": 0,
+    "seconds": 2.46
+  },
+  {
+    "module": "Foundation",
+    "exit_code": 0,
+    "seconds": 2.11
+  },
+  {
+    "module": "Coverage",
+    "exit_code": 0,
+    "seconds": 1.02
+  },
+  {
+    "module": "PriorityEncoder",
+    "exit_code": 0,
+    "seconds": 2.23
+  },
+  {
+    "module": "ThresholdNet",
+    "exit_code": 0,
+    "seconds": 2.51
+  },
+  {
+    "module": "ThresholdInst",
+    "exit_code": 0,
+    "seconds": 4.13
+  },
+  {
+    "module": "WholeGame",
+    "exit_code": 0,
+    "seconds": 2.34
+  },
+  {
+    "module": "Family",
+    "exit_code": 0,
+    "seconds": 3.02
+  },
+  {
+    "module": "Barrier",
+    "exit_code": 0,
+    "seconds": 2.76
+  },
+  {
+    "module": "RolloutExec",
+    "exit_code": 0,
+    "seconds": 6.7
+  },
+  {
+    "module": "Bypass",
+    "exit_code": 0,
+    "seconds": 2.46
+  },
+  {
+    "module": "Classical",
+    "exit_code": 0,
+    "seconds": 3.92
+  },
+  {
+    "module": "BoardStore",
+    "exit_code": 0,
+    "seconds": 6.65
+  },
+  {
+    "module": "Windows",
+    "exit_code": 0,
+    "seconds": 1.33
+  },
+  {
+    "module": "Misc",
+    "exit_code": 0,
+    "seconds": 3.81
+  },
+  {
+    "module": "NoiseModel",
+    "exit_code": 0,
+    "seconds": 5.68
+  },
+  {
+    "module": "Shootout",
+    "exit_code": 0,
+    "seconds": 7.62
+  },
+  {
+    "module": "WeakMastery",
+    "exit_code": 0,
+    "seconds": 3.02
+  },
+  {
+    "module": "Fourier",
+    "exit_code": 0,
+    "seconds": 5.96
+  },
+  {
+    "module": "RealNoise",
+    "exit_code": 0,
+    "seconds": 13.47
+  },
+  {
+    "module": "RealFourier",
+    "exit_code": 0,
+    "seconds": 6.42
+  }
+]

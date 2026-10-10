@@ -1,0 +1,1660 @@
+{
+  "manuscript_sha256": "451c08fbcd85613a059bb5d0a8846d679c3bef39313340b9ceb22e6d960af870",
+  "date": "2026-10-10",
+  "description": "Audited statement correspondence; exact source references, not generated live website links. Includes auxiliary formal definitions and empirical/external boundaries.",
+  "rows": [
+    {
+      "label": "def:quantised-inference",
+      "status": "definition/checked-model",
+      "claim": "Literal-threshold gate and network model",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.netFormula_spec",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 47,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        }
+      ],
+      "hypotheses_and_boundary": "Nonnegative literal weights, bounded threshold in minimum-weight units; not arbitrary quantised networks."
+    },
+    {
+      "label": "app:defs",
+      "status": "definition/checked-model",
+      "claim": "Literal-threshold gate and network model",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.netFormula_spec",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 47,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        }
+      ],
+      "hypotheses_and_boundary": "Nonnegative literal weights, bounded threshold in minimum-weight units; not arbitrary quantised networks."
+    },
+    {
+      "label": "app:precision",
+      "status": "definition/checked-model",
+      "claim": "Literal-threshold gate and network model",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.netFormula_spec",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 47,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        }
+      ],
+      "hypotheses_and_boundary": "Nonnegative literal weights, bounded threshold in minimum-weight units; not arbitrary quantised networks."
+    },
+    {
+      "label": "app:NN",
+      "status": "definition/checked-model",
+      "claim": "Literal-threshold gate and network model",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.netFormula_spec",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 47,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        }
+      ],
+      "hypotheses_and_boundary": "Nonnegative literal weights, bounded threshold in minimum-weight units; not arbitrary quantised networks."
+    },
+    {
+      "label": "def:NN-formal",
+      "status": "definition/checked-model",
+      "claim": "Literal-threshold gate and network model",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.netFormula_spec",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 47,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        }
+      ],
+      "hypotheses_and_boundary": "Nonnegative literal weights, bounded threshold in minimum-weight units; not arbitrary quantised networks."
+    },
+    {
+      "label": "rem:ac0-scope",
+      "status": "scope",
+      "claim": "Majority outside the fixed bound",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.majGate_not_valid",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 196,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "A growing threshold is excluded by the declared gate model."
+    },
+    {
+      "label": "rem:local-vs-global-parity",
+      "status": "checked/conditional",
+      "claim": "Constant-block XOR versus global parity",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.blockXor_res",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 233,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.parityNotAC0_of_hastad",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 334,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        }
+      ],
+      "hypotheses_and_boundary": "Global obstruction uses the named classical parity-correlation premise."
+    },
+    {
+      "label": "thm:sim-ac0",
+      "status": "checked",
+      "claim": "Network to AC0 simulation",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.network_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 925,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.family_finite",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 170,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        },
+        {
+          "name": "NimAudit.Family.netFam_ac0",
+          "module": "Family",
+          "source": "05_revision_cycle/lean/phase6/Family.lean",
+          "line": 160,
+          "sha256": "7a647f0a667d5ede47f0e49473001e3e0c46b07c04bf20b6a0fdce7d1e3bf180"
+        },
+        {
+          "name": "NimAudit.Windows.window_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 82,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        },
+        {
+          "name": "NimAudit.Windows.staged_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 169,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed depth, latency, quantisation bounds; staged attention requires gate-realised operations."
+    },
+    {
+      "label": "app:ac0proof",
+      "status": "checked",
+      "claim": "Network to AC0 simulation",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.network_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 925,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.FiniteNet.family_finite",
+          "module": "FiniteNet",
+          "source": "05_revision_cycle/lean/phase4/FiniteNet.lean",
+          "line": 170,
+          "sha256": "1d45c47650006bb7ecdbd3b890cedb017653b057f6e7974ec683e4c68ae827ac"
+        },
+        {
+          "name": "NimAudit.Family.netFam_ac0",
+          "module": "Family",
+          "source": "05_revision_cycle/lean/phase6/Family.lean",
+          "line": 160,
+          "sha256": "7a647f0a667d5ede47f0e49473001e3e0c46b07c04bf20b6a0fdce7d1e3bf180"
+        },
+        {
+          "name": "NimAudit.Windows.window_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 82,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        },
+        {
+          "name": "NimAudit.Windows.staged_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 169,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed depth, latency, quantisation bounds; staged attention requires gate-realised operations."
+    },
+    {
+      "label": "def:impartial",
+      "status": "external-background",
+      "claim": "General impartial games",
+      "proofs": [],
+      "hypotheses_and_boundary": "General Sprague-Grundy theory is cited background; NIM is the formalised game."
+    },
+    {
+      "label": "def:nim",
+      "status": "checked",
+      "claim": "NIM moves, XOR and winning positions",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.lose_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 109,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.win_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 117,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.exists_move_to_zero",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 81,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        }
+      ],
+      "hypotheses_and_boundary": "Finite normal-play NIM, nonnegative heap sizes."
+    },
+    {
+      "label": "def:nimsum",
+      "status": "checked",
+      "claim": "NIM moves, XOR and winning positions",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.lose_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 109,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.win_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 117,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.exists_move_to_zero",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 81,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        }
+      ],
+      "hypotheses_and_boundary": "Finite normal-play NIM, nonnegative heap sizes."
+    },
+    {
+      "label": "thm:nim-win",
+      "status": "checked",
+      "claim": "NIM moves, XOR and winning positions",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.lose_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 109,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.win_iff",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 117,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Game.exists_move_to_zero",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 81,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        }
+      ],
+      "hypotheses_and_boundary": "Finite normal-play NIM, nonnegative heap sizes."
+    },
+    {
+      "label": "def:mastery",
+      "status": "checked",
+      "claim": "History-dependent weak and strong mastery, pairing, separation",
+      "proofs": [
+        {
+          "name": "NimAudit.Mastery.secure_iff_guarantee",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 409,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.weakMastery_iff_optimal",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 652,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.pairing_net_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 690,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.strong_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 819,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.sep3_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 858,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.sep3_not_strong",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 880,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        }
+      ],
+      "hypotheses_and_boundary": "Designated role, initial family, deterministic policies, legal opponents, illegal/missing actions forfeit; losing starts give vacuous weak mastery."
+    },
+    {
+      "label": "app:weak",
+      "status": "checked",
+      "claim": "History-dependent weak and strong mastery, pairing, separation",
+      "proofs": [
+        {
+          "name": "NimAudit.Mastery.secure_iff_guarantee",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 409,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.weakMastery_iff_optimal",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 652,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.pairing_net_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 690,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.strong_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 819,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.sep3_weak",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 858,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        },
+        {
+          "name": "NimAudit.Mastery.sep3_not_strong",
+          "module": "WeakMastery",
+          "source": "05_revision_cycle/lean/phase8/WeakMastery.lean",
+          "line": 880,
+          "sha256": "4c83e573f527989c93abdad00fa986b0a84b8157df6f99cc5d76967387c1be26"
+        }
+      ],
+      "hypotheses_and_boundary": "Designated role, initial family, deterministic policies, legal opponents, illegal/missing actions forfeit; losing starts give vacuous weak mastery."
+    },
+    {
+      "label": "thm:singleframe-impossible",
+      "status": "checked/conditional",
+      "claim": "Winning-move parity reduction and family obstruction",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.winning_selector_parity",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 536,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.Barrier.barrier_net",
+          "module": "Barrier",
+          "source": "05_revision_cycle/lean/phase6/Barrier.lean",
+          "line": 187,
+          "sha256": "474ac44cf86dd7e72e8750ffa6c8aaab44f48ad34a5cebf57e34cc727b8911f2"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.parityNotAC0_of_hastad",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 334,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        }
+      ],
+      "hypotheses_and_boundary": "Parity hardness is an explicit classical input; all reduction boards are winning."
+    },
+    {
+      "label": "def:nimber-difference",
+      "status": "checked",
+      "claim": "Single-heap XOR difference",
+      "proofs": [
+        {
+          "name": "NimAudit.one_heap_difference",
+          "module": "NimCore",
+          "source": "05_revision_cycle/lean/NimCore.lean",
+          "line": 37,
+          "sha256": "b07db6c505210d5ad7ad88b7e36d2599664e8e05084cfeaac17403484e8b5dcf"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed aligned heap indices."
+    },
+    {
+      "label": "lem:nimber-diff-ac0",
+      "status": "checked",
+      "claim": "At most a constant number of changed heaps",
+      "proofs": [
+        {
+          "name": "NimAudit.LocalRestore.bdC_eval",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 345,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        },
+        {
+          "name": "NimAudit.LocalRestore.bdDelta_eq",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 377,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        },
+        {
+          "name": "NimAudit.LocalRestore.bdC_res",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 521,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        }
+      ],
+      "hypotheses_and_boundary": "Promise at most t changes; polynomial exponent depends on fixed t."
+    },
+    {
+      "label": "app:nimberdiff",
+      "status": "checked",
+      "claim": "At most a constant number of changed heaps",
+      "proofs": [
+        {
+          "name": "NimAudit.LocalRestore.bdC_eval",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 345,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        },
+        {
+          "name": "NimAudit.LocalRestore.bdDelta_eq",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 377,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        },
+        {
+          "name": "NimAudit.LocalRestore.bdC_res",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 521,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        }
+      ],
+      "hypotheses_and_boundary": "Promise at most t changes; polynomial exponent depends on fixed t."
+    },
+    {
+      "label": "prop:restore",
+      "status": "checked",
+      "claim": "Conditional restoration and binary selector",
+      "proofs": [
+        {
+          "name": "NimAudit.conditional_restoration",
+          "module": "NimCore",
+          "source": "05_revision_cycle/lean/NimCore.lean",
+          "line": 50,
+          "sha256": "b07db6c505210d5ad7ad88b7e36d2599664e8e05084cfeaac17403484e8b5dcf"
+        },
+        {
+          "name": "NimAudit.LocalRestore.restore_equiv",
+          "module": "LocalRestore",
+          "source": "05_revision_cycle/lean/phase4/LocalRestore.lean",
+          "line": 212,
+          "sha256": "fc4c7f908b0c9c58e112b71747e811377de85ae028d5c4cd98dd260db5206c2f"
+        },
+        {
+          "name": "NimAudit.Family.rest_semantics",
+          "module": "Family",
+          "source": "05_revision_cycle/lean/phase6/Family.lean",
+          "line": 330,
+          "sha256": "7a647f0a667d5ede47f0e49473001e3e0c46b07c04bf20b6a0fdce7d1e3bf180"
+        }
+      ],
+      "hypotheses_and_boundary": "Previous board has nim-sum zero and opponent transition is legal."
+    },
+    {
+      "label": "def:rollout-policy",
+      "status": "definition/checked-interface",
+      "claim": "Restricted structured-channel observations",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.single_policy_affine",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 928,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.Misc.single_policy_correction",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 718,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        },
+        {
+          "name": "NimAudit.Misc.bitBoard_query",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 845,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        }
+      ],
+      "hypotheses_and_boundary": "One fixed structured head; query corrections included in bounded-depth readout; no unrestricted transformed starts."
+    },
+    {
+      "label": "def:agent-types",
+      "status": "definition/checked-interface",
+      "claim": "Restricted structured-channel observations",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.single_policy_affine",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 928,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.Misc.single_policy_correction",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 718,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        },
+        {
+          "name": "NimAudit.Misc.bitBoard_query",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 845,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        }
+      ],
+      "hypotheses_and_boundary": "One fixed structured head; query corrections included in bounded-depth readout; no unrestricted transformed starts."
+    },
+    {
+      "label": "rem:why-multi-head",
+      "status": "definition/checked-interface",
+      "claim": "Restricted structured-channel observations",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.single_policy_affine",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 928,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.Misc.single_policy_correction",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 718,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        },
+        {
+          "name": "NimAudit.Misc.bitBoard_query",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 845,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        }
+      ],
+      "hypotheses_and_boundary": "One fixed structured head; query corrections included in bounded-depth readout; no unrestricted transformed starts."
+    },
+    {
+      "label": "par:shootout-controller",
+      "status": "checked",
+      "claim": "Early-exit and all-head compiled controllers",
+      "proofs": [
+        {
+          "name": "NimAudit.Shootout.ee_net",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 970,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.ahSel_wins",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 914,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.ahL_counts",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1370,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.sh_ac0",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1198,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.sh_net",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1205,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        }
+      ],
+      "hypotheses_and_boundary": "Read-only original board each tick; all-head move selection distinct from early classification. M+2B+2 includes reset and readout."
+    },
+    {
+      "label": "par:controller-costs",
+      "status": "checked",
+      "claim": "Early-exit and all-head compiled controllers",
+      "proofs": [
+        {
+          "name": "NimAudit.Shootout.ee_net",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 970,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.ahSel_wins",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 914,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.ahL_counts",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1370,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.sh_ac0",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1198,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        },
+        {
+          "name": "NimAudit.Shootout.sh_net",
+          "module": "Shootout",
+          "source": "05_revision_cycle/lean/phase7/Shootout.lean",
+          "line": 1205,
+          "sha256": "1abd814426d345b9dcac4f3c2a101741a0bee3851d299d85a661ed15cee44b7b"
+        }
+      ],
+      "hypotheses_and_boundary": "Read-only original board each tick; all-head move selection distinct from early classification. M+2B+2 includes reset and readout."
+    },
+    {
+      "label": "prop:rollout-sufficiency",
+      "status": "checked",
+      "claim": "Executed rollouts recover invariant and select winning move",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.rolloutWinner_channel",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 173,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.RolloutExec.mhExec_wins",
+          "module": "RolloutExec",
+          "source": "05_revision_cycle/lean/phase6/RolloutExec.lean",
+          "line": 519,
+          "sha256": "c7b63a6e02d1d425c00fb6b7d76899cbfcceaeb0e07772434c4875c15a468513"
+        },
+        {
+          "name": "NimAudit.RolloutExec.mhExec_evals",
+          "module": "RolloutExec",
+          "source": "05_revision_cycle/lean/phase6/RolloutExec.lean",
+          "line": 525,
+          "sha256": "c7b63a6e02d1d425c00fb6b7d76899cbfcceaeb0e07772434c4875c15a468513"
+        }
+      ],
+      "hypotheses_and_boundary": "B channels; simulated legal moves bounded by BN(2^B-1); total horizon grows."
+    },
+    {
+      "label": "app:rollout-proofs",
+      "status": "checked",
+      "claim": "Executed rollouts recover invariant and select winning move",
+      "proofs": [
+        {
+          "name": "NimAudit.Game.rolloutWinner_channel",
+          "module": "NimGame",
+          "source": "05_revision_cycle/lean/phase2/NimGame.lean",
+          "line": 173,
+          "sha256": "23df6bb87ecfd344155c0786e1b6b1de78f8ecfe33ec92561245ecd3ac9a3724"
+        },
+        {
+          "name": "NimAudit.RolloutExec.mhExec_wins",
+          "module": "RolloutExec",
+          "source": "05_revision_cycle/lean/phase6/RolloutExec.lean",
+          "line": 519,
+          "sha256": "c7b63a6e02d1d425c00fb6b7d76899cbfcceaeb0e07772434c4875c15a468513"
+        },
+        {
+          "name": "NimAudit.RolloutExec.mhExec_evals",
+          "module": "RolloutExec",
+          "source": "05_revision_cycle/lean/phase6/RolloutExec.lean",
+          "line": 525,
+          "sha256": "c7b63a6e02d1d425c00fb6b7d76899cbfcceaeb0e07772434c4875c15a468513"
+        }
+      ],
+      "hypotheses_and_boundary": "B channels; simulated legal moves bounded by BN(2^B-1); total horizon grows."
+    },
+    {
+      "label": "prop:single-policy-bound",
+      "status": "checked",
+      "claim": "One channel gives one affine invariant bit",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.rollout_outcome_linear",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 921,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.Prob.single_policy_affine",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 928,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        }
+      ],
+      "hypotheses_and_boundary": "Structured fixed head and known one-heap modifications."
+    },
+    {
+      "label": "rem:noisy-rollout-decay",
+      "status": "checked",
+      "claim": "Real probability law and minimum sample complexity",
+      "proofs": [
+        {
+          "name": "NimAudit.RealNoise.flip_law",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 249,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_repeated",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 266,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_spec",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 144,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_bounds",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 152,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_theta",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 161,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_mMin",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 317,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.eventually_small",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 340,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.reuse_any_rule",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 385,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.remark_real",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 418,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        }
+      ],
+      "hypotheses_and_boundary": "0<=epsilon<1/2; fresh independent blocks; 0<a<=1/2 for bounds; worst-case error 1/4; arbitrary randomized decision rules. Not a model of erroneous legal moves."
+    },
+    {
+      "label": "app:noise-samples",
+      "status": "checked",
+      "claim": "Real probability law and minimum sample complexity",
+      "proofs": [
+        {
+          "name": "NimAudit.RealNoise.flip_law",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 249,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_repeated",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 266,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_spec",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 144,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_bounds",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 152,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_theta",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 161,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_mMin",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 317,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.eventually_small",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 340,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.reuse_any_rule",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 385,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.remark_real",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 418,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        }
+      ],
+      "hypotheses_and_boundary": "0<=epsilon<1/2; fresh independent blocks; 0<a<=1/2 for bounds; worst-case error 1/4; arbitrary randomized decision rules. Not a model of erroneous legal moves."
+    },
+    {
+      "label": "prop:noise-samples",
+      "status": "checked",
+      "claim": "Real probability law and minimum sample complexity",
+      "proofs": [
+        {
+          "name": "NimAudit.RealNoise.flip_law",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 249,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_repeated",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 266,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_spec",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 144,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_bounds",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 152,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.mMin_theta",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 161,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.flip_mMin",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 317,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.eventually_small",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 340,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.reuse_any_rule",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 385,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        },
+        {
+          "name": "NimAudit.RealNoise.remark_real",
+          "module": "RealNoise",
+          "source": "05_revision_cycle/lean/phase8/RealNoise.lean",
+          "line": 418,
+          "sha256": "ff2ca55835deab85a775a5e7a3f4113efe166c580f19b8e66a3ce614c6d6b760"
+        }
+      ],
+      "hypotheses_and_boundary": "0<=epsilon<1/2; fresh independent blocks; 0<a<=1/2 for bounds; worst-case error 1/4; arbitrary randomized decision rules. Not a model of erroneous legal moves."
+    },
+    {
+      "label": "thm:search-gap",
+      "status": "checked/conditional",
+      "claim": "Finite success bound, asymptotic application and attainability",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.success_bound",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 838,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.CorrBridge.circuit_readout_bound",
+          "module": "NimCorrBridge",
+          "source": "05_revision_cycle/lean/phase3/NimCorrBridge.lean",
+          "line": 876,
+          "sha256": "d3fb2e4a64db3e9249eeda1f54b991aca1f40c8b4664a091de255c5d9c1689d6"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 477,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic_net",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 514,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.Attain.attain_exact",
+          "module": "NimAttain",
+          "source": "05_revision_cycle/lean/phase3/NimAttain.lean",
+          "line": 566,
+          "sha256": "dd978aa0cd3d6fe5d81a02728ea1c2ddccefe9d2124fa5391c240166b72ade10"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed B>=2 and uniform winning boards; named HastadNegl input implies needed indicator correlation. External analytic negligible-rate deduction."
+    },
+    {
+      "label": "app:search-gap-proof",
+      "status": "checked/conditional",
+      "claim": "Finite success bound, asymptotic application and attainability",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.success_bound",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 838,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.CorrBridge.circuit_readout_bound",
+          "module": "NimCorrBridge",
+          "source": "05_revision_cycle/lean/phase3/NimCorrBridge.lean",
+          "line": 876,
+          "sha256": "d3fb2e4a64db3e9249eeda1f54b991aca1f40c8b4664a091de255c5d9c1689d6"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 477,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic_net",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 514,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.Attain.attain_exact",
+          "module": "NimAttain",
+          "source": "05_revision_cycle/lean/phase3/NimAttain.lean",
+          "line": 566,
+          "sha256": "dd978aa0cd3d6fe5d81a02728ea1c2ddccefe9d2124fa5391c240166b72ade10"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed B>=2 and uniform winning boards; named HastadNegl input implies needed indicator correlation. External analytic negligible-rate deduction."
+    },
+    {
+      "label": "eq:finite-correlation-bound",
+      "status": "checked/conditional",
+      "claim": "Finite success bound, asymptotic application and attainability",
+      "proofs": [
+        {
+          "name": "NimAudit.Prob.success_bound",
+          "module": "NimProbability",
+          "source": "05_revision_cycle/lean/phase2/NimProbability.lean",
+          "line": 838,
+          "sha256": "1d5d7977a43e854db0e83facc4da36d59202c7891374b0b6c14461ecdbf8bef0"
+        },
+        {
+          "name": "NimAudit.CorrBridge.circuit_readout_bound",
+          "module": "NimCorrBridge",
+          "source": "05_revision_cycle/lean/phase3/NimCorrBridge.lean",
+          "line": 876,
+          "sha256": "d3fb2e4a64db3e9249eeda1f54b991aca1f40c8b4664a091de255c5d9c1689d6"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 477,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.search_gap_asymptotic_net",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 514,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        },
+        {
+          "name": "NimAudit.Attain.attain_exact",
+          "module": "NimAttain",
+          "source": "05_revision_cycle/lean/phase3/NimAttain.lean",
+          "line": 566,
+          "sha256": "dd978aa0cd3d6fe5d81a02728ea1c2ddccefe9d2124fa5391c240166b72ade10"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed B>=2 and uniform winning boards; named HastadNegl input implies needed indicator correlation. External analytic negligible-rate deduction."
+    },
+    {
+      "label": "prop:streaming-nimsum",
+      "status": "checked",
+      "claim": "Streamed summary and separator protocol",
+      "proofs": [
+        {
+          "name": "NimAudit.Recurrent.stream_reports_delta",
+          "module": "NimRecurrent",
+          "source": "05_revision_cycle/lean/phase3/NimRecurrent.lean",
+          "line": 173,
+          "sha256": "1f2994aefc75e7f500afbeffb1644cb960ffe68454744cdba79a353418584f35"
+        },
+        {
+          "name": "NimAudit.Recurrent.circuit_update",
+          "module": "NimRecurrent",
+          "source": "05_revision_cycle/lean/phase3/NimRecurrent.lean",
+          "line": 424,
+          "sha256": "1f2994aefc75e7f500afbeffb1644cb960ffe68454744cdba79a353418584f35"
+        },
+        {
+          "name": "NimAudit.Recurrent.circuit_resources",
+          "module": "NimRecurrent",
+          "source": "05_revision_cycle/lean/phase3/NimRecurrent.lean",
+          "line": 493,
+          "sha256": "1f2994aefc75e7f500afbeffb1644cb960ffe68454744cdba79a353418584f35"
+        }
+      ],
+      "hypotheses_and_boundary": "Aligned B-bit rows, completed frames, validity flag and reset; stores summaries rather than entire history."
+    },
+    {
+      "label": "prop:bypass-interfaces",
+      "status": "checked/conditional",
+      "claim": "All three constructions, resource families, whole-game composition",
+      "proofs": [
+        {
+          "name": "NimAudit.Bypass.prop_bypass_interfaces",
+          "module": "Bypass",
+          "source": "05_revision_cycle/lean/phase6/Bypass.lean",
+          "line": 91,
+          "sha256": "d2e3ef2e71220448165f5498ca3778bc54b463fb902c4d506cce7a061c81c962"
+        },
+        {
+          "name": "NimAudit.Bypass.bypass_barriers",
+          "module": "Bypass",
+          "source": "05_revision_cycle/lean/phase6/Bypass.lean",
+          "line": 149,
+          "sha256": "d2e3ef2e71220448165f5498ca3778bc54b463fb902c4d506cce7a061c81c962"
+        },
+        {
+          "name": "NimAudit.WholeGame.replay_game",
+          "module": "WholeGame",
+          "source": "05_revision_cycle/lean/phase5/WholeGame.lean",
+          "line": 306,
+          "sha256": "809a74ad589db609136b97d1ca92b4e1faf296208e84a6d9a9614a4d61de6460"
+        },
+        {
+          "name": "NimAudit.BoardStore.bits_store_wins",
+          "module": "BoardStore",
+          "source": "05_revision_cycle/lean/phase6/BoardStore.lean",
+          "line": 530,
+          "sha256": "c35ac76d5db6e833dd9c208f2fba0aa4963c035349f5f831e4da69c798ca2a39"
+        }
+      ],
+      "hypotheses_and_boundary": "Two-frame promise; recurrent replay supplied by environment; complete rollout/recurrent maps excluded from AC0 conditional on parity hardness. ReplayWins uses its existing game semantics, not new Hist predicate."
+    },
+    {
+      "label": "def:fourier-tail",
+      "status": "checked",
+      "claim": "Fourier basis, expansion, tail and parity-correlation inequality",
+      "proofs": [
+        {
+          "name": "NimAudit.RealFourier.orthonormal_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 117,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.inversion_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 108,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.parseval_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 141,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.tailF_eq",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 161,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.bandLimited_corr_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 194,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        }
+      ],
+      "hypotheses_and_boundary": "Uniform Boolean cube; epsilon>=0; character degree exceeds cutoff."
+    },
+    {
+      "label": "eq:tail-correlation",
+      "status": "checked",
+      "claim": "Fourier basis, expansion, tail and parity-correlation inequality",
+      "proofs": [
+        {
+          "name": "NimAudit.RealFourier.orthonormal_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 117,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.inversion_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 108,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.parseval_fin",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 141,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.tailF_eq",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 161,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.bandLimited_corr_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 194,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        }
+      ],
+      "hypotheses_and_boundary": "Uniform Boolean cube; epsilon>=0; character degree exceeds cutoff."
+    },
+    {
+      "label": "eq:delta-extension",
+      "status": "checked",
+      "claim": "Specified total OR-of-XOR extension",
+      "proofs": [
+        {
+          "name": "NimAudit.RealFourier.dSign_enc_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 207,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.dC_not_character_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 198,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.dC_one_exactDeg_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 217,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        }
+      ],
+      "hypotheses_and_boundary": "Equals delta on at-most-one-change domain; not a signed character for N>=2, bit j<B; N=1 degree two."
+    },
+    {
+      "label": "sec:spectral-view",
+      "status": "checked/external",
+      "claim": "Nim-bit spectrum and classical tail discussion",
+      "proofs": [
+        {
+          "name": "NimAudit.RealFourier.nimBit_spectrum_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 183,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.RealFourier.delta_spectrum_real",
+          "module": "RealFourier",
+          "source": "05_revision_cycle/lean/phase8/RealFourier.lean",
+          "line": 189,
+          "sha256": "e0e69edd199d8650ffd7ab2a6505c1a57c673abe7d1961d54eaee83c26da78be"
+        },
+        {
+          "name": "NimAudit.Fourier.nimBit_corr_of_tail",
+          "module": "Fourier",
+          "source": "05_revision_cycle/lean/phase8/Fourier.lean",
+          "line": 554,
+          "sha256": "afffe6072d707e408cbea6b7bceb45fbbaaf08c6a1ab6a61d76240532ef523be"
+        }
+      ],
+      "hypotheses_and_boundary": "LMN/Tal TailPremise not instantiated against exact published size/depth conventions. This discussion is not needed for main search bound."
+    },
+    {
+      "label": "app:RNN",
+      "status": "checked-model",
+      "claim": "Finite-window recurrence",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.window_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 82,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        },
+        {
+          "name": "NimAudit.Windows.window_size_closed",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 136,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed total unrolling; full row scan deliberately leaves this restriction."
+    },
+    {
+      "label": "def:RNN-formal",
+      "status": "checked-model",
+      "claim": "Finite-window recurrence",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.window_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 82,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        },
+        {
+          "name": "NimAudit.Windows.window_size_closed",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 136,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed total unrolling; full row scan deliberately leaves this restriction."
+    },
+    {
+      "label": "app:LTST",
+      "status": "checked-model",
+      "claim": "Gate-realised staged composition",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.staged_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 169,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "No reduction of standard softmax attention is claimed."
+    },
+    {
+      "label": "def:LTST-formal",
+      "status": "checked-model",
+      "claim": "Gate-realised staged composition",
+      "proofs": [
+        {
+          "name": "NimAudit.Windows.staged_ac0",
+          "module": "Windows",
+          "source": "05_revision_cycle/lean/phase6/Windows.lean",
+          "line": 169,
+          "sha256": "ff59ec8bf0a0de703ade112d8cc1c19541502e4dac5e25cb8041768a647279f8"
+        }
+      ],
+      "hypotheses_and_boundary": "No reduction of standard softmax attention is claimed."
+    },
+    {
+      "label": "app:oneunit",
+      "status": "checked",
+      "claim": "Constant witness and DNF",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.Gate.bounded_witness",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 503,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.dnf_aoDepth",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 213,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        }
+      ],
+      "hypotheses_and_boundary": "Classical depth counts AND/OR layers; NOT-counting bound may add one."
+    },
+    {
+      "label": "lem:unit-ac0",
+      "status": "checked",
+      "claim": "Constant witness and DNF",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.Gate.bounded_witness",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 503,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.gate_ac0",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 736,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.ClassicalBoundary.dnf_aoDepth",
+          "module": "Classical",
+          "source": "05_revision_cycle/lean/phase6/Classical.lean",
+          "line": 213,
+          "sha256": "ee9d365e1611d40cc3d5ba10c995dbd2607f679bf5f12be022d74249a4868a23"
+        }
+      ],
+      "hypotheses_and_boundary": "Classical depth counts AND/OR layers; NOT-counting bound may add one."
+    },
+    {
+      "label": "app:network",
+      "status": "checked",
+      "claim": "Layer simulation",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.eval_compileLayer",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 771,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.compileLayer_size",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 801,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.compileLayer_depth",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 818,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed gate bound and polynomial widths."
+    },
+    {
+      "label": "lem:layer-ac0",
+      "status": "checked",
+      "claim": "Layer simulation",
+      "proofs": [
+        {
+          "name": "NimAudit.AC0.eval_compileLayer",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 771,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.compileLayer_size",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 801,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        },
+        {
+          "name": "NimAudit.AC0.compileLayer_depth",
+          "module": "Circuit",
+          "source": "05_revision_cycle/lean/phase3/Circuit.lean",
+          "line": 818,
+          "sha256": "af97cc0eec7d8464dc795a9efafd7da523c2f96b9cc24147340307a22575d2f6"
+        }
+      ],
+      "hypotheses_and_boundary": "Fixed gate bound and polynomial widths."
+    },
+    {
+      "label": "app:impl",
+      "status": "checked",
+      "claim": "Binary outputs and threshold compiler resources",
+      "proofs": [
+        {
+          "name": "NimAudit.PriorityEncoder.encode_correct",
+          "module": "PriorityEncoder",
+          "source": "05_revision_cycle/lean/phase5/PriorityEncoder.lean",
+          "line": 70,
+          "sha256": "1be04943f5455fc119e177793bbe00de6aed8109e3ff0a55a3291c70aab29c69"
+        },
+        {
+          "name": "NimAudit.ThresholdNet.compileF_spec",
+          "module": "ThresholdNet",
+          "source": "05_revision_cycle/lean/phase5/ThresholdNet.lean",
+          "line": 699,
+          "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b"
+        },
+        {
+          "name": "NimAudit.ThresholdNet.compileF_length",
+          "module": "ThresholdNet",
+          "source": "05_revision_cycle/lean/phase5/ThresholdNet.lean",
+          "line": 626,
+          "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b"
+        },
+        {
+          "name": "NimAudit.ThresholdNet.compileF_gates",
+          "module": "ThresholdNet",
+          "source": "05_revision_cycle/lean/phase5/ThresholdNet.lean",
+          "line": 687,
+          "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b"
+        },
+        {
+          "name": "NimAudit.ThresholdNet.compileF_bounded",
+          "module": "ThresholdNet",
+          "source": "05_revision_cycle/lean/phase5/ThresholdNet.lean",
+          "line": 641,
+          "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b"
+        },
+        {
+          "name": "NimAudit.ThresholdNet.compileF_fixed_grid",
+          "module": "ThresholdNet",
+          "source": "05_revision_cycle/lean/phase5/ThresholdNet.lean",
+          "line": 718,
+          "sha256": "15c36f444487a1bdd02793ae1cee53b0472a0c5d99054c52440427cc3a63e16b"
+        },
+        {
+          "name": "NimAudit.BoardStore.bs_net",
+          "module": "BoardStore",
+          "source": "05_revision_cycle/lean/phase6/BoardStore.lean",
+          "line": 754,
+          "sha256": "c35ac76d5db6e833dd9c208f2fba0aa4963c035349f5f831e4da69c798ca2a39"
+        }
+      ],
+      "hypotheses_and_boundary": "Counts total output formula nodes; weights/thresholds 0/1; board-storage and replay have different space/time."
+    },
+    {
+      "label": "sec:supervised-restoration",
+      "status": "empirical/partly-checked-mathematics",
+      "claim": "Experiments and arithmetic baselines",
+      "proofs": [
+        {
+          "name": "NimAudit.Misc.baseline_numbers",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 518,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        },
+        {
+          "name": "NimAudit.Misc.board_recall",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 759,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        }
+      ],
+      "hypotheses_and_boundary": "Numerical baseline theorem does not certify checkpoints or the causal mechanism of the 0.54 plateau. Saved-data diagnostics remain empirical."
+    },
+    {
+      "label": "sec:exp-fsm-shootout",
+      "status": "empirical/partly-checked-mathematics",
+      "claim": "Experiments and arithmetic baselines",
+      "proofs": [
+        {
+          "name": "NimAudit.Misc.baseline_numbers",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 518,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        },
+        {
+          "name": "NimAudit.Misc.board_recall",
+          "module": "Misc",
+          "source": "05_revision_cycle/lean/phase6/Misc.lean",
+          "line": 759,
+          "sha256": "07766c03566dbfca1cc2d85d424e85a8003364563979df33fffbc5869408f975"
+        }
+      ],
+      "hypotheses_and_boundary": "Numerical baseline theorem does not certify checkpoints or the causal mechanism of the 0.54 plateau. Saved-data diagnostics remain empirical."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase4/FiniteNet.lean:67:66: warning: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase4/FiniteNet.lean:130:50: warning: This simp argument is unused:
+  probeNet
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵p̵r̵o̵b̵e̵N̵e̵t̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.FiniteNet.eval_clip' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.clip_size' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.clip_depth' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.clip_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.netFormula_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.FiniteNet.netFormula_local' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.gate_eval_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.evalLayer_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.wired_pad' depends on axioms: [propext, Quot.sound]
+'NimAudit.FiniteNet.netFormula_wired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.FiniteNet.probe_not_wired' depends on axioms: [propext]
+'NimAudit.FiniteNet.audit_example' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.FiniteNet.totalSize_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.FiniteNet.family_finite' depends on axioms: [propext, Classical.choice, Quot.sound]

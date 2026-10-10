@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "source_sha256": "451c08fbcd85613a059bb5d0a8846d679c3bef39313340b9ceb22e6d960af870",
+  "pdf_sha256": "0745196bdbf1c0e1e925ceecc0cdba473507b5ad6c43b2eb3836fe09a3bbb6fc",
+  "pages": 40,
+  "abstract_words_whitespace": 187,
+  "labels": 89,
+  "correspondence_entries": 51,
+  "lean_declarations": 1588,
+  "compilation": "local latexmk success; no warnings/overfull/undefined references",
+  "visual_review": "All 40 pages rendered and overview inspected; changed proof/spectral/verification/resource pages inspected individually",
+  "native_editor": "opened; preview compiler cannot load external figures",
+  "source_bundle_build": "success from isolated source snapshot; two included figures",
+  "all_indexed_declarations_have_source_lines": true
+}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Author’s perspective (separate from the paper)</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-author">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="author-page">
+<aside class="author-note" aria-labelledby="author-h">
+<h1 id="author-h">Author’s perspective</h1>
+<p>The starting point for this paper goes back to my thesis work in mathematical
+logic, on feasible reasoning in bounded arithmetic and the strength of counting
+principles. What interested me was a striking gap: a principle can be almost
+obvious when viewed through the right abstraction, yet remain inaccessible to a
+system restricted to a particular kind of elementary reasoning. That gap has
+remained a thread through my work.</p>
+<h2>Bounded arithmetic, counting and circuits</h2>
+<p>In my thesis, <em>Independence in Bounded Arithmetic</em>, I studied formal systems
+whose restrictions reflect limits on the resources available for reasoning.
+One of the surprises in this area is that elementary counting principles can,
+in suitable formulations, be unprovable in certain weak systems of bounded
+arithmetic. Examples include the pigeonhole principle and the parity principle
+that an odd-sized set cannot be partitioned into pairs. These are statements
+we readily understand from a higher-level perspective. What a formal system
+can establish depends on its resources and on how the principle is represented.
+My <a href="https://doi.org/10.1016/S0168-0072%2897%2900029-8">work on modular counting principles</a>
+explores how even different forms of counting can have different logical strengths.</p>
+<p>The methods behind these independence results connect to Boolean circuit
+complexity. Constant-depth, polynomial-size circuits built from AND, OR and NOT
+gates cannot compute parity on arbitrarily long inputs. Related switching
+arguments and probabilistic techniques play a role in proving limitations on
+restricted reasoning. Computing the parity of a bit string and proving a
+counting principle are different tasks, but the connection between their lower-bound
+methods was an important part of this intellectual background. My later
+<a href="https://doi.org/10.1090/dimacs/039/02">joint work with Paul Beame</a>
+also develops this connection through lower bounds for proofs of counting principles.</p>
+<h2>The frog's-eye perspective</h2>
+<p>I think of restricted reasoning of this kind as a <em>frog's-eye perspective</em>:
+working close to the individual pieces, without ready access to the abstraction
+that makes the overall structure clear. This is a metaphor for the contrast
+that interested me, rather than a technical definition of a proof system.
+My later work in proof complexity, including resolution and other proof systems,
+continued to explore this contrast.</p>
+<p>A particularly vivid example is the mutilated chessboard. Remove two opposite
+corners from an even-by-even chessboard and ask whether dominoes can cover the
+remaining squares. Each domino covers one black and one white square, while
+the two removed corners have the same colour. The colour imbalance settles
+the question immediately. Yet in
+<a href="https://doi.org/10.1109/SFCS.2001.959896">work with my former student Stefan Dantchev</a>,
+we proved exponential lower bounds for resolution proofs of the standard
+propositional encoding of this impossibility as the board grows. The short
+colour-counting argument and the long resolution proofs concern the same
+combinatorial obstruction, approached with very different reasoning resources.</p>
+<h2>The question raised by AlphaZero</h2>
+<p>When AlphaZero appeared, I brought this background to the question of what its
+neural networks could discover. How would they handle a game whose solution is
+easy once a global invariant is recognised, but difficult to recover from
+restricted computations? NIM offered a clear test: its optimal strategy has a
+concise, efficient algorithm, and parity is at the heart of that algorithm.</p>
+<p>A neural network is not simply a Boolean circuit. Its activations can be
+real-valued, whereas Boolean gates work with zeros and ones; the available
+operations and precision matter. Circuit lower bounds therefore need an explicit
+bridge to the neural model. The present paper builds that bridge for a restricted
+model of quantised inference. The broader question that motivated me remains
+how a learning system can discover and use the abstraction that makes an
+otherwise difficult task easy.</p>
+<h2>The earlier FOM discussion</h2>
+<p>Harvey Friedman's <a href="https://fomarchive.ugent.be/2017-September/020612.html">“AI Challenge” (28 September 2017)</a>
+asked whether a computer could discover perfect play in NIM without being given
+the winning strategy. His <a href="https://fomarchive.ugent.be/2017-September/020619.html">“NIM Challenges” (30 September 2017)</a>
+expanded the discussion to learning protocols and harder variants of the game.</p>
+<p>A further post, <a href="https://fomarchive.ugent.be/2017-October/020642.html">“NIM/Deep Learning” (15 October 2017)</a>,
+reproduces correspondence from John Schulman proposing a recurrent network that
+reads the heaps one at a time, together with preliminary supervised nim-sum
+experiments. This is an important antecedent of the broad row-wise recurrent
+idea. It should be distinguished from the specific separator, state and
+move-selection protocols, circuit bounds and correctness proofs developed in
+this paper. The post also distinguishes supervised learning of the nim-sum from
+learning a strategy through self-play. In <a href="https://fomarchive.ugent.be/2017-October/020648.html">“NIM/AI challenges” (17 October 2017)</a>,
+the discussion turns to generalisation and to how the game is presented to a
+learner, including whether its representation supplies a hint about binary
+arithmetic.</p>
+<p>The <a href="https://arxiv.org/html/2411.06403v1#S1">earlier NIM preprint</a> discusses
+Friedman's challenge in its introduction and cites it as reference [8]. The
+archive links above identify the original posts more precisely than that
+bibliographic entry did.</p>
+<h2>Experiments with Bei Zhou</h2>
+<p>My subsequent work with Bei Zhou made this question concrete through experiments
+on impartial games and parity-related learning tasks. My recollection is that
+the reception was mixed. Some reactions questioned whether there was a real
+limitation; others regarded the underlying difficulty as already obvious. I found
+that the distinction I wanted to make was not easy to communicate. Saying that a
+neural network can in principle compute a function does not settle whether a
+particular architecture can represent it under specified resource constraints,
+or whether a training procedure will discover it.</p>
+<p>The joint work referred to here, with bibliographic details as given in the paper's reference list:</p>
+<ul>
+<li>Bei Zhou and Søren Riis. Impartial games: A challenge for reinforcement learning. <em>Machine Learning</em> 115:54, 2026; first preprint 2022. <a href="https://doi.org/10.1007/s10994-026-06996-1">https://doi.org/10.1007/s10994-026-06996-1</a></li>
+<li>Bei Zhou and Søren Riis. Exploring parity challenges in reinforcement learning through curriculum learning with noisy labels. arXiv:2312.05379, 2023.</li>
+<li>Bei Zhou. <em>Reinforcement Learning for Impartial Games and Complex Combinatorial Optimisation Problems</em>. PhD thesis, Queen Mary University of London, 2024.</li>
+</ul>
+<h2>From an obstruction to possible ways forward</h2>
+<p>The present paper isolates one precise computational obstruction in a restricted
+model of neural inference. Its purpose is also constructive: once the missing
+resource is clear, we can ask how to supply it. A transition between positions,
+complementary rollout information, or a recurrent scan with retained state can
+change what is computationally available to the learner. These constructions do
+not settle the learning problem. They separate an obstacle in representation
+from the further questions of training, generalisation and discovery through
+self-play. The interactive edition lets readers follow that distinction from
+the informal idea through the mathematics to the exact formal statements.</p>
+<h2>Publication history and the present version</h2>
+<p>This paper has not yet undergone journal peer review. An earlier version received a desk rejection. A subsequent intended submission was not properly completed because of a misunderstanding, which I discovered only six months later. My emphasis in preparing the present version has been on making its arguments open to scrutiny, through detailed explanations, AI-assisted critical review, and machine-checked proofs.</p>
+<p class="author-back"><a href="index.html">Back to the edition</a> · <a href="paper.html">Read the paper</a></p>
+</aside>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

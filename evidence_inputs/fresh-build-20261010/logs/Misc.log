@@ -1,0 +1,74 @@
+/root/interactive/lean/phase6/Misc.lean:70:36: warning: This simp argument is unused:
+  List.getElem?_set
+
+Hint: Omit it from the simp argument list.
+  simp [List.getD_eq_getElem?_getD, L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵s̵e̵t̵,̵ ̵Ne.symm h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase6/Misc.lean:675:36: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h̵,̵ ̵this]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Misc.partner_partner' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.partner_ne' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.partner_lt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.secondWins_sound' does not depend on any axioms
+'NimAudit.Misc.getD_set_ne'' depends on axioms: [propext]
+'NimAudit.Misc.getD_set_eq'' depends on axioms: [propext]
+'NimAudit.Misc.paired_move' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.toNatBE_heap' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.flagC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.pairR_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.pairing_wins' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.paired_lose' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.pairR_reads' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.valC_cmpR_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.flagC_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.pairR_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.pairBin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.firstHit_ge' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.run_query' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.run_yes' depends on axioms: [propext]
+'NimAudit.Misc.run_no' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.firstHit_hit' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.firstHit_miss' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.firstHit_end' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.shootout_from' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.shootout_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.channels_or' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.shootout_decides' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.odd_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.detected_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.baseline_numbers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.baseline_P' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.bw_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.bw_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.flip_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.flip_agree_noisy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.par_append' depends on axioms: [propext]
+'NimAudit.Misc.paired_flips_cancel' depends on axioms: [propext]
+'NimAudit.Misc.flip_example_nat' does not depend on any axioms
+'NimAudit.Misc.pm_zipWith' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.char_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.zipWith_xor_all_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.char_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.dotB_low' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.dotB_pow' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.count_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.ones_toBitsBE_count' depends on axioms: [propext]
+'NimAudit.Misc.nimsum_bit_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.delta_bit_local' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.init_counterexample' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.single_policy_correction' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.rsum_filter_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.boards_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.board_recall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.pow_frac' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.le_div_of_mul_le'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.flip_example' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Misc.restoration_figure' depends on axioms: [propext]
+'NimAudit.Misc.nimSum_bitBoard' depends on axioms: [propext, Quot.sound]
+'NimAudit.Misc.bitBoard_query' depends on axioms: [propext, Quot.sound]

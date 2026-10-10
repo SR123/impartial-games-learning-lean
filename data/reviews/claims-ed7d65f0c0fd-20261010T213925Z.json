@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T21:38:39Z",
+ "context": {
+  "manuscript_sha256": "ed7d65f0c0fd9eacd206403cbafd9db77150e8ca795d0f3a55901594dd08b6cd",
+  "locked_manuscript_sha256": "1d9d55753136b9e2e1b8a847960de1ab1ae40edd095bb5f1d4456e21ca5516b7"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "1d9d55753136b9e2e1b8a847960de1ab1ae40edd095bb5f1d4456e21ca5516b7",
+   "new": "ed7d65f0c0fd9eacd206403cbafd9db77150e8ca795d0f3a55901594dd08b6cd",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Reviewed citation-only changes in introduction and Section 5.5 against archived primary FOM posts. Added two bibliography entries. All 47 formal blocks and 94 labels unchanged; no claim statements changed, so existing explanations and Lean targets remain valid. Rendered PDF pages 1, 17 and 44 inspected; links and bibliography fit. Explicitly preserves distinction between supervised experiments and self-play."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

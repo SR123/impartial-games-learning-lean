@@ -1,0 +1,135 @@
+{
+ "visuals": {
+  "bypasses": {
+   "claims": {
+    "c-bypass-not-ac0": "d43e7103cb5d359153fc05836f7766e6ba240de3f418d33398ae87dca868cb62",
+    "c-conclusion-bypasses": "1a0bd11281cdd2078990f02412b931fa513f96fa1dd0625d69b64cccb52e2616",
+    "fig:rollout_gap": "c144c2a208289732394eb3590bfdf055d077262dc66166a9cfda9053bff39e44",
+    "prop:bypass-interfaces": "42524208a19b28cfe7bf26ac3f5a8d5d11617294704462771cb55aaeca75a484"
+   },
+   "figures": {
+    "fig:rollout_gap": "c144c2a208289732394eb3590bfdf055d077262dc66166a9cfda9053bff39e44"
+   },
+   "lean": {
+    "NimAudit.Bypass.bypass_barriers": "41551b5d7114e5c3e1075aaab6e3ecc8a0220fbf640376558c4f11caf947e8e0",
+    "NimAudit.Bypass.prop_bypass_interfaces": "0e42d3f401db3ca1625ad9b67d353da0ceae350a5d1f5bcf8bf0a21ed2b171eb"
+   }
+  },
+  "compile": {
+   "claims": {
+    "c-depth-table": "8bc8f4451c54e341f3005c453f7f654bf647aee92bff22f16f54d7748ea70c55",
+    "c-threshold-realisation": "34cc9a8cd7d7624c1a344450a0cc41fbb8290f6b3e0cf27608a76fc5c8ee80da",
+    "fig:threshold-compilation": "815371b5ff9a6c8ab6010f997afbcf822d56d2065d426ac0082dd1334d725f57",
+    "par:depth-accounting": "0c5047726ffa41efb1dfed6c226af8170906c5ec1e68d2af34867c13063d6c47"
+   },
+   "figures": {
+    "fig:threshold-compilation": "815371b5ff9a6c8ab6010f997afbcf822d56d2065d426ac0082dd1334d725f57"
+   },
+   "lean": {
+    "NimAudit.Family.rest_ac0": "d81f27551c82d36a8b0097b4a29e1ebb986725e55a1bc29ba98adab12214146e",
+    "NimAudit.Family.rest_net": "cf66f84dfcfe7c95d0fc5cddc5f4e04c32faaa7036743e3739d3cc2910ca0868",
+    "NimAudit.ThresholdNet.compileF": "08d6481738070e872da83628bbee3476bd477606cc80969cea73e1b585cfde87",
+    "NimAudit.ThresholdNet.compileF_fixed_grid": "287c32b1d6bcae4c47b9719ff898270f47cdcb643e7eae14b86e7fff9f88bd0a",
+    "NimAudit.ThresholdNet.compileF_spec": "0eaec607b06ee06ce66a1c61fb45860ddf023c845276c1ed81cb345f5271ae09",
+    "NimAudit.ThresholdNet.constGate_eval": "7e02b8555e34058af012e40692e79f1c3b73e68eb74e19c93a897533038d34cf",
+    "NimAudit.ThresholdNet.layerAt": "caf544b16a007bed806df446ce6677a140a379cee5a26c0e41ea0a88d374003f",
+    "NimAudit.ThresholdNet.orGate_eval": "1873846009311d70875344f3da0caaa03fef908061080dd7965a8d472bd1f869"
+   }
+  },
+  "recurrence": {
+   "claims": {
+    "c-board-storage": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
+    "c-lower-bound-respected": "f609eee9d30337f1c344784b48de08ee18b710d1270893c1fb9d91125ef4f785",
+    "c-recurrence-history": "c85879e3d34832e31203782f9a350b331a97304634bc7087b0822bd6f1549cba",
+    "c-recurrent-update": "9ef288e7140f8527118ef088d0f9b8ebee504219410133d406409b3ad7c6f3b0",
+    "c-replay": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
+    "c-stream": "1b991b2a8d9d385c2587be5c31b7f6cb84567e56081c0f81e6eecce053661560",
+    "prop:streaming-nimsum": "bacb9fc36383f7880f966bdbeb259e41090d4c758af9ca08a36d5d54b0d43be7"
+   },
+   "figures": {},
+   "lean": {
+    "NimAudit.BoardStore.bits_store_wins": "c3c77e1b941a1d6ad27483515085b7958af55983407c530a72098e3fb4aaf24d",
+    "NimAudit.BoardStore.bsForms_res": "e78142aef618ee63d11216dd6cb72d0270ee1ab0f163144fc11dc9c71831cf22",
+    "NimAudit.BoardStore.bsOuts_res": "4774f0247d981337f623c36e53b05190b2d0dd5144ea1c269370a10379c0f644",
+    "NimAudit.BoardStore.bsStep": "733f82028447e491c6725df621e6f2db3103dc43c22796297d72785f71e86081",
+    "NimAudit.BoardStore.bs_net": "112bdadfc03673a2f380be78eefe48f3e04d66ee384c2adbbf7ac0f60971ec23",
+    "NimAudit.BoardStore.btoks": "1a5c41e3ec0d2d2050df492677e84042a042a4aa7c52dbff62c4b6deee092437",
+    "NimAudit.Bypass.diff_decision_only": "97e3d28321e71b430b89c189a9d3d07cf42b6bb1ad333d21d787d3d611767c17",
+    "NimAudit.Bypass.diff_with_postMove": "6ca9adbbffc9f35e12cbb31a3d3d0487a7d45288f470b61bee33fa816353d15c",
+    "NimAudit.Controller.crun_decision": "c22b215465ed35c7c213423f11c647ec336a576d2bb9a12fc096712f8efb93ff",
+    "NimAudit.Controller.cstep": "eec19ec7936c0277d1380d3845015b2eb163d6b3e6abe7aaff8c7ba4dfa18322",
+    "NimAudit.Controller.dtoks": "1a5c41e3ec0d2d2050df492677e84042a042a4aa7c52dbff62c4b6deee092437",
+    "NimAudit.Controller.stream_fits": "65a5955e49aff9dc4a11251bcdd92dabbe1509db2985eb7ce09c2c882fa85aa8",
+    "NimAudit.ControllerBits.bstep_reset": "be4c33ba9030ffa692fa7af09a620112ccbe190ba6aec145c3933d1972ab84d4",
+    "NimAudit.Recurrent.circuit_resources": "02d33451fa483cd9e3a68ec7cdc29a1b5247fb035a9afb39a456f0ba3e8b48e3",
+    "NimAudit.Recurrent.replayStep": "13c9777d8c7cc8bbe1ff2fc0298126504348890a9c49d79562bae44531f6aa0c",
+    "NimAudit.Recurrent.sep_resets": "a28111b737fd0c026945f06b7e3702bb13ae5fe7a952cc4d933960e862257710",
+    "NimAudit.Recurrent.step": "37a38a456be8b0b45373513156341dec69da496fd0df61fc44b54594615997b6",
+    "NimAudit.WholeGame.replay_wins": "938a74a88429c1f8e1733d7b668e00aa17307de9b0307f22683c3788b0f33f92"
+   }
+  },
+  "restore": {
+   "claims": {
+    "c-binary-index": "979453a04f351f49be147daaa2c52b4f4d041bfb5e2b7f2f8ab51d9053c0003d",
+    "c-candidate-moves": "35e6316fb7699da7b36bd42c0dfe8540ba793d5db8fdddc1a29ae2acfcc4e77a",
+    "c-impl-overview": "a80358fba4a0a3f9a40c847bac069d7f38fc4a063bda7dd866a2b5759a315b43",
+    "c-mirror-delta": "8d048be4dc49977c2ed06b779c60dacdaaf2053d57acc947efa899b96984f17a",
+    "c-restore-selector": "f0cd9ede2be2bf3905824e7563dbb3672dfd58781ebaa578b37df11d3a913ad6",
+    "fig:construction-pipeline": "907077765feb76ade17f5192ca0b1cd92843354d463ae4231a385b60c435b61e",
+    "fig:restoration-example": "1a6ca1c763d12d3e42113b2d5a0798fc08d0d1e62e32a70c9f074582ac1dca9f",
+    "lem:nimber-diff-ac0": "f7c70f3c55b3196c1fb79ddb33564056aeec3b2c426c29ef7a6ef4242ba91866",
+    "par:construction-example": "c1a74bbbea9021c2576f6c25cbbde771fd80216e4d3f71559cd3930ad28a3119",
+    "prop:restore": "a8eb6954cec14e2320d180a27755f9519e26bdeb9961392aac2ec52e3987d90c",
+    "thm:search-gap.iii": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a"
+   },
+   "figures": {
+    "fig:construction-pipeline": "907077765feb76ade17f5192ca0b1cd92843354d463ae4231a385b60c435b61e",
+    "fig:restoration-example": "1a6ca1c763d12d3e42113b2d5a0798fc08d0d1e62e32a70c9f074582ac1dca9f"
+   },
+   "lean": {
+    "NimAudit.AttainCircuit.cancel_iff_bit": "79723f643fc718bd6411b99b7853feeab928f84bba9d6356b748fb71d5265b34",
+    "NimAudit.Family.rest_ac0": "d81f27551c82d36a8b0097b4a29e1ebb986725e55a1bc29ba98adab12214146e",
+    "NimAudit.Family.rest_net": "cf66f84dfcfe7c95d0fc5cddc5f4e04c32faaa7036743e3739d3cc2910ca0868",
+    "NimAudit.Family.rest_semantics": "7a68744b8d99a5d00e003ef10e1e2b3d4d13044a58729677b0db9fa9e22a667f",
+    "NimAudit.LocalRestore.localDelta_eq": "ae6e1fcc30b12630f46a696a624d814d3098725628bbeb52a25d556e9dad9dd7",
+    "NimAudit.LocalRestore.restC_eval": "c831e9e96fd33a06348cc9ad9fad0f4c4f63b02a1bd4a2d19f8c9a6fa0686d46",
+    "NimAudit.LocalRestore.restore_equiv": "cbfae8cf63396cd1bd0d688068a9dca6a324860f9adef188c7ad9efd0e673365",
+    "NimAudit.PriorityEncoder.encode_correct": "38121356bcb6074eceb28bf77f995821f61258c74d3eb8275494c020c0cc7291",
+    "NimAudit.SelectCircuit.varSel_correct": "ce507d0f8abbe8bb9f715f69fa7800340b3421d99c52cc27aee22274abe50de9"
+   }
+  },
+  "rollout": {
+   "claims": {
+    "c-controller-evals": "8c0ab472930a121fc8b88a2eba018c4c998ae8da934aa7ae9756622589e76171",
+    "c-depth-amplification": "fd2ef06aa48f35541fa8dac72a40d77ad76d81c7ee67d2f8abf277f99ba46e3f",
+    "c-fsm-definition": "ebdfa283f8e224f789291dd6735ad0067771a27b37028b3aa5b1c59950dbe92d",
+    "c-outer-controller": "f57af1853d04e970399dad9d59473b73e5711bb972080695db7939a3ae9ed541",
+    "def:rollout-policy": "4edfadc2a395e22424e668893e42508821081f5a2fffa2cf343d34a29d0783d3",
+    "fig:fsm-shootout-controller": "330e81321971be455c42bb24c22575c684d5c6f8cba94ae3146702c606bc2c9e",
+    "par:controller-costs": "739b9626e71ac7a86599b2f76e1a63c302ee252e5d49f79e9941750770ac798b",
+    "par:shootout-controller": "2f827b0e7a8341dcb393866d478a2001f3e3f0a01c63cb763d143739445453e0",
+    "prop:rollout-sufficiency": "4a1c0cfcc79921907eb043c73a5dd3f92131cbb7752d4fe8488549b54d881457",
+    "rem:why-multi-head": "f4008ef5ce03a22badc231e5a0833ef4a526ee67a17099087acb178cfad5df9f",
+    "thm:search-gap.ii": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a"
+   },
+   "figures": {
+    "fig:fsm-shootout-controller": "330e81321971be455c42bb24c22575c684d5c6f8cba94ae3146702c606bc2c9e"
+   },
+   "lean": {
+    "NimAudit.Game.reconstruct_eq": "360b6e578de2ae6966d124209914e55ac0f1742ebaa71a159b1669021c328589",
+    "NimAudit.Game.recoverBit": "1cff72ec4fffc600be90c000506e5abdb3b8655e76b99c29ec02d6b833fd8d52",
+    "NimAudit.Rollout.run_parity": "3179ebdce7fc9f96b9480b5e553b6c52a489d82d98b25f2d734866a958521975",
+    "NimAudit.RolloutExec.rsStep": "d15ec41ae139acde1464f6a96b70310f9a94884cce998fce30a81cc2cfef08f2",
+    "NimAudit.SelectCircuit.policyIdx": "a66471ace698bc99f8db25fc426cf8baa21251331615a5726e90a85b3ac57a0f",
+    "NimAudit.Shootout.ahL_counts": "ac29e0599f56b331c86776cbd19670300be5a5ceac6f3ef468ba59acd01664c5",
+    "NimAudit.Shootout.ahMove_eq": "2a8db06c483a3b125a406849b093de70112f41bdc9ccb69a42325ef0db32bd42",
+    "NimAudit.Shootout.ah_counts": "4085703d752784ac207bf409878e8effb500ce644591fc22dbf9527fe1e5ffae",
+    "NimAudit.Shootout.ee_counts": "ce9ca33bac85d7643e2baa320d80604d49b661c7f27d4876d2a03cf508993612",
+    "NimAudit.Shootout.ee_spec": "8f623a35ff5c2c0aa231427e8198dc6f386bd70691e600885d7784772288f6cc",
+    "NimAudit.Shootout.initOS": "a895adc1b8e9da4bf64017af19a624f429a94ff36503e89d55087d07e8e6fe52",
+    "NimAudit.Shootout.ostep": "460546a9469e8f1839e046b34b6c18299f37c7340926e2b3178510c3e866f36f",
+    "NimAudit.Shootout.query_step": "8ad1969674509e3be70150c1b1da0ec361b113b0bf3411a09e5ad677a3a0ae39"
+   }
+  }
+ }
+}

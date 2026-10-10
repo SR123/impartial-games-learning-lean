@@ -1,0 +1,65 @@
+[
+ {
+  "label": "fig:barrier-blueprint",
+  "kind": "tikz",
+  "source": "paper_jmlr.tex lines 101-203",
+  "source_sha256": "0efd3bd91e7b36f409b2c5898ea3cd2a1ed75877d5066aafba66f832afb74c3b",
+  "output": "assets/figures/barrier-blueprint.svg",
+  "output_sha256": "9b8f0bd717619a1399a7409b2c8140aa437dbb210257eeb935f232cf977206f3",
+  "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
+ },
+ {
+  "label": "fig:restoration-example",
+  "kind": "tikz",
+  "source": "paper_jmlr.tex lines 543-596",
+  "source_sha256": "c9b342121869e97d0461047f4426ffaada54acf2c4243aeedbe6a652f5d681fb",
+  "output": "assets/figures/restoration-example.svg",
+  "output_sha256": "22b5cf79f25a2bdc07c2c4584291bd8214a62444f66024d8e978650db75f3b82",
+  "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
+ },
+ {
+  "label": "fig:fsm-shootout-controller",
+  "kind": "tikz",
+  "source": "paper_jmlr.tex lines 679-709",
+  "source_sha256": "994ebfe6f0144ebb6993f7e61f76ebc4dcceab5f2ccd6baf4e612060cef13500",
+  "output": "assets/figures/fsm-shootout-controller.svg",
+  "output_sha256": "8893f4bd14b99818ad1d6fd9cad96938ab34acc98f6e8cf3ec342467c28b06d4",
+  "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
+ },
+ {
+  "label": "fig:construction-pipeline",
+  "kind": "tikz",
+  "source": "paper_jmlr.tex lines 1475-1484",
+  "source_sha256": "0a8b03a8ff456fc6026455f8829252d9f83067aa1ad67cc2b75ab537ab2cab2c",
+  "output": "assets/figures/construction-pipeline.svg",
+  "output_sha256": "00330147883db5230d53eea15fc8fe989efd4c468e41596d335349da31e42b1e",
+  "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
+ },
+ {
+  "label": "fig:threshold-compilation",
+  "kind": "tikz",
+  "source": "paper_jmlr.tex lines 1517-1523",
+  "source_sha256": "96881cc32a449aba164ae8f80227ab97fe7d6cd7c91c8ebb0a0b2dc78264d4fc",
+  "output": "assets/figures/threshold-compilation.svg",
+  "output_sha256": "e59c0c02b171e74ddb1267081dda3353245b4911169cbec4d6f216c6be704af5",
+  "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
+ },
+ {
+  "label": "fig:valacc-H20k4",
+  "kind": "plot",
+  "source": "figures/figValAccH20k4.pdf",
+  "source_sha256": "c310f57fddf255652a273d0d6176fb83bf234d353c7f54ee6a5f84513aad7c63",
+  "output": "assets/figures/valacc-H20k4.svg",
+  "output_sha256": "06a1b5b6271ca8a21ed5edf26c6db900ee0f64c04dfe47b6bb1a4af5bcfc62e4",
+  "method": "pdftocairo -svg of the manuscript's vector PDF (no re-plotting)"
+ },
+ {
+  "label": "fig:testacc-H20k4",
+  "kind": "plot",
+  "source": "figures/figTestAccCkptsH20k4.pdf",
+  "source_sha256": "68caaeea1fee4a3f148c93a8a57423ca7d8222bdc86b0854b4859357d15930ef",
+  "output": "assets/figures/testacc-H20k4.svg",
+  "output_sha256": "728f307f66ee034ffa2c410ac9f2cf669518edfb8fea83db2b923b2e29008bc0",
+  "method": "pdftocairo -svg of the manuscript's vector PDF (no re-plotting)"
+ }
+]

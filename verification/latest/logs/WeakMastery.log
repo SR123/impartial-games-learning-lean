@@ -1,0 +1,81 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase8/WeakMastery.lean:369:17: warning: unused variable `hj`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase8/WeakMastery.lean:391:17: warning: unused variable `hj`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase8/WeakMastery.lean:577:6: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase8/WeakMastery.lean:671:8: warning: unused variable `P0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'NimAudit.Mastery.Role.other_ne' depends on axioms: [propext]
+'NimAudit.Mastery.Role.eq_other_of_ne' depends on axioms: [propext]
+'NimAudit.Mastery.cur_cons' does not depend on any axioms
+'NimAudit.Mastery.mover_cons' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.mover_init' does not depend on any axioms
+'NimAudit.Mastery.mover_cons_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.mover_cons_ne' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.legal_sum' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.legal_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.legal_ne_nil' depends on axioms: [propext]
+'NimAudit.Mastery.legal_last' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.legal_pair' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.cons_legal' does not depend on any axioms
+'NimAudit.Mastery.cons_own' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.secure_extend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.secure_terminal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.play_own' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.play_own_fail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.play_opp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.play_opp_fail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.play_finishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.play_fuel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.terminal_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.secure_play' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.secure_guarantee' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.subFirstPos_move' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.subFirstPos_isSome' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.subFirst_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.followD_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.follow_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.followD_play' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.follow_play' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.followD_reach' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.secure_iff_guarantee' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.optOpp_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.optOpp_play' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.optLike_play' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.guarantee_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.wins_secure' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.secondWins_secure' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.zeroSel_wins' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.le_sum_of_mem' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.width_sum' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.roleWinnable_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.roleWinnable_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.roleWinnable_game' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.roleWinnable_exclusive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.weakMastery_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.weakMastery_vacuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.weakMastery_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.weakMastery_iff_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairing_guarantee' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairing_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairing_first_vacuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairNetSel_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairing_net_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.pairing_resources' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.mh_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.twoFrame_secure' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.twoFrame_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.twoFrame_memory' depends on axioms: [propext, Quot.sound]
+'NimAudit.Mastery.cons_congr' does not depend on any axioms
+'NimAudit.Mastery.guarantee_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.weakMastery_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.strong_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.legal_width' depends on axioms: [propext]
+'NimAudit.Mastery.mh_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.sep3_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Mastery.sep3_not_strong' depends on axioms: [propext, Quot.sound]

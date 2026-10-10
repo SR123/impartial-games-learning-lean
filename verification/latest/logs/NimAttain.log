@@ -1,0 +1,48 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase3/NimAttain.lean:353:48: warning: This simp argument is unused:
+  Nat.ne_of_gt (Nat.two_pow_pos i)
+
+Hint: Omit it from the simp argument list.
+  simp [inFibre, dotB_two_pow_right, hiB, hi,̵ ̵N̵a̵t̵.̵n̵e̵_̵o̵f̵_̵g̵t̵ ̵(̵N̵a̵t̵.̵t̵w̵o̵_̵p̵o̵w̵_̵p̵o̵s̵ ̵i̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase3/NimAttain.lean:362:51: warning: This simp argument is unused:
+  Nat.ne_of_gt (Nat.two_pow_pos k)
+
+Hint: Omit it from the simp argument list.
+  simp [inFibre, dotB_two_pow_right, hkB, hwk,̵ ̵N̵a̵t̵.̵n̵e̵_̵o̵f̵_̵g̵t̵ ̵(̵N̵a̵t̵.̵t̵w̵o̵_̵p̵o̵w̵_̵p̵o̵s̵ ̵k̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Attain.cancelIdx_some' depends on axioms: [propext]
+'NimAudit.Attain.cancelIdx_none' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.decIdx_some' depends on axioms: [propext]
+'NimAudit.Attain.decIdx_none' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.decIdx_terminal' depends on axioms: [propext]
+'NimAudit.Attain.cancelIdx_terminal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.attainF_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.attainF_move' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.attainF_none_iff' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.gval_attainF_cancel' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.attain_success' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.rsum_nonneg_ite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.attain_count_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.nonzeroCount_eq'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.qpow_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.q_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.attain_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.findLeast_some' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.findLeast_isSome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.dotB_comm' depends on axioms: [propext]
+'NimAudit.Attain.dotB_two_pow_right' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.fibre_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.fibreRep_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.xor_pred_mask' depends on axioms: [propext, Quot.sound]
+'NimAudit.Attain.attain_no_extra' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.attain_count_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.attain_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.succCountRO_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.attain_exact_head' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.rep_B2_false' depends on axioms: [propext]
+'NimAudit.Attain.rep_B2_true' depends on axioms: [propext]
+'NimAudit.Attain.paper_example_two_thirds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.corrHyp_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Attain.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]

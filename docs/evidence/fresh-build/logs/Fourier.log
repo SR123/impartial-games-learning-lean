@@ -1,0 +1,203 @@
+/root/interactive/lean/phase8/Fourier.lean:125:68: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp only [ofPred, List.getD_eq_getElem?_getD, List.getElem?_map,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:324:52: warning: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵ ̵h̵x̵y̵,̵[̲h̲x̲y̲,̲ decide_false, Noise.ind,
+        Bool.false_eq_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:349:52: warning: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵ ̵h̵S̵T̵,̵[̲h̲S̲T̲,̲ decide_false, Noise.ind,
+        Bool.false_eq_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:612:64: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp only [pt, List.getD_eq_getElem?_getD, List.getElem?_map,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:649:21: warning: This simp argument is unused:
+  List.getElem_zipWith
+
+Hint: Omit it from the simp argument list.
+  simp [twoMask, pt,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵_̵z̵i̵p̵W̵i̵t̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:676:30: warning: This simp argument is unused:
+  Ne.symm h1
+
+Hint: Omit it from the simp argument list.
+  simp [h1,̵ ̵N̵e̵.̵s̵y̵m̵m̵ ̵h̵1̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:686:60: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp only [List.getD_eq_getElem?_getD, List.getElem?_map,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:867:47: warning: This simp argument is unused:
+  List.getElem?_map
+
+Hint: Omit it from the simp argument list.
+  simp [vfun, enc, List.getD_eq_getElem?_getD, List.getElem?_m̵a̵p̵,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵range, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:867:66: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp [vfun, enc, List.getD_eq_getElem?_getD, List.getElem?_map, L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵ ̵hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:927:43: warning: This simp argument is unused:
+  List.getElem?_map
+
+Hint: Omit it from the simp argument list.
+  simp [frame, List.getD_eq_getElem?_getD, List.getElem?_m̵a̵p̵,̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵range, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:927:62: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp [frame, List.getD_eq_getElem?_getD, List.getElem?_map, L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵ ̵hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase8/Fourier.lean:1107:12: warning: This simp argument is unused:
+  this
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵h̵i̵s̵,̵ ̵h̵j̵a̵]̵[̲h̲j̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Fourier.pm_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pm_xor_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pm_of_false' depends on axioms: [propext]
+'NimAudit.Fourier.pm_zeros_right' does not depend on any axioms
+'NimAudit.Fourier.pm_selCount' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.cube_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.nodup_map_cons' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.cube_nodup' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.cube_card' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.ofPred_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.ofPred_getD' depends on axioms: [propext]
+'NimAudit.Fourier.mask_ext' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.mask_of_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.two_pos'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.two_pow_pos''' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.two_pow_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pow_mul_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.one_ne_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sg_xor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sg_mul_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.gs_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.gs_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.gs_single_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.chi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.coef_congr' depends on axioms: [propext]
+'NimAudit.Fourier.chi_mul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.chi_mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.chi_zeros' depends on axioms: [propext]
+'NimAudit.Fourier.char_sum_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.zipWith_length_eq' depends on axioms: [propext]
+'NimAudit.Fourier.orth_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.orthonormal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dual_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.uniqueness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.parseval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.plancherel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dim_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.tail_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.tail_congr' depends on axioms: [propext]
+'NimAudit.Fourier.exactDeg_unique' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.tail_of_degLe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.coef_sq_le_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.bandLimited_corr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sign_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.tail_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.coef_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.tail_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.chi_exactDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.bandLimited_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sg_eq_ind' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.coef_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sign_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.par_eq_pm' does not depend on any axioms
+'NimAudit.Fourier.maskU_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.nimBitSign_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.nimBit_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.nimBit_corr_of_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.decode_two' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.delta_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.delta_move_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pt_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pt_getD' depends on axioms: [propext]
+'NimAudit.Fourier.pm_pt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.twoMask_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pm_twoMask' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.twoMask_eq_map' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.ones_map_range' depends on axioms: [propext]
+'NimAudit.Fourier.ite_lt_succ' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.count_two' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.ones_twoMask' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.twoMask_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.eval_yC' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.yC_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.eval_dC_any' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.getD_replicate_false' depends on axioms: [propext]
+'NimAudit.Fourier.dSign_true' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.dC_not_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dC_two_coefs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dC_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dC_one_exactDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.dC_trivial' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.enc_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.vfun_enc' depends on axioms: [propext]
+'NimAudit.Fourier.eval_enc' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.dSign_enc' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.set_split' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.dSign_known_heap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.frame_length' depends on axioms: [propext]
+'NimAudit.Fourier.frame_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.frame_getD' depends on axioms: [propext]
+'NimAudit.Fourier.enc_split' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.decode_frame' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.gMask_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.ones_gMask' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.gMask_delta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.toBitsBE_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.maskU_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.unitBoard_length' depends on axioms: [propext]
+'NimAudit.Fourier.zero_width' depends on axioms: [propext]
+'NimAudit.Fourier.unitBoard_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.unitBoard_split' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.boardBits_zero' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.boardBits_unit' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.enc_unit_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.enc_unit_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.pm_pt_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.sg_inj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.char_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.nimSum_zeros' depends on axioms: [propext, Quot.sound]
+'NimAudit.Fourier.enc_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.char_unique_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.no_low_degree_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.chi_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.ip_chi_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.orthonormal_rat_agrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Fourier.parity_corr_coef' depends on axioms: [propext, Classical.choice, Quot.sound]

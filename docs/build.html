@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Reproducible build (interactive edition)</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-build">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html" aria-current="page">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="build-page">
+<h1>Reproducible Lean build</h1>
+<p>The Lean development is checked by compiling its 38 modules. A successful compilation means that the Lean kernel
+accepted every proof of every formal statement. It does not by itself show that a formal statement matches the
+English sentence it is linked to; that correspondence is reviewed in each claim record.</p>
+<h2>Pinned toolchain</h2>
+<ul><li>Lean 4.26.0 (<code>leanprover/lean4:v4.26.0</code>, commit <code>d8204c9fd894f91bbb2cdfec5912ec8196fd8562</code>)</li>
+<li>Mathlib v4.26.0, commit <code>2df2f0150c275ad53cb3c90f7c98ec15a56a1a67</code>, pinned in
+<a href="lean/phase8/lakefile.toml"><code>lean/phase8/lakefile.toml</code></a> and
+<a href="lean/phase8/lake-manifest.json"><code>lake-manifest.json</code></a>. Only RealNoise and RealFourier import Mathlib;
+the other 36 modules use Lean core and Std only.</li></ul>
+<h2>Commands</h2>
+<p>From the root of this edition's source folder (the folder that contains <code>lean/</code> and <code>tools/</code>):</p>
+<pre class="cmd"><code># 1. Pinned Mathlib, needed only for RealNoise and RealFourier (downloads into lean/phase8/.lake)
+cd lean/phase8
+lake exe cache get        # optional: official build cache, where the network allows it
+lake build Mathlib.Data.Real.Archimedean Mathlib.Data.Fintype.BigOperators Mathlib.Algebra.BigOperators.Fin \
+  Mathlib.Algebra.Order.BigOperators.Group.Finset Mathlib.Tactic.Linarith Mathlib.Tactic.Positivity \
+  Mathlib.Tactic.FieldSimp Mathlib.Tactic.NormNum Mathlib.Tactic.Ring Mathlib.Tactic.GCongr
+cd ../..
+
+# 2. Compile all 38 modules into a NEW directory (the script refuses to reuse one)
+sh tools/lean/build_bundle.sh work/lean_build_$(date +%Y%m%d_%H%M%S) lean/phase8
+
+# 3. Summarise the run: exit codes, warnings and every #print axioms report
+python3 tools/lean/parse_build.py work/lean_build_&lt;stamp&gt; work/lean_build_&lt;stamp&gt;.json
+
+# 4. (site maintainers) export declaration types and dependencies for the website
+LEAN_PATH="$(cd lean/phase8 &amp;&amp; lake env printenv LEAN_PATH):$PWD/work/lean_build_&lt;stamp&gt;/olean" \
+  lean tools/lean/ExportDecls.lean      # writes data/lean_export.json</code></pre>
+<p>The per-phase scripts <code>lean/phase*/build.sh</code> from the original deliveries are included unchanged;
+they write build products inside the source tree, so the bundle script above is preferred.</p>
+<h2>Fresh build recorded for this edition</h2>
+<p>Run in a new, isolated output directory (<code>lean_fresh_20261010</code>), Lean (version 4.26.0, x86_64-unknown-linux-gnu, commit d8204c9fd894f91bbb2cdfec5912ec8196fd8562, Release).
+Started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z. Result: 38 of 38
+modules compiled; 1588 axiom reports, one for each audited theorem, using only
+(none); propext; propext, Classical.choice, Quot.sound; propext, Quot.sound; 126 linter warnings (unused simp arguments and variables), no errors,
+no <code>sorry</code>. Machine-readable summary: <a href="evidence/fresh-build/summary.json">summary.json</a>.</p>
+<table class="build-t"><thead><tr><th>Module</th><th>Status</th><th>Axiom reports</th><th>Warnings</th><th>Log</th></tr></thead>
+<tbody><tr><td><a href="source/NimCore.html">NimCore</a></td><td>compiled</td><td class="num">18</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/NimCore.log">log</a></td></tr><tr><td><a href="source/NimRollout.html">NimRollout</a></td><td>compiled</td><td class="num">22</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/NimRollout.log">log</a></td></tr><tr><td><a href="source/NimGame.html">NimGame</a></td><td>compiled</td><td class="num">47</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/NimGame.log">log</a></td></tr><tr><td><a href="source/NimProbability.html">NimProbability</a></td><td>compiled</td><td class="num">73</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/NimProbability.log">log</a></td></tr><tr><td><a href="source/NimAttain.html">NimAttain</a></td><td>compiled</td><td class="num">34</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/NimAttain.log">log</a></td></tr><tr><td><a href="source/Circuit.html">Circuit</a></td><td>compiled</td><td class="num">86</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Circuit.log">log</a></td></tr><tr><td><a href="source/NimRecurrent.html">NimRecurrent</a></td><td>compiled</td><td class="num">38</td><td class="num">3</td><td><a href="evidence/fresh-build/logs/NimRecurrent.log">log</a></td></tr><tr><td><a href="source/BitBridge.html">BitBridge</a></td><td>compiled</td><td class="num">36</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/BitBridge.log">log</a></td></tr><tr><td><a href="source/NimCorrBridge.html">NimCorrBridge</a></td><td>compiled</td><td class="num">36</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/NimCorrBridge.log">log</a></td></tr><tr><td><a href="source/AttainCircuit.html">AttainCircuit</a></td><td>compiled</td><td class="num">28</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/AttainCircuit.log">log</a></td></tr><tr><td><a href="source/FiniteNet.html">FiniteNet</a></td><td>compiled</td><td class="num">14</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/FiniteNet.log">log</a></td></tr><tr><td><a href="source/BinaryReadout.html">BinaryReadout</a></td><td>compiled</td><td class="num">14</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/BinaryReadout.log">log</a></td></tr><tr><td><a href="source/ParityCircuit.html">ParityCircuit</a></td><td>compiled</td><td class="num">13</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/ParityCircuit.log">log</a></td></tr><tr><td><a href="source/Controller.html">Controller</a></td><td>compiled</td><td class="num">17</td><td class="num">6</td><td><a href="evidence/fresh-build/logs/Controller.log">log</a></td></tr><tr><td><a href="source/ControllerBits.html">ControllerBits</a></td><td>compiled</td><td class="num">81</td><td class="num">25</td><td><a href="evidence/fresh-build/logs/ControllerBits.log">log</a></td></tr><tr><td><a href="source/SharedCircuit.html">SharedCircuit</a></td><td>compiled</td><td class="num">30</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/SharedCircuit.log">log</a></td></tr><tr><td><a href="source/SelectCircuit.html">SelectCircuit</a></td><td>compiled</td><td class="num">53</td><td class="num">20</td><td><a href="evidence/fresh-build/logs/SelectCircuit.log">log</a></td></tr><tr><td><a href="source/LocalRestore.html">LocalRestore</a></td><td>compiled</td><td class="num">34</td><td class="num">7</td><td><a href="evidence/fresh-build/logs/LocalRestore.log">log</a></td></tr><tr><td><a href="source/Foundation.html">Foundation</a></td><td>compiled</td><td class="num">24</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/Foundation.log">log</a></td></tr><tr><td><a href="source/Coverage.html">Coverage</a></td><td>compiled</td><td class="num">5</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Coverage.log">log</a></td></tr><tr><td><a href="source/PriorityEncoder.html">PriorityEncoder</a></td><td>compiled</td><td class="num">29</td><td class="num">4</td><td><a href="evidence/fresh-build/logs/PriorityEncoder.log">log</a></td></tr><tr><td><a href="source/ThresholdNet.html">ThresholdNet</a></td><td>compiled</td><td class="num">54</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/ThresholdNet.log">log</a></td></tr><tr><td><a href="source/ThresholdInst.html">ThresholdInst</a></td><td>compiled</td><td class="num">33</td><td class="num">5</td><td><a href="evidence/fresh-build/logs/ThresholdInst.log">log</a></td></tr><tr><td><a href="source/WholeGame.html">WholeGame</a></td><td>compiled</td><td class="num">23</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/WholeGame.log">log</a></td></tr><tr><td><a href="source/Family.html">Family</a></td><td>compiled</td><td class="num">54</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/Family.log">log</a></td></tr><tr><td><a href="source/Barrier.html">Barrier</a></td><td>compiled</td><td class="num">30</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Barrier.log">log</a></td></tr><tr><td><a href="source/RolloutExec.html">RolloutExec</a></td><td>compiled</td><td class="num">50</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/RolloutExec.log">log</a></td></tr><tr><td><a href="source/Bypass.html">Bypass</a></td><td>compiled</td><td class="num">18</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Bypass.log">log</a></td></tr><tr><td><a href="source/Classical.html">Classical</a></td><td>compiled</td><td class="num">44</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Classical.log">log</a></td></tr><tr><td><a href="source/BoardStore.html">BoardStore</a></td><td>compiled</td><td class="num">44</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/BoardStore.log">log</a></td></tr><tr><td><a href="source/Windows.html">Windows</a></td><td>compiled</td><td class="num">16</td><td class="num">0</td><td><a href="evidence/fresh-build/logs/Windows.log">log</a></td></tr><tr><td><a href="source/Misc.html">Misc</a></td><td>compiled</td><td class="num">60</td><td class="num">2</td><td><a href="evidence/fresh-build/logs/Misc.log">log</a></td></tr><tr><td><a href="source/NoiseModel.html">NoiseModel</a></td><td>compiled</td><td class="num">69</td><td class="num">6</td><td><a href="evidence/fresh-build/logs/NoiseModel.log">log</a></td></tr><tr><td><a href="source/Shootout.html">Shootout</a></td><td>compiled</td><td class="num">100</td><td class="num">8</td><td><a href="evidence/fresh-build/logs/Shootout.log">log</a></td></tr><tr><td><a href="source/WeakMastery.html">WeakMastery</a></td><td>compiled</td><td class="num">69</td><td class="num">4</td><td><a href="evidence/fresh-build/logs/WeakMastery.log">log</a></td></tr><tr><td><a href="source/Fourier.html">Fourier</a></td><td>compiled</td><td class="num">117</td><td class="num">12</td><td><a href="evidence/fresh-build/logs/Fourier.log">log</a></td></tr><tr><td><a href="source/RealNoise.html">RealNoise</a></td><td>compiled</td><td class="num">46</td><td class="num">1</td><td><a href="evidence/fresh-build/logs/RealNoise.log">log</a></td></tr><tr><td><a href="source/RealFourier.html">RealFourier</a></td><td>compiled</td><td class="num">29</td><td class="num">5</td><td><a href="evidence/fresh-build/logs/RealFourier.log">log</a></td></tr></tbody></table>
+<h2>Independent audit (dated evidence)</h2>
+<p>The development was independently audited on 2026-10-10: "Independent phase-8 audit and manuscript connections". The audit
+report, its declaration index and its correspondence map are reproduced unchanged in
+<a href="evidence/audit/">evidence/audit/</a>. They are dated evidence from that audit, not results of this site build.</p>
+<h2>Rebuilding the website</h2>
+<pre class="cmd"><code>cd tools &amp;&amp; npm ci &amp;&amp; cd ..     # KaTeX 0.16.11 (pinned in tools/package.json)
+python3 tools/build_site.py         # regenerates dist/ from the manuscript, content and data
+python3 tools/validate_site.py      # fidelity, link, anchor and browser checks
+python3 tools/serve.py              # local preview</code></pre>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

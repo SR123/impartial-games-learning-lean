@@ -1,0 +1,181 @@
+/root/interactive/lean/phase4/SelectCircuit.lean:627:28: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:641:28: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:655:28: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:690:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:694:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:700:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:771:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:776:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:783:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:788:36: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:795:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:800:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:829:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:833:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:839:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:875:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:902:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/SelectCircuit.lean:1003:9: warning: unused variable `i`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/root/interactive/lean/phase4/SelectCircuit.lean:1003:38: warning: unused variable `i`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/root/interactive/lean/phase4/SelectCircuit.lean:1003:43: warning: unused variable `p`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'NimAudit.SelectCircuit.readoutOf_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.selReadout_subst' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.orFirst_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.firstTrue_isSome' depends on axioms: [propext]
+'NimAudit.SelectCircuit.max_nzC' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.max_decbitC' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.decbit_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.getD_lt_of_width' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.map_getD_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.firstTrue_map_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.genSel_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.firstIdx_cons' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.cancelIdx_eq_firstIdx' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.attainT_eq_primOr' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.cancelIdx_zero' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.attainT_eq_replayMove' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.applyM_shift' does not depend on any axioms
+'NimAudit.SelectCircuit.subFirstGe_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.subFirstPos_eq' depends on axioms: [propext]
+'NimAudit.SelectCircuit.policyIdx_step' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.selIn_board' depends on axioms: [propext]
+'NimAudit.SelectCircuit.selIn_sig' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.heap_lt' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.cancV_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.xbV_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.varSel_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mh_inputs' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mhSel_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mhSel_outcomes' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.pow_le_iff_bit' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.sub_pow_testBit' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.eligC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.subbitC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.polSel_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.lift1' does not depend on any axioms
+'NimAudit.SelectCircuit.sz_firstC' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.dp_firstC' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mx_firstC' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.sz_orFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.dp_orFirst' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mx_orFirst' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.nzC_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.decbitC_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.genSel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.substR_bound' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.cancV_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.xbV_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.varSel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.recC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.mhSel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.SelectCircuit.eligC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.subbitC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.SelectCircuit.polSel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

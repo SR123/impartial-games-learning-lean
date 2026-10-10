@@ -1,0 +1,66 @@
+/root/interactive/lean/phase4/Controller.lean:145:13: warning: This simp argument is unused:
+  crun
+
+Hint: Omit it from the simp argument list.
+  simp only [cr̵u̵n̵,̵ ̵c̵step, if_true, Option.toList, List.nil_append, List.append_nil,
+  ̵  ̵ ̵ ̵List.cons_append,
+  ̲  ̲ ̲ ̲List.singleton_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/Controller.lean:145:19: warning: This simp argument is unused:
+  cstep
+
+Hint: Omit it from the simp argument list.
+  simp only [crun, c̵s̵t̵e̵p̵,̵ ̵if_true, Option.toList, List.nil_append, List.append_nil,
+  ̵  ̵ ̵ ̵List.cons_append,
+  ̲  ̲ ̲ ̲List.singleton_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/Controller.lean:145:35: warning: This simp argument is unused:
+  Option.toList
+
+Hint: Omit it from the simp argument list.
+  simp only [crun, cstep, if_true, O̵p̵t̵i̵o̵n̵.̵t̵o̵L̵i̵s̵t̵,̵ ̵List.nil_append, List.append_nil, List.cons_append,
+  ̲  ̲ ̲ ̲List.singleton_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/Controller.lean:146:22: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  simp only [crun, cstep, if_true, Option.toList, List.nil_append, List.append_nil,
+      List.cons_append,̵ ̵L̵i̵s̵t̵.̵s̵i̵n̵g̵l̵e̵t̵o̵n̵_̵a̵p̵p̵e̵n̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/Controller.lean:346:14: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [crunStates, cstep, Bool.false_eq_true, if_false, List.mem_cons,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵] at h4
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/Controller.lean:363:46: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [crunStates, List.mem_cons,̵ ̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵] at h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Controller.crun_append' depends on axioms: [propext]
+'NimAudit.Controller.crunStates_append' depends on axioms: [propext]
+'NimAudit.Controller.crun_mem_states' depends on axioms: [propext]
+'NimAudit.Controller.crun_scan_rows' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.crun_replay_rows' depends on axioms: [propext]
+'NimAudit.Controller.crun_decision' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.crun_stream' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.cinit_idle' does not depend on any axioms
+'NimAudit.Controller.crun_reset' depends on axioms: [propext]
+'NimAudit.Controller.crun_games' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.empty_board' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.decision_correct' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.ctrl_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Controller.replayStep_fits' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.scan_rows_fit' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.replay_rows_fit' depends on axioms: [propext, Quot.sound]
+'NimAudit.Controller.stream_fits' depends on axioms: [propext, Quot.sound]

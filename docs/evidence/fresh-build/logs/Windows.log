@@ -1,0 +1,16 @@
+'NimAudit.Windows.wState_succ' does not depend on any axioms
+'NimAudit.Windows.wCirc_succ' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.sizeBound_ge' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.rnnSize_mono' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.window_ac0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Windows.window_size_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Windows.evalNet_append' does not depend on any axioms
+'NimAudit.Windows.evalNet_flatten' does not depend on any axioms
+'NimAudit.Windows.flatten_length_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.staged_ac0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Windows.majGate_not_valid' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.majGate_coeffs' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.xorChain_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.xorChain_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.blockXor_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Windows.literal_shift' depends on axioms: [propext, Classical.choice, Quot.sound]

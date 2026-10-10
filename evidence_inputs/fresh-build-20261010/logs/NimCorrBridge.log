@@ -1,0 +1,46 @@
+/root/interactive/lean/phase3/NimCorrBridge.lean:410:36: warning: This simp argument is unused:
+  List.getElem?_take
+
+Hint: Omit it from the simp argument list.
+  simp [List.getD_eq_getElem?_getD, L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵t̵a̵k̵e̵,̵ ̵hp, List.getElem?_drop]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase3/NimCorrBridge.lean:538:19: warning: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'NimAudit.CorrBridge.firstTrue_some_iff' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.eval_getC' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.eval_eqC' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.eval_xor2' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.boardBits_heap' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.selC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.val_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.lt_iff_top' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.ltC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.gval_readoutOf' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.legalC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.gval_legal' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.gval_illegal' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.gbitC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.gval_lt' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.HC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.getD_take_drop' depends on axioms: [propext]
+'NimAudit.CorrBridge.decodeBoard_getD' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.boardBits_decode' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.depth_and_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.depth_or_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.sum_le_len_mul' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.upow_pos' does not depend on any axioms
+'NimAudit.CorrBridge.size_and_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.CorrBridge.size_or_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.CorrBridge.size_lift' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.size_not_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.Upar_ge' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.getC_size' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.getC_depth' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.getC_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.HC_depth' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.HC_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.CorrBridge.HC_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.CorrBridge.corrHyp_of_premise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.CorrBridge.circuit_readout_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

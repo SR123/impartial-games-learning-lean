@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Abstract: Summary of the results; each is stated and qualified in the body of the paper</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-abstract.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#abstract">Back to Abstract in the paper</a>
+· <a href="coverage.html#c-c-abstract">Coverage table</a></nav>
+<h1 data-title="Abstract: Summary of the results; each is stated and qualified in the body of the paper">Abstract<span class="claim-h-short">Summary of the results; each is stated and qualified in the body of the paper</span></h1>
+<p class="cat-line"><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span> <span class="cat-desc">Motivation, interpretation or scope; not a formal claim.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><section class="abstract" id="x-abstract"><h2 class="abstract-h">Abstract</h2><p>Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi></mrow><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">\AC^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8873em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">AC</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">C</mi></mrow><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">\AC^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8873em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">AC</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. An accompanying interactive edition connects the paper to its formal statements and proofs.</p></section></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 64–68.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>The abstract compresses the whole paper into a few sentences. Each sentence corresponds to a precise statement
+inside the paper, and several of them carry conditions that the abstract can only hint at:</p>
+<ul>
+<li>"lies in AC<sup>0</sup>" is <a class="paper-ref" href="paper.html#thm:sim-ac0">Theorem 2.4</a>, for an explicitly restricted model of fixed-scale threshold networks, not for
+  neural networks in general;</li>
+<li>"prevents optimal single-position play" is <a class="paper-ref" href="paper.html#thm:singleframe-impossible">Theorem 5.2</a>, which uses the classical fact that
+  parity is not in AC<sup>0</sup>;</li>
+<li>the three routes around the obstruction are <a class="paper-ref" href="paper.html#prop:restore">Proposition 5.5</a> (two frames, given a zero-nim-sum predecessor),
+  <a class="paper-ref" href="paper.html#prop:rollout-sufficiency">Proposition 5.9</a> (several rollout policies, executed in sequence) and <a class="paper-ref" href="paper.html#prop:streaming-nimsum">Proposition 5.13</a>
+  (a recurrent scan whose length grows with the board, with retained state, a reset, and a replay of the board or
+  board storage to choose a move);</li>
+<li>the experiments are single saved supervised and imitation runs (<a class="paper-ref" href="paper.html#sec:supervised-restoration">Section 7.2</a>,
+  <a class="paper-ref" href="paper.html#sec:exp-fsm-shootout">Section 7.3</a>).</li>
+</ul>
+<p>The final sentences say what is <em>not</em> claimed: the constructions are representational possibilities, not
+guarantees that training will find them, and AC<sup>0</sup> membership is not a test of learnability.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>The abstract itself is not formalised; it summarises. Its mathematical sentences are covered by the records of
+the statements listed above, each with its own category. Its verification statement, that core results were checked in
+Lean with classical complexity results as explicit external inputs, is reflected on the
+<a href="coverage.html">coverage page</a>: conditional results name their classical input, <code>HastadNegl</code>, and empirical
+results are marked as such.</p>
+<p>The interactive edition reproduces the manuscript text and supplies the linked explanations and formal statements.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#abstract"><code>abstract</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Abstract</td></tr><tr><th scope="row">Claim</th><td>Summary of the results; each is stated and qualified in the body of the paper</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 64–68; SHA-256 of the normalised block source <code class="hash">db5dd8fb9b9f0be0…</code></td></tr><tr><th scope="row">Depends on</th><td><a href="claims/thm__sim-ac0.html">Theorem 2.4</a>, <a href="claims/thm__singleframe-impossible.b.html">Theorem 5.2 (barrier)</a>, <a href="claims/prop__restore.html">Proposition 5.5</a>, <a href="claims/prop__rollout-sufficiency.html">Proposition 5.9</a>, <a href="claims/prop__streaming-nimsum.html">Proposition 5.13</a>, <a href="claims/prop__bypass-interfaces.html">Proposition 5.14</a>, <a href="claims/c-exp-result-1f2f.html">Section 7.2.5, “One-frame does not learn restoration; two-frame eventually does”</a>, <a href="claims/c-fsm-results.html">Section 7.3, paragraph 2</a></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-abstract</code>, <code>formal/c-abstract</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is interpretation or motivation, not a formal mathematical claim.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

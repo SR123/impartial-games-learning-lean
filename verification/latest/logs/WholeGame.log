@@ -1,0 +1,26 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/WholeGame.lean:183:18: warning: unused variable `Q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'NimAudit.WholeGame.move_length' depends on axioms: [propext]
+'NimAudit.WholeGame.twoFrame_sound' does not depend on any axioms
+'NimAudit.WholeGame.restReply_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.twoFrame_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.twoFrame_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.twoFrame_lose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.polStepN_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.policyStep_move' depends on axioms: [propext, Quot.sound]
+'NimAudit.WholeGame.rolloutMoves_some' depends on axioms: [propext, Quot.sound]
+'NimAudit.WholeGame.rolloutMoves_none' depends on axioms: [propext, Quot.sound]
+'NimAudit.WholeGame.rollMoves_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.rollOut_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.mhSelect_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.wins_congr' depends on axioms: [propext]
+'NimAudit.WholeGame.mhSelect_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.mhSelect_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.mhSelect_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.decide_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.afterState_ok' depends on axioms: [propext, Quot.sound]
+'NimAudit.WholeGame.replayWins_sound' depends on axioms: [propext, Quot.sound]
+'NimAudit.WholeGame.replay_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.replay_game' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.WholeGame.replay_counts' depends on axioms: [propext, Quot.sound]

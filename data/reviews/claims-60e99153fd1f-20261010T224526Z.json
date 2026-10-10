@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T22:45:12Z",
+ "context": {
+  "manuscript_sha256": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333",
+  "locked_manuscript_sha256": "6bfc4748195c77de365b3de99bffc5be426a67122324ebdcd730818b062f659d"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "6bfc4748195c77de365b3de99bffc5be426a67122324ebdcd730818b062f659d",
+   "new": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Inspected exact source diff: only an HTTPS hyperlink was added around the existing phrase interactive edition in Section 10. All prose, formal statements, proofs and labels are unchanged. Converter now supports that link while preserving the displayed words."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

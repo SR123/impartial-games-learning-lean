@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 10, paragraph 3 (open item): The Fourier-tail premise is not connected to a precise LMN/Tal statement with reconciled conventions</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-tailpremise-open.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#sec:development-p3">Back to Section 10, paragraph 3 (open item) in the paper</a>
+· <a href="coverage.html#c-c-tailpremise-open">Coverage table</a></nav>
+<h1 data-title="Section 10, paragraph 3 (open item): The Fourier-tail premise is not connected to a precise LMN/Tal statement with reconciled conventions">Section 10, paragraph 3 (open item)<span class="claim-h-short">The Fourier-tail premise is not connected to a precise LMN/Tal statement with reconciled conventions</span></h1>
+<p class="cat-line"><span class="cat cat-open" title="Explicitly left open, deferred or not yet connected.">Open or deferred item</span> <span class="cat-desc">Explicitly left open, deferred or not yet connected.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec:development-p3">The boundary of this verification is explicit. Classical complexity results, notably Håstad’s parity hardness and correlation bounds and the Linial–Mansour–Nisan/Tal spectral bounds, remain external inputs <span class="citation">(Håstad, <a class="cite" href="paper.html#bib-hastad1986thesis">1986</a>, <a class="cite" href="paper.html#bib-hastad2014correlation">2014</a>; Linial et al., <a class="cite" href="paper.html#bib-linial1993constant">1993</a>; Tal, <a class="cite" href="paper.html#bib-tal2015tight">2015</a>)</span>. The single-channel result is checked conditional on a stated negligible parity-correlation theorem, including its application to the readout and its probability calculation. The spectral discussion uses a separate Fourier-tail premise; its connection to the exact conventions of a published tail theorem is not part of the checked development. The conditional implication from a tail bound to small parity correlation is checked. Empirical measurements and training runs are supported by experimental code and saved results, rather than by Lean proofs.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 1288–1288.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>The spectral discussion uses a hypothesis of the form "every bounded-depth, bounded-size formula has small Fourier
+mass above degree <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>". Results of this kind are classical (Linial–Mansour–Nisan; Tal), but their exact statements use
+particular conventions for size, depth and normalisation. Matching the Lean premise to one specific published
+statement, with those conventions reconciled, has not been done.</p>
+<p>The main results do not depend on this: the single-channel bound uses Håstad's correlation input instead.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p><strong>Status: open.</strong> <a class="lean-ref" href="source/Fourier.html#L514"><code>Fourier.TailPremise</code></a> is an explicit, unproved hypothesis of the auxiliary conditional
+application <a class="lean-ref" href="source/Fourier.html#L550"><code>Fourier.nimBit_corr_of_tail</code></a>; the principal results do not depend on it. The checked
+implication from band-limitation to small correlation is <a class="lean-ref" href="source/RealFourier.html#L194"><code>RealFourier.bandLimited_corr_real</code></a>.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#sec:development-p3"><code>sec:development-p3</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 10, paragraph 3 (open item)</td></tr><tr><th scope="row">Claim</th><td>The Fourier-tail premise is not connected to a precise LMN/Tal statement with reconciled conventions</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-open" title="Explicitly left open, deferred or not yet connected.">Open or deferred item</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 1288–1288; SHA-256 of the normalised block source <code class="hash">8027624b08756a3b…</code></td></tr><tr><th scope="row">Depends on</th><td><a href="claims/eq__tail-correlation.html">Equation (6.1)</a></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-tailpremise-open</code>, <code>formal/c-tailpremise-open</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This item is explicitly open or deferred.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

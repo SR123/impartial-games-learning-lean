@@ -1,0 +1,5 @@
+'NimAudit.Coverage.no_strong_master_of_switching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Coverage.no_strong_master_of_dag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Coverage.network_readout_bound_switching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Coverage.two_frame_restoration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Coverage.multi_head_selection' depends on axioms: [propext, Classical.choice, Quot.sound]

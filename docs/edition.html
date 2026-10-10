@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>About this edition</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-edition">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html" aria-current="page">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="edition-page"><h1>About this edition</h1><p>This interactive edition accompanies <em>Overcoming a Learning Bottleneck in Impartial Games:
+A Circuit Complexity Approach</em> by Søren Riis. It connects the paper to explanations,
+construction diagrams, formal statements and the complete Lean development.</p>
+<h2>What the edition contains</h2>
+<ul>
+<li><strong>The paper</strong>, generated as semantic HTML from <code>paper_jmlr.tex</code>, the exact source of the 46-page JMLR reading copy.
+  Wording, section order, numbering of sections, statements, equations, figures and tables, all 94 LaTeX labels,
+  captions, appendices and bibliography are reproduced. The PDF is offered unchanged as the exact layout reference.</li>
+<li><strong>Three further levels per claim</strong>, opened beneath a statement or on the claim's own page: <em>Explain this</em> (intuition,
+  an example, why it matters, caveats), <em>How this is formalised</em> (objects, hypotheses, proof steps, the precise relation
+  to the paper statement, and a machine-readable coverage record), and <em>Lean statement and source</em> (the elaborated Lean
+  statement, the exact source text, the definitions it uses, the full module and the build evidence).</li>
+<li><strong>Proof coverage</strong>: every inventoried claim, labelled or not, with one of seven categories.</li>
+<li><strong>The Lean sources</strong>: all 38 project modules, browsable with line anchors and as raw files with their build scripts and
+  pinned dependency metadata.</li>
+<li><strong>Illustrations</strong> of the constructions, inside "Explain this" and before the formalisation level: exact traces of the
+  two-frame selector, the threshold compiler, the rollout controller and the recurrent controller, and a schematic of
+  the three bypasses (listed at the end of this page). Each states what it is and how it relates to the Lean results.</li>
+<li><strong>An author's note</strong>, kept on a separate page that is reached only through its own link. It is separate from the article and its print output.</li>
+</ul>
+<h2>How the article is generated</h2>
+<ol>
+<li><code>tools/latex2html.py</code> parses <code>paper_jmlr.tex</code> with a project-specific converter that knows exactly the constructs
+   used in this paper and <strong>fails on anything else</strong> (an unknown command or environment, an unresolved reference, or a
+   formula that KaTeX rejects in strict mode). It replicates the LaTeX counters of the JMLR class (shared theorem
+   counter reset per section, global example, figure and table counters, equations per section, appendix letters) and
+   records, for every block, its exact comment-stripped source and source lines.</li>
+<li>Formulas are rendered at build time with KaTeX 0.16.11 (pinned) to HTML and MathML, using the paper's own macros, so
+   mathematics is selectable and needs no JavaScript.</li>
+<li><code>tools/build_figures.py</code> compiles each TikZ picture from its exact source text with the paper's packages and macros
+   (<code>pdflatex</code> on a measured page with a 6pt border, then <code>pdftocairo -svg</code>), and converts the two plot figures from the manuscript's vector PDFs. The plots
+   are replots of saved CSV values recorded in the manuscript's figure provenance file; nothing is re-plotted here.</li>
+<li><code>tools/build_site.py</code> checks every pinned input hash, verifies the 38 bundled Lean files against the audit's
+   declaration index and every cited declaration against a fresh Lean export, resolves every claim anchor, and compares
+   each claim's statement-source hash with <code>data/claims.lock.json</code>.</li>
+</ol>
+<p><strong>When the manuscript is revised</strong>, the article regenerates from the new source automatically, and explanations are
+kept because they live in separate files (<code>content/explanations/</code>, keyed by claim id; claim metadata in
+<code>data/claims.source.yaml</code>). The build then <strong>refuses to continue</strong> if the input hashes differ from
+<code>site.config.yaml</code>, if a claim's anchor or snippet no longer resolves, or if the source of any statement with a claim
+record has changed. After an editor has reviewed the affected explanations, <code>python3 tools/build_site.py --pin</code>
+records the new statement hashes. Old proof metadata is never silently combined with new paper text.</p>
+<h2>Conversion notes and limitations</h2>
+<ul>
+<li><strong>Layout.</strong> Line breaks, page breaks and float placement differ from the PDF. Figures and tables appear where they
+  occur in the source rather than where LaTeX floated them. Theorem bodies are set upright rather than in italics, the
+  end-of-proof mark is □, and run-in paragraph headings are marked up as headings for assistive technology.</li>
+<li><strong>Mathematics.</strong> Every formula is rendered from its exact TeX. One adaptation was needed: the <code>align*</code> environment
+  in Appendix H is rendered as an <code>aligned</code> block inside display mathematics. No formula was dropped; the validation
+  checks that the source formulas and the rendered annotations agree one for one.</li>
+<li><strong>Figures.</strong> TikZ text is drawn as outlines inside the SVG images, so it is not selectable; each figure has a written
+  text alternative (<code>content/figures.yaml</code>) that describes what is drawn without adding claims.</li>
+<li><strong>Tables.</strong> Tables are HTML tables. Rules follow the source (<code>\hline</code> placement); fixed column widths are not
+  reproduced.</li>
+<li><strong>Citations and references.</strong> Author–year citations reproduce the PDF's natbib formatting, including merged years.
+  The reference list keeps two entries that the text does not cite (Nesterov 1983; Ngo et al. 2018), as in the
+  manuscript.</li>
+<li><strong>Anchors.</strong> Labelled items use their LaTeX labels as anchors (for example <code>paper.html#thm:sim-ac0</code>). Unlabelled
+  items get stable website-side anchors derived from their titles or claim ids, for example
+  <code>x-remark-scope-of-the-simulation</code> (Remark A.4), <code>x-remark-negations</code> (Remark B.2), <code>x-example-pairing-strategy</code>
+  (Example 1) and <code>sec-paper-organisation</code>. The two <code>\paragraph</code> labels (<code>par:shootout-controller</code>,
+  <code>par:controller-costs</code>) are attached to their run-in headings; as in LaTeX, references to them show the enclosing
+  section numbers (5.4 and C).</li>
+</ul>
+<h2>Source access</h2>
+<p>The full project-local Lean source is included in this edition, both as browsable pages
+with line links and as raw files. The build instructions identify the Lean toolchain,
+pinned Mathlib dependency and the commands needed to check the development.</p>
+<h2>Validation</h2>
+<p>The build output is checked by <code>tools/validate_site.py</code>: input and PDF hashes; all 94 labels and their numbers against
+the LaTeX <code>.aux</code> file; every heading, statement header, caption and equation number against the text of the supplied
+PDF; the bibliography order; the formula inventory; a word-for-word comparison of the article with an independent
+source-derived text, and a classified comparison with the PDF text; every link, asset and fragment in every page;
+every claim record against the Lean sources and their audited hashes; a crawl of the whole site under a non-root
+prefix; and browser checks of keyboard use, focus return, direct links, back and forward navigation, the print view,
+operation without JavaScript and small screens. The results are in <code>validation/</code> in the edition's source folder.</p>
+<h2>Third-party components</h2>
+<p>KaTeX 0.16.11 and its fonts are bundled under the MIT licence, included as
+<code>assets/katex/LICENSE</code>. Mathlib is an Apache-2.0-licensed, pinned build dependency;
+its source and compiled libraries are downloaded separately when rebuilding the proofs.</p><h2 id="illustrations">Illustrations</h2><p>These illustrations appear in the “Explain this” level of the claims listed, before the formalisation level. Each is marked as an exact construction trace, a schematic, or an exact trace beside a teaching example.</p><ul class="vis-index"><li><strong>The three bypasses side by side</strong> <span class="vis-kind vis-kind-schematic">Schematic</span><br>Shown with: <a href="claims/prop__bypass-interfaces.html#vis-bypasses">Proposition 5.14</a>, <a href="claims/fig__rollout_gap.html#vis-bypasses">Figure 4</a>, <a href="claims/c-bypass-not-ac0.html#vis-bypasses">Section 5.6, paragraph 1</a>, <a href="claims/c-conclusion-bypasses.html#vis-bypasses">Section 9, paragraph 2</a></li><li><strong>Two-frame restoration, step by step</strong> <span class="vis-kind vis-kind-exact">Exact construction trace</span><br>Shown with: <a href="claims/par__construction-example.html#vis-restore">Section C, “From a game rule to a network”</a>, <a href="claims/fig__construction-pipeline.html#vis-restore">Figure 7</a>, <a href="claims/prop__restore.html#vis-restore">Proposition 5.5</a>, <a href="claims/fig__restoration-example.html#vis-restore">Figure 2</a>, <a href="claims/c-restore-selector.html#vis-restore">Section 5.3.1, paragraph 2</a>, <a href="claims/c-mirror-delta.html#vis-restore">Section 5.3.1, paragraph 2</a>, <a href="claims/c-impl-overview.html#vis-restore">Section 5.3.2, list</a>, <a href="claims/lem__nimber-diff-ac0.html#vis-restore">Lemma 5.4</a>, <a href="claims/c-candidate-moves.html#vis-restore">Appendix C, “Local differences and candidate moves”</a>, <a href="claims/c-binary-index.html#vis-restore">Appendix C, “A binary index is part of the circuit”</a>, <a href="claims/thm__search-gap.iii.html#vis-restore">Theorem 5.12 (iii)</a></li><li><strong>From Boolean formulas to threshold layers</strong> <span class="vis-kind vis-kind-mixed">Exact trace and teaching example</span><br>Shown with: <a href="claims/c-threshold-realisation.html#vis-compile">Appendix C, “Realisation with fixed-scale threshold gates”</a>, <a href="claims/fig__threshold-compilation.html#vis-compile">Figure 8</a>, <a href="claims/par__depth-accounting.html#vis-compile">Section C, “Where the layer counts come from”</a>, <a href="claims/c-depth-table.html#vis-compile">Appendix C, table</a></li><li><strong>Multi-head rollouts and the outer controller, tick by tick</strong> <span class="vis-kind vis-kind-exact">Exact construction trace</span><br>Shown with: <a href="claims/prop__rollout-sufficiency.html#vis-rollout">Proposition 5.9</a>, <a href="claims/def__rollout-policy.html#vis-rollout">Definition 5.6</a>, <a href="claims/rem__why-multi-head.html#vis-rollout">Remark 5.8</a>, <a href="claims/thm__search-gap.ii.html#vis-rollout">Theorem 5.12 (ii)</a>, <a href="claims/c-depth-amplification.html#vis-rollout">Section 5.4, “Depth amplification”</a>, <a href="claims/c-outer-controller.html#vis-rollout">Section 5.4, paragraph 4</a>, <a href="claims/par__controller-costs.html#vis-rollout">Section C, “Outer-controller storage and time”</a>, <a href="claims/c-controller-evals.html#vis-rollout">Appendix C, paragraph 2</a>, <a href="claims/par__shootout-controller.html#vis-rollout">Section 5.4, “Finite-state shootout controller (FSM over policy heads)”</a>, <a href="claims/fig__fsm-shootout-controller.html#vis-rollout">Figure 3</a>, <a href="claims/c-fsm-definition.html#vis-rollout">Section 5.4, paragraph 2</a></li><li><strong>Row-wise recurrence: registers, separators and replay</strong> <span class="vis-kind vis-kind-exact">Exact construction trace</span><br>Shown with: <a href="claims/c-replay.html#vis-recurrence">Section 5.5, “From a summary to a move”</a>, <a href="claims/prop__streaming-nimsum.html#vis-recurrence">Proposition 5.13</a>, <a href="claims/c-stream.html#vis-recurrence">Section 5.5, “Serialising positions and retaining state”</a>, <a href="claims/c-board-storage.html#vis-recurrence">Section 5.5, “From a summary to a move”</a>, <a href="claims/c-recurrent-update.html#vis-recurrence">Appendix C, “The recurrent update”</a>, <a href="claims/c-recurrence-history.html#vis-recurrence">Section 5.5, “Connecting recurrence to the history bypass”</a>, <a href="claims/c-lower-bound-respected.html#vis-recurrence">Section 5.5, “Why the lower bound is respected”</a></li></ul></main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

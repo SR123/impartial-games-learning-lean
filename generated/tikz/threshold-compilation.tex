@@ -1,0 +1,6 @@
+[font=\small, box/.style={draw,rounded corners,align=center,text width=3.1cm,minimum height=1.3cm}, >=Stealth]
+\node[box] (a) {Boolean formulas\\depth at most $d$};
+\node[box,right=0.4cm of a] (b) {Translate gates\\OR/NOT: one layer\\AND: two layers};
+\node[box,right=0.4cm of b] (c) {Copy values\\to later layers\\align dependencies};
+\node[box,right=0.4cm of c] (d) {Arrange outputs\\at most $2d+2$\\threshold layers};
+\draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c) -- (d);

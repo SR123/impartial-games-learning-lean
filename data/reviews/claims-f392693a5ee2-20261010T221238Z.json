@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T22:12:25Z",
+ "context": {
+  "manuscript_sha256": "f392693a5ee2632c8bdce87b88ea324353771c091405234e194e8273e286a0af",
+  "locked_manuscript_sha256": "ed7d65f0c0fd9eacd206403cbafd9db77150e8ca795d0f3a55901594dd08b6cd"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "ed7d65f0c0fd9eacd206403cbafd9db77150e8ca795d0f3a55901594dd08b6cd",
+   "new": "f392693a5ee2632c8bdce87b88ea324353771c091405234e194e8273e286a0af",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Only manuscript change is author email correction to s.riis@qmul.ac.uk, verified by exact comparison with saved canonical source. All mathematical text and labels unchanged. PDF first page rendered and inspected. Author-only links use published DOI records; explanations and Lean mapping unchanged."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

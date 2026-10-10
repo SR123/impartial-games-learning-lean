@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 8.1, paragraph 1: The experiments&#x27; networks differ from the theorem&#x27;s gates; finite results do not settle asymptotic ones</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-idealisation.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#sec:idealisation-p1">Back to Section 8.1, paragraph 1 in the paper</a>
+· <a href="coverage.html#c-c-idealisation">Coverage table</a></nav>
+<h1 data-title="Section 8.1, paragraph 1: The experiments&#x27; networks differ from the theorem&#x27;s gates; finite results do not settle asymptotic ones">Section 8.1, paragraph 1<span class="claim-h-short">The experiments&#x27; networks differ from the theorem&#x27;s gates; finite results do not settle asymptotic ones</span></h1>
+<p class="cat-line"><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span> <span class="cat-desc">Motivation, interpretation or scope; not a formal claim.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec:idealisation-p1">The simulation theorem concerns Boolean literal-threshold gates with nonnegative weights and bounded thresholds, including their permitted compositions. The experiments use floating-point signed linear layers and ReLU as well as LayerNorm and a Log-Softmax loss. Their difference from the theorem therefore extends beyond normalisation layers. A failure at one finite board size does not establish an asymptotic representational impossibility; success on a finite dataset does not establish strong mastery. The controlled comparison supports a narrower empirical conclusion: the reported transition representation is much easier to learn under this supervised protocol.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 1222–1225.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>The theorem's gates (nonnegative weights on Boolean literals, bounded thresholds) and the experiments' networks
+(floating-point signed linear layers, ReLU, LayerNorm, Log-Softmax loss) differ in more than normalisation. Two
+consequences: a failure at one finite board size does not prove an asymptotic impossibility, and success on a finite
+dataset does not prove strong mastery. What the experiment supports is narrower: under this supervised protocol, the
+transition representation is much easier to learn.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>A scope statement relating <a class="claim-ref" href="claims/thm__sim-ac0.html">Theorem 2.4</a> to the empirical records; nothing further is formalised.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#sec:idealisation-p1"><code>sec:idealisation-p1</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 8.1, paragraph 1</td></tr><tr><th scope="row">Claim</th><td>The experiments&#x27; networks differ from the theorem&#x27;s gates; finite results do not settle asymptotic ones</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 1222–1225; SHA-256 of the normalised block source <code class="hash">d46857718fdf6b1d…</code></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-idealisation</code>, <code>formal/c-idealisation</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is interpretation or motivation, not a formal mathematical claim.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

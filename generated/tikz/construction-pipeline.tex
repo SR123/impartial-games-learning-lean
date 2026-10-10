@@ -1,0 +1,9 @@
+[font=\small, box/.style={draw,rounded corners,align=center,text width=4.1cm,minimum height=1.05cm}, >=Stealth]
+\node[box] (a) {Two frames\\$Q=(3,5,6)$, $Q'=(3,4,6)$};
+\node[box,right=0.5cm of a] (b) {Extract the difference\\$\delta=1$};
+\node[box,right=0.5cm of b] (c) {Propose replacements\\$(2,5,7)$};
+\node[box,below=0.6cm of c] (d) {Test decreases in parallel\\$(\mathrm{true},\mathrm{false},\mathrm{false})$};
+\node[box,left=0.5cm of d] (e) {Select the first candidate\\heap $0$, value $2$};
+\node[box,left=0.5cm of e] (f) {Encode the move\\$1\mid00\mid010$};
+\draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c) -- (d);
+\draw[->] (d) -- (e); \draw[->] (e) -- (f);

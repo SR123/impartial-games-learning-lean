@@ -1,0 +1,83 @@
+/root/interactive/lean/phase4/LocalRestore.lean:276:40: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:454:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:465:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:479:30: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:499:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:512:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/LocalRestore.lean:536:32: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.LocalRestore.tf_left' depends on axioms: [propext]
+'NimAudit.LocalRestore.tf_right' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.tf_heapL' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.tf_heapR' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.yC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.testBit_ne_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.chgC_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.oneChange_of_move' does not depend on any axioms
+'NimAudit.LocalRestore.nimSum_split' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.delta_oneChange' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.getD_split' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.dC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.localDelta_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.rest_inputs' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.restC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.cancelFirst_eq' depends on axioms: [propext]
+'NimAudit.LocalRestore.restore_equiv' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.cntR_zero' does not depend on any axioms
+'NimAudit.LocalRestore.cntR_succ' depends on axioms: [propext]
+'NimAudit.LocalRestore.cntR_mono' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.atLeastC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.parC_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.nimSum_xor_testBit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.bdC_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.bdDelta_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.yC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.yC_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.dC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.chgC_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.restC_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.atLeast_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.atLeast_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.LocalRestore.parC_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.LocalRestore.bdC_res' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 6.3, paragraph 1: Scale-adaptive threshold models (TC⁰) can represent parity</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-majority-objection.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#sec:majority-vs-parity-p1">Back to Section 6.3, paragraph 1 in the paper</a>
+· <a href="coverage.html#c-c-majority-objection">Coverage table</a></nav>
+<h1 data-title="Section 6.3, paragraph 1: Scale-adaptive threshold models (TC⁰) can represent parity">Section 6.3, paragraph 1<span class="claim-h-short">Scale-adaptive threshold models (TC<sup>0</sup>) can represent parity</span></h1>
+<p class="cat-line"><span class="cat cat-classical-external" title="A published result used as background or input; not proved in Lean here.">External cited result</span> <span class="cat-desc">A published result used as background or input; not proved in Lean here.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec:majority-vs-parity-p1">One might object that modern networks can implement majority-like decisions, suggesting <span class="math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">C</mi></mrow><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">\TC^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8873em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">TC</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> (threshold circuits) as the “right” complexity class. Indeed, if one allows scale-adaptive thresholds/biases or fan-in dependent re-scaling, constant-depth threshold models can represent parity-type computations.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 921–922.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>A natural objection: real networks compute majority-like functions, so maybe <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">C</mi></mrow><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">\mathrm{TC}^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8873em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">TC</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span> (threshold circuits) is
+the right model, not AC<sup>0</sup>. Indeed, with scale-adaptive thresholds or fan-in-dependent rescaling, constant-depth
+threshold models <em>can</em> compute parity.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>A classical fact about threshold circuits, cited. The paper's model deliberately excludes such thresholds; the
+checked boundary example is <a class="claim-ref" href="claims/rem__ac0-scope.model.html">Remark 2.2 (model scope)</a>.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#sec:majority-vs-parity-p1"><code>sec:majority-vs-parity-p1</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 6.3, paragraph 1</td></tr><tr><th scope="row">Claim</th><td>Scale-adaptive threshold models (TC<sup>0</sup>) can represent parity</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-classical-external" title="A published result used as background or input; not proved in Lean here.">External cited result</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 921–922; SHA-256 of the normalised block source <code class="hash">05a789dd205282b0…</code></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-majority-objection</code>, <code>formal/c-majority-objection</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is a published classical result. It is cited, not proved in this Lean development.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

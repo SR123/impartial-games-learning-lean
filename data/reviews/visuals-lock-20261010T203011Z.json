@@ -1,0 +1,17 @@
+{
+ "gate": "visuals",
+ "written_utc": "2026-10-10T20:30:09Z",
+ "context": {},
+ "items": [
+  {
+   "id": "recurrence",
+   "change": "inputs changed",
+   "old": "89ad81b633297a812e995fb88bd46762dd49c7176c5cd99822921ed3ca762af0",
+   "new": "c519e32523f5c1c8cf905e34cf8a207aa49421c9b351e2b3843c45ea5a322e92",
+   "detail": "lea NimAudit.BoardStore.bsForms_res: added; lea NimAudit.BoardStore.bsOuts_res: added; lea NimAudit.BoardStore.bs_net: added; lea NimAudit.Recurrent.circuit_resources: added",
+   "reviewed": true,
+   "note": "Claude, 2026-10-10: revised after an independent review (separate agent): separator and reset wording, conditional not-AC0 statements, board-storage bounds, summary protocol for prop:streaming-nimsum; added Lean names checked against their statements."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin-visuals."
+}

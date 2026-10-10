@@ -1,0 +1,119 @@
+/root/interactive/lean/phase7/NoiseModel.lean:263:27: warning: This simp argument is unused:
+  decide_eq_false_iff_not
+
+Hint: Omit it from the simp argument list.
+  simp only [ind, Bool.not_false, Bool.not_true, Bool.false_xor,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Bool.true_xor, decide_eq_true_eq, d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵_̵n̵o̵t̵,̵ ̵Bool.false_eq_true, if_false, if_true, decide_true,
+          decide_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/NoiseModel.lean:297:73: warning: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [ind, Bool.and_true, Bool.and_false, Bool.t̵r̵u̵e̵_̵a̵n̵d̵,̵ ̵B̵o̵o̵l̵.̵false_and,
+      Bool.false_eq_true, if_false, if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/NoiseModel.lean:297:88: warning: This simp argument is unused:
+  Bool.false_and
+
+Hint: Omit it from the simp argument list.
+  simp only [ind, Bool.and_true, Bool.and_false, Bool.true_and, ̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵a̵n̵d̵,̵
+      Bool.false_eq_true, if_false, if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/NoiseModel.lean:584:56: warning: This simp argument is unused:
+  Bool.true_eq_false
+
+Hint: Omit it from the simp argument list.
+  simp only [qY, rr, chiG, if_true, Bool.false_eq_true, B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵,̵ ̵if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/NoiseModel.lean:808:18: warning: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [hbc, hxv, List.cons.injEq,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲and_self, and_true, t̵r̵u̵e̵_̵a̵n̵d̵,̵ ̵and_false, false_and, decide_true, decide_false, ind, if_true, if_false,
+          Bool.false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/NoiseModel.lean:808:39: warning: This simp argument is unused:
+  false_and
+
+Hint: Omit it from the simp argument list.
+  simp only [hbc, hxv, List.cons.injEq,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲and_self, and_true, true_and, and_false, f̵a̵l̵s̵e̵_̵a̵n̵d̵,̵ ̵decide_true, decide_false, ind, if_true, if_false,
+          Bool.false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Noise.gs_nil' does not depend on any axioms
+'NimAudit.Noise.gs_cons' does not depend on any axioms
+'NimAudit.Noise.gs_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_map' depends on axioms: [propext]
+'NimAudit.Noise.gs_congr' depends on axioms: [propext]
+'NimAudit.Noise.gs_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_mul_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_bitvecs_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_bitvecs_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.getD_drop'' depends on axioms: [propext]
+'NimAudit.Noise.gs_fw_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_fw_head' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_marginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.agree_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.observe_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.one_pow'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.agree_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.ind_and' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.repeated_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.cnt_add' depends on axioms: [propext, Quot.sound]
+'NimAudit.Noise.detRule_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chan_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.prodF_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chan_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chan_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.sum3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.dev_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chan_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.sq_le_sq'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.cheb_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.cheb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.nat_cast_nonneg'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.quarter_of_cheb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.maj_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.lr_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chi_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chiG_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.bernoulli_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.sum3'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.err_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.sq_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.final_arith' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.chi_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.samples_from_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.lower_bound_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.no_signal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.exact_channel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.order_inv_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.obsOf_length' depends on axioms: [propext]
+'NimAudit.Noise.rep_expect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.flip_order_inv_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.gs_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.fw_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.bw_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.q_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Noise.remark_instance' depends on axioms: [propext, Classical.choice, Quot.sound]

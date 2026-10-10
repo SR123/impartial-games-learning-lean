@@ -1,0 +1,148 @@
+INDEPENDENT PHASE-8 AUDIT AND MANUSCRIPT CONNECTIONS
+10 October 2026
+
+VERDICT
+All 38 delivered local modules compile independently with Lean 4.26.0 on this
+Mac. The 34 earlier modules are unchanged from the phase-7 audit. All delivered
+hashes match. All 1,588 theorem/lemma declarations have matching axiom reports;
+only propext, Classical.choice and Quot.sound occur. No sorry, admit, custom
+axiom, unsafe, native_decide, extern or implemented_by was found by the
+comment/string-aware scan. Fresh logs agree with delivered logs after normalising
+only the leading ./ in warning locations. No invalid theorem was found in the
+semantic interfaces examined. Kernel checking validates the formal statements;
+their correspondence to prose is a separate review, recorded below and in the map.
+
+The three outstanding mathematical tasks from phase 7 are substantially complete:
+real-number sample complexity and minimum sample count; Fourier basis/tail and
+specified delta extension; general weak mastery and strategy connections.
+The existing winning-game certificates for all three bypasses remain valid.
+It would still be inaccurate to say that the entire paper, including observations,
+background literature and informal learning hypotheses, is a Lean theorem.
+
+EXTENT
+38 local Lean modules; 1,588 theorem/lemma declarations; 632 def declarations.
+24,493 source lines; 21,813 nonblank source lines; 17,689 code lines after
+comment/string removal and excluding #print axioms commands. Counts exclude
+Mathlib, Lean/Std, dependencies, logs and audit copies. Auxiliary results count.
+Phase 8 adds 4 modules, 261 declarations, 3,096 source lines and 2,075 code lines.
+The real-number files use Mathlib v4.26.0, pinned to
+2df2f0150c275ad53cb3c90f7c98ec15a56a1a67.
+Qualitatively this checks an interconnected construction: game semantics,
+parity reduction, probability, executable move selectors, resource-bounded
+circuit families, network compilation, controllers and whole-game guarantees.
+It is much more extensive than checking a selection of algebraic identities.
+
+REPRODUCTION
+rebuild.py rebuilt the 36 core modules from copied sources into new oleans.
+rebuild_real.py rebuilt RealNoise and RealFourier against the pinned official
+mathlib cache in this audit's isolated .lake directory. The source delivery and
+its dependencies were not modified. reproduction_results.json records exits and
+times; input_manifest.json records sources/hashes; audit_results.json records
+scans, counts, hashes and axiom coverage. scan_audit.py reproduces the checks.
+The official cache was fetched only for the required imports (1,008 dependency
+files); these dependencies are trusted in the usual Lean/Mathlib sense, rather
+than claimed to have been independently rebuilt from source in this audit.
+
+SEMANTIC FINDINGS
+1. RealNoise uses genuine Mathlib real arithmetic. Its adapters verify that the
+   generic field operations are the intended operations. mUp = ceil(4/a^2) is a
+   natural sample count, ach_exists establishes existence, and mMin_spec proves
+   attainment/minimality. For 0<a<=1/2 and worst-case error <=1/4,
+        3/(32a^2) <= mMin <= ceil(4/a^2) <= 17/(4a^2).
+   The lower bound covers randomized decision rules, not just majority.
+   Finite nonnegative product probabilities, marginals, fresh-block observations
+   and real flip parameters are connected. Zero samples, no signal and exact
+   signal are distinguished. Reusing the same corrupted bit gives no new data.
+   The numerical 31-repetition result is sufficient, not a claim of optimality.
+   The manuscript now defines the minimum explicitly and gives a short proof.
+
+2. Fourier/RealFourier establish orthonormality, inversion, uniqueness, Parseval,
+   real finite-cube sums, Fourier tails, band limitation and the correlation
+   implication. Nim-bit degree N and known-heap delta degree 2 are connected to
+   actual bit encodings. The total OR-over-heaps of XORs agrees with the delta
+   on at-most-one-change pairs. For N>=2 its sign is not a signed character;
+   N=1 is explicitly degree two. This is now the exact claim in the paper.
+   Claude also proves uniqueness of the degree-2N character agreeing on ALL
+   single-change pairs, including increases and unchanged boards. That theorem
+   must not be advertised as a legal-decreases-only result. The paper does not
+   make that stronger assertion.
+
+3. WeakMastery formalises roles, histories, deterministic strategies, legal
+   opponents, forfeits, terminating play and winning guarantees. The equivalence
+   to moving to a P-position on all policy-consistent decision histories is
+   substantive. Initially losing roles give vacuous weak mastery. Pairing has
+   a compiled selector and a genuine second-player guarantee; multi-head and
+   two-frame strategies are instantiated. Strong mastery uses arbitrary legal
+   histories, and the (3)->(0) example separates it from weak mastery.
+   The manuscript now specifies these domains and gives that simple example.
+
+4. The latest paper contained stale implementation language. BoardStore already
+   checks one-pass storage (NB+B+r bits, N+1 updates plus reset) as well as the
+   replay alternative. Phase 7 already checks the outer early-exit and all-head
+   schedules, including actual rollout execution, reset and head switching.
+   The updated paper distinguishes classification from move selection and counts
+   the read-only original board separately from controller registers. It records
+   M+2B+2 component evaluations for all heads plus final readout, not just M
+   simulated legal moves. The circuits and networks linked to these semantics
+   have depth <=34 and layers <=70 per controller tick. These are sufficient
+   resource bounds, not hardware timings or optimised implementations.
+
+REMAINING BOUNDARIES AND OPTIONAL FORMAL WORK
+A. Classical results are intentionally external. HastadNegl is a theorem
+   parameter, not a hidden Lean axiom. The main paper-specific application to
+   AC0 readouts, finite probabilities and the negligible final error is checked.
+   The analytic passage from a published exponential correlation estimate to
+   that named negligible-family theorem remains at the accepted classical
+   boundary. General Sprague-Grundy, Ajtai and other cited background are also
+   literature results, not claimed as newly formalised here.
+B. Fourier.TailPremise is not instantiated against one precise LMN/Tal theorem
+   with reconciled size/depth conventions. The tail-to-correlation implication
+   is checked. Completing that adapter is useful final boundary work, but is
+   not needed for the paper's principal search bound, whose correlation route
+   is separate. The revised verification paragraph discloses this explicitly.
+C. WholeGame.ReplayWins is not instantiated in the newer Mastery.Hist model.
+   This is an optional unification bridge: the replay game and network guarantee
+   already exist in their original semantics. Do not describe it as an absent
+   recurrent winning proof. The same distinction applies to storage semantics.
+D. Strategies in the new general game framework are deterministic; probability
+   over testing rules is formalised separately. No randomized game-policy or
+   learning-convergence theorem is claimed. A universal adaptive-FSM compiler
+   is not claimed; the two concrete schedules are checked.
+E. Training curves, checkpoint observations, plateau causation and empirical
+   implementation are not kernel-certified. This audit did not rerun training.
+   Mathematical baseline counts are checked; they do not establish why SGD
+   remains near 0.54 or when it improves. The paper already states this carefully.
+
+PRESENTATION AND CORRESPONDENCE DELIVERED
+The canonical candidate source has been edited in place, preserving its title,
+article format, narrative, experiments and principal results. A byte-for-byte
+pre-edit source is saved as paper_before_phase8.tex. Changes clarify mastery,
+noise independence, the Fourier connection, the unknown-index extension,
+controller/storage costs and the scope of verification. A short probability
+appendix supplies the previously deferred minimum-sample definition and proof.
+No Lean source was changed.
+
+paper_proof_correspondence.json/.tsv map 51 stable LaTeX labels, including every
+mathematical label, to exact checked declarations, source locations, hashes,
+hypotheses and external/empirical boundaries. declaration_index.json indexes all
+1,588 checked declarations. make_correspondence.py validates label and declaration
+existence. The map records the manuscript hash. It is a reviewable correspondence
+record, not an automated proof that English and Lean mean the same thing.
+No interactive site has been built; the canonical text and stable labels are
+prepared for that later layer. Final public URLs remain placeholders as requested.
+
+PUBLICATION STATUS
+The paper builds as a 40-page article. Its abstract is 187 whitespace-separated
+words. The local TeX build resolves references/citations; the built-in single-file
+compiler cannot load the external figure files. Use the verified project PDF.
+Final journal formatting, actual public links, author declarations and the
+public proof/experiment release remain pre-submission tasks. No submission or
+publication was performed. The source bundle is a review candidate, not a claim
+that these final author/publication tasks are complete.
+
+FINAL VALIDATION: all 40 pages rendered and visually reviewed in overviews;
+changed verification, Fourier, resource-table and noise-proof pages also inspected
+individually. Final build has no warnings, overfull boxes or undefined references.
+The isolated arXiv source snapshot also compiles successfully. All 1,588 declaration
+index entries have source line locations. The canonical source hash is recorded
+in both publication_validation.json and paper_proof_correspondence.json.

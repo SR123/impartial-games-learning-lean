@@ -1,0 +1,45 @@
+# Configuration of the interactive-edition build (tools/build_site.py).
+# The build refuses to run if any pinned input hash differs.
+
+status_line: "Interactive edition · paper, explanations and Lean proofs."
+build_label: "10 October 2026"
+
+inputs:
+  jmlr_tex:
+    path: input/jmlr_source/paper_jmlr.tex
+    sha256: 60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333
+  canonical_tex:
+    path: input/canonical_paper.tex
+    sha256: 8a0b7988139c177c5af5d7a8c7682a7936823dfd9010fa559a993610814c4f35
+    note: >-
+      Convenience snapshot of ../../02_working_copy/candidate/paper_revised_final.tex (the
+      authoritative manuscript, outside this folder); its hash is recorded in the current source manifest and reviewed correspondence map.
+      Earlier audit snapshots retain their original hashes.
+  pdf:
+    path: input/paper_jmlr.pdf
+    sha256: f18f5c9bccec2e2f11d58d77dfa5bc943c470b788884733fa1880f8f6783ce72
+  correspondence: data/paper_proof_correspondence.json
+  declaration_index: data/declaration_index.json
+  lean_export: data/lean_export.json
+  fresh_build: data/fresh_build.json
+
+lean:
+  version: "4.26.0"
+  mathlib_version: "v4.26.0"
+  mathlib_commit: 2df2f0150c275ad53cb3c90f7c98ec15a56a1a67
+  audited_extent:
+    modules: 38
+    theorems: 1588
+    defs: 632
+    source_lines: 24493
+    nonblank_lines: 21813
+    code_lines: 17689
+  audit:
+    title: "Independent phase-8 audit and manuscript connections"
+    date: "2026-10-10"
+    report: evidence/audit/AUDIT_REPORT.txt
+
+# Immutable remote location of the Lean sources (a release tag or commit URL).  None exists
+# yet; while this is null the site links only to its local source pages and shows the
+# remote link as pending.
+remote_source_base: null

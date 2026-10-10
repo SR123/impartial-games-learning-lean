@@ -1,0 +1,5 @@
+{
+  "type": "commonjs",
+  "private": true,
+  "description": "Browser scripts for the illustrations; CommonJS so that Node tests can require them."
+}

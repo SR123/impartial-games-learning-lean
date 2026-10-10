@@ -1,0 +1,53 @@
+{
+ "gate": "visuals",
+ "written_utc": "2026-10-10T20:06:16Z",
+ "context": {},
+ "items": [
+  {
+   "id": "bypasses",
+   "change": "no lock yet",
+   "old": null,
+   "new": "b55fddbbef41ba345a4bdc5d2df53fbdf6d884d1b54901a106948d768270954a",
+   "detail": "illustration not yet reviewed",
+   "reviewed": true,
+   "note": "Initial authoring by Claude, 2026-10-10: checked against the attached claims, the cited Lean statements and the paper figures."
+  },
+  {
+   "id": "restore",
+   "change": "no lock yet",
+   "old": null,
+   "new": "17d4febebaf64df0a26e526aa1af1b343855a392c6ecc760ae6a7c5017115d09",
+   "detail": "illustration not yet reviewed",
+   "reviewed": true,
+   "note": "Initial authoring by Claude, 2026-10-10: checked against the attached claims, the cited Lean statements and the paper figures."
+  },
+  {
+   "id": "compile",
+   "change": "no lock yet",
+   "old": null,
+   "new": "f0401d353ec155900adb90ae5106c3b7b588fde7bbf40406984a4fb0950e47f0",
+   "detail": "illustration not yet reviewed",
+   "reviewed": true,
+   "note": "Initial authoring by Claude, 2026-10-10: checked against the attached claims, the cited Lean statements and the paper figures."
+  },
+  {
+   "id": "rollout",
+   "change": "no lock yet",
+   "old": null,
+   "new": "9dfa5e73c0124a9eec0da4d4d784fc0e597845f4eb9ffd985fbab2ccdcdf2b25",
+   "detail": "illustration not yet reviewed",
+   "reviewed": true,
+   "note": "Initial authoring by Claude, 2026-10-10: checked against the attached claims, the cited Lean statements and the paper figures."
+  },
+  {
+   "id": "recurrence",
+   "change": "no lock yet",
+   "old": null,
+   "new": "89ad81b633297a812e995fb88bd46762dd49c7176c5cd99822921ed3ca762af0",
+   "detail": "illustration not yet reviewed",
+   "reviewed": true,
+   "note": "Initial authoring by Claude, 2026-10-10: checked against the attached claims, the cited Lean statements and the paper figures."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin-visuals."
+}

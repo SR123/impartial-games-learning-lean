@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 4.1, paragraph 1: A position with no legal moves is terminal</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-terminal.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#sec-impartial-games-p1">Back to Section 4.1, paragraph 1 in the paper</a>
+· <a href="coverage.html#c-c-terminal">Coverage table</a></nav>
+<h1 data-title="Section 4.1, paragraph 1: A position with no legal moves is terminal">Section 4.1, paragraph 1<span class="claim-h-short">A position with no legal moves is terminal</span></h1>
+<p class="cat-line"><span class="cat cat-checked-definition" title="Lean contains the definition or construction, with checked properties.">Checked definition or construction</span> <span class="cat-desc">Lean contains the definition or construction, with checked properties.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec-impartial-games-p1">A position with no legal moves is terminal.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 404–404.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>A terminal position is one with no legal moves. In NIM, these are exactly the boards whose heaps are all empty; the
+player to move there has lost (normal play).</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p><a class="lean-ref" href="source/NimGame.html#L28"><code>Game.Terminal</code></a> defines a terminal board as one whose heaps are all zero, and
+<a class="lean-ref" href="source/NimGame.html#L48"><code>Game.terminal_iff_no_move</code></a> proves that this is equivalent to having no legal move.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#sec-impartial-games-p1"><code>sec-impartial-games-p1</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 4.1, paragraph 1</td></tr><tr><th scope="row">Claim</th><td>A position with no legal moves is terminal</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-checked-definition" title="Lean contains the definition or construction, with checked properties.">Checked definition or construction</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 404–404; SHA-256 of the normalised block source <code class="hash">f4e009f7b01f0a24…</code></td></tr><tr><th scope="row">Lean declarations</th><td><ul><li><a href="source/NimGame.html#L48"><code>NimAudit.Game.terminal_iff_no_move</code></a> (NimGame, lines 48–57, file <code class="hash">23df6bb87ecf…</code>)</li></ul></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-terminal</code>, <code>formal/c-terminal</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><h3 class="lvl-sub">Principal declarations</h3><article class="decl">
+<h4 class="decl-h"><span class="decl-kind">theorem</span> <code>Game.terminal_iff_no_move</code></h4>
+<p class="decl-meta">Module <a href="source/NimGame.html#L48">NimGame</a>
+(<code>lean/phase2/NimGame.lean</code>, lines 48–57) · file SHA-256 <code class="hash">23df6bb87ecfd344…</code> <span class="axioms">Axioms reported by the fresh build: propext, Quot.sound</span></p>
+
+<div class="decl-type"><p class="lbl">Statement as elaborated and printed by Lean 4.26.0</p>
+<pre class="lean-type"><code>∀ (p : List ℕ), NimAudit.Game.Terminal p ↔ ∀ (q : List ℕ), ¬NimAudit.Game.Move p q</code></pre></div>
+<details class="decl-src" open><summary>Exact source text, lines 48–57</summary><pre class="lean"><code><span class="cl"><a class="ln" href="source/NimGame.html#L48" aria-label="line 48">48</a><span class="lc">theorem terminal_iff_no_move (p : List Nat) : Terminal p ↔ ∀ q, ¬ Move p q := by</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L49" aria-label="line 49">49</a><span class="lc">  constructor</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L50" aria-label="line 50">50</a><span class="lc">  · intro ht q ⟨pre, x, post, y, hp, _, hlt⟩</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L51" aria-label="line 51">51</a><span class="lc">    have : x = 0 := ht x (by rw [hp]; simp)</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L52" aria-label="line 52">52</a><span class="lc">    omega</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L53" aria-label="line 53">53</a><span class="lc">  · intro hno x hx</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L54" aria-label="line 54">54</a><span class="lc">    obtain ⟨pre, post, rfl⟩ := List.append_of_mem hx</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L55" aria-label="line 55">55</a><span class="lc">    by_cases h0 : x = 0</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L56" aria-label="line 56">56</a><span class="lc">    · exact h0</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L57" aria-label="line 57">57</a><span class="lc">    · exact absurd ⟨pre, x, post, 0, rfl, rfl, by omega⟩ (hno (pre ++ 0 :: post))</span></span></code></pre></details>
+<p class="decl-deps"><span class="lbl">Project declarations in the statement:</span> <a href="source/NimGame.html#L24"><code>Game.Move</code></a>, <a href="source/NimGame.html#L28"><code>Game.Terminal</code></a></p>
+<details class="decl-pdeps"><summary>Project declarations used by the proof or definition body</summary><p><a href="source/NimGame.html#L24"><code>Game.Move</code></a>, <a href="source/NimGame.html#L28"><code>Game.Terminal</code></a></p></details>
+</article><h3 class="lvl-sub">Definitions these statements use</h3><article class="decl decl-aux">
+<h4 class="decl-h"><span class="decl-kind">def</span> <code>Game.Terminal</code></h4>
+<p class="decl-meta">Module <a href="source/NimGame.html#L28">NimGame</a>
+(<code>lean/phase2/NimGame.lean</code>, lines 28–29) · file SHA-256 <code class="hash">23df6bb87ecfd344…</code> </p>
+<p class="decl-doc">Terminal board: every heap is empty.</p>
+<div class="decl-type"><p class="lbl">Statement as elaborated and printed by Lean 4.26.0</p>
+<pre class="lean-type"><code>List ℕ → Prop</code></pre></div>
+<details class="decl-src" open><summary>Exact source text, lines 28–29</summary><pre class="lean"><code><span class="cl"><a class="ln" href="source/NimGame.html#L28" aria-label="line 28">28</a><span class="lc">/-- Terminal board: every heap is empty. -/</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L29" aria-label="line 29">29</a><span class="lc">def Terminal (p : List Nat) : Prop := ∀ x ∈ p, x = 0</span></span></code></pre></details>
+<p class="decl-deps"><span class="lbl">Project declarations in the statement:</span> none</p>
+<details class="decl-pdeps"><summary>Project declarations used by the proof or definition body</summary><p>none</p></details>
+</article><article class="decl decl-aux">
+<h4 class="decl-h"><span class="decl-kind">def</span> <code>Game.Move</code></h4>
+<p class="decl-meta">Module <a href="source/NimGame.html#L24">NimGame</a>
+(<code>lean/phase2/NimGame.lean</code>, lines 24–26) · file SHA-256 <code class="hash">23df6bb87ecfd344…</code> </p>
+<p class="decl-doc">An ordinary legal Nim move: exactly one heap strictly decreases.</p>
+<div class="decl-type"><p class="lbl">Statement as elaborated and printed by Lean 4.26.0</p>
+<pre class="lean-type"><code>List ℕ → List ℕ → Prop</code></pre></div>
+<details class="decl-src" open><summary>Exact source text, lines 24–26</summary><pre class="lean"><code><span class="cl"><a class="ln" href="source/NimGame.html#L24" aria-label="line 24">24</a><span class="lc">/-- An ordinary legal Nim move: exactly one heap strictly decreases. -/</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L25" aria-label="line 25">25</a><span class="lc">def Move (p q : List Nat) : Prop :=</span></span><span class="cl"><a class="ln" href="source/NimGame.html#L26" aria-label="line 26">26</a><span class="lc">  ∃ pre x post y, p = pre ++ x :: post ∧ q = pre ++ y :: post ∧ y &lt; x</span></span></code></pre></details>
+<p class="decl-deps"><span class="lbl">Project declarations in the statement:</span> none</p>
+<details class="decl-pdeps"><summary>Project declarations used by the proof or definition body</summary><p>none</p></details>
+</article><h3 class="lvl-sub">Full modules</h3><table class="mods"><thead><tr><th>Module</th><th>File</th><th>Lines</th><th>Imports</th></tr></thead><tbody><tr><td><a href="source/NimGame.html">NimGame</a></td><td><code>lean/phase2/NimGame.lean</code></td><td>634</td><td><a href="source/NimRollout.html">NimRollout</a></td></tr></tbody></table><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (10 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

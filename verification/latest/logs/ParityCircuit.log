@@ -1,0 +1,20 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase4/ParityCircuit.lean:93:30: warning: This simp argument is unused:
+  show j < 2 * (m + 1) from hj
+
+Hint: Omit it from the simp argument list.
+  simp only [hj, if_true,̵ ̵s̵h̵o̵w̵ ̵j̵ ̵<̵ ̵2̵ ̵*̵ ̵(̵m̵ ̵+̵ ̵1̵)̵ ̵f̵r̵o̵m̵ ̵h̵j̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.ParityCircuit.par_eq_parity' depends on axioms: [propext]
+'NimAudit.ParityCircuit.length_encode' depends on axioms: [propext]
+'NimAudit.ParityCircuit.encode_width' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.winning_move_on_encode' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.low_bit_of_two' depends on axioms: [propext]
+'NimAudit.ParityCircuit.parSubst_leaf' does not depend on any axioms
+'NimAudit.ParityCircuit.parSubst_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.parSubst_max' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.extraction' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.no_small_strong_master' depends on axioms: [propext, Quot.sound]
+'NimAudit.ParityCircuit.rsum_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ParityCircuit.hard_of_premise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ParityCircuit.no_strong_master_of_premise' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this interactive edition and its accompanying Lean development when using the material."
+title: "Overcoming a Learning Bottleneck in Impartial Games: A Circuit Complexity Approach"
+authors:
+  - family-names: Riis
+    given-names: Søren
+    email: s.riis@qmul.ac.uk
+    affiliation: Queen Mary University of London
+abstract: "An interactive theory paper with explanations, circuit-construction illustrations, complete Lean source, and reproducible proof-build evidence."
+keywords:
+  - impartial games
+  - Nim
+  - circuit complexity
+  - Lean
+  - formal verification
+repository-code: "https://github.com/SR123/impartial-games-learning-lean"
+url: "https://sr123.github.io/impartial-games-learning-lean/"

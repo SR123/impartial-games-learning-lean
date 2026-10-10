@@ -1,0 +1,260 @@
+/root/interactive/lean/phase4/ControllerBits.lean:130:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:132:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:136:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:138:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:142:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:144:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:148:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:150:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:152:70: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:154:70: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:156:70: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:156:78: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [enc, inp, sbits, layout, tbits, if_neg, if_pos,̵ ̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:381:26: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [prevN, mux, Rc, W̵c̵,̵ ̵Ec, Mc, e_mode, e_row, e_rst, e_acc, e_prev, hk, tokRow, tokRst, cstep,
+        cinit, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:386:22: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [validN, Rc, W̵c̵,̵ ̵Ec, Mc, e_mode, e_row, e_rst, e_valid, tokRow, tokRst, cstep, cinit, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:390:25: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [sigN, mux, Rc, W̵c̵,̵ ̵Ec, Mc, e_mode, e_row, e_rst, e_acc, e_sig, hk, tokRow, tokRst, cstep,
+        cinit, hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:395:29: warning: This simp argument is unused:
+  Ec
+
+Hint: Omit it from the simp argument list.
+  simp [idxN, mux, Rc, Wc, E̵c̵,̵ ̵Mc, e_mode, e_row, e_rst, e_idx, hq, ev_inc hq, tokRow, tokRst, cstep,
+        cinit, hm, replayStep]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:417:83: warning: This simp argument is unused:
+  optI
+
+Hint: Omit it from the simp argument list.
+  simp [h1, h2,̵ ̵o̵p̵t̵I̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:427:66: warning: This simp argument is unused:
+  Nat.testBit_xor
+
+Hint: Omit it from the simp argument list.
+  simp [selVN, Rc, Wc, Mc, xI, e_rst, e_row, e_mode, e_selF, e_selV, e_sig, e_x, hk, ev_canc hσ, ̵t̵o̵k̵R̵s̵t̵,̵
+          tokRs̲t̲,̲ ̲t̲ok̲R̲o̲w, tokX, cstep, hm, hs, replayStep, optV, eval_xor2,̵ ̵N̵a̵t̵.̵t̵e̵s̵t̵B̵i̵t̵_̵x̵o̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:428:83: warning: This simp argument is unused:
+  optV
+
+Hint: Omit it from the simp argument list.
+  simp [h1, h2, o̵p̵t̵V̵,̵ ̵Nat.testBit_xor]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:449:41: warning: This simp argument is unused:
+  optI
+
+Hint: Omit it from the simp argument list.
+  simp [h1,̵ ̵o̵p̵t̵I̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:702:50: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [inp, tbits, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:704:50: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [inp, tbits, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:1001:38: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [prevN, mux, Rc, W̵c̵,̵ ̵Ec, Mc, listMax, cellSize]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:1002:22: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [validN, Rc, W̵c̵,̵ ̵Ec, Mc, listMax, cellSize]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase4/ControllerBits.lean:1003:37: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [sigN, mux, Rc, W̵c̵,̵ ̵Ec, Mc, listMax, cellSize]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.ControllerBits.layout_map' depends on axioms: [propext]
+'NimAudit.ControllerBits.layout_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_mode' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_acc' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_prev' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_valid' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_sig' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_idx' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_selF' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_selI' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_selV' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_fnzF' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_fnzI' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_fnzV' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_row' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_rst' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.e_x' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.testBit_succ' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.top_bit' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.canc_iff' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.pos_iff_bitLE' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.ev_inc' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.ev_canc' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.ev_nz' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.ev_dec' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_mode' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_acc' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_prev' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_valid' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_sig' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_idx' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_selF' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_selI' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_selV' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_fnzF' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_fnzI' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.f_fnzV' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.step_state' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.step_out' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.step_refines' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.decodeS_sbits' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.brun_append' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.brun_refines' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.self_mem_crunStates' depends on axioms: [propext]
+'NimAudit.ControllerBits.allDec_of_fits' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.tok_bound_stream' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.bits_stream' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.inp_row' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.inp_rst' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.bstep_reset' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.bits_games' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.reachable_lossless' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.dtoks_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.stream_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.brun_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.bits_one_board' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.sbits_beyond' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.nextC_beyond' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.counter_width' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.layout_forall' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_and_le'' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_or_le'' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.maxInput_and_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.maxInput_or_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_cancC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.depth_cancC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.max_cancC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_nzC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.depth_nzC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.max_nzC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_decC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.depth_decC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.max_decC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.size_incC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.depth_incC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.max_incC' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.nextC_resources' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ControllerBits.outC_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.outC_resources' depends on axioms: [propext, Quot.sound]
+'NimAudit.ControllerBits.per_update_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ControllerBits.summary_resources' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,18 @@
+'NimAudit.xor_left_comm' depends on axioms: [propext, Quot.sound]
+'NimAudit.xor_cancel_left' depends on axioms: [propext, Quot.sound]
+'NimAudit.nimSum_append' depends on axioms: [propext, Quot.sound]
+'NimAudit.scan_invariant' depends on axioms: [propext, Quot.sound]
+'NimAudit.scan_from_zero' depends on axioms: [propext, Quot.sound]
+'NimAudit.one_heap_difference' depends on axioms: [propext, Quot.sound]
+'NimAudit.one_heap_update' depends on axioms: [propext, Quot.sound]
+'NimAudit.matching_deltas_restore_original' depends on axioms: [propext, Quot.sound]
+'NimAudit.conditional_restoration' depends on axioms: [propext, Quot.sound]
+'NimAudit.move_to_zero_algebra' depends on axioms: [propext, Quot.sound]
+'NimAudit.summary_comparison' depends on axioms: [propext, Quot.sound]
+'NimAudit.two_of_three_fibre_values' does not depend on any axioms
+'NimAudit.failure_on_third_value' does not depend on any axioms
+'NimAudit.no_zero_without_zero_promise' depends on axioms: [propext]
+'NimAudit.lowBit_add' depends on axioms: [propext, Quot.sound]
+'NimAudit.channel_xor' depends on axioms: [propext, Quot.sound]
+'NimAudit.heap_count_channel' depends on axioms: [propext, Quot.sound]
+'NimAudit.rollout_count_channel' depends on axioms: [propext, Quot.sound]

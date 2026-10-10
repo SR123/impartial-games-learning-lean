@@ -1,0 +1,1454 @@
+{
+ "claims": {
+  "app:impl": {
+   "block": "app:impl",
+   "lines": [
+    1464,
+    1464
+   ],
+   "source_sha256": "5173677bae34efd78f4473799d93aabb6bd30fb68fe92e3471bc2edfe3f37ac7",
+   "source_text": "\\section{Implementation details: shallow circuits and fixed-scale networks}"
+  },
+  "app:precision": {
+   "block": "app:precision",
+   "lines": [
+    1314,
+    1314
+   ],
+   "source_sha256": "c9e050abbdbc68da04b124576f304d103165fbce80838c0ab5d3853d8df0ff43",
+   "source_text": "\\subsection{Preliminaries: fixed-scale quantisation and representable parameters}"
+  },
+  "app:rollout-proofs": {
+   "block": "app:rollout-proofs",
+   "lines": [
+    1624,
+    1624
+   ],
+   "source_sha256": "7c7a6d65cdea358268961b856ce3e977317e8a8175551ef40cef3ca0e3be2062",
+   "source_text": "\\section{Additional proofs for the rollout analysis}"
+  },
+  "app:search-gap-proof": {
+   "block": "app:search-gap-proof",
+   "lines": [
+    1656,
+    1656
+   ],
+   "source_sha256": "7e8cd3062b734b54014e67b1b987f305a4dbc2f2ec30ca0110e1173da8b41f41",
+   "source_text": "\\section{Proof of Theorem~\\ref{thm:search-gap}}"
+  },
+  "c-abstract": {
+   "block": "abstract",
+   "lines": [
+    64,
+    68
+   ],
+   "source_sha256": "db5dd8fb9b9f0be03f0aa11841ec9268fdd78d11dacbf4f42ab902754e0b6063",
+   "source_text": "\\begin{abstract} Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\\AC^0$ does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. An accompanying interactive edition connects the paper to its formal statements and proofs. \\end{abstract}"
+  },
+  "c-arbitrary-starts": {
+   "block": "sec:search-gap-p3",
+   "lines": [
+    643,
+    643
+   ],
+   "source_sha256": "66e6302b0b41babe68f104013d03acb869d107eeba97ad87fcab06e6d150a5b0",
+   "source_text": "Allowing arbitrary start positions would defeat the single-channel restriction: querying $\\pi_0$ on heaps consisting of the $k$th bits of $P$ returns $\\sigma_k(P)$. Likewise, an unrestricted sequential controller could compute the nim-sum itself. The lower bound therefore concerns the stated measurement/readout model, not general MCTS or all single-policy algorithms."
+  },
+  "c-author-verification-scope": {
+   "block": "sec:development-p4",
+   "lines": [
+    1290,
+    1290
+   ],
+   "source_sha256": "a2e1e1836ed74897b9b9befdb621e425e1dd4d2ca38cc023a084f1c4b5be10ec",
+   "source_text": "The author's review of the formalisation focused on the interface between the paper and Lean: whether the formal definitions, hypotheses and conclusions express the intended mathematical claims. The author did not manually inspect every theorem or lemma declaration or every line of Lean source. Mechanical checking verifies the formal proofs relative to their definitions and stated hypotheses; it does not independently certify the correspondence with the prose, the suitability of the modelling assumptions, or the experimental results."
+  },
+  "c-baseline-arith": {
+   "block": "par-results-p3",
+   "lines": [
+    1178,
+    1184
+   ],
+   "source_sha256": "e23068ca456c51b6529f2f4882044c4c0b91fc3ae0c27a1fa61d2cc36952e309",
+   "source_text": "\\emph{Single-head baseline.} The single-head baseline achieves 0.768~overall accuracy and 0.536~N-position recall. These numbers have an exact theoretical explanation. With $k=4$ bits, an N-position has nim-sum $\\sigma \\in \\{1,\\dots,15\\}$. Of these 15~values, exactly~8 are odd ($\\sigma_0 = 1$: the values $1,3,5,7,9,11,13,15$) and 7~are even ($\\sigma_0 = 0$). Head~$\\pi_0$ detects an N-position only when $\\sigma_0 = 1$, so the theoretical N-position recall is $8/15 \\approx 0.533$ (observed: 0.536 on the finite test set). All P-positions are correctly classified (since $\\sigma = 0$ implies $\\sigma_0 = 0$), so on a balanced test set the overall accuracy is $\\tfrac{1}{2}\\cdot 1 + \\tfrac{1}{2}\\cdot\\tfrac{8}{15} = \\tfrac{23}{30} \\approx 0.767$ (observed: 0.768). This calculation describes the particular classifier that declares an N-position exactly when $r_0=1$. It is not the winning-move success bound of Theorem~\\ref{thm:search-gap}(i), and does not establish a limit on arbitrary classifiers or rollout policies."
+  },
+  "c-baseline-observed": {
+   "block": "par-results-p3",
+   "lines": [
+    1178,
+    1184
+   ],
+   "source_sha256": "e23068ca456c51b6529f2f4882044c4c0b91fc3ae0c27a1fa61d2cc36952e309",
+   "source_text": "\\emph{Single-head baseline.} The single-head baseline achieves 0.768~overall accuracy and 0.536~N-position recall. These numbers have an exact theoretical explanation. With $k=4$ bits, an N-position has nim-sum $\\sigma \\in \\{1,\\dots,15\\}$. Of these 15~values, exactly~8 are odd ($\\sigma_0 = 1$: the values $1,3,5,7,9,11,13,15$) and 7~are even ($\\sigma_0 = 0$). Head~$\\pi_0$ detects an N-position only when $\\sigma_0 = 1$, so the theoretical N-position recall is $8/15 \\approx 0.533$ (observed: 0.536 on the finite test set). All P-positions are correctly classified (since $\\sigma = 0$ implies $\\sigma_0 = 0$), so on a balanced test set the overall accuracy is $\\tfrac{1}{2}\\cdot 1 + \\tfrac{1}{2}\\cdot\\tfrac{8}{15} = \\tfrac{23}{30} \\approx 0.767$ (observed: 0.768). This calculation describes the particular classifier that declares an N-position exactly when $r_0=1$. It is not the winning-move success bound of Theorem~\\ref{thm:search-gap}(i), and does not establish a limit on arbitrary classifiers or rollout policies."
+  },
+  "c-benchmark-evaluation": {
+   "block": "sec:othergames-p3",
+   "lines": [
+    1244,
+    1244
+   ],
+   "source_sha256": "813c3e1ba321f20590e6a0ddbda8f12ea1c59814851f48628224285b82cd5ad6",
+   "source_text": "These are proposed learning challenges, not consequences of the present $\\AC^0$ lower bound. An unresolved structural question is not itself a complexity lower bound, and worst-case hardness need not make a chosen instance distribution difficult. A useful evaluation would reserve unseen sizes and positions, report both training and decision-time computation, and compare play with exact solvers where feasible and strong search baselines elsewhere. Beyond the range of exact verification, improved win rates are evidence of stronger play rather than a solution of an open mathematical problem. The central question is whether self-play discovers reusable strategic structure that extends the range of positions it can handle under a fixed computation budget."
+  },
+  "c-binary-index": {
+   "block": "par-a-binary-index-is-part-of-the-circuit-p1",
+   "lines": [
+    1498,
+    1505
+   ],
+   "source_sha256": "979453a04f351f49be147daaa2c52b4f4d041bfb5e2b7f2f8ab51d9053c0003d",
+   "source_text": "Let $s_i$ be the candidate flags after choosing between cancellation and fallback. More than one may be true. Define \\[ f_i=s_i\\wedge\\bigwedge_{j<i}\\neg s_j, \\qquad I_k=\\bigvee_{\\substack{0\\le i<N\\\\\\text{bit }k\\text{ of }i\\text{ is }1}}f_i. \\] The $f_i$ flags select the first candidate; the $I_k$ wires give its binary index. Masking the candidate replacement bits by $f_i$ and taking OR gives the value output. Combining validity with $\\bigvee_i s_i$ handles the absence of candidates. This uses constant additional depth and polynomial size, rather than an uncosted external search for the first true flag. The Lean priority encoder proves agreement for every flag pattern, including invalid outputs, no candidates, and the cases $N=0$ and $N=1$. A move index uses $r$ bits with $N\\le2^r$; the replay counter also stores $N$ and therefore requires $N<2^r$."
+  },
+  "c-board-storage": {
+   "block": "par-from-a-summary-to-a-move-p1",
+   "lines": [
+    847,
+    857
+   ],
+   "source_sha256": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
+   "source_text": "Computing $\\sigma_t$ does not by itself retain the heap rows needed to choose a move. One implementation replays the current position after the first scan. If $\\sigma_t\\ne0$, select the first row $i$ for which \\[ x_{t,i}'=x_{t,i}\\oplus\\sigma_t<x_{t,i}. \\] Such a row exists: choose a heap containing the highest set bit of $\\sigma_t$. Replacing that heap by $x_{t,i}'$ leaves nim-sum zero. XOR, binary comparison and conditional selection are constant-depth operations; the replay uses $O(B+\\log N)$ state bits to retain the summary, a selected move and its row index. The explicit protocol is \\[ \\mathtt{rows}(P_t),\\ \\mathtt{SEP},\\ \\mathtt{rows}(P_t),\\ \\mathtt{SEP}. \\] The first separator stores the summary and switches to replay; the second emits the move and returns to scan mode. This takes exactly $2N+2$ updates, with one additional reset token at the start of a game. If $\\sigma_t=0$, choose the first nonempty heap and decrement it, or report termination when all heaps are empty. Lean verifies the complete replay controller, including its binary move output and its fixed-scale threshold implementation. With an $r$-bit counter satisfying $N<2^r$, its state uses $4+5B+3r$ bits. The strict inequality allows the counter to hold the end value $N$, whereas an output index alone only needs $N\\le2^r$. Alternatively, store the current board in $O(NB)$ bits during the initial scan and use a constant-depth selector at the separator, as in Appendix~\\ref{app:impl}. This avoids replay at the cost of board-sized memory. The distinction matters for a stream in which each position is supplied only once. Both variants have checked bit-level circuits, fixed-scale network implementations and winning-play guarantees. The board-storage variant uses $NB+B+r$ state bits and $N+1$ updates per decision, with $N<2^r$, plus a reset update when initialising the controller."
+  },
+  "c-bypass-not-ac0": {
+   "block": "sec:bypass-scope-p1",
+   "lines": [
+    891,
+    891
+   ],
+   "source_sha256": "d43e7103cb5d359153fc05836f7766e6ba240de3f418d33398ae87dca868cb62",
+   "source_text": "These are three ways around the \\emph{same restricted inference problem}, not three shallow algorithms for unrestricted parity. The two-frame construction changes the input and imposes a promise. The other constructions allow processing time to grow. Their complete board-to-winning-move maps cannot themselves form an $\\AC^0$ family: otherwise applying either to $(2,b_1,\\ldots,b_m)$ would contradict Theorem~\\ref{thm:singleframe-impossible}. Parallel output heads alone do not supply the rollout computation, and separators alone do not supply a recurrent scan. Appendix~\\ref{app:impl} illustrates the explicit network constructions and explains their conservative depth and layer bounds."
+  },
+  "c-candidate-moves": {
+   "block": "par-local-differences-and-candidate-moves-p1",
+   "lines": [
+    1491,
+    1496
+   ],
+   "source_sha256": "35e6316fb7699da7b36bd42c0dfe8540ba793d5db8fdddc1a29ae2acfcc4e77a",
+   "source_text": "On a legal transition only one heap changes. Consequently, bit $k$ of the delta is \\[ \\delta_k=\\bigvee_{i=0}^{N-1}(x_{i,k}\\oplus x'_{i,k}). \\] The single-change promise makes OR equal to the required XOR across changed rows. For a target $\\delta$ supplied as input bits, form $y_i=x_i\\oplus\\delta$ in parallel. The test $y_i<x_i$ is shallow: OR over the possible highest differing bit, requiring equality at every higher bit and $y_{i,k}=0,x_{i,k}=1$ at that bit. Each test has size polynomial in $B$. When no cancelling candidate exists, use the first nonzero heap and subtract one. Bit $k$ of that decrement is $x_{i,k}$ XOR the conjunction saying that all lower bits are zero. The validity bit is false exactly when the board is terminal. In restoration, the target comes from the two-frame delta; in the multi-head readout it comes from reconstruction of the rollout outcomes."
+  },
+  "c-conclusion": {
+   "block": "sec:conclusion-p1",
+   "lines": [
+    1271,
+    1273
+   ],
+   "source_sha256": "4821796746fb25bd1e471167836672c98813984c35e9da1e0d09888ba03d20f0",
+   "source_text": "\\label{sec:conclusion} A fixed-depth Boolean literal-threshold model with nonnegative fixed-grid weights and bounded thresholds is simulable in $\\AC^0$. The NIM parity reduction then rules out strong single-frame mastery in that model."
+  },
+  "c-conclusion-bypasses": {
+   "block": "sec:conclusion-p2",
+   "lines": [
+    1275,
+    1275
+   ],
+   "source_sha256": "1a0bd11281cdd2078990f02412b931fa513f96fa1dd0625d69b64cccb52e2616",
+   "source_text": "Three constructions identify resources beyond that restricted inference problem. Two-frame access supports constant-depth restoration when the preceding position has nim-sum zero. Distinct structured rollout policies reveal complementary invariant bits; a single-channel limitation holds only under our explicit query and readout restrictions. Persistent recurrence implements running XOR over heap rows, exchanging fixed total latency for a growing sequence of simple updates. Cross-position memory additionally supports comparisons, while replay or board storage supplies the heaps needed for move selection."
+  },
+  "c-conclusion-experiments": {
+   "block": "sec:conclusion-p3",
+   "lines": [
+    1277,
+    1277
+   ],
+   "source_sha256": "1c97c652320cd6f4ca553d358491c523a91f5b83ac31a17afd1e493aad22a983",
+   "source_text": "The saved floating-point experiments show a large supervised two-frame restoration advantage and perfect finite-test $P/N$ classification by a learned multi-head controller. The latter coexists with imperfect individual channel recovery. The restoration plateaus and checkpoint diagnostics also show that learning can proceed in stages after transition information is supplied. These observations do not certify the formal gate assumptions, worst-case mastery, or self-play discovery."
+  },
+  "c-condorcet": {
+   "block": "sec:math-p1",
+   "lines": [
+    1227,
+    1229
+   ],
+   "source_sha256": "9ea6ac4eb126427c72c8a298ae40ee0388d6b665b5d0fdec61a7a4d33890816f",
+   "source_text": "\\label{sec:math} Exposing local invariants may also help guide combinatorial search. Our work on large Condorcet domains used structural constructions and local restrictions \\citep{karpov2023setalternating,zhou2024cdl,zhou2024phd}. This is a motivating analogy, not an $\\AC^0$ reduction or a demonstrated parity lower bound for that search problem. Transferring the present argument requires a precisely encoded computational task."
+  },
+  "c-contributions": {
+   "block": "sec:contrib-list1",
+   "lines": [
+    217,
+    238
+   ],
+   "source_sha256": "0dd4657db4edf4f4743891903c5b9e72cf33b0958ede1413dfc3378796fcf637",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item \\textbf{$\\AC^0$ containment for fixed-scale quantised inference.} We formalise a fixed-grid Boolean literal-threshold model and its bounded-unrolling recurrent extension. Both are simulable by $\\AC^0$ circuits (Theorem~\\ref{thm:sim-ac0}). An attention-style extension is covered only when all its operations have an explicit implementation in the same permitted gates. \\item \\textbf{Single-frame impossibility for strong mastery.} Under this model, no single-frame policy/value network can strongly master NIM in the worst case (Theorem~\\ref{thm:singleframe-impossible}). \\item \\textbf{Two-frame bypass via local differences and restoration.} With two consecutive frames, the agent can compute $\\Delta(P,P')$ in $\\AC^0$ (Lemma~\\ref{lem:nimber-diff-ac0}). When $P$ has nim-sum zero, an $\\AC^0$ move selector restores zero after the opponent's move (Proposition~\\ref{prop:restore}). This is conditional restoration mastery, not an arbitrary-start verifier. \\item \\textbf{Planning analysis and the single-policy bottleneck.} We analyse a restricted measurement interface inspired by rollouts, rather than a general model of MCTS. With $B$ structured policies one can recover all nim-sum bits (Proposition~\\ref{prop:rollout-sufficiency}). Root and one-heap-modification queries to one fixed member of that family expose only one unknown linear functional (Proposition~\\ref{prop:single-policy-bound}). With an explicitly bounded readout, this yields the distributional bound in Theorem~\\ref{thm:search-gap}. \\item \\textbf{Persistent recurrence via sequential row updates.} A constant-depth recurrent update accumulates the nim-sum over $N$ heap rows and retains a summary across position separators (Proposition~\\ref{prop:streaming-nimsum}). With a replay of the current board or stored heap rows, this supports optimal move selection. The construction relaxes fixed total latency, not fixed-scale quantisation (Section~\\ref{sec:recurrent-bypass}). \\item \\textbf{Controlled empirical comparison and learnability discussion.} On 20-heap, 4-bit NIM with $10^6$ supervised restoration examples, a one-frame model has low restoration accuracy while a two-frame model learns restoration (Section~\\ref{sec:supervised-restoration}). In a complementary single-frame experiment, multi-head FSM-controlled shootouts achieve perfect win/loss position classification while the single-head baseline remains bottlenecked by one-bit information (Section~\\ref{sec:exp-fsm-shootout}). We also discuss why $\\AC^0$ is a useful abstraction for what is robustly feasible under fixed-scale quantised inference (Section~\\ref{sec:majority-vs-parity}). \\end{itemize}"
+  },
+  "c-controller-evals": {
+   "block": "par:controller-costs-p2",
+   "lines": [
+    1553,
+    1553
+   ],
+   "source_sha256": "8c0ab472930a121fc8b88a2eba018c4c998ae8da934aa7ae9756622589e76171",
+   "source_text": "Let $M$ be the total number of simulated legal moves in the all-head schedule. The implementation uses $M+2B+2$ component evaluations: $M$ move updates, $B$ terminal tests, $B$ outcome-consumption updates, one initial reset and one final move readout. Since $M\\le BN(2^B-1)$, this agrees with the rollout-time bound in the main text while making the control overhead explicit. These are circuit evaluations, not measured processor time. The early-exit schedule uses only the visited heads and gives the same classification as the OR of all outcomes. These certificates concern the two specified schedules; the abstract definition of a finite-state controller does not certify arbitrary scheduling logic."
+  },
+  "c-delta-local": {
+   "block": "sec:multiframe-p2",
+   "lines": [
+    495,
+    499
+   ],
+   "source_sha256": "da1455481e81fc889e815b3f5049ccd0587e1e8c04b37c6d5500c59443a32bb4",
+   "source_text": "In NIM, if $P'$ is obtained from $P$ by changing heap $i$ from $x_i$ to $x_i'$, then \\[ \\Delta(P,P') \\;=\\; x_i \\oplus x_i', \\] a purely local computation on the changed heap."
+  },
+  "c-depth-amplification": {
+   "block": "par-depth-amplification-p1",
+   "lines": [
+    724,
+    726
+   ],
+   "source_sha256": "fd2ef06aa48f35541fa8dac72a40d77ad76d81c7ee67d2f8abf277f99ba46e3f",
+   "source_text": "Although a single $\\AC^0$ circuit cannot compute parity, iterating an $\\AC^0$ policy for $L$ game steps yields an effective depth $\\Theta(L)$ computation, which can reveal parity information. The next proposition makes this explicit by exhibiting $B$ simple $\\AC^0$ rollout heads whose outcomes recover all $B$ bits of the nim-sum."
+  },
+  "c-depth-table": {
+   "block": "par-realisation-with-fixed-scale-threshold-gates-table1",
+   "lines": [
+    1528,
+    1540
+   ],
+   "source_sha256": "8bc8f4451c54e341f3005c453f7f654bf647aee92bff22f16f54d7748ea70c55",
+   "source_text": "\\begin{center} \\begin{tabular}{lcc} \\hline \\textbf{Component} & \\textbf{Boolean depth} & \\textbf{Threshold layers} \\\\ \\hline Two-frame binary move selector & $\\le20$ & $\\le42$ \\\\ Multi-head binary readout, given outcomes & $\\le19$ & $\\le40$ \\\\ One structured policy's binary move output & $\\le17$ & $\\le36$ \\\\ One recurrent state update and output & $\\le8$ & $\\le18$ \\\\ One shootout controller tick & $\\le34$ & $\\le70$ \\\\ \\hline \\end{tabular} \\end{center}"
+  },
+  "c-development-disclosure": {
+   "block": "sec:development-p1",
+   "lines": [
+    1281,
+    1284
+   ],
+   "source_sha256": "e62d4f2243d331049dfd6fbcb4ee3e18657682a69c8be8e66d875ff6636893a2",
+   "source_text": "\\label{sec:development} \\label{sec:verification} The earlier version of this paper was developed solely by the author, with editorial feedback from AI assistants. The present version was developed interactively with the AI assistants Astra and Claude. Extensive feedback from the Lean formalisation and its audits helped to improve the presentation, clarify definitions and hypotheses, and make the scope of the claims more precise. The author takes sole responsibility for the paper, including its arguments, interpretation and use of AI assistance."
+  },
+  "c-diagnostic": {
+   "block": "par-learning-in-stages-the-plateau-and-subsequent-improvement-p2",
+   "lines": [
+    1126,
+    1126
+   ],
+   "source_sha256": "9749a9392e996382f009da630d495f229f3182521f1a83bad97b9aa5049383d6",
+   "source_text": "A diagnostic of the saved checkpoints makes the remaining difficulty more concrete. For a predicted move setting heap $i$ to $v$, compare its proposed change $p'_i\\oplus v$ with the required nim-sum of $p'$. On the reconstructed and independently verified 100,000-position test set, the epoch-23 model makes only legal moves and gets the upper three bits of this change jointly correct on 99.998\\% of examples. Of its 46,206 failed moves, 46,204 differ from the correct change only in the lowest bit. At epoch 45 all 12,437 errors are confined to that bit; at epoch 178 only two errors remain, both of the same kind. These diagnostic counts weight examples equally, unlike the saved batch-mean accuracies plotted above."
+  },
+  "c-different-metrics": {
+   "block": "par-results-p4",
+   "lines": [
+    1186,
+    1187
+   ],
+   "source_sha256": "9423c80bcc4f5067914f87f5826e494f83e49b8aa4bf449ba7e21ad0446278de",
+   "source_text": "\\emph{Different metrics.} The recall $8/15$ measures the fraction of nonzero nim-sums detected by the exact least-significant-bit channel. Restoration accuracy instead measures whether a complete selected move cancels the full nim-sum. A resemblance between the recall and a training plateau is not evidence that the same learned mechanism produces both."
+  },
+  "c-discussion": {
+   "block": "sec:discussion-p1",
+   "lines": [
+    1220,
+    1220
+   ],
+   "source_sha256": "893b4b62c9dff25a0b86eb9659c64b1ae68251fc00e371fdc0c5836ffb7d29fb",
+   "source_text": "The three bypasses identify different resources for handling a global invariant: multi-frame inputs expose local transition information, multiple rollout heads provide complementary channels, and persistent recurrence accumulates the invariant through sequential updates. In the recurrent route, memory connects successive positions while the growing processing horizon supplies the depth needed for parity. The common design principle is to match the information and computation available to the agent to the invariant it must maintain. We briefly discuss directions beyond the specific NIM setting."
+  },
+  "c-early-stopping": {
+   "block": "par-results-p5",
+   "lines": [
+    1189,
+    1192
+   ],
+   "source_sha256": "2f5c7c88e0e815198ecfd653914d3e0cd9048b660cceb6b529ba85301d91b78f",
+   "source_text": "\\emph{Early stopping.} The average number of shootouts is 2.87 rather than the worst-case~4, because any N-position with $\\sigma_0 = 1$ is caught at head~0 (one rollout); only those with $\\sigma_0 = 0$ require further heads. \\emph{Scope.} We report the saved seed-7 configuration above. Perfect classification on this finite test set does not establish all-position correctness, robustness across seeds, or successful self-play discovery. We make no broader sweep claim without corresponding run records."
+  },
+  "c-exp-criteria": {
+   "block": "sec-evaluation-criteria-in-this-version-p1",
+   "lines": [
+    1031,
+    1035
+   ],
+   "source_sha256": "0280938a752c87628921e08b44e0a0db0c760c73ca4f2c1c0f07f61f9e1c3fcc",
+   "source_text": "In this version we report two task-level notions of performance rather than full game-level Elo tournaments. \\emph{Move-level restoration performance} is measured by \\textbf{functional correctness}: on a test position with nonzero nim-sum, a move is counted as correct if it produces a successor state with nim-sum zero. Positions with zero nim-sum have no winning move (Theorem~\\ref{thm:nim-win}); when reporting functional correctness we therefore condition on nonzero nim-sum positions. \\emph{Position-level evaluation performance} is measured by $P/N$ classification accuracy and $N$-position recall in FSM-controlled shootouts (Section~\\ref{sec:exp-fsm-shootout})."
+  },
+  "c-exp-data": {
+   "block": "sec-dataset-generation-teacher-random-teacher-p1",
+   "lines": [
+    1059,
+    1064
+   ],
+   "source_sha256": "f46d017456d5a006c8029a1860c12ced80e920a2d1d4da1fa0717b449be5ffe9",
+   "source_text": "We generate a dataset of size $D=10^6$ examples of the form \\[ (p, p') \\mapsto \\pi_{\\mathrm{opt}}(\\cdot \\mid p') , \\] where $\\pi_{\\mathrm{opt}}(\\cdot \\mid p')$ is a soft target distribution over optimal moves from $p'$."
+  },
+  "c-exp-goal": {
+   "block": "sec:experiments-p1",
+   "lines": [
+    992,
+    992
+   ],
+   "source_sha256": "7c0f87c46de57174f3b330f0c60783c5be3a27236bdef2768b6dc680db9ad6ce",
+   "source_text": "The stronger experimental goal would be to show that an AlphaZero-style learner discovers effective play through self-play once a bypass is available. We do not establish that here. The theoretical barrier concerns what the restricted network can represent, independently of training; removing it leaves open whether the required computation can be learned, with what data and under which training regime."
+  },
+  "c-exp-loss": {
+   "block": "sec-training-targets-and-loss-p1",
+   "lines": [
+    1026,
+    1029
+   ],
+   "source_sha256": "68aa8bd326b0ab98f67d963e712238f27dcadc0f0ff70f973bdfc75817302406",
+   "source_text": "For each training input (single-frame state or two-frame state-pair), the target is a soft distribution $\\pi_{\\mathrm{opt}}(\\cdot\\mid p')$ over optimal restoration moves. The policy head is trained with cross-entropy to this target. The soft-target cross-entropy also uses unmasked logits. No value loss is used in this supervised restoration experiment."
+  },
+  "c-exp-metric": {
+   "block": "par-restoration-accuracy-validationtest-p1",
+   "lines": [
+    1095,
+    1097
+   ],
+   "source_sha256": "85fa97c8ca049d322aa3b4fe735f63b12d6bfcecb3e7ae99a838f520accb4279",
+   "source_text": "Given a held-out example, the saved evaluation takes the argmax over all action logits and counts it as correct if it lies in the support of $\\pi_{\\mathrm{opt}}(\\cdot\\mid p')$. Illegal predictions therefore count as incorrect, and every legal optimal move is accepted. The saved implementation averages batch accuracies equally, including the shorter final batch, rather than weighting them by batch size. The reported decimals are those saved batch means, not exact correct-example counts divided by 100,000. The same convention applies to the displayed validation curve."
+  },
+  "c-exp-provenance": {
+   "block": "par-scope-and-provenance-of-the-reported-result-p1",
+   "lines": [
+    1130,
+    1132
+   ],
+   "source_sha256": "2d632590847724c514031b68f17bd38aa84741a79823b9565274c2a338711af9",
+   "source_text": "This controlled supervised run shows a large advantage for transition information at $N=20$, $k=4$, $D=10^6$ and seed 0. It does not prove worst-case mastery, efficient self-play learning, or the asymptotic circuit lower bound. The checkpoint CSV is identified by run suffix \\texttt{20260214\\_120801\\_cd18fc9f}; the architecture and evaluation convention above follow its associated saved notebook. We report this documented configuration and do not make an unsupported claim of robustness across a hyperparameter or board-size sweep. Multiple independent seeds, matched-parameter controls and out-of-distribution evaluations remain useful follow-up experiments."
+  },
+  "c-exp-repr": {
+   "block": "sec:state-action-repr-p1",
+   "lines": [
+    1000,
+    1002
+   ],
+   "source_sha256": "ac95f39a8f37d56cffd7c3ccf3d2d15d19551bbb4a1b52a29dc2cb8d98f6e2cc",
+   "source_text": "\\label{sec:state-action-repr} We use a fixed-width binary encoding of heap sizes with $k$ bits per heap. The single-frame input is the encoding of the current heap vector. The two-frame input concatenates the encodings of the previous and current heap vectors. When a previous frame is unavailable (e.g. on the first move of a game), we set the previous frame equal to the current position so that the input dimension is constant and the 2F policy remains well-defined."
+  },
+  "c-exp-result-1f2f": {
+   "block": "par-one-frame-does-not-learn-restoration-two-frame-eventually-do-p1",
+   "lines": [
+    1101,
+    1105
+   ],
+   "source_sha256": "d8e7638567036e612229ea3fcecc413ad533fd1a9a44ee6cd8fc8a0ad84d6697",
+   "source_text": "Figure~\\ref{fig:valacc-H20k4} shows validation restoration accuracy as a function of epoch. The 1F model has low test restoration accuracy throughout training, approximately 0.075--0.081 across saved checkpoints. We do not identify this range with a measured random-legal-move baseline, which is not supplied in the reported evaluation. In contrast, the 2F model learns the restoration mapping and reaches essentially perfect accuracy with enough training. On the test set (Figure~\\ref{fig:testacc-H20k4}), the 2F checkpoints achieve 0.209 at epoch 1, 0.538 at epoch 23, 0.876 at epoch 45, 0.989 at epoch 67, and 0.99998 by epoch 178 (remaining $\\ge 0.99993$ at epoch 200)."
+  },
+  "c-exp-training": {
+   "block": "sec-training-and-checkpoints-p1",
+   "lines": [
+    1086,
+    1090
+   ],
+   "source_sha256": "f02efd47ec196f3cda053df6a903ed632380b11e2a4fa579503cc7d6c63c71c8",
+   "source_text": "We train each model with supervised learning using cross-entropy to the soft target distribution. We use Adam with learning rate $10^{-3}$ and batch size 512 for 200 epochs. To study performance as a function of training, we save $C=10$ checkpoints per model at epochs \\[\\{1,23,45,67,89,112,134,156,178,200\\}.\\]"
+  },
+  "c-flip-cases": {
+   "block": "app:noise-samples-p2",
+   "lines": [
+    1622,
+    1622
+   ],
+   "source_sha256": "1c8c7d52ef64b0b267b1e071660ce14dd1ccd09b437559586c4c278010c973de",
+   "source_text": "For the flip model, $a=(1-2\\varepsilon)^L$. Fresh independent blocks of $L$ flips produce exactly the product observation law used above. When $0<\\varepsilon<1/2$, the small-bias condition holds for every $L\\ge\\lceil1/(2\\varepsilon)\\rceil$; one elementary bound is $(1-2\\varepsilon)^L\\le(1+2\\varepsilon L)^{-1}$. If $\\varepsilon=0$ or $L=0$, one observation is exact. If $a=0$, no number of observations permits error below $1/2$ for both ideal bits. Reusing the same corrupted bit leaves the information content unchanged. The finite product laws, real-parameter bounds, minimum sample count and these boundary cases are checked in Lean."
+  },
+  "c-fourier-basis": {
+   "block": "sec:spectral-view-p1",
+   "lines": [
+    933,
+    945
+   ],
+   "source_sha256": "9234e1d1315bf7278d6c0e64277197645670747df8be2f71d07ae8e52376614e",
+   "source_text": "A useful complementary lens is Fourier analysis on the Boolean hypercube. Let $f:\\bits^{n}\\to\\mathbb{R}$ and define the Walsh--Hadamard characters \\[ \\chi_S(x) \\;=\\; (-1)^{\\sum_{i\\in S} x_i}, \\qquad S\\subseteq[n]. \\] The set $\\{\\chi_S\\}_{S\\subseteq[n]}$ is an orthonormal basis with respect to the uniform distribution on $\\bits^n$. The Fourier coefficients are \\[ \\hat f(S)\\;=\\;\\mathbb{E}_{x\\sim U(\\bits^n)}\\bigl[f(x)\\chi_S(x)\\bigr], \\qquad\\text{and}\\qquad f(x)=\\sum_{S\\subseteq[n]}\\hat f(S)\\chi_S(x). \\] We refer to $|S|$ as the \\emph{Fourier degree} (or ``frequency'') of the coefficient $\\hat f(S)$."
+  },
+  "c-fsm-definition": {
+   "block": "par:shootout-controller-p2",
+   "lines": [
+    660,
+    669
+   ],
+   "source_sha256": "ebdfa283f8e224f789291dd6735ad0067771a27b37028b3aa5b1c59950dbe92d",
+   "source_text": "Formally, fix rollout heads $\\pi_0,\\dots,\\pi_{k-1}$. A \\emph{finite-state shootout controller} is a tuple \\[ \\mathcal{C} = (\\mathcal{S}, s_{\\mathrm{init}}, g, \\delta, \\mathsf{halt}), \\] where $\\mathcal{S}$ is a finite set of controller states, $s_{\\mathrm{init}}\\in\\mathcal{S}$ is the initial state, $g\\colon \\mathcal{S}\\to\\{0,\\dots,k-1\\}$ selects which head to use for the next rollout query, $\\delta\\colon \\mathcal{S}\\times\\{0,1\\}\\to\\mathcal{S}$ updates the controller state after observing a rollout outcome bit $r=\\mathrm{RO}_{\\pi_{g(s)}}(P)$, and $\\mathsf{halt}\\subseteq \\mathcal{S}$ is a set of halting states associated with an output decision. (When $\\mathsf{halt}=\\emptyset$, the controller simply runs for a fixed number of queries and outputs a decision at the end.)"
+  },
+  "c-fsm-metric": {
+   "block": "par-rollout-evaluation-p2",
+   "lines": [
+    1161,
+    1162
+   ],
+   "source_sha256": "c3bf990959c12836087a308903cbc2c6870ab8d10c70062ba6ea67e9742a3d98",
+   "source_text": "The per-head accuracy metric is whether the model's rollout outcome matches the teacher's rollout outcome---the correct channel bit---not whether it matches the $P/N$ label directly. Each \\emph{exact teacher} head computes a specified linear functional ($r_0=\\sigma_0$; $r_j=\\sigma_j\\oplus\\sigma_0$ for $j\\ge1$). The learned heads can make channel errors. The FSM uses an OR of the queried outcomes for $P/N$ classification, which is a different task from reconstructing every nim-sum bit."
+  },
+  "c-fsm-power": {
+   "block": "par:shootout-controller-p3",
+   "lines": [
+    671,
+    673
+   ],
+   "source_sha256": "44c71a19cbbf238e836385b8a0c865ab02ce4d7c60e0a8bb25d00ab440d4ee78",
+   "source_text": "This viewpoint does \\emph{not} increase the per-step computational power of the rollout heads: each $\\pi_j$ remains $\\AC^0$-bounded. Instead, the controller organises \\emph{which} $\\AC^0$ head is iterated in a shootout and \\emph{when} to stop querying. Figure~\\ref{fig:fsm-shootout-controller} depicts a particularly simple controller that turns the $B$ structured rollout heads from Proposition~\\ref{prop:rollout-sufficiency} into a sequential ``bit-query'' procedure for deciding whether $\\sigma(P)=\\operatorname{nim}(P)$ is zero (and hence whether $P$ is a $P$-position)."
+  },
+  "c-fsm-results": {
+   "block": "par-results-p2",
+   "lines": [
+    1174,
+    1176
+   ],
+   "source_sha256": "157360d919881b5cdad55bdf1da919c742b72a986ac350a9fbe269f478844afd",
+   "source_text": "\\emph{Multi-head FSM achieves perfect classification.} The saved output reports correct $P/N$ classification on all 2,000 test positions, matching the teacher's final decisions. However, the saved per-head channel accuracies are $2000/2000$, $2000/2000$, $1469/2000$ and $1480/2000$, respectively: $1.0000$, $1.0000$, $0.7345$ and $0.7400$. Consequently, this result does not establish exact channel recovery or recovery of the full invariant by the learned model. Early stopping leaves some channels unqueried, and even queried channel errors need not change the final OR decision. These are transcribed saved outputs, not a fresh checkpoint evaluation; reached-head error counts and a reproducible end-to-end rerun are needed for a stronger claim."
+  },
+  "c-fsm-setup": {
+   "block": "par-setup-p1",
+   "lines": [
+    1142,
+    1144
+   ],
+   "source_sha256": "2a05cec9d17cbecb8261c4e54dd549c0c526794cfbee84f84556d524c178a255",
+   "source_text": "We consider NIM with $N=20$ heaps and bit-width $k=4$ (so $B=k=4$ heads), matching the encoding of Section~\\ref{sec:state-action-repr}. We evaluate on a balanced test set of 2000~positions with $50\\%$ $P$-positions ($\\sigma=0$) and $50\\%$ $N$-positions ($\\sigma\\neq 0$)."
+  },
+  "c-fsm-training": {
+   "block": "par-training-the-rollout-heads-p2",
+   "lines": [
+    1153,
+    1154
+   ],
+   "source_sha256": "e6f5aa9a0ee2ccb692336eaa35b95f1fcee81a5e29943a84aca588e1f0f81f16",
+   "source_text": "The network uses the same shared-trunk architecture as Table~\\ref{table:arch} (two hidden layers of width $H=256$ with LayerNorm), with $B$ independent linear output heads each producing $N \\cdot 2^k = 320$ action logits. Training uses Adam (learning rate $10^{-3}$, batch size 1024) for 12 epochs on $2\\times10^5$ imitation examples, with a separate 20,000-example validation set and seed 7 in the saved notebook."
+  },
+  "c-geography": {
+   "block": "sec:othergames-p1",
+   "lines": [
+    1234,
+    1234
+   ],
+   "source_sha256": "c1573656b15b22b2b9e4fbdd6626705ef6a7def9c9557e8cbaff0d43970610fc",
+   "source_text": "By Sprague--Grundy theory, every finite impartial game position has a nimber. However, the computational complexity of determining nimbers varies widely. Some impartial games have PSPACE-complete winner problems, such as directed vertex Geography \\citep{schaefer1978games}. Unless $\\mathrm P=\\mathrm{PSPACE}$, no polynomial-time algorithm solves all such instances. Having a nimber does not supply an efficient way to compute it."
+  },
+  "c-harder-benchmarks": {
+   "block": "sec:othergames-list1",
+   "lines": [
+    1238,
+    1242
+   ],
+   "source_sha256": "79d3df280f7f68aace988ea770167274676b903dcbfec336bd0fd18d122c0e3f",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item \\textbf{Sprouts.} Players join spots by noncrossing curves, add a spot on each new curve, and keep every spot's degree at most three. The normal-play outcome conjecture for the standard $n$-spot opening remains open despite substantial progress with exact solvers \\citep{cizek2026sprouts}. Learning to exploit the evolving region structure, and to choose winning moves in intermediate positions, would be a stronger test than predicting opening outcomes from $n$ alone. \\item \\textbf{Chomp.} A move removes a chosen square and all squares above and to its right; taking the distinguished corner loses. Strategy stealing establishes a first-player win on every nontrivial rectangle, but does not supply the winning moves \\citep{berlekamp2001winningways}. Larger boards and their irregular intermediate positions offer a challenge beyond solved special families; the analysis of Chomp continues to pose open problems \\citep{nowakowski2025unsolved}. The benchmark should test move selection and generalisation across shapes, not just the known opening winner. \\item \\textbf{Grundy's game.} A move splits one heap into two nonempty unequal heaps. Whether its nim-value sequence is eventually periodic remains an open problem \\citep{nowakowski2025unsolved}. This offers a test of whether self-play discovers useful structure in component values and how they combine. Testing unseen heap sizes and sums of heaps can distinguish such progress from memorising a finite table. \\end{itemize}"
+  },
+  "c-idealisation": {
+   "block": "sec:idealisation-p1",
+   "lines": [
+    1222,
+    1225
+   ],
+   "source_sha256": "d46857718fdf6b1d8368886aa3c81537594c59aa9f7ab39a8e2c1fad16505e4e",
+   "source_text": "\\label{sec:idealisation} The simulation theorem concerns Boolean literal-threshold gates with nonnegative weights and bounded thresholds, including their permitted compositions. The experiments use floating-point signed linear layers and ReLU as well as LayerNorm and a Log-Softmax loss. Their difference from the theorem therefore extends beyond normalisation layers. A failure at one finite board size does not establish an asymptotic representational impossibility; success on a finite dataset does not establish strong mastery. The controlled comparison supports a narrower empirical conclusion: the reported transition representation is much easier to learn under this supervised protocol."
+  },
+  "c-impl-overview": {
+   "block": "sec-implementation-overview-list1",
+   "lines": [
+    613,
+    618
+   ],
+   "source_sha256": "a80358fba4a0a3f9a40c847bac069d7f38fc4a063bda7dd866a2b5759a315b43",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item a binary encoding scheme for heap vectors (Appendix~\\ref{app:impl}), \\item a constant-depth detection of which heaps changed between frames, \\item an $\\AC^0$ circuit computing $\\Delta$ on those changed heaps (Lemma~\\ref{lem:nimber-diff-ac0}), \\item an $\\AC^0$ selection mechanism for a response move realising a target $\\delta$. \\end{itemize}"
+  },
+  "c-init-boundary": {
+   "block": "par-the-initialisation-boundary-for-restoration-p1",
+   "lines": [
+    778,
+    781
+   ],
+   "source_sha256": "0044397e1e8f5fe70930a81dad3f44db893a63796f2b3a62b16bef90e5116625",
+   "source_text": "Matching two successive differences yields $\\operatorname{nim}(R)=\\operatorname{nim}(Q)$, whether or not that value is zero. Thus Proposition~\\ref{prop:restore} does not supply a classifier for an arbitrary starting position. For example, complete a matching-delta policy by subtracting one from the first nonempty heap whenever no matching response exists or no previous frame is available. Starting from $(2)$, it plays $(2)\\to(1)\\to(0)$ and the first player loses, although $(2)$ is winning. The fallback after the first move is needed because its delta is $2\\oplus1=3$, which cannot be realised from $(1)$. This counterexample does not rule out every possible verifier construction; it shows that conditional restoration and an unspecified fallback do not establish one. We make no universal-verifier claim. Initial winning-move selection can instead use the multi-channel construction above or the growing recurrent scan in Section~\\ref{sec:recurrent-bypass}."
+  },
+  "c-integration": {
+   "block": "par:shootout-controller-p5",
+   "lines": [
+    717,
+    722
+   ],
+   "source_sha256": "889c23c816bd602113f3a16f074b6ff7313392a19bae7ff6982baeb2e3a0f03e",
+   "source_text": "\\noindent\\textbf{Integration (channels vs.\\ protocol).} It is helpful to reinterpret Part~(ii) of Theorem~\\ref{thm:search-gap} in an ``information-channel'' language: each policy head $\\pi_j$ defines a distinct rollout \\emph{measurement channel} which, when iterated to termination, returns a single bit $r_j=\\mathrm{RO}_{\\pi_j}(P)$ that depends on the hidden $B$-bit invariant $\\sigma(P)$ (cf.\\ the identities in Proposition~\\ref{prop:rollout-sufficiency}). With a \\emph{single} head, repeated deterministic root rollouts return the \\emph{same} linear functional $\\ell(\\sigma)$; admissible one-heap modifications give its known affine corrections (Proposition~\\ref{prop:single-policy-bound}). These measurements supply no further unknown invariant bit. With \\emph{multiple} heads, the agent has access to linearly independent invariant measurements and can reconstruct $\\sigma(P)$ from their outcomes (Proposition~\\ref{prop:rollout-sufficiency}). The finite-state shootout controller introduced above is the natural generalisation of this idea: it does not change what any head can compute, but organises the heads into an \\emph{adaptive querying protocol}---the controller decides which channel to query next (and when to stop, or when to re-query for robustness) based on previously observed rollout outcomes. In this view, multi-head provides the \\emph{channels}, while the FSM provides the \\emph{sequential control} that turns those channels into a practical evaluation procedure."
+  },
+  "c-intro-ac0": {
+   "block": "sec:intro-p3",
+   "lines": [
+    88,
+    88
+   ],
+   "source_sha256": "c91a30a19032e1c3be927bffd6491f03b2d982e32b769aea66afe2137a13c778",
+   "source_text": "Here we turn that difficulty into a question about computation. The class $\\AC^0$ consists of polynomial-size Boolean circuits built from AND, OR and NOT gates, with a number of layers that remains fixed as the input grows. Such circuits can combine many local tests, but cannot compute global parity: whether the total number of input 1s is odd or even. This is the feature that makes the class useful here: it provides a precise model with a provable version of the parity limitation seen in the experiments. We establish the connection for an explicitly restricted neural model, rather than assuming that all neural networks lie in $\\AC^0$."
+  },
+  "c-intro-necessary": {
+   "block": "sec:intro-p4",
+   "lines": [
+    90,
+    90
+   ],
+   "source_sha256": "65533ae04feda29aa5501a69314e96f2bbc253a50767108365a69b96687cd6eb",
+   "source_text": "The value of identifying a bottleneck is that it tells us what an architectural change must supply. Instead of asking a shallow network to rediscover a global invariant from every board, we can expose a useful transition, obtain complementary information from rollouts, or accumulate the invariant over time. Our contribution is this \\emph{barrier-to-bypass} approach: a computational obstruction guides three concrete constructions. Representability in $\\AC^0$ is a necessary condition for a fixed-latency computation in our restricted model; it is neither sufficient for successful training nor a universal condition on what neural networks can learn."
+  },
+  "c-intro-transition": {
+   "block": "sec:intro-p5",
+   "lines": [
+    92,
+    97
+   ],
+   "source_sha256": "8dcd11f9c9d1749da3cf2abc245db7dec766251629ddbe40eb0ed277965f63aa",
+   "source_text": "The central observation is that while the \\emph{state} can be hard to process, the \\emph{transition} can be easy: under the promise that the preceding position has nim-sum zero, short history converts winning-move selection into local difference computation and restoration. A second route uses distinct rollout policies to extract complementary bits of the invariant. A third route processes each position sequentially, retaining recurrent state as rows and then successive positions arrive. Here a sequence of simple updates computes the global invariant, and memory connects the new position to the preceding one. These mechanisms use different resources: explicit transition information, multiple rollout channels, or a growing recurrent computation horizon. The distinction between a shallow component and the complete computation is essential. Two-frame restoration is a shallow map on a promised pair of boards. In the other two constructions, each policy step or recurrent update is shallow, but generating the information needed for a decision takes a sequence of such steps. Thus the bypasses preserve simple network components while changing the input information or total processing time. The complete sequential computation need not itself lie in $\\AC^0$. Figure~\\ref{fig:barrier-blueprint} summarises the three routes for NIM."
+  },
+  "c-intro-zhou": {
+   "block": "sec:intro-p2",
+   "lines": [
+    86,
+    86
+   ],
+   "source_sha256": "786121a9079b86bf94b832dc8b16a2c7e592da87928297f59e48afe70047dbfe",
+   "source_text": "Our earlier work with Bei Zhou provides the empirical starting point. In \\emph{Impartial Games: A Challenge for Reinforcement Learning}, Zhou and Riis found that AlphaZero-style learning deteriorated as NIM boards grew \\citep{zhou2022impartial}. Subsequent parity experiments examined how noisy labels can obstruct curriculum learning \\citep{zhou2023parity}; see also Zhou's thesis \\citep{zhou2024phd}. These findings make parity a useful test of the gap between learning familiar patterns and discovering an exact rule that works across positions."
+  },
+  "c-lmn": {
+   "block": "par-ac0-has-little-high-frequency-mass-p1",
+   "lines": [
+    966,
+    969
+   ],
+   "source_sha256": "cc00adcaa05b249d1de9030ab042d0f6c4d59b613764cf3c21b9f21d708ce737",
+   "source_text": "A seminal theorem of Linial--Mansour--Nisan shows that $\\AC^0$ functions have almost all Fourier mass on low degrees: for $f$ computed by an $\\AC^0_d$ circuit of size $M$, the tail above degree $k$ decays rapidly with $k$ (see \\citep{linial1993constant}, and sharper bounds in \\citep{tal2015tight}). For fixed depth and polynomial size, correlation with full parity under the uniform distribution is negligible in $n$. Applying this statement to other subsets requires specifying their size relative to circuit depth and size, and it does not automatically apply under a nonuniform training distribution."
+  },
+  "c-local-checks": {
+   "block": "sec-from-global-invariants-to-local-checks-p1",
+   "lines": [
+    984,
+    986
+   ],
+   "source_sha256": "73cb6f5d6a547c7797787f4b0d71e2fef9472321b969acdcd7a444a1f93ad076",
+   "source_text": "The core representational point is that the global invariant $\\operatorname{nim}(P)$ is hard to compute from a single frame, whereas the transition quantity $\\Delta(P,P')$ is locally computable from two frames (Lemma~\\ref{lem:nimber-diff-ac0}). Section~\\ref{sec:supervised-restoration} isolates this effect by training one-frame and two-frame models on the same restoration targets."
+  },
+  "c-lower-bound-respected": {
+   "block": "par-why-the-lower-bound-is-respected-p1",
+   "lines": [
+    869,
+    871
+   ],
+   "source_sha256": "f609eee9d30337f1c344784b48de08ee18b710d1270893c1fb9d91125ef4f785",
+   "source_text": "Unrolling $N$ constant-depth updates gives a computation of depth $O(N)$, so Proposition~\\ref{prop:streaming-nimsum} lies outside the fixed-$T$ premise of Theorem~\\ref{thm:sim-ac0}. A one-step recurrent dependency can nevertheless carry information accumulated over the whole stream. Merely appending positions and separators to a fixed-depth input does not supply this growing computation horizon. The bypass comes from sequential computation with retained state, not from the delimiter itself. For growing heap bit-width, the accumulator also needs $O(B)$ bits; a fixed-width hidden state is not claimed to store arbitrary-size invariants or histories. The construction establishes representational sufficiency for NIM, but does not establish that training a recurrent network will discover the update or preserve it reliably over long games. We do not report recurrent training experiments here."
+  },
+  "c-majority-objection": {
+   "block": "sec:majority-vs-parity-p1",
+   "lines": [
+    921,
+    922
+   ],
+   "source_sha256": "05a789dd205282b05592d242ffd384014f7b8f4ddd02d7db8c081795521e61ae",
+   "source_text": "One might object that modern networks can implement majority-like decisions, suggesting $\\TC^0$ (threshold circuits) as the ``right'' complexity class. Indeed, if one allows scale-adaptive thresholds/biases or fan-in dependent re-scaling, constant-depth threshold models can represent parity-type computations."
+  },
+  "c-majority-regime": {
+   "block": "sec:majority-vs-parity-p2",
+   "lines": [
+    924,
+    928
+   ],
+   "source_sha256": "eceec6bc4e5101e2a4307964e01a5779e8e2d7c8341a0cafdaab0fd045e14168",
+   "source_text": "Our focus is a restricted literal-threshold regime: fixed total depth, nonnegative weights on Boolean literals, and thresholds bounded in units of the smallest nonzero weight. In this regime, each gate has a constant-size witness and collapses to a constant-width DNF, yielding an $\\AC^0$ abstraction (Theorem~\\ref{thm:sim-ac0}). Constant-depth $\\AC^0$ circuits can implement approximate counting \\citep{ajtai1993approxcount}, yet they have exponentially small correlation with parity \\citep{furst1984parity,hastad1986thesis,smolensky1987algebraic,razborov1987lower}. Learning parity depends on the architecture and training setting; both difficulties and positive results have been studied \\citep{thornton1996parity,thornton1996bp,daniely2020parities}. The representational lower bound here applies only to the explicit gate model. Section~\\ref{sec:spectral-view} gives a complementary Fourier/spectral interpretation of this local-versus-global parity separation."
+  },
+  "c-mcts-sentence": {
+   "block": "par-interpretation-mirror-the-delta-p3",
+   "lines": [
+    609,
+    609
+   ],
+   "source_sha256": "5b4c91a026ba8def86c1dfa21974a67606be49b22c93e45957362afad0239d66",
+   "source_text": "The significance for learnability is representational. A two-frame policy network can condition its response on $(Q,Q')$ and hence on the locally computable $\\delta$, while a single-frame policy must reconstruct the relevant global information from $Q'$ alone. The experiments in Section~\\ref{sec:experiments} examine this contrast through supervised restoration learning and imitation-trained rollout policies. The reported networks are policy-only; these results do not establish that self-play discovers the constructions."
+  },
+  "c-mirror-delta": {
+   "block": "par-interpretation-mirror-the-delta-p2",
+   "lines": [
+    607,
+    607
+   ],
+   "source_sha256": "8d048be4dc49977c2ed06b779c60dacdaaf2053d57acc947efa899b96984f17a",
+   "source_text": "Proposition~\\ref{prop:restore} is structural: it describes a response pattern that keeps returning the game to nim-sum zero, provided the player can (i) compute $\\delta=\\Delta(Q,Q')$ from the last two frames and (ii) choose a legal move $Q'\\to R$ that realises the same $\\delta$. In NIM, when the opponent changes exactly one heap, $\\delta$ is simply $x_i\\oplus x_i'$, and testing whether a candidate response move realises $\\delta$ is a local check on the heap being changed."
+  },
+  "c-model-table": {
+   "block": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction-table1",
+   "lines": [
+    329,
+    343
+   ],
+   "source_sha256": "995cbe39b401240a1284c8c65a83fc5f5bb66d236571c7bc0d2e5f262e675b15",
+   "source_text": "\\begin{center} \\begin{tabular}{|>{\\raggedright\\arraybackslash}p{0.30\\linewidth}|>{\\raggedright\\arraybackslash}p{0.28\\linewidth}|>{\\raggedright\\arraybackslash}p{0.30\\linewidth}|} \\hline \\textbf{Property of deployed inference} & \\textbf{Captured here} & \\textbf{Not captured here} \\\\ \\hline Fixed latency / bounded depth & constant depth $L$ (and window $T$) & depth growing with $n$ \\\\ \\hline Fixed-scale quantisation (bounded range) & weights/thresholds in fixed grid $\\Qset_{W,D}$ & fan-in dependent scaling or thresholds growing with $n$ \\\\ \\hline Parallel bit operations & unbounded fan-in AND/OR/NOT & exact global counting / exact parity on unbounded inputs \\\\ \\hline Signed effects & via input negations (Lemma~\\ref{lem:unit-ac0}) & large signed dot-product accumulation \\\\ \\hline \\end{tabular} \\end{center}"
+  },
+  "c-nim-bit-character": {
+   "block": "par-local-vs-global-parity-in-nim-p1",
+   "lines": [
+    971,
+    978
+   ],
+   "source_sha256": "5228c8bfadd11fe224fd0a68a64871ed9b05607352db9927d9b4d9365697a152",
+   "source_text": "In our encoding, the $j$th bit of the nim-sum is the parity of the $j$th bits across all $N$ heaps, hence a degree-$N$ character. Conditional on a specified changed heap $i$, the sign encoding of the $j$th delta bit is the two-coordinate character $(-1)^{x_{i,j}+x'_{i,j}}$. When the changed index is unknown, the delta bit is specified on pairs of boards differing in at most one heap. A shallow extension to all pairs is \\begin{equation} d_j(P,P')=\\bigvee_{i=1}^{N}(x_{i,j}\\oplus x'_{i,j}). \\label{eq:delta-extension} \\end{equation} On the promised domain this is the required delta bit. For $N\\ge2$, its sign encoding $(-1)^{d_j}$ is not a single character, even up to sign; for $N=1$ it is exactly a degree-two character. Thus local computability does not mean that the full unknown-index map has degree two. It follows from the explicit $\\AC^0$ construction in Lemma~\\ref{lem:nimber-diff-ac0}."
+  },
+  "c-no-discovery": {
+   "block": "sec:development-p6",
+   "lines": [
+    1294,
+    1294
+   ],
+   "source_sha256": "b19a441740a849b44c769628af72663c603a901ab3f7c923b423c20fe8622423",
+   "source_text": "Neither the mathematical verification nor the experiments establish that gradient descent or self-play will discover the constructions in general."
+  },
+  "c-noise-model": {
+   "block": "app:noise-samples-p1",
+   "lines": [
+    1602,
+    1602
+   ],
+   "source_sha256": "58e52d25b7c88cb1815565aca89fa5e8a6cb8b03a2ef3de79e61e9606eea3e56",
+   "source_text": "Remark~\\ref{rem:noisy-rollout-decay} concerns a symmetric observation channel for an unknown bit $Y$. Each observation agrees with $Y$ with probability $(1+a)/2$, where $0<a\\le1/2$, and observations are independent conditional on $Y$. A possibly randomised decision rule assigns a probability of outputting~1 to each observed bit vector. Let $m_*(a)$ be the least sample count for which such a rule has error at most $1/4$ for each possible value of $Y$."
+  },
+  "c-noisy-teacher": {
+   "block": "sec:teacher-p1",
+   "lines": [
+    914,
+    916
+   ],
+   "source_sha256": "1ab56c68163ed39869bdf7c968e94456385f27ac8ccca35fc8c91c8323dc3e86",
+   "source_text": "Let $\\pi_{\\mathrm{opt}}$ denote an optimal NIM policy (move to nim-sum~$0$ whenever possible). For a noise parameter $\\varepsilon\\in[0,1]$, define a noisy teacher $\\pi_T^{\\varepsilon}$ that plays according to $\\pi_{\\mathrm{opt}}$ with probability $1-\\varepsilon$ and otherwise chooses a uniformly random legal move. Occasional random moves broaden state coverage and, crucially for two-frame agents, generate diverse transition pairs $(Q,Q')$ from which the local difference signal $\\Delta(Q,Q')$ can be inferred."
+  },
+  "c-not-floating": {
+   "block": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction-p2",
+   "lines": [
+    311,
+    312
+   ],
+   "source_sha256": "13eb347596d58fb301c6557fa8fd8ca1b1ef2f2295e1ee262325a68ae68248d7",
+   "source_text": "We emphasise that this is not a statement about floating-point arithmetic per se. The abstraction intentionally excludes \\emph{scale-adaptive} regimes where thresholds/biases grow with fan-in or where weights shrink with dimension (e.g.\\ $1/n$ or $1/\\sqrt{n}$ normalisations), which move the analysis toward threshold-circuit classes such as $\\TC^0$."
+  },
+  "c-opt-gap": {
+   "block": "sec:opt-gap-p1",
+   "lines": [
+    1254,
+    1254
+   ],
+   "source_sha256": "c782d009bceb3860f2c4064b4ed1799ebab9123791c947620c8d225b7ed7e809",
+   "source_text": "The constructions establish that the required computations can be expressed using the stated resources: a shallow restoration rule, structured rollout policies, or a shallow recurrent update iterated over the board. This removes one obstacle before training begins. It does not determine whether gradient descent will find those computations, whether sparse game rewards provide enough guidance, or whether the resulting behaviour generalises."
+  },
+  "c-opt-gap-evidence": {
+   "block": "sec:opt-gap-p2",
+   "lines": [
+    1256,
+    1256
+   ],
+   "source_sha256": "0acee1d20e77ffe484671ce554518dd4a500aa1a67d1a8788d281cd0bdca6216",
+   "source_text": "The restoration experiment makes this distinction tangible. Even with transition information and correct supervision, learning passes through an intermediate plateau before reaching near-perfect measured accuracy. The checkpoint diagnostic in Section~\\ref{sec:supervised-restoration} associates the later improvement with the lowest bit of the selected move's XOR change. We therefore have empirical evidence of a remaining learning bottleneck that is largely overcome in this run, alongside a theorem about a different, representational obstruction. The data do not establish how many distinct learning mechanisms produce the stages or why the transitions occur."
+  },
+  "c-othergames-scope": {
+   "block": "sec:othergames-p2",
+   "lines": [
+    1236,
+    1236
+   ],
+   "source_sha256": "27041a576294ab72758be2dc8f84b4cb587e70c69c5bce545941019f8e0dc670",
+   "source_text": "NIM is therefore a diagnostic starting point: its efficient optimal strategy lets us separate a representational obstruction from the difficulty of discovering a strategy. The longer-term benchmark is self-play on impartial games whose strategic structure is only partly understood or whose exact analysis becomes impractical as positions grow. Three candidates illustrate different challenges:"
+  },
+  "c-outer-controller": {
+   "block": "par:shootout-controller-p4",
+   "lines": [
+    675,
+    675
+   ],
+   "source_sha256": "f57af1853d04e970399dad9d59473b73e5711bb972080695db7939a3ae9ed541",
+   "source_text": "The checked implementation includes the outer controller: it selects a head, executes its rollout, records the outcome and either reloads the original board for the next head or halts. For classification it stops at the first outcome~1. For move selection our implementation runs all $B$ heads, since an early classification decision need not supply the invariant bits required by the move readout. Each controller tick is itself an $\\AC^0$ map. The original board remains available as a read-only input throughout; it is not an oracle for its nim-sum. Appendix~\\ref{app:impl} specifies the storage and update costs."
+  },
+  "c-plateau": {
+   "block": "par-learning-in-stages-the-plateau-and-subsequent-improvement-p1",
+   "lines": [
+    1123,
+    1124
+   ],
+   "source_sha256": "f1dd8351bd9a64baf1612a6905bfdf0d59b867ba8fc7532d97b0c28d5df34016",
+   "source_text": "The plateau near $0.54$ and later rise in Figures~\\ref{fig:valacc-H20k4}--\\ref{fig:testacc-H20k4} suggest a temporary learning bottleneck even with two-frame input. The learner makes substantial progress, remains at an intermediate level, and then improves sharply. This is evidence about training dynamics within the saved run, rather than a further circuit lower bound."
+  },
+  "c-plateau-interpretation": {
+   "block": "par-learning-in-stages-the-plateau-and-subsequent-improvement-p3",
+   "lines": [
+    1128,
+    1128
+   ],
+   "source_sha256": "6fd5cea90e31d3d6ce57317c875e7b11bfd53bc0c1277d68554949f19ed09b97",
+   "source_text": "Thus the later improvement is accounted for at the output level by learning to select moves with the correct lowest bit while retaining the already accurate upper bits. This supports staged acquisition of the restoration behaviour. It does not identify an internal representation or explain why optimisation follows this order. Nor does the plateau's proximity to $8/15$ establish a random-bit guessing mechanism: that baseline assumes a particular distribution and prediction rule. Internal probes, interventions and independent training runs are needed to explain the transition and test its reproducibility."
+  },
+  "c-primer": {
+   "block": "par-circuit-complexity-primer-p1",
+   "lines": [
+    348,
+    349
+   ],
+   "source_sha256": "93fabe384e22e9ff3bc7c9ce22474b98c1090a19e3b1bc5ba213ffef3f819e13",
+   "source_text": "$\\AC^0$ is the class of Boolean functions computable by constant-depth, polynomial-size circuits with unbounded fan-in AND/OR/NOT gates. A classical result is that $\\mathrm{PARITY}\\notin\\AC^0$. In contrast, $\\TC^0$ augments $\\AC^0$ with unbounded fan-in threshold gates and can compute parity. Our focus here is a fixed-scale quantised regime in which thresholds do not scale with fan-in; in that regime, each threshold unit admits a constant-witness DNF expansion and the overall computation collapses to $\\AC^0$ (Theorem~\\ref{thm:sim-ac0})."
+  },
+  "c-qset": {
+   "block": "sec:framework-fixedprecision-p3",
+   "lines": [
+    287,
+    293
+   ],
+   "source_sha256": "f3f940a9a022ec9f3f31b707854293a163dc4f1da8781df0c03df910c1319682",
+   "source_text": "We define \\[ \\Qset_{W,D} \\;=\\; \\Big\\{ \\frac{\\ell}{D}\\ :\\ \\ell\\in\\{0,1,2,\\dots,W\\}\\Big\\}, \\] a finite set independent of input length. The threshold bound applies \\emph{after} choosing the literal representation. Replacing a signed term $-a x$ by $a(1-x)$ adds $a$ to the threshold; many negative terms can therefore produce a dimension-dependent threshold outside this model."
+  },
+  "c-recurrence-history": {
+   "block": "par-connecting-recurrence-to-the-history-bypass-p1",
+   "lines": [
+    859,
+    867
+   ],
+   "source_sha256": "c85879e3d34832e31203782f9a350b331a97304634bc7087b0822bd6f1549cba",
+   "source_text": "The retained summaries allow the agent to compare consecutive positions through \\[ \\sigma_{t-1}\\oplus\\sigma_t =\\operatorname{nim}(P_{t-1})\\oplus\\operatorname{nim}(P_t) =\\Delta(P_{t-1},P_t). \\] When one heap changes from $a$ to $b$, this equals $a\\oplus b$. If the preceding position has nim-sum zero, the difference is exactly the invariant that the restoration rule must cancel. Storing the preceding board additionally permits direct row-by-row comparison as the new board arrives. A summary of $O(B)$ bits preserves the invariant, rather than the full game history; arbitrary access to old positions requires additional storage or replay. The difference always refers to consecutive completed boards actually supplied to the controller. If these are only the boards at the player's decision times, they usually span two game moves. Comparing just the opponent's move instead requires the player's own post-move board as the preceding frame. The initial scan also computes the invariant from an arbitrary starting position, without assuming an earlier zero-nim-sum frame. This initialisation uses the growing recurrent horizon and is therefore an additional resource beyond the fixed-latency two-frame construction."
+  },
+  "c-recurrent-update": {
+   "block": "par-the-recurrent-update-p1",
+   "lines": [
+    1507,
+    1508
+   ],
+   "source_sha256": "9ef288e7140f8527118ef088d0f9b8ebee504219410133d406409b3ad7c6f3b0",
+   "source_text": "Scan mode updates the accumulator by two-bit XORs. Replay mode tests the current row against the stored summary, retains the first cancelling candidate and a fallback, and increments the row counter. Counter bit $k$ changes exactly when all lower bits are one, so increment also has a shallow circuit. Mode, validity and reset flags select the appropriate register updates. Induction over well-formed token streams proves that every reachable register fits its allotted width and that the output move uses the summary from the same board's first scan. The input protocol supplies the repeated rows; the controller does not secretly store the board."
+  },
+  "c-replay": {
+   "block": "par-from-a-summary-to-a-move-p1",
+   "lines": [
+    847,
+    857
+   ],
+   "source_sha256": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
+   "source_text": "Computing $\\sigma_t$ does not by itself retain the heap rows needed to choose a move. One implementation replays the current position after the first scan. If $\\sigma_t\\ne0$, select the first row $i$ for which \\[ x_{t,i}'=x_{t,i}\\oplus\\sigma_t<x_{t,i}. \\] Such a row exists: choose a heap containing the highest set bit of $\\sigma_t$. Replacing that heap by $x_{t,i}'$ leaves nim-sum zero. XOR, binary comparison and conditional selection are constant-depth operations; the replay uses $O(B+\\log N)$ state bits to retain the summary, a selected move and its row index. The explicit protocol is \\[ \\mathtt{rows}(P_t),\\ \\mathtt{SEP},\\ \\mathtt{rows}(P_t),\\ \\mathtt{SEP}. \\] The first separator stores the summary and switches to replay; the second emits the move and returns to scan mode. This takes exactly $2N+2$ updates, with one additional reset token at the start of a game. If $\\sigma_t=0$, choose the first nonempty heap and decrement it, or report termination when all heaps are empty. Lean verifies the complete replay controller, including its binary move output and its fixed-scale threshold implementation. With an $r$-bit counter satisfying $N<2^r$, its state uses $4+5B+3r$ bits. The strict inequality allows the counter to hold the end value $N$, whereas an output index alone only needs $N\\le2^r$. Alternatively, store the current board in $O(NB)$ bits during the initial scan and use a constant-depth selector at the separator, as in Appendix~\\ref{app:impl}. This avoids replay at the cost of board-sized memory. The distinction matters for a stream in which each position is supplied only once. Both variants have checked bit-level circuits, fixed-scale network implementations and winning-play guarantees. The board-storage variant uses $NB+B+r$ state bits and $N+1$ updates per decision, with $N<2^r$, plus a reset update when initialising the controller."
+  },
+  "c-replay-bridge-open": {
+   "block": "prop:bypass-interfaces",
+   "lines": [
+    876,
+    885
+   ],
+   "source_sha256": "42524208a19b28cfe7bf26ac3f5a8d5d11617294704462771cb55aaeca75a484",
+   "source_text": "\\begin{proposition}[Shallow components and complete strategies] \\label{prop:bypass-interfaces} For $N\\ge1$ heaps of $B\\ge1$ bits, the following constructions use polynomial-size, constant-depth Boolean components, realisable by literal-threshold networks with weights and thresholds in $\\{0,1\\}$. \\begin{enumerate}[leftmargin=*,label=(\\roman*)] \\item The two-frame selector maps a legal transition $Q\\to Q'$ from $\\operatorname{nim}(Q)=0$ to a legal binary-encoded response restoring zero. Retaining the response board as the next predecessor gives a winning strategy from this established invariant, with the opponent to move. \\item Each structured rollout policy and the readout from the board and its $B$ outcome bits are shallow. Executing the rollouts and then the readout gives a winning strategy from any nonzero nim-sum board, using at most $BN(2^B-1)$ simulated game moves per decision. \\item The recurrent state update is shallow. Iterating it over the replay protocol gives a winning strategy from any nonzero nim-sum board, with $O(B+\\log N)$ memory and $2N+2$ updates per decision. \\end{enumerate} Here ``winning strategy'' quantifies over every legal opponent response. Polynomial size and constant depth refer to the indicated component, with depth independent of $N$ and $B$; they do not bound the number of sequential component evaluations. \\end{proposition}"
+  },
+  "c-reproducibility": {
+   "block": "par-reproducibility-status-p1",
+   "lines": [
+    1214,
+    1215
+   ],
+   "source_sha256": "e5b5112a55a7de580ab17530d91bdf50b809067ecf0eda834357b125954f1ed1",
+   "source_text": "The restoration notebook, checkpoint-accuracy CSV and FSM notebook are retained with the local review materials. The public repository previously named for this work does not currently provide a reproducibility package; we therefore do not claim that code and data for all configurations are publicly available. The numerical results above remain tied to the saved runs and their stated limitations. A public versioned package and independently repeated evaluation are future work."
+  },
+  "c-restoration-equivalence": {
+   "block": "sec:supervised-restoration-p1",
+   "lines": [
+    1041,
+    1043
+   ],
+   "source_sha256": "267c518dee953357e4fe672ebc4494461650426cbc1d994355db5d15e33cb586",
+   "source_text": "This experiment isolates the \\emph{restoration response} as a supervised learning problem. In normal-play impartial games, a restoration response is the move that returns play to a losing ($P$-)position after the opponent departs from it. In Nim, this is equivalent to selecting an optimal (winning) move from the post-opponent position: if the previous position had nim-sum $0$, then after any opponent move the position is winning, and any optimal reply restores nim-sum $0$."
+  },
+  "c-restore-selector": {
+   "block": "sec:restoration-p2",
+   "lines": [
+    539,
+    539
+   ],
+   "source_sha256": "f0cd9ede2be2bf3905824e7563dbb3672dfd58781ebaa578b37df11d3a913ad6",
+   "source_text": "Moreover, a concrete restoration move can be selected in $\\AC^0$ from $(Q,Q')$ by computing $\\delta=\\Delta(Q,Q')$ and then choosing (with a fixed tie-break rule) a heap $i$ such that $x_i' = x_i \\oplus \\delta < x_i$ (Appendix~\\ref{app:impl})."
+  },
+  "c-rollout-separation": {
+   "block": "sec:multipolicy-discussion-p1",
+   "lines": [
+    1246,
+    1249
+   ],
+   "source_sha256": "1d5275c69af4bff543a371a83ac88c310bb9981cacbaef108c59abb1cd3f40ba",
+   "source_text": "\\label{sec:multipolicy-discussion} Theorem~\\ref{thm:search-gap}(i) bounds winning-move selection for fixed bit-width, a specified family of root/one-heap measurements and a polynomial-size, constant-depth readout. It does not bound general single-policy search. Within that interface, the $B$ structured channels reconstruct the invariant and permit direct move selection. The extra computational resource is the sequential rollout, not the number of neural output coordinates alone. Repeated deterministic measurements of the same affine channel cannot create additional channel bits, but changing the permitted query transformations or controller computation changes the model and can remove that restriction."
+  },
+  "c-rw-circuits": {
+   "block": "par-circuit-complexity-and-neural-networks-p1",
+   "lines": [
+    373,
+    376
+   ],
+   "source_sha256": "e47d558f65a93f014192666cae23ac1bdecca500f0cfd9906cd850419309e66b",
+   "source_text": "Parity is outside $\\AC^0$ \\citep{furst1984parity,hastad1986thesis}, while constant-depth threshold circuits ($\\TC^0$) can compute it. Attention results depend on the precise model: Hao, Angluin and Frank analyse hard-attention variants, including $\\AC^0$ restrictions for unique hard attention \\citep{hao2022hardattention}. Merrill and Sabharwal study the additional power of intermediate decoding over a $\\TC^0$ baseline \\citep{merrill2021transformer}; that containment does not rule out parity. Their sequential-computation perspective is relevant to our recurrent bypass, although the architectures and formal assumptions differ. Our contribution applies these distinctions to NIM policies and a restricted rollout-measurement interface."
+  },
+  "c-rw-history": {
+   "block": "par-history-and-memory-in-rl-p1",
+   "lines": [
+    386,
+    389
+   ],
+   "source_sha256": "15c33f2f9ded8365bb02e3cd4ca4674ed52160892b64b36b9faf96a72f92325d",
+   "source_text": "Using short history windows is standard in partially observable settings, where stacked frames recover hidden variables such as velocity \\citep{mnih2015humanlevel}. Our point is different and perhaps surprising: even in Markovian, fully observable games---where the current state is informationally sufficient and the past is theoretically irrelevant---history can reduce \\emph{computational} complexity by exposing local differences that would otherwise require expensive search or unbounded-depth inference to extract from the current state alone. In our restoration setting, the previous frame carries a promise established by an earlier successful move: its nim-sum is zero. That promise makes a local difference sufficient for the next response. Establishing the promise initially remains a separate computational task."
+  },
+  "c-rw-quant": {
+   "block": "par-quantised-inference-and-deployment-constraints-p1",
+   "lines": [
+    378,
+    379
+   ],
+   "source_sha256": "7b9c887654f17fed1652842a6ad2869920678d023fb6e30c8b811cf56bd0db1a",
+   "source_text": "Low-bit inference motivates studying bounded numerical resources \\citep{jacob2018integeronly,dettmers2022llmint8}. Our constant-witness proof additionally requires nonnegative literal weights, bounded thresholds and Boolean intermediate states. These are explicit mathematical assumptions, not properties inferred merely from a quantisation format. Standard signed linear layers and scale-adaptive normalisation are outside the theorem unless separately reduced to the permitted gates."
+  },
+  "c-rw-rl": {
+   "block": "par-reinforcement-learning-in-combinatorial-games-p1",
+   "lines": [
+    381,
+    384
+   ],
+   "source_sha256": "7ec0fd7179c570fe7b3ba29e8de592ceb8ddf97f9d2b4d1d0033ed380eda3f59",
+   "source_text": "While RL has mastered domains such as Go and chess, impartial games remain a useful stress test because optimality is governed by exact algebraic invariants rather than approximate pattern matching. Zhou and Riis \\citep{zhou2022impartial,zhou2023parity} studied reinforcement-learning difficulties in impartial games. Our lower bound identifies a representational obstruction in a restricted model; determining which mechanisms explain failures in ordinary neural training requires separate experiments."
+  },
+  "c-scope": {
+   "block": "sec:scope-list1",
+   "lines": [
+    246,
+    261
+   ],
+   "source_sha256": "0143b886c8a0923205b32e99e95cac916ec2678d4f3fe78f9c3ec2fb9e164344",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item \\textbf{Fixed-scale quantisation / fixed latency.} The $\\AC^0$ simulation (Theorem~\\ref{thm:sim-ac0}) assumes constant depth and a \\emph{fixed-scale, bounded-range quantisation} regime: weights/thresholds lie on a fixed grid whose range/resolution do not scale with the input length (cf.\\ Remark~\\ref{rem:ac0-scope}). Architectures that rely on fan-in dependent re-normalisation, biases/thresholds growing with dimension, or depth growing with $n$ fall outside this abstraction. In particular, a fixed recurrent update rule need not have fixed total latency: the third bypass deliberately allows $N$ successive row updates per position. \\item \\textbf{Formal model vs.\\ experimental networks.} The formal units have nonnegative weights on Boolean literals and bounded thresholds. The experiments instead use ordinary floating-point signed linear layers, ReLU and LayerNorm, with Log-Softmax in the loss. They test the benefit of transition information under the reported training protocol, not the asymptotic lower bound or the deployment behaviour of quantised networks. \\item \\textbf{Stylised planning interface.} The single-channel lower bound permits only root and one-heap-modification queries to a fixed structured policy, and requires a polynomial-size, constant-depth final readout. It is not a bound on arbitrary rollout policies, unrestricted query transformations, or an unbounded adaptive MCTS controller. \\item \\textbf{No guarantee of learnability.} The multi-policy-head and recurrent constructions concern \\emph{existence} of suitable computations; we do not claim that self-play efficiently discovers the structured heads or an exact recurrent accumulator. Our experiments use controlled supervised restoration and policy imitation; self-play discovery is left for a separate study. \\end{itemize}"
+  },
+  "c-search-intro": {
+   "block": "sec:search-gap-p1",
+   "lines": [
+    624,
+    625
+   ],
+   "source_sha256": "a5063fd156793c216e2185c1916cecbb5f570cd6eddac7220c5cd68e52e56216",
+   "source_text": "Theorem~\\ref{thm:singleframe-impossible} shows that no $\\AC^0$ circuit can evaluate the nim-sum in a single forward pass. A natural follow-up is whether \\emph{planning}---testing candidate moves and simulating play, as in Monte-Carlo Tree Search (MCTS)---can compensate."
+  },
+  "c-selfplay-open": {
+   "block": "sec:opt-gap-p3",
+   "lines": [
+    1258,
+    1258
+   ],
+   "source_sha256": "8e6dfe8ac49a39a78e26b681f2dac494eae0fae78d6e9ca716c1017998ba6fba",
+   "source_text": "The immediate experimental question is whether AlphaZero-style self-play can discover the restoration rule, complementary rollout policies or recurrent accumulator without their supervised targets. A follow-up should compare outcome-only training with curricula and auxiliary supervision, and examine the learned computations as well as win rates. For recurrence, this includes accurate accumulation and reliable state retention across separators. These controlled NIM tests would establish a basis for the harder benchmarks in Section~\\ref{sec:othergames}; efficient self-play learning and the training regimes needed to achieve it remain open."
+  },
+  "c-significance": {
+   "block": "sec-significance-and-impact-list1",
+   "lines": [
+    1263,
+    1267
+   ],
+   "source_sha256": "c2849a5801d391ba308602ce927d709cdefc392943cc41bd1c949b4bfadef44d",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item \\textbf{For learning theory:} representational sufficiency and learnability are separate questions. A promised predecessor state, complementary measurements, or sequential computation can each alter the resources available for an invariant-based decision. \\item \\textbf{For neural architecture:} short history windows (or difference features) can be a principled way to bypass parity-like barriers without scaling depth/width. When history is unavailable, multiple rollout heads offer an alternative within a single-frame architecture. When growing processing time is available, persistent recurrence offers a third route, building the invariant sequentially and retaining it across positions. \\item \\textbf{For practice:} circuit complexity can help formulate architectural hypotheses, provided the implemented model satisfies the mathematical assumptions. Tests of those hypotheses should distinguish representation, training dynamics, task distribution and computation budget. \\end{itemize}"
+  },
+  "c-spectral-bias": {
+   "block": "par-connection-to-optimisation-informal-p1",
+   "lines": [
+    980,
+    982
+   ],
+   "source_sha256": "9f45932aaafe7ffd2a7bc7a99187f5cf1ba50f0bbbae093845649b90844d7806",
+   "source_text": "Fourier degree also aligns with a common empirical observation in deep learning: gradient-based training tends to fit low-frequency components before high-frequency ones (``spectral bias'' / ``frequency principle'') \\citep{rahaman2019spectral,xu2019frequency}. This suggests a possible analogy for parity learning, but continuous-domain spectral-bias observations do not prove how SGD learns Boolean parity or restoration under our nonuniform data distribution. We treat that connection as a hypothesis requiring separate measurements."
+  },
+  "c-sprague-grundy": {
+   "block": "sec-sprague-grundy-theory-and-nim-sum-p1",
+   "lines": [
+    412,
+    413
+   ],
+   "source_sha256": "c1ac82165acb58cda7c27c56776abc3a5b47873fd1702348450c2564761eca3f",
+   "source_text": "The Sprague--Grundy theorem states that every finite impartial game position is equivalent (under disjunctive sum) to a NIM heap of some size (its nimber/Grundy value). For NIM itself, the Grundy value of a position is the bitwise XOR (nim-sum) of its heap sizes."
+  },
+  "c-stream": {
+   "block": "par-serialising-positions-and-retaining-state-p1",
+   "lines": [
+    824,
+    831
+   ],
+   "source_sha256": "1b991b2a8d9d385c2587be5c31b7f6cb84567e56081c0f81e6eecce053661560",
+   "source_text": "Write position $P_t=(x_{t,1},\\ldots,x_{t,N})$, with each heap represented by one $B$-bit row. Feed successive positions as the stream \\[ \\underbrace{x_{1,1},\\ldots,x_{1,N}}_{P_1},\\ \\mathtt{SEP},\\quad \\underbrace{x_{2,1},\\ldots,x_{2,N}}_{P_2},\\ \\mathtt{SEP},\\quad\\ldots . \\] Each row arrives as a block of $B$ bits together with a row/separator tag. A separator marks the end of a complete position; the agent chooses a move only after that position has been read. The next observed position is then appended to the stream. For comparisons of individual heaps, indices remain aligned across positions, including rows for empty heaps. A scan of the current board suffices for nim-sum evaluation without earlier game positions; cross-position memory additionally supports the comparisons below. The hidden state is carried across rows and position boundaries. A separator resets the accumulator for the next scan while preserving selected information about the completed position; it does not reset the entire memory."
+  },
+  "c-tailpremise-open": {
+   "block": "sec:development-p3",
+   "lines": [
+    1288,
+    1288
+   ],
+   "source_sha256": "8027624b08756a3b8ccb7d44405d5cc3e5378c0bad4fdac6021cbadd68777613",
+   "source_text": "The boundary of this verification is explicit. Classical complexity results, notably H{\\aa}stad's parity hardness and correlation bounds and the Linial--Mansour--Nisan/Tal spectral bounds, remain external inputs \\citep{hastad1986thesis,hastad2014correlation,linial1993constant,tal2015tight}. The single-channel result is checked conditional on a stated negligible parity-correlation theorem, including its application to the readout and its probability calculation. The spectral discussion uses a separate Fourier-tail premise; its connection to the exact conventions of a published tail theorem is not part of the checked development. The conditional implication from a tail bound to small parity correlation is checked. Empirical measurements and training runs are supported by experimental code and saved results, rather than by Lean proofs."
+  },
+  "c-takeaways": {
+   "block": "sec-practical-takeaways-list1",
+   "lines": [
+    900,
+    909
+   ],
+   "source_sha256": "bfc0ef68af439c5f98197e6f15773b6894a49b8ebb033c92a74c3c27574d3285",
+   "source_text": "\\begin{itemize}[leftmargin=*] \\item \\textbf{Single-frame is brittle to parity.} In the worst case, fixed-scale quantised bounded-depth inference cannot reliably represent the nim-sum or a winning move selector (Section~\\ref{sec:impossibility}). \\item \\textbf{Three bypasses with different resources.} A two-frame input exposes the transition signal $\\Delta(P,P')$ and supports restoration (Section~\\ref{sec:restoration}); multiple rollout heads recover the missing nim-sum bits through depth amplification (Section~\\ref{sec:search-gap}); persistent recurrence accumulates the invariant over sequential row updates and retains summaries across positions (Section~\\ref{sec:recurrent-bypass}). The last route trades fixed total latency for a growing processing horizon. \\item \\textbf{Optimisation remains nontrivial.} Even when a solution is expressible in $\\AC^0$, discovering it from sparse win/loss rewards can be difficult; our experiments therefore isolate a dense restoration supervision signal and separately report rollout-based classification. \\end{itemize}"
+  },
+  "c-terminal": {
+   "block": "sec-impartial-games-p1",
+   "lines": [
+    404,
+    404
+   ],
+   "source_sha256": "f4e009f7b01f0a247b6afcbbb899ec30130ff3aa98aceba0d44328a62ded37b3",
+   "source_text": "A position with no legal moves is terminal."
+  },
+  "c-threshold-realisation": {
+   "block": "par-realisation-with-fixed-scale-threshold-gates-p1",
+   "lines": [
+    1510,
+    1512
+   ],
+   "source_sha256": "34cc9a8cd7d7624c1a344450a0cc41fbb8290f6b3e0cf27608a76fc5c8ee80da",
+   "source_text": "An OR gate uses weights $1$ and threshold $1$; a negated literal supplies NOT. Implement AND by De Morgan, as an OR of negated inputs followed by negation. This keeps the threshold bound fixed even when fan-in grows. Constants use no inputs and threshold $0$ or $1$. Thus all these circuits can use the fixed grid $W=D=1$. More precisely, for $K$ output formulas of depth at most $d$, total formula size $S$, and input support below $n$, the checked compiler constructs one network of at most $2d+2$ layers, at most $(2d+1)S+K$ gates, and layer widths and fan-ins at most $S+n$. Identity buffers align layers; every output is proved equal to its source formula on the same finite input. Size counts duplicated formula nodes, and depth counts NOT gates, so these are conservative bounds."
+  },
+  "c-tie-breaking": {
+   "block": "par-training-the-rollout-heads-p1",
+   "lines": [
+    1146,
+    1151
+   ],
+   "source_sha256": "373eb3c467bdb24040310a856bde811c5186258d4ef69b073ab297749e910f63",
+   "source_text": "We train a shared-trunk network with $B=4$ policy heads by imitation learning against the structured policies $\\pi_0,\\dots,\\pi_{B-1}$ from Proposition~\\ref{prop:rollout-sufficiency}. Each head~$\\pi_j$ subtracts~$2^j$ from the leftmost heap of size at least~$2^j$ (falling back to subtracting~1 from the leftmost nonzero heap). When multiple heaps qualify for the same phase of~$\\pi_j$ (e.g.\\ several heaps have $h_i \\geq 2^j$), any choice among them produces a rollout with the same total move count and hence the same parity outcome. We therefore train with \\emph{soft targets}: for each position and head~$j$, the label is uniform over all equivalent actions, and the loss is cross-entropy against this soft distribution. This avoids penalising the model for an arbitrary tie-breaking choice among equally valid heaps."
+  },
+  "c-verification-boundary": {
+   "block": "sec:development-p3",
+   "lines": [
+    1288,
+    1288
+   ],
+   "source_sha256": "8027624b08756a3b8ccb7d44405d5cc3e5378c0bad4fdac6021cbadd68777613",
+   "source_text": "The boundary of this verification is explicit. Classical complexity results, notably H{\\aa}stad's parity hardness and correlation bounds and the Linial--Mansour--Nisan/Tal spectral bounds, remain external inputs \\citep{hastad1986thesis,hastad2014correlation,linial1993constant,tal2015tight}. The single-channel result is checked conditional on a stated negligible parity-correlation theorem, including its application to the readout and its probability calculation. The spectral discussion uses a separate Fourier-tail premise; its connection to the exact conventions of a published tail theorem is not part of the checked development. The conditional implication from a tail bound to small parity correlation is checked. Empirical measurements and training runs are supported by experimental code and saved results, rather than by Lean proofs."
+  },
+  "c-verification-extent": {
+   "block": "sec:development-p2",
+   "lines": [
+    1286,
+    1286
+   ],
+   "source_sha256": "36e1495090c90b70b5ffc5b84d2cd4e5e9d9abf08c1f347e8dd205b7b4ec0394",
+   "source_text": "The accompanying Lean development connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves."
+  },
+  "c-weak-mastery-histories": {
+   "block": "sec-mastery-notions-p2",
+   "lines": [
+    451,
+    452
+   ],
+   "source_sha256": "277a6851ee46eef13129a2ae53e7f1a978b8905c64fd10287e144015f12ed495",
+   "source_text": "We use standard impartial-game terminology: a $P$-position is losing for the player to move, and an $N$-position is winning. For NIM, Theorem~\\ref{thm:nim-win} says that $P$-positions are exactly the positions with nim-sum $0$. Equivalently, weak mastery requires the agent to move to a $P$-position at every one of its decision histories consistent with its own earlier actions, starting from an initial position winnable in its designated role. This distinction allows a simple strategy to master a family without solving positions it never encounters under its own play; Appendix~\\ref{app:weak} gives examples."
+  },
+  "c-weak-vs-strong": {
+   "block": "app:weak-p1",
+   "lines": [
+    1563,
+    1563
+   ],
+   "source_sha256": "5203245c88a18003f6a9410c1a33d35d570544e71a2fa76d1167f4c13b7767a7",
+   "source_text": "The distinction from strong mastery is substantive. From the single heap $(3)$, a strategy that takes all three stones wins immediately, irrespective of what it would do elsewhere. It therefore weakly masters that initial position as first player. If it has no prescribed move at $(1)$, however, it fails strong mastery: arbitrary legal play can reach $(3)\\to(2)\\to(1)$ with the first player to move. That history is excluded by its own initial action. The general definition and this separation are checked in Lean."
+  },
+  "c-why-nim": {
+   "block": "par-why-nim-is-a-useful-barrier-example-p1",
+   "lines": [
+    429,
+    431
+   ],
+   "source_sha256": "65f940e93e1d06858daa1668075d04c54414e175b5217fe92b31274f5175a635",
+   "source_text": "For a disjunctive sum of independent impartial components, the Grundy value is the XOR of the component nimbers. If these nimbers can vary independently so that their aggregation contains an unbounded parity subproblem, NIM isolates the resulting aggregation obstruction. Sprague--Grundy equivalence does not provide an efficient algorithm for finding component nimbers, nor imply that every impartial game has a hard parity aggregation task. Our unconditional lower bound concerns NIM; extensions require an explicit encoding and reduction."
+  },
+  "c-window-insufficient": {
+   "block": "sec:framework-fixedprecision-p5",
+   "lines": [
+    304,
+    304
+   ],
+   "source_sha256": "48c9b9aa622c4a84e85f2433396a4caf0ba92d1bbc8336651bf4dc5a53140086",
+   "source_text": "A bound on the number of preceding states consulted by one update is insufficient: even $h_{r+1}=h_r\\oplus x_r$ can accumulate parity over an arbitrarily long stream. Section~\\ref{sec:recurrent-bypass} exploits precisely this distinction by allowing the number of recurrent updates to grow with the number of rows."
+  },
+  "c-witness": {
+   "block": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction-p1",
+   "lines": [
+    306,
+    309
+   ],
+   "source_sha256": "dd57d703abbd1d21cc924a1b6a2b2d293323fffd37d615f22a6c8c79ebbb58bd",
+   "source_text": "The key structural property is \\emph{fixed scale}: the smallest nonzero weight is $1/D$ and the largest threshold is $W/D$, with $W,D$ independent of the input length. Consequently, whenever a threshold unit outputs $1$, there is a satisfying \\emph{witness} consisting of at most $W$ input literals whose contributions already cross the threshold. This yields a constant-width DNF expansion for each unit (Lemma~\\ref{lem:unit-ac0}), and composing a constant number of layers yields an $\\AC^0$ simulation (Theorem~\\ref{thm:sim-ac0})."
+  },
+  "def:LTST-formal": {
+   "block": "def:LTST-formal",
+   "lines": [
+    1375,
+    1385
+   ],
+   "source_sha256": "98c0d52ef13438725fbdc53d89d871bc51440759289ae518355c84f432bfbb62",
+   "source_text": "\\begin{definition}[Gate-realised attention-style model] \\label{def:LTST-formal} Fix a time window $T\\in\\N$. A fixed-scale quantised $\\LTST$ model processes a sequence $(x_{t-T+1},\\dots,x_t)$ by: \\begin{itemize}[leftmargin=*] \\item computing short-term and long-term attention scores using fixed-scale quantised parameters in $\\Qset_{W,D}$, \\item combining attended summaries through a constant number of layers of fixed-scale quantised threshold computations, \\item producing outputs $o_t\\in\\bits^k$. \\end{itemize} Every score computation, input-dependent coefficient selection, encoding and value aggregation is required to have a polynomial-size, constant-depth implementation in the Boolean literal-threshold gates of Definition~\\ref{def:NN-formal}. Intermediate state is Boolean, and total unrolling is bounded as in Definition~\\ref{def:RNN-formal}. Under these explicit implementation assumptions, the simulation theorem applies by composition. Merely requiring parameters or coefficients to lie in a finite set is insufficient. This extension makes no claim about standard softmax attention without such a reduction. \\end{definition}"
+  },
+  "def:NN-formal": {
+   "block": "def:NN-formal",
+   "lines": [
+    1332,
+    1351
+   ],
+   "source_sha256": "8abbcb663c2c85e168dc83d6730809cb44ef2c1f042240fc1df2a2d6b986560a",
+   "source_text": "\\begin{definition}[Literal-threshold network] \\label{def:NN-formal} A fixed-scale quantised $\\NN$ of depth $L$ on $n$ Boolean inputs is specified by: \\begin{itemize}[leftmargin=*] \\item Layer widths $m_0=n$, $m_1,\\dots,m_L$, where $m_\\ell\\le \\poly(n)$. \\item For each layer $\\ell\\in\\{1,\\dots,L\\}$ and unit $i\\in\\{1,\\dots,m_\\ell\\}$: \\begin{itemize}[leftmargin=2em] \\item weights $w_{\\ell,i,j}\\in \\Qset_{W,D}$ for $j\\in\\{1,\\dots,m_{\\ell-1}\\}$, \\item a threshold $\\theta_{\\ell,i}\\in \\Qset_{W,D}$, \\item an optional negation bit $\\eta_{\\ell,i,j}\\in\\{0,1\\}$ indicating whether input $j$ is negated before weighting. \\end{itemize} \\end{itemize} The computation proceeds as follows. Let $y^{(0)}=x\\in\\bits^n$. For $\\ell\\ge 1$, \\[ y^{(\\ell)}_i \\;=\\; \\Heav\\!\\Big(\\sum_{j=1}^{m_{\\ell-1}} w_{\\ell,i,j}\\cdot (y^{(\\ell-1)}_j \\oplus \\eta_{\\ell,i,j}) \\;-\\; \\theta_{\\ell,i}\\Big), \\] where $\\Heav(z)=1$ if $z\\ge 0$ and $\\Heav(z)=0$ otherwise. The network output is $y^{(L)}$ (or a designated subset of its coordinates). \\end{definition}"
+  },
+  "def:RNN-formal": {
+   "block": "def:RNN-formal",
+   "lines": [
+    1356,
+    1370
+   ],
+   "source_sha256": "8cf36150201875f280fc69c64a3a2375c56802743abd6a283ea52ffbbc37ee32",
+   "source_text": "\\begin{definition}[Bounded-unrolling recurrence] \\label{def:RNN-formal} Fix a time window $T\\in\\N$. A fixed-scale quantised $\\RNN$ consists of: \\begin{itemize}[leftmargin=*] \\item input bits $x_t\\in\\bits^n$ at time $t$, \\item a hidden state $h_t\\in\\bits^{m}$ for some $m\\le \\poly(n)$, \\item an output $o_t\\in\\bits^{k}$ for $k\\le \\poly(n)$, \\item fixed-scale quantised parameters (weights/thresholds in $\\Qset_{W,D}$ and optional input negations) shared across time, \\end{itemize} such that each update $h_{t+1}$ and $o_t$ is computed by a depth-$L$ fixed-scale quantised threshold network over the current input and earlier states within the window. Each inference starts from an input-independent initial state, and the entire computation producing its output contains at most $T$ recurrent updates. No boundary state may carry additional input-dependent computation from before that window. Unrolling this bounded computation yields a feedforward computation of depth $O(L\\cdot T)$. A bound only on the lag between connected states does not imply this bound on total unrolling; the persistent model in Section~\\ref{sec:recurrent-bypass} deliberately allows more than $T$ updates. \\end{definition}"
+  },
+  "def:agent-types": {
+   "block": "def:agent-types",
+   "lines": [
+    636,
+    641
+   ],
+   "source_sha256": "8064cbf4f0ed779a125edf05e4d1f9b833e311399269da4fbd5dee21d82250f8",
+   "source_text": "\\begin{definition}[Restricted rollout measurements and readout] \\label{def:agent-types} Fix a root position $P$. An admissible query starts at $P$ or a position obtained by changing one heap of $P$; the changed index and old/new values are known to the readout. A legal one-move successor is an admissible query. Arbitrary transformations of the whole root are excluded. For the single-channel lower bound, one fixes a policy $\\pi_j$ from Proposition~\\ref{prop:rollout-sufficiency}, independently of $P$. Writing $\\beta=\\mathrm{RO}_{\\pi_j}(P)$, the agent's final move must have the form $F_N(P,\\beta)$, where $F_N$ is a polynomial-size, constant-depth Boolean circuit family. Any value head, query corrections or other processing must be included in this readout bound. The number of queries alone does not impose that bound. A multi-channel construction may query distinct members of the same structured policy family and apply a polynomial-size, constant-depth readout to $P$ and their outcome bits. A \\emph{policy head} means a rollout policy, not simply a parallel output neuron. We count simulated game moves separately from the circuit work per move. \\end{definition}"
+  },
+  "def:fourier-tail": {
+   "block": "def:fourier-tail",
+   "lines": [
+    947,
+    954
+   ],
+   "source_sha256": "4323de922f0b06668a6a9d1b5d846f41298f09a2445ec0dd2f96d7f74c2d51ab",
+   "source_text": "\\begin{definition}[Fourier tail / spectral bandwidth] \\label{def:fourier-tail} For $k\\in\\N$, define the degree-$>k$ Fourier tail \\[ \\mathrm{Tail}_{>k}(f)\\;=\\;\\sum_{S\\subseteq[n]:\\,|S|>k}\\hat f(S)^2. \\] For $\\varepsilon\\ge0$, we say $f$ is $(k,\\varepsilon)$-\\emph{spectrally band-limited} if $\\mathrm{Tail}_{>k}(f)\\le \\varepsilon$. \\end{definition}"
+  },
+  "def:impartial": {
+   "block": "def:impartial",
+   "lines": [
+    399,
+    402
+   ],
+   "source_sha256": "752f4c49fe94626af8e36c4c5c2c3f08d0d4ded769414232fd3984754409f377",
+   "source_text": "\\begin{definition}[Impartial game] \\label{def:impartial} A finite terminating impartial game is a pair $(\\mathcal{P},\\mathcal{M})$ where $\\mathcal{P}$ is a nonempty set of positions and $\\mathcal{M}(p)\\subseteq \\mathcal{P}$ is the (finite) set of legal moves from $p$, with the property that the move relation does not depend on which player is to play (symmetry). We assume the move relation is acyclic and play terminates. Under normal play, the player who makes the last move wins. \\end{definition}"
+  },
+  "def:mastery": {
+   "block": "def:mastery",
+   "lines": [
+    442,
+    449
+   ],
+   "source_sha256": "b54757884d24e1f8514787b6f042f402157a72a5c65de3e1aa507be5fe64357a",
+   "source_text": "\\begin{definition}[Strong, weak, and restoration mastery] \\label{def:mastery} An agent achieves \\emph{strong mastery} of NIM if it chooses a winning move at every $N$-position where it is to move, including positions reached by arbitrary legal play by both players. Reachability is relative to the specified initial positions and player role; unrestricted strong mastery allows every initial position. It achieves \\emph{weak mastery relative to an initial position $p_0$ and a designated player role} if, whenever that role has a winning strategy from $p_0$, its own strategy wins against every opponent strategy. The guarantee concerns histories consistent with its own preceding actions, not every position reachable under arbitrary actions by both players. For asymptotic claims, the initial positions form a specified family. Strategies may depend on the complete history. Opponent moves are legal; a missing or illegal agent move counts as a loss. On an initially losing position the weak-mastery condition imposes no requirement. It achieves \\emph{restoration mastery} if, whenever the opponent moves from a $P$-position $Q$ with $\\operatorname{nim}(Q)=0$ to a position $Q'$, the agent responds with a move $Q'\\to R$ such that $\\operatorname{nim}(R)=0$. \\end{definition}"
+  },
+  "def:nim": {
+   "block": "def:nim",
+   "lines": [
+    407,
+    410
+   ],
+   "source_sha256": "a7ecd52cdc483f243d221a6ec0acb05188db1433577daa2c4f8753c65ad40c6e",
+   "source_text": "\\begin{definition}[NIM] \\label{def:nim} A NIM position consists of $h$ heaps with sizes $x_1,\\dots,x_h\\in\\N_0$. A legal move reduces exactly one heap: choose $i$ with $x_i>0$ and replace $x_i$ by some $x_i'<x_i$. \\end{definition}"
+  },
+  "def:nimber-difference": {
+   "block": "def:nimber-difference",
+   "lines": [
+    487,
+    493
+   ],
+   "source_sha256": "787b3d99be2e32502ad1e77335aa80e7b33bbeb7a1f583e70ac7abf243e40e97",
+   "source_text": "\\begin{definition}[Nimber difference] \\label{def:nimber-difference} Given consecutive positions $P$ and $P'$ in a play sequence, define the \\emph{nimber difference} \\[ \\Delta(P,P') \\;=\\; \\operatorname{nim}(P)\\ \\oplus\\ \\operatorname{nim}(P'). \\] \\end{definition}"
+  },
+  "def:nimsum": {
+   "block": "def:nimsum",
+   "lines": [
+    415,
+    422
+   ],
+   "source_sha256": "c868301621191346a67abfa7fbc07313c1f9ca2552c57013140e6581b9817339",
+   "source_text": "\\begin{definition}[Nim-sum] \\label{def:nimsum} For heap sizes $x_1,\\dots,x_h$, define \\[ \\operatorname{nim}(x_1,\\dots,x_h) \\;=\\; x_1 \\oplus x_2 \\oplus \\cdots \\oplus x_h, \\] where $\\oplus$ denotes bitwise XOR. \\end{definition}"
+  },
+  "def:quantised-inference": {
+   "block": "def:quantised-inference",
+   "lines": [
+    297,
+    302
+   ],
+   "source_sha256": "2f122daa6a7ac5c1d7e9929ec8f67d1eee074e9d0542c309b6d1f71c3297e8ef",
+   "source_text": "\\begin{definition}[Quantised inference] \\label{def:quantised-inference} A network $\\NN$ in this class has constant depth and polynomially many threshold neurons, with weights and thresholds in $\\Qset_{W,D}$. Analogously, fixed-scale quantised $\\RNN$ and $\\LTST$ models have constant depth and polynomial size per time step and operate within a fixed time window $T$. For the simulation theorem, $T$ bounds the entire unrolled computation from an input-independent initial state, including any computation used to form a retained state. \\end{definition}"
+  },
+  "def:rollout-policy": {
+   "block": "def:rollout-policy",
+   "lines": [
+    630,
+    634
+   ],
+   "source_sha256": "4edfadc2a395e22424e668893e42508821081f5a2fffa2cf343d34a29d0783d3",
+   "source_text": "\\begin{definition}[Rollout policy and rollout outcome] \\label{def:rollout-policy} A deterministic rollout policy maps a nonterminal $NB$-bit NIM position to a legal move, encoded by a heap index and its new value; on the terminal position it outputs a halt symbol. It is $\\AC^0$-bounded when this map has polynomial-size, constant-depth circuits. A rollout has both players follow that policy until termination. Its outcome $\\mathrm{RO}_{\\pi}(P)$ is 1 if the first player wins and 0 otherwise, including at a terminal start. The interface returns only this terminal bit, not a trajectory or move count. \\end{definition}"
+  },
+  "eq:delta-extension": {
+   "block": "par-local-vs-global-parity-in-nim-p1",
+   "lines": [
+    971,
+    978
+   ],
+   "source_sha256": "5228c8bfadd11fe224fd0a68a64871ed9b05607352db9927d9b4d9365697a152",
+   "source_text": "In our encoding, the $j$th bit of the nim-sum is the parity of the $j$th bits across all $N$ heaps, hence a degree-$N$ character. Conditional on a specified changed heap $i$, the sign encoding of the $j$th delta bit is the two-coordinate character $(-1)^{x_{i,j}+x'_{i,j}}$. When the changed index is unknown, the delta bit is specified on pairs of boards differing in at most one heap. A shallow extension to all pairs is \\begin{equation} d_j(P,P')=\\bigvee_{i=1}^{N}(x_{i,j}\\oplus x'_{i,j}). \\label{eq:delta-extension} \\end{equation} On the promised domain this is the required delta bit. For $N\\ge2$, its sign encoding $(-1)^{d_j}$ is not a single character, even up to sign; for $N=1$ it is exactly a degree-two character. Thus local computability does not mean that the full unknown-index map has degree two. It follows from the explicit $\\AC^0$ construction in Lemma~\\ref{lem:nimber-diff-ac0}."
+  },
+  "eq:finite-correlation-bound": {
+   "block": "app:search-gap-proof-proof",
+   "lines": [
+    1659,
+    1708
+   ],
+   "source_sha256": "a172e3ca2d1bb0963709c68d0c3efb9643068909c7670619828771674d4a5aaa",
+   "source_text": "\\begin{proof} \\textbf{Part (i).} Fix $B\\ge2$, $N\\ge1$ and put $q=2^B$. Let $U$ be the uniform distribution on all $N$ independent $B$-bit heaps, before conditioning on a nonzero nim-sum. For any fixed values of $N-1$ heaps and any target nim-sum, exactly one value of the remaining heap gives that target. Thus $\\sigma$ is exactly uniform on $\\mathbb F_2^B$, and $\\Pr_U[\\sigma\\ne0]=(q-1)/q$. Let $\\ell=\\ell_j$ be the nonzero linear functional returned by the fixed structured head, and let $\\beta=\\ell(\\sigma)$. For each fixed $b\\in\\{0,1\\}$, decode $F_N(P,b)$ as a proposed move $(i,v)$. On legal outputs define $g_b(P)=h_i\\oplus v$, and set $g_b(P)=0$ on invalid outputs. Selecting an indexed input block, checking legality and taking its XOR with the output use polynomial-size, constant-depth circuits. Thus for each $a\\in\\mathbb F_2^B$, the indicator \\[ H_{b,a}(P)=\\mathbf1\\{g_b(P)=a\\} \\] is in $\\AC^0$. On $\\sigma\\ne0$, a legal move wins exactly when $g_\\beta(P)=\\sigma(P)$; invalid outputs cannot satisfy that equality. For $u\\in\\mathbb F_2^B$, write $\\chi_u(P)=(-1)^{\\langle u,\\sigma(P)\\rangle}$. First consider the finite probability calculation under the explicit assumption that some $\\eta_N\\ge0$ satisfies \\[ \\bigl|\\mathbb E_U[H_{b,a}(P)\\chi_u(P)]\\bigr| \\le \\eta_N \\] for every $b\\in\\{0,1\\}$, $a\\in\\mathbb F_2^B$ and nonzero $u\\in\\mathbb F_2^B$. This is a two-sided correlation bound under the unconditioned distribution $U$; it does not assume independence between the readout and the nim-sum. Expanding the exact-value indicator gives \\[ \\mathbf1\\{\\sigma=a\\}=q^{-1}\\sum_{u\\in\\mathbb F_2^B} (-1)^{\\langle u,a\\rangle}\\chi_u(P), \\] so \\[ \\left|\\mathbb E_U[H_{b,a}\\mathbf1\\{\\sigma=a\\}] -q^{-1}\\mathbb E_U H_{b,a}\\right| \\le \\frac{q-1}{q}\\eta_N. \\] For each fixed $b$, the events $g_b(P)=a$ are disjoint. Therefore \\begin{align*} \\Pr_U[\\text{winning move and }\\sigma\\ne0] &=\\sum_{a\\ne0}\\mathbb E_U[H_{\\ell(a),a}\\mathbf1\\{\\sigma=a\\}]\\\\ &\\le q^{-1}\\sum_{b\\in\\{0,1\\}}\\sum_{\\substack{a\\ne0\\\\\\ell(a)=b}} \\mathbb E_U H_{b,a}+\\frac{(q-1)^2}{q}\\eta_N\\\\ &\\le \\frac{2}{q}+\\frac{(q-1)^2}{q}\\eta_N. \\end{align*} Dividing by $\\Pr_U[\\sigma\\ne0]=(q-1)/q$ gives the finite bound \\begin{equation} \\Pr_U[\\text{legal winning move}\\mid\\sigma\\ne0] \\le \\frac{2}{q-1}+(q-1)\\eta_N. \\label{eq:finite-correlation-bound} \\end{equation} It remains to supply the correlation estimate for the circuit class. For $u\\ne0$, $\\chi_u$ is parity on $N$ times the number of nonzero coordinates of $u$, hence on at least $N$ input bits. Fix all coordinates outside this support. The restricted indicator remains a polynomial-size, fixed-depth $\\AC^0$ circuit, so the standard parity-correlation bound applies uniformly to every such restriction; averaging over the fixed coordinates preserves the bound \\citep{hastad1986thesis,hastad2014correlation}. Taking the maximum over the finitely many $a,b,u\\ne0$ gives a nonnegative negligible $\\eta_N$. Since $B$, the circuit depth and the polynomial size exponent are fixed, $(q-1)\\eta_N$ is also negligible. This yields the asserted asymptotic bound. The fixed-$B$ assumption is essential to this stated asymptotic conclusion. For attainability of the leading constant, choose a nonzero $a_b$ from each fibre $\\ell(a)=b$, possible because $B\\ge2$. After observing $b$, try to cancel $a_b$ using the first heap $h_i$ with $h_i\\oplus a_b<h_i$, with any legal fallback if none exists. This is an $\\AC^0$ readout and wins whenever $\\sigma=a_0$ or $a_1$, an event of conditional probability $2/(q-1)$. Any additional success is at most negligible by the upper bound. For $B=2$ and $\\pi_0$, the choices $a_0=2,a_1=1$ give exactly $2/3$: the case $\\sigma=3$ is assigned a legal delta-1 move and cannot win. \\textbf{Part (ii).} The $B$ root rollout bits reconstruct $\\sigma$. If it is nonzero, a heap containing its highest set bit can be decreased to $h_i\\oplus\\sigma$, leaving zero nim-sum. An $\\AC^0$ first-qualifying-heap selector implements this choice. With zero nim-sum, any legal move is optimal in the game-theoretic sense that no winning move exists. Each root rollout has at most $N(2^B-1)$ moves. Hence $B$ rollouts use $O(BN2^B)$ simulated moves, each with polynomial circuit work; no successor enumeration or unrestricted controller is used. \\textbf{Part (iii).} If the predecessor $Q$ has nim-sum zero and the opponent legally reaches $Q'$, then $\\delta=\\Delta(Q,Q')=\\operatorname{nim}(Q')\\ne0$. Select a decreasing heap $h_i\\to h_i\\oplus\\delta$ as above. The two-frame difference and move selector are $\\AC^0$, and the response returns nim-sum zero. Repeating this response after the player's own successful moves wins from the established invariant. No assertion about establishing it from an arbitrary start is used. \\end{proof}"
+  },
+  "eq:tail-correlation": {
+   "block": "par-parity-is-a-pure-high-frequency-character-p1",
+   "lines": [
+    956,
+    964
+   ],
+   "source_sha256": "2a3991e3eaeca2962791e0c69f5c9f47527aadfa6b643ac6cd40d3f088ca0220",
+   "source_text": "For any nonempty $S\\subseteq[n]$, the parity function $\\mathrm{PARITY}_S(x)=\\chi_S(x)$ has Fourier expansion supported on a single set: $\\widehat{\\mathrm{PARITY}_S}(S)=1$ and $\\widehat{\\mathrm{PARITY}_S}(T)=0$ for $T\\neq S$. Thus its spectral ``frequency'' is exactly $|S|$. More generally, if $f$ is $(k,\\varepsilon)$-spectrally band-limited and $|S|>k$, then \\begin{equation} \\bigl|\\mathbb{E}[f(x)\\chi_S(x)]\\bigr|^2=\\hat f(S)^2\\le\\mathrm{Tail}_{>k}(f)\\le\\varepsilon. \\label{eq:tail-correlation} \\end{equation} This elementary inequality is the link between concentration at low degree and small correlation with a high-degree parity."
+  },
+  "fig:barrier-blueprint": {
+   "block": "fig:barrier-blueprint",
+   "lines": [
+    99,
+    210
+   ],
+   "source_sha256": "8be67364875748f59d92baa4cd28af96b7d73254a3e1f7218d25c3fe84aa1b0e",
+   "source_text": "\\begin{figure}[t] \\centering \\begin{tikzpicture}[ node distance=0.8cm and 1.2cm, auto, block/.style={ rectangle, draw, fill=blue!5, text width=2.2cm, align=center, rounded corners, minimum height=1.0cm, font=\\small }, head/.style={ rectangle, draw, fill=yellow!10, text width=1.8cm, align=center, rounded corners, minimum height=0.6cm, font=\\footnotesize }, line/.style={ draw, -{Latex[length=2.5mm]}, thick, gray!80 }, barrier/.style={ circle, draw=red!80, fill=red!10, very thick, minimum size=0.6cm, inner sep=0pt }, success/.style={ circle, draw=green!60!black, fill=green!10, very thick, minimum size=0.6cm, inner sep=0pt }, labelnode/.style={ font=\\bfseries\\small, anchor=west } ] \\node[block] (input1) {Input $P_t$\\\\ \\textit{(Global)}}; \\node[block, right=of input1] (net1) {Single-Head\\\\ Network}; \\node[barrier, right=of net1] (out1) {\\Large $\\times$}; \\node[right=0.1cm of out1, align=left, font=\\footnotesize, text width=2.5cm] {Cannot compute\\\\ global parity\\\\ under FSQI/$\\AC^0$}; \\path[line] (input1) -- (net1); \\path[line] (net1) -- (out1); \\node[above=0.45cm of input1, labelnode] {(a) Barrier: Single-Frame, Single-Head}; \\node[block, below=1.3cm of input1] (input2) {Input $(P_{t-1}, P_t)$\\\\ \\textit{(Transition)}}; \\node[block, right=of input2] (net2) {Single-Head\\\\ Network}; \\node[success, right=of net2] (out2) {\\Large $\\checkmark$}; \\node[right=0.1cm of out2, align=left, font=\\footnotesize, text width=2.5cm] {Computes Local\\\\ Difference $\\Delta$}; \\path[line] (input2) -- (net2); \\path[line] (net2) -- (out2); \\node[above=0.45cm of input2, labelnode] {(b) Bypass 1: Multi-Frame Input}; \\node[block, below=1.3cm of input2] (input3) {Input $P_t$\\\\ \\textit{(Global)}}; \\node[right=of input3, text width=0cm, inner sep=0] (split) {}; \\node[head, right=0.2cm of split, yshift=0.4cm] (head1) {Head $\\pi_0$}; \\node[head, right=0.2cm of split, yshift=-0.4cm] (head2) {Head $\\pi_{B-1}$}; \\node[font=\\footnotesize] at ($(head1)!0.5!(head2)$) {$\\vdots$}; \\node[success, right=0.8cm of head1, yshift=-0.4cm] (out3) {\\Large $\\checkmark$}; \\node[right=0.1cm of out3, align=left, font=\\footnotesize, text width=2.5cm] {Rollout outcomes\\\\ recover $B$ bits}; \\path[line] (input3) -- (split); \\draw[line] (split.center) |- (head1.west); \\draw[line] (split.center) |- (head2.west); \\draw[line] (head1.east) -| (out3.north); \\draw[line] (head2.east) -| (out3.south); \\node[above=0.45cm of input3, labelnode] {(c) Bypass 2: Multiple Rollout Heads}; \\node[block, below=1.3cm of input3] (input4) {Rows of $P_t$\\\\ then $P_{t+1}$}; \\node[block, right=of input4] (net4) {Recurrent State\\\\ $s\\leftarrow s\\oplus x_i$}; \\node[success, right=of net4] (out4) {\\Large $\\checkmark$}; \\node[right=0.1cm of out4, align=left, font=\\footnotesize, text width=2.5cm] {Nim-sum after\\\\ $N$ row updates\\\\ (growing latency)}; \\path[line] (input4) -- (net4); \\path[line] (net4) -- (out4); \\node[above=0.45cm of input4, labelnode] {(d) Bypass 3: Persistent Recurrence}; \\end{tikzpicture} \\caption{The parity barrier and three structural bypasses. (a) Fixed-latency FSQI inference cannot compute global parity. (b) Two frames expose $\\Delta$ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$.} \\label{fig:barrier-blueprint} \\end{figure}"
+  },
+  "fig:construction-pipeline": {
+   "block": "fig:construction-pipeline",
+   "lines": [
+    1473,
+    1487
+   ],
+   "source_sha256": "907077765feb76ade17f5192ca0b1cd92843354d463ae4231a385b60c435b61e",
+   "source_text": "\\begin{figure}[htbp] \\centering \\begin{tikzpicture}[font=\\small, box/.style={draw,rounded corners,align=center,text width=4.1cm,minimum height=1.05cm}, >=Stealth] \\node[box] (a) {Two frames\\\\$Q=(3,5,6)$, $Q'=(3,4,6)$}; \\node[box,right=0.5cm of a] (b) {Extract the difference\\\\$\\delta=1$}; \\node[box,right=0.5cm of b] (c) {Propose replacements\\\\$(2,5,7)$}; \\node[box,below=0.6cm of c] (d) {Test decreases in parallel\\\\$(\\mathrm{true},\\mathrm{false},\\mathrm{false})$}; \\node[box,left=0.5cm of d] (e) {Select the first candidate\\\\heap $0$, value $2$}; \\node[box,left=0.5cm of e] (f) {Encode the move\\\\$1\\mid00\\mid010$}; \\draw[->] (a) -- (b); \\draw[->] (b) -- (c); \\draw[->] (c) -- (d); \\draw[->] (d) -- (e); \\draw[->] (e) -- (f); \\end{tikzpicture} \\caption{A schematic of the checked two-frame construction on one legal transition. Boxes group operations, not individual network layers. The general selector also handles multiple candidates, fallback moves and terminal boards.} \\label{fig:construction-pipeline} \\end{figure}"
+  },
+  "fig:fsm-shootout-controller": {
+   "block": "fig:fsm-shootout-controller",
+   "lines": [
+    677,
+    715
+   ],
+   "source_sha256": "330e81321971be455c42bb24c22575c684d5c6f8cba94ae3146702c606bc2c9e",
+   "source_text": "\\begin{figure}[t] \\centering \\begin{tikzpicture}[>=Latex, node distance=16mm and 18mm, font=\\small] \\tikzset{ state/.style={draw, rounded corners, minimum height=8mm, minimum width=20mm, align=center}, term/.style={draw, rounded corners, thick, minimum height=8mm, minimum width=28mm, align=center}, arrow/.style={->, thick} } \\node[state] (q0) {$q_0$\\\\ use $\\pi_0$}; \\node[state, right=of q0] (q1) {$q_1$\\\\ use $\\pi_1$}; \\node[inner sep=0pt, right=of q1] (dots) {\\Large$\\cdots$}; \\node[state, right=of dots] (qB) {$q_{B-1}$\\\\ use $\\pi_{B-1}$}; \\node[term, above=12mm of dots] (nonzero) {$\\sigma(P)\\neq 0$\\\\ (declare $N$)}; \\node[term, below=12mm of qB] (zero) {$\\sigma(P)=0$\\\\ (declare $P$)}; \\draw[arrow] (q0) -- node[below] {$r_0=0$} (q1); \\draw[arrow] (q0) to[bend left=25] node[left] {$r_0=1$} (nonzero); \\draw[arrow] (q1) -- node[below] {$r_1=0$} (dots); \\draw[arrow] (q1) to[bend left=18] node[above left] {$r_1=1$} (nonzero); \\draw[arrow] (dots) -- node[below] {$r_j=0$} (qB); \\draw[arrow, dashed] (dots) to[bend left=15] node[above] {$\\exists j:\\ r_j=1$} (nonzero); \\draw[arrow] (qB) to[bend left=15] node[above right] {$r_{B-1}=1$} (nonzero); \\draw[arrow] (qB) -- node[right] {$r_{B-1}=0$} (zero); \\end{tikzpicture} \\caption{A simple finite-state shootout controller for deciding whether $\\sigma(P)=\\operatorname{nim}(P)$ is zero using the $B$ rollout heads of Proposition~\\ref{prop:rollout-sufficiency}. The controller queries heads sequentially and halts as soon as it can certify $\\sigma(P)\\neq 0$. Reaching the final transition to $\\sigma(P)=0$ implicitly means $r_0=\\cdots=r_{B-1}=0$. } \\label{fig:fsm-shootout-controller} \\end{figure}"
+  },
+  "fig:restoration-example": {
+   "block": "fig:restoration-example",
+   "lines": [
+    541,
+    601
+   ],
+   "source_sha256": "1a6ca1c763d12d3e42113b2d5a0798fc08d0d1e62e32a70c9f074582ac1dca9f",
+   "source_text": "\\begin{figure}[t] \\centering \\begin{tikzpicture}[ node distance=1.5cm, auto, font=\\small, p_pos/.style={ rectangle, draw=green!50!black, fill=green!5, thick, rounded corners, align=center, text width=2.8cm, minimum height=1.6cm, inner sep=4pt }, n_pos/.style={ rectangle, draw=red!50!black, fill=red!5, thick, rounded corners, align=center, text width=2.8cm, minimum height=1.6cm, inner sep=4pt }, arr/.style={-{Latex[length=2.5mm]}, thick, black!70}, restore_arr/.style={-{Latex[length=2.5mm]}, very thick, blue!80} ] \\node[p_pos] (Q) { \\textbf{Start ($Q$)}\\\\ Heaps: $\\{3, 5, 6\\}$\\\\ \\textcolor{green!40!black}{\\textbf{nim-sum} $\\mathbf{= 0}$} }; \\node[n_pos, right=2.8cm of Q] (Qp) { \\textbf{After Opponent ($Q'$)}\\\\ Heaps: $\\{3, \\mathbf{4}, 6\\}$\\\\ \\textcolor{red!40!black}{\\textbf{nim-sum} $\\mathbf{= 1}$} }; \\node[p_pos, right=2.8cm of Qp] (R) { \\textbf{Restored ($R$)}\\\\ Heaps: $\\{\\mathbf{2}, 4, 6\\}$\\\\ \\textcolor{green!40!black}{\\textbf{nim-sum} $\\mathbf{= 0}$} }; \\draw[arr] (Q) -- node[align=center, above, font=\\footnotesize] {Opponent moves\\\\$5 \\to 4$} node[align=center, below, font=\\footnotesize] {$\\delta = 5 \\oplus 4 = \\mathbf{1}$} (Qp); \\draw[restore_arr] (Qp) -- node[align=center, above, font=\\footnotesize, text=blue!80] {\\textbf{Agent restores}\\\\$3 \\to 2$} node[align=center, below, font=\\footnotesize, text=blue!80] {Matches $\\delta=\\mathbf{1}$\\\\$(3 \\oplus 2 = 1)$} (R); \\end{tikzpicture} \\caption{A worked restoration example (three heaps). Starting from a $P$-position $Q$ (green), the opponent changes heap 2 ($5\\to 4$), creating a nimber difference $\\delta=1$. The agent instantly restores the $P$-position by changing heap 1 ($3\\to 2$), which imposes the matching difference $3\\oplus 2 = 1$.} \\label{fig:restoration-example} \\end{figure}"
+  },
+  "fig:rollout_gap": {
+   "block": "fig:rollout_gap",
+   "lines": [
+    783,
+    797
+   ],
+   "source_sha256": "c144c2a208289732394eb3590bfdf055d077262dc66166a9cfda9053bff39e44",
+   "source_text": "\\begin{figure}[t] \\centering \\begin{tabular}{>{\\raggedright\\arraybackslash}p{0.28\\linewidth}>{\\raggedright\\arraybackslash}p{0.29\\linewidth}>{\\raggedright\\arraybackslash}p{0.31\\linewidth}} \\hline \\textbf{Resource} & \\textbf{What stays in $\\AC^0$} & \\textbf{Additional information or time} \\\\ \\hline One structured channel & Policy step and final readout & One complete rollout; one invariant bit \\\\ $B$ structured channels & Each policy step; reconstruction and move selection & $B$ complete rollouts supply all invariant bits \\\\ Two-frame transition & Local difference and binary move selection & Previous zero-nim-sum board and a legal transition \\\\ Persistent row scan & One state update and its output bits & Two scans per decision; $O(B+\\log N)$ state bits \\\\ \\hline \\end{tabular} \\caption{The three bypasses use different resources. Conditional restoration does not classify arbitrary starting positions; the rollout and recurrent constructions supply additional sequential computation.} \\label{fig:rollout_gap} \\end{figure}"
+  },
+  "fig:testacc-H20k4": {
+   "block": "fig:testacc-H20k4",
+   "lines": [
+    1115,
+    1121
+   ],
+   "source_sha256": "b7b14ba64b1c6ca5491d19f32169e593c4d2b178fc794a686d31675170a1f24b",
+   "source_text": "\\begin{figure}[t] \\centering \\includegraphics[width=0.95\\linewidth]{figTestAccCkptsH20k4.pdf} \\caption{Test restoration accuracy of checkpointed agents ($N=20$, $k=4$, $D=10^6$). Checkpoints are saved at epochs $\\{1,23,45,67,89,112,134,156,178,200\\}$. The 2F checkpoints confirm the improvement beyond the intermediate plateau; the more densely sampled validation curve in Figure~\\ref{fig:valacc-H20k4} shows its timing.} \\label{fig:testacc-H20k4} \\end{figure}"
+  },
+  "fig:threshold-compilation": {
+   "block": "fig:threshold-compilation",
+   "lines": [
+    1515,
+    1526
+   ],
+   "source_sha256": "815371b5ff9a6c8ab6010f997afbcf822d56d2065d426ac0082dd1334d725f57",
+   "source_text": "\\begin{figure}[htbp] \\centering \\begin{tikzpicture}[font=\\small, box/.style={draw,rounded corners,align=center,text width=3.1cm,minimum height=1.3cm}, >=Stealth] \\node[box] (a) {Boolean formulas\\\\depth at most $d$}; \\node[box,right=0.4cm of a] (b) {Translate gates\\\\OR/NOT: one layer\\\\AND: two layers}; \\node[box,right=0.4cm of b] (c) {Copy values\\\\to later layers\\\\align dependencies}; \\node[box,right=0.4cm of c] (d) {Arrange outputs\\\\at most $2d+2$\\\\threshold layers}; \\draw[->] (a) -- (b); \\draw[->] (b) -- (c); \\draw[->] (c) -- (d); \\end{tikzpicture} \\caption{The checked Boolean-to-threshold compiler, shown schematically. Negated input literals are permitted. AND uses an OR of negated inputs followed by negation, keeping weights and thresholds in $\\{0,1\\}$. Copying and output stages give a uniform depth bound.} \\label{fig:threshold-compilation} \\end{figure}"
+  },
+  "fig:valacc-H20k4": {
+   "block": "fig:valacc-H20k4",
+   "lines": [
+    1107,
+    1113
+   ],
+   "source_sha256": "1a2357a8e3237237edcce96170c629ac67210998957c25ca5b2aed78468cf1e6",
+   "source_text": "\\begin{figure}[t] \\centering \\includegraphics[width=0.95\\linewidth]{figValAccH20k4.pdf} \\caption{Validation restoration accuracy vs.\\ epoch on the restoration dataset ($N=20$, $k=4$, $D=10^6$). In this saved run, the 1F model has low accuracy while the 2F model passes through an intermediate plateau around 0.54 before improving sharply towards near-perfect accuracy. The transition suggests a learning bottleneck that training eventually overcomes; it is distinct from the representational lower bound. Values use the saved batch-mean metric.} \\label{fig:valacc-H20k4} \\end{figure}"
+  },
+  "lem:layer-ac0": {
+   "block": "lem:layer-ac0",
+   "lines": [
+    1445,
+    1449
+   ],
+   "source_sha256": "97b5b3b24707126b57f0affcff529f37a992a2f07c8ad29dc0459393e1535a67",
+   "source_text": "\\begin{lemma}[One layer of fixed-scale quantised units is in $\\AC^0$] \\label{lem:layer-ac0} Fix $W,D$ and let a layer consist of $m'$ threshold units whose inputs are outputs of a previous layer of width $m$, with $m,m'\\le \\poly(n)$. Then the layer can be simulated by an $\\AC^0$ circuit of constant depth and polynomial size. \\end{lemma}"
+  },
+  "lem:nimber-diff-ac0": {
+   "block": "lem:nimber-diff-ac0",
+   "lines": [
+    501,
+    506
+   ],
+   "source_sha256": "f7c70f3c55b3196c1fb79ddb33564056aeec3b2c426c29ef7a6ef4242ba91866",
+   "source_text": "\\begin{lemma}[Bounded-change differences] \\label{lem:nimber-diff-ac0} Fix a constant $t\\in\\N$. Let $P$ and $P'$ be NIM positions whose heap vectors differ in at most $t$ heaps. Then $\\Delta(P,P')$ can be computed by an $\\AC^0$ circuit of polynomial size (in the input length). \\end{lemma}"
+  },
+  "lem:unit-ac0": {
+   "block": "lem:unit-ac0",
+   "lines": [
+    1403,
+    1412
+   ],
+   "source_sha256": "aab403d1ce88322105271d5a34b95cd310bfaffc26697a48f3c0f6fecddde648",
+   "source_text": "\\begin{lemma}[Fixed-scale quantised threshold gate $\\in\\AC^0$] \\label{lem:unit-ac0} Fix constants $W,D\\in\\N$. Let $z_1,\\dots,z_m\\in\\bits$ be Boolean inputs, and let $w_1,\\dots,w_m,\\theta\\in\\Qset_{W,D}$. Consider the Boolean function \\[ f(z_1,\\dots,z_m) \\;=\\; \\Heav\\!\\Big(\\sum_{j=1}^m w_j z_j - \\theta\\Big). \\] Then $f$ is computable by a depth-2 $\\AC^0$ circuit of size $O(m^K)$, where $K:=W$ is a constant (depending only on $W,D$). \\end{lemma}"
+  },
+  "par:construction-example": {
+   "block": "par:construction-example-p1",
+   "lines": [
+    1469,
+    1471
+   ],
+   "source_sha256": "c1a74bbbea9021c2576f6c25cbbde771fd80216e4d3f71559cd3930ad28a3119",
+   "source_text": "\\label{par:construction-example} The networks in this appendix are constructed explicitly from the game rules: their connections and weights are specified by an algorithm, rather than found by training. To see what the construction computes, revisit Figure~\\ref{fig:restoration-example}. The preceding board $Q=(3,5,6)$ has nim-sum zero; after the opponent changes $5$ to $4$, the current board is $Q'=(3,4,6)$. Comparing the frames gives $\\delta=5\\oplus4=1$. In parallel, the circuit proposes replacements $(3\\oplus1,4\\oplus1,6\\oplus1)=(2,5,7)$ and tests which decrease their heaps. Only $2<3$ passes, so the output selects heap index $0$ with replacement value $2$, giving $(2,4,6)$ with nim-sum zero. For $B=3$ and a two-bit index, the output fields are validity $1$, index $00$, and value $010$."
+  },
+  "par:controller-costs": {
+   "block": "par:controller-costs-p1",
+   "lines": [
+    1549,
+    1551
+   ],
+   "source_sha256": "739b9626e71ac7a86599b2f76e1a63c302ee252e5d49f79e9941750770ac798b",
+   "source_text": "\\label{par:controller-costs} For $B,N\\ge1$ and $B\\le2^r$, the shootout controller uses $NB+4+r+B$ state bits: a working board, control flags, a head index and the collected outcomes. Its input also contains the original $NB$-bit board, held fixed throughout the decision. This external storage is additional to the state count. The circuit handles head selection, board reload, outcome collection, increment and halt; the depth bound in the table applies to either the early-exit classifier or the all-head schedule."
+  },
+  "par:depth-accounting": {
+   "block": "par:depth-accounting-p1",
+   "lines": [
+    1543,
+    1545
+   ],
+   "source_sha256": "0c5047726ffa41efb1dfed6c226af8170906c5ec1e68d2af34867c13063d6c47",
+   "source_text": "\\label{par:depth-accounting} For the two-frame selector, the compositional Boolean-depth bound is $4+4+9+3=20$: at most four levels extract the frame difference, four handle candidate tests and replacement bits, nine are allowed by the general selection construction (including fallback and output handling), and three encode the selected heap's binary index. These are bounds on composed subcircuits, not necessarily the exact number of levels on a shortest implementation. The compiler then gives at most $2\\cdot20+2=42$ threshold layers. Similarly, Boolean depths $19$, $17$, $8$ and $34$ give the other entries in the table."
+  },
+  "par:shootout-controller": {
+   "block": "par:shootout-controller-p1",
+   "lines": [
+    655,
+    658
+   ],
+   "source_sha256": "2f827b0e7a8341dcb393866d478a2001f3e3f0a01c63cb763d143739445453e0",
+   "source_text": "\\label{par:shootout-controller} The multi-channel classifier can stop early after a nonzero channel outcome, without changing its Boolean decision rule (the OR of all channel bits). This limited scheduling optimisation does not give the single-channel readout an unrestricted sequential controller. To make this adaptivity explicit (without changing the $\\AC^0$ constraints on each head), it is convenient to view head-selection as a small \\emph{finite-state controller} that sits outside the heads and only sees the terminal win/loss bit of each rollout."
+  },
+  "prop:bypass-interfaces": {
+   "block": "prop:bypass-interfaces",
+   "lines": [
+    876,
+    885
+   ],
+   "source_sha256": "42524208a19b28cfe7bf26ac3f5a8d5d11617294704462771cb55aaeca75a484",
+   "source_text": "\\begin{proposition}[Shallow components and complete strategies] \\label{prop:bypass-interfaces} For $N\\ge1$ heaps of $B\\ge1$ bits, the following constructions use polynomial-size, constant-depth Boolean components, realisable by literal-threshold networks with weights and thresholds in $\\{0,1\\}$. \\begin{enumerate}[leftmargin=*,label=(\\roman*)] \\item The two-frame selector maps a legal transition $Q\\to Q'$ from $\\operatorname{nim}(Q)=0$ to a legal binary-encoded response restoring zero. Retaining the response board as the next predecessor gives a winning strategy from this established invariant, with the opponent to move. \\item Each structured rollout policy and the readout from the board and its $B$ outcome bits are shallow. Executing the rollouts and then the readout gives a winning strategy from any nonzero nim-sum board, using at most $BN(2^B-1)$ simulated game moves per decision. \\item The recurrent state update is shallow. Iterating it over the replay protocol gives a winning strategy from any nonzero nim-sum board, with $O(B+\\log N)$ memory and $2N+2$ updates per decision. \\end{enumerate} Here ``winning strategy'' quantifies over every legal opponent response. Polynomial size and constant depth refer to the indicated component, with depth independent of $N$ and $B$; they do not bound the number of sequential component evaluations. \\end{proposition}"
+  },
+  "prop:noise-samples": {
+   "block": "prop:noise-samples",
+   "lines": [
+    1604,
+    1612
+   ],
+   "source_sha256": "31604b6f79fa704b65e19dde0c25b0a3622e4329de515b1ade66c1bd0c60cdee",
+   "source_text": "\\begin{proposition}[Repetitions needed for a weakly informative bit] \\label{prop:noise-samples} The minimum $m_*(a)$ exists and satisfies \\[ \\frac{3}{32a^2}\\le m_*(a)\\le\\left\\lceil\\frac{4}{a^2}\\right\\rceil \\le\\frac{17}{4a^2}. \\] Majority voting, with ties declared~0, achieves the middle upper bound. \\end{proposition}"
+  },
+  "prop:restore": {
+   "block": "prop:restore",
+   "lines": [
+    517,
+    526
+   ],
+   "source_sha256": "a8eb6954cec14e2320d180a27755f9519e26bdeb9961392aac2ec52e3987d90c",
+   "source_text": "\\begin{proposition}[Local restoration principle] \\label{prop:restore} Suppose the \\emph{opponent} moves from a position $Q$ with $\\operatorname{nim}(Q)=0$ to a position $Q'$ (so it is now our turn). Let $\\Delta(Q,Q')=\\operatorname{nim}(Q)\\oplus \\operatorname{nim}(Q')$ denote the nimber difference caused by the opponent's move. If we respond with a move $Q' \\to R$ such that \\[ \\Delta(Q',R) \\;=\\; \\Delta(Q,Q'), \\] then $\\operatorname{nim}(R)=0$. \\end{proposition}"
+  },
+  "prop:rollout-sufficiency": {
+   "block": "prop:rollout-sufficiency",
+   "lines": [
+    728,
+    731
+   ],
+   "source_sha256": "4a1c0cfcc79921907eb043c73a5dd3f92131cbb7752d4fe8488549b54d881457",
+   "source_text": "\\begin{proposition}[Structured rollout sufficiency] \\label{prop:rollout-sufficiency} The $B$ structured rollout policies below, followed by an $\\AC^0$ move selector, achieve strong mastery of NIM on $N$ heaps of bit-width $B$. They use $B$ root rollouts and $O(BN2^B)$ simulated game moves per decision. Each policy update and the final readout have polynomial circuit size in $NB$. For $B=O(\\log N)$ the resulting bit work is polynomial in $N$. \\end{proposition}"
+  },
+  "prop:single-policy-bound": {
+   "block": "prop:single-policy-bound",
+   "lines": [
+    750,
+    760
+   ],
+   "source_sha256": "587bf4faeead2458f47b5c7b4e12d9588f2ea878ed1a7c5a300f1442a045ecd9",
+   "source_text": "\\begin{proposition}[Single-policy information bound] \\label{prop:single-policy-bound} Fix $j$ and the rollout policy $\\pi_j$ from the proof outline of Proposition~\\ref{prop:rollout-sufficiency}. For any position $P$, the rollout outcome $\\mathrm{RO}_{\\pi_j}(P)$ is a fixed linear functional $\\ell_j(\\sigma(P))$ of the nim-sum bits (indeed, $\\ell_0(\\sigma)=\\sigma_0$ and $\\ell_j(\\sigma)=\\sigma_j\\oplus\\sigma_0$ for $j\\ge 1$). Moreover, if $P_i$ is obtained from $P$ by modifying one heap (as when evaluating candidate moves), then \\[ \\mathrm{RO}_{\\pi_j}(P_i)=\\ell_j(\\sigma(P))\\oplus c_i, \\] where the correction bit $c_i$ is computable from the known heap values and the chosen modification. Hence root and one-heap-modification queries to this fixed head reveal only known affine functions of $\\ell_j(\\sigma(P))$. \\end{proposition}"
+  },
+  "prop:streaming-nimsum": {
+   "block": "prop:streaming-nimsum",
+   "lines": [
+    833,
+    836
+   ],
+   "source_sha256": "bacb9fc36383f7880f966bdbeb259e41090d4c758af9ca08a36d5d54b0d43be7",
+   "source_text": "\\begin{proposition}[Sequential nim-sum accumulation] \\label{prop:streaming-nimsum} There is a recurrent Boolean update of constant depth and size $O(B)$, implementable with fixed-scale quantised threshold gates, that computes the nim-sum of an $N$-heap position after $N$ row updates. With $O(B)$ state bits, it can also retain the previous completed nim-sum and report the XOR difference between consecutive completed positions. \\end{proposition}"
+  },
+  "rem:ac0-scope.model": {
+   "block": "rem:ac0-scope",
+   "lines": [
+    313,
+    320
+   ],
+   "source_sha256": "988fb4fd7142b64bc78ef89f060b21dc0e413ddeaf3f1d307fe9f88d6581ce3d",
+   "source_text": "\\begin{remark}[Scope of the $\\AC^0$ abstraction] \\label{rem:ac0-scope} Theorem~\\ref{thm:sim-ac0} formalises a fixed-latency \\emph{fixed-scale quantised} regime in which each unit uses parameters drawn from a bounded-range grid $\\Qset_{W,D}$ with $W,D$ independent of the input length. This yields the constant-witness property exploited in Lemma~\\ref{lem:unit-ac0}. The abstraction is deliberately conservative: it does not model architectures that rely on fan-in dependent re-scaling, numerically large signed biases/thresholds that grow with dimension, or deep computations whose depth scales with $n$. Allowing such scale-adaptive behaviour leads naturally to richer threshold-circuit models (e.g.\\ $\\TC^0$), in which parity-like computations can become representable. \\end{remark}"
+  },
+  "rem:ac0-scope.tc0": {
+   "block": "rem:ac0-scope",
+   "lines": [
+    313,
+    320
+   ],
+   "source_sha256": "988fb4fd7142b64bc78ef89f060b21dc0e413ddeaf3f1d307fe9f88d6581ce3d",
+   "source_text": "\\begin{remark}[Scope of the $\\AC^0$ abstraction] \\label{rem:ac0-scope} Theorem~\\ref{thm:sim-ac0} formalises a fixed-latency \\emph{fixed-scale quantised} regime in which each unit uses parameters drawn from a bounded-range grid $\\Qset_{W,D}$ with $W,D$ independent of the input length. This yields the constant-witness property exploited in Lemma~\\ref{lem:unit-ac0}. The abstraction is deliberately conservative: it does not model architectures that rely on fan-in dependent re-scaling, numerically large signed biases/thresholds that grow with dimension, or deep computations whose depth scales with $n$. Allowing such scale-adaptive behaviour leads naturally to richer threshold-circuit models (e.g.\\ $\\TC^0$), in which parity-like computations can become representable. \\end{remark}"
+  },
+  "rem:local-vs-global-parity.global": {
+   "block": "rem:local-vs-global-parity",
+   "lines": [
+    322,
+    327
+   ],
+   "source_sha256": "521cad39a13ca6cb72c3cf8f0a8f399ba05f8883f6c644be9f84a620608544c1",
+   "source_text": "\\begin{remark}[Local vs.\\ global parity] \\label{rem:local-vs-global-parity} When we say ``parity is hard'' we mean \\emph{global} parity across the full Boolean input of length $n=NB$. In contrast, parity on $O(1)$ bits is trivial in $\\AC^0$ (hardwire the truth table), and more generally XOR of a constant number of $B$-bit blocks is $\\AC^0$-computable. This local/global separation underlies both the two-frame bypass via the nimber difference $\\Delta(P,P')$ and the recurrent bypass, which composes local XOR updates over a growing number of steps. \\end{remark}"
+  },
+  "rem:local-vs-global-parity.local": {
+   "block": "rem:local-vs-global-parity",
+   "lines": [
+    322,
+    327
+   ],
+   "source_sha256": "521cad39a13ca6cb72c3cf8f0a8f399ba05f8883f6c644be9f84a620608544c1",
+   "source_text": "\\begin{remark}[Local vs.\\ global parity] \\label{rem:local-vs-global-parity} When we say ``parity is hard'' we mean \\emph{global} parity across the full Boolean input of length $n=NB$. In contrast, parity on $O(1)$ bits is trivial in $\\AC^0$ (hardwire the truth table), and more generally XOR of a constant number of $B$-bit blocks is $\\AC^0$-computable. This local/global separation underlies both the two-frame bypass via the nimber difference $\\Delta(P,P')$ and the recurrent bypass, which composes local XOR updates over a growing number of steps. \\end{remark}"
+  },
+  "rem:noisy-rollout-decay": {
+   "block": "rem:noisy-rollout-decay",
+   "lines": [
+    767,
+    776
+   ],
+   "source_sha256": "90ba4a3ec1e636427f3d3621af69e44b4b01842aae4260336e221b3e966f1451",
+   "source_text": "\\begin{remark}[An illustrative independent outcome-flip model] \\label{rem:noisy-rollout-decay} Suppose an ideal terminal bit $Y$ is corrupted as $\\widetilde Y=Y\\oplus E_1\\oplus\\cdots\\oplus E_L$, where the $E_i$ are independent Bernoulli variables of parameter $0\\le\\varepsilon<1/2$. Then \\[ \\Pr[\\widetilde Y=Y]=\\frac{1+(1-2\\varepsilon)^L}{2}. \\] The formula follows by multiplying the expectations of $(-1)^{E_i}$. With fresh independent flips for each repetition, the least number of observations needed to distinguish the two possible ideal bits with worst-case error at most $1/4$ grows as $a^{-2}$, where $a=(1-2\\varepsilon)^L$. Appendix~\\ref{app:noise-samples} states and proves explicit bounds over real parameters. Repeating one corrupted observation with the same randomness supplies no additional information. At $\\varepsilon=0.01$ and $L=50$, agreement is approximately $0.682$, so this example is not yet close to a fair coin. This is a channel-noise illustration, not a theorem about erroneous game moves: a move error need not flip the terminal bit, and can change later states and rollout length. Correlated flips can cancel in pairs, eliminating the claimed decay. Exact structured rollouts have no such noise. \\end{remark}"
+  },
+  "rem:why-multi-head": {
+   "block": "rem:why-multi-head",
+   "lines": [
+    647,
+    653
+   ],
+   "source_sha256": "f4008ef5ce03a22badc231e5a0833ef4a526ee67a17099087acb178cfad5df9f",
+   "source_text": "\\begin{remark}[Why multiple heads are not redundant] \\label{rem:why-multi-head} Since $\\AC^0$ is closed under parallel composition, one could compute all $k$ policies simultaneously as a single $\\AC^0$ circuit. The distinction is not about computational power at the circuit level but about the \\emph{rollout interface}: each rollout query simulates a complete game under \\emph{one} policy, and at each game step only that policy determines the next move. A single rollout trajectory under a fixed policy $\\pi$ produces one outcome bit; merging $k$ circuits into a single circuit does not change the fact that any one rollout follows a single deterministic rule, yielding a single bit of information. Multiple heads are useful because the agent can issue \\emph{separate} rollout queries under different policies $\\pi_j$, producing different game trajectories that reveal \\emph{independent} linear functionals of the nim-sum (cf.\\ Propositions~\\ref{prop:rollout-sufficiency} and~\\ref{prop:single-policy-bound}). \\end{remark}"
+  },
+  "tab:fsm-shootout": {
+   "block": "tab:fsm-shootout",
+   "lines": [
+    1194,
+    1209
+   ],
+   "source_sha256": "cca551d958baf8649f49e0067fb3018d24f58c2b2f7d2157daf651e5378dbc90",
+   "source_text": "\\begin{table}[t] \\centering \\small \\begin{tabular}{p{0.36\\linewidth}cccc} \\hline Method & Heads & Rollouts & Accuracy & Recall \\\\ \\hline Single head (model) & 1 & 1.00 & 0.768 & 0.536 \\\\ Multi-head + FSM (model) & 4 & 2.87 & 1.000 & 1.000 \\\\ Single head (teacher) & 1 & 1.00 & 0.768 & 0.536 \\\\ Multi-head + FSM (teacher) & 4 & 2.87 & 1.000 & 1.000 \\\\ \\hline \\end{tabular} \\caption{Single-frame $P/N$ evaluation by FSM-controlled shootouts ($N=20$, $k=4$), reporting overall $P/N$ accuracy and $N$-position recall.} \\label{tab:fsm-shootout} \\end{table}"
+  },
+  "table:arch": {
+   "block": "table:arch",
+   "lines": [
+    1009,
+    1024
+   ],
+   "source_sha256": "0463fce4170d5fb3f9e7f75a0ec2988bfcdcb258b90903a2dfdbef7b9bbad750",
+   "source_text": "\\begin{table}[h!] \\centering {\\footnotesize \\begin{tabularx}{\\linewidth}{@{}lYYY@{}} \\hline \\textbf{Component} & \\textbf{Type} & \\textbf{Dimensions} & \\textbf{Activation/}\\allowbreak\\textbf{Normalisation} \\\\ \\hline Input & State representation & Two-frame: $2Nk$ bits (1F: $Nk$) & None \\\\ Hidden 1 & Fully Connected & 1F: $Nk\\to H$; 2F: $2Nk\\to H$ & LayerNorm + ReLU \\\\ Hidden 2 & Fully Connected & $H\\to H$ & ReLU \\\\ Policy Head & Linear Output & $H\\to N\\cdot2^k$ & Raw logits; Log-Softmax in loss \\\\ \\hline \\end{tabularx}} \\caption{Neural network architecture used in the experiments. $H$ denotes the hidden width (a fixed hyperparameter).} \\label{table:arch} \\end{table}"
+  },
+  "thm:nim-win": {
+   "block": "thm:nim-win",
+   "lines": [
+    424,
+    427
+   ],
+   "source_sha256": "b7a02420951e1b1e682a46dcd95a9d0f6ec2d27c3cb85a19d1fe0065cc383add",
+   "source_text": "\\begin{theorem}[Classical NIM characterisation] \\label{thm:nim-win} A NIM position $(x_1,\\dots,x_h)$ is losing for the player to move iff $\\operatorname{nim}(x_1,\\dots,x_h)=0$. Moreover, from any winning position (nim-sum $\\neq 0$) there is a move to a losing position (nim-sum $=0$). \\end{theorem}"
+  },
+  "thm:search-gap.i": {
+   "block": "thm:search-gap",
+   "lines": [
+    799,
+    811
+   ],
+   "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
+   "source_text": "\\begin{theorem}[Restricted bound and bypasses] \\label{thm:search-gap} The following statements hold under Definition~\\ref{def:agent-types}. \\begin{enumerate} \\item[\\textup{(i)}] For each fixed $B\\ge2$, let $P$ be uniform on $\\{0,\\ldots,2^B-1\\}^N$ conditional on $\\sigma(P)\\ne0$. For one fixed structured head $\\pi_j$ and an $\\AC^0$ readout $F_N(P,\\mathrm{RO}_{\\pi_j}(P))$, winning-move success is at most \\[ \\frac{2}{2^B-1}+\\operatorname{negl}(N). \\] Here $N\\ge1$, and a negligible error is a nonnegative sequence smaller than every inverse polynomial for sufficiently large $N$, with circuit depth, polynomial size exponent and $B$ fixed. More precisely, a uniform parity-correlation bound $\\eta_N$ for the fixed-bit readout indicators gives the finite upper bound $2/(2^B-1)+(2^B-1)\\eta_N$; the indicators and correlation premise are specified in Appendix~\\ref{app:search-gap-proof}. The leading constant is asymptotically attainable by guessing one nonzero nim-sum in each channel fibre. \\item[\\textup{(ii)}] For any $B$, the $B$ structured heads and an $\\AC^0$ readout select an optimal move using $O(BN2^B)$ rollout steps, as in Proposition~\\ref{prop:rollout-sufficiency}. \\item[\\textup{(iii)}] Given a legal transition from a known zero-nim-sum predecessor, a two-frame $\\AC^0$ selector restores zero. Once a player has established that invariant, it maintains it against every legal opponent response. This statement does not supply the initial winning move from an arbitrary position. \\end{enumerate} \\end{theorem}"
+  },
+  "thm:search-gap.ii": {
+   "block": "thm:search-gap",
+   "lines": [
+    799,
+    811
+   ],
+   "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
+   "source_text": "\\begin{theorem}[Restricted bound and bypasses] \\label{thm:search-gap} The following statements hold under Definition~\\ref{def:agent-types}. \\begin{enumerate} \\item[\\textup{(i)}] For each fixed $B\\ge2$, let $P$ be uniform on $\\{0,\\ldots,2^B-1\\}^N$ conditional on $\\sigma(P)\\ne0$. For one fixed structured head $\\pi_j$ and an $\\AC^0$ readout $F_N(P,\\mathrm{RO}_{\\pi_j}(P))$, winning-move success is at most \\[ \\frac{2}{2^B-1}+\\operatorname{negl}(N). \\] Here $N\\ge1$, and a negligible error is a nonnegative sequence smaller than every inverse polynomial for sufficiently large $N$, with circuit depth, polynomial size exponent and $B$ fixed. More precisely, a uniform parity-correlation bound $\\eta_N$ for the fixed-bit readout indicators gives the finite upper bound $2/(2^B-1)+(2^B-1)\\eta_N$; the indicators and correlation premise are specified in Appendix~\\ref{app:search-gap-proof}. The leading constant is asymptotically attainable by guessing one nonzero nim-sum in each channel fibre. \\item[\\textup{(ii)}] For any $B$, the $B$ structured heads and an $\\AC^0$ readout select an optimal move using $O(BN2^B)$ rollout steps, as in Proposition~\\ref{prop:rollout-sufficiency}. \\item[\\textup{(iii)}] Given a legal transition from a known zero-nim-sum predecessor, a two-frame $\\AC^0$ selector restores zero. Once a player has established that invariant, it maintains it against every legal opponent response. This statement does not supply the initial winning move from an arbitrary position. \\end{enumerate} \\end{theorem}"
+  },
+  "thm:search-gap.iii": {
+   "block": "thm:search-gap",
+   "lines": [
+    799,
+    811
+   ],
+   "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
+   "source_text": "\\begin{theorem}[Restricted bound and bypasses] \\label{thm:search-gap} The following statements hold under Definition~\\ref{def:agent-types}. \\begin{enumerate} \\item[\\textup{(i)}] For each fixed $B\\ge2$, let $P$ be uniform on $\\{0,\\ldots,2^B-1\\}^N$ conditional on $\\sigma(P)\\ne0$. For one fixed structured head $\\pi_j$ and an $\\AC^0$ readout $F_N(P,\\mathrm{RO}_{\\pi_j}(P))$, winning-move success is at most \\[ \\frac{2}{2^B-1}+\\operatorname{negl}(N). \\] Here $N\\ge1$, and a negligible error is a nonnegative sequence smaller than every inverse polynomial for sufficiently large $N$, with circuit depth, polynomial size exponent and $B$ fixed. More precisely, a uniform parity-correlation bound $\\eta_N$ for the fixed-bit readout indicators gives the finite upper bound $2/(2^B-1)+(2^B-1)\\eta_N$; the indicators and correlation premise are specified in Appendix~\\ref{app:search-gap-proof}. The leading constant is asymptotically attainable by guessing one nonzero nim-sum in each channel fibre. \\item[\\textup{(ii)}] For any $B$, the $B$ structured heads and an $\\AC^0$ readout select an optimal move using $O(BN2^B)$ rollout steps, as in Proposition~\\ref{prop:rollout-sufficiency}. \\item[\\textup{(iii)}] Given a legal transition from a known zero-nim-sum predecessor, a two-frame $\\AC^0$ selector restores zero. Once a player has established that invariant, it maintains it against every legal opponent response. This statement does not supply the initial winning move from an arbitrary position. \\end{enumerate} \\end{theorem}"
+  },
+  "thm:sim-ac0": {
+   "block": "thm:sim-ac0",
+   "lines": [
+    356,
+    366
+   ],
+   "source_sha256": "43ef59ca27f65af5b6e4a8cc4a677c74ee612db12ab46942d70d92440ed56bc2",
+   "source_text": "\\begin{theorem}[Simulation by $\\AC^0$] \\label{thm:sim-ac0} Fix constants $W,D\\in\\N$ and a time window $T\\in\\N$. Let $\\{\\mathcal{M}_n\\}_{n\\ge 1}$ be any family of models of type $\\NN$, $\\RNN$ (with window $T$), or $\\LTST$ (with window $T$) such that: \\begin{enumerate}[leftmargin=*,label=(\\arabic*)] \\item (\\textbf{Polynomial size}) the number of neurons/units in $\\mathcal{M}_n$ is at most $\\poly(n)$. \\item (\\textbf{Constant depth}) the number of layers is a fixed constant $L$ (independent of $n$); for $\\RNN/\\LTST$ the entire unrolled computation uses at most $T$ time steps from an input-independent initial state. \\item (\\textbf{Permitted primitives}) every operation is realised by the Boolean literal-threshold gates of Definition~\\ref{def:NN-formal}; all weights and thresholds lie in $\\Qset_{W,D}$. For the attention-style extension this includes score computation, coefficient selection and aggregation. \\end{enumerate} Then the Boolean function computed by $\\mathcal{M}_n$ can be computed by an $\\AC^0$ circuit family of polynomial size and constant depth (depending only on $L,T,W,D$). \\end{theorem}"
+  },
+  "thm:singleframe-impossible.a": {
+   "block": "thm:singleframe-impossible",
+   "lines": [
+    460,
+    465
+   ],
+   "source_sha256": "a21606992573ea17d648f3b62cebdbf0dda69b41441351fa0722b9d1c8031854",
+   "source_text": "\\begin{theorem}[Single-frame parity barrier] \\label{thm:singleframe-impossible} Consider the restricted family of NIM positions $P(\\mathbf{b})=(2,b_1,\\dots,b_m)$ where $b_i\\in\\{0,1\\}$. Any single-frame agent that achieves strong mastery must compute the parity $b_1\\oplus\\cdots\\oplus b_m$. Since $\\mathrm{PARITY}\\notin \\AC^0$, no polynomial-size, constant-depth fixed-scale quantised network can strongly master NIM. \\end{theorem}"
+  },
+  "thm:singleframe-impossible.b": {
+   "block": "thm:singleframe-impossible",
+   "lines": [
+    460,
+    465
+   ],
+   "source_sha256": "a21606992573ea17d648f3b62cebdbf0dda69b41441351fa0722b9d1c8031854",
+   "source_text": "\\begin{theorem}[Single-frame parity barrier] \\label{thm:singleframe-impossible} Consider the restricted family of NIM positions $P(\\mathbf{b})=(2,b_1,\\dots,b_m)$ where $b_i\\in\\{0,1\\}$. Any single-frame agent that achieves strong mastery must compute the parity $b_1\\oplus\\cdots\\oplus b_m$. Since $\\mathrm{PARITY}\\notin \\AC^0$, no polynomial-size, constant-depth fixed-scale quantised network can strongly master NIM. \\end{theorem}"
+  },
+  "x-example-pairing-strategy": {
+   "block": "x-example-pairing-strategy",
+   "lines": [
+    1559,
+    1561
+   ],
+   "source_sha256": "ae050acb1c51530d6dc464519de6977c891e96015f6358bc4ff66e47c6151802",
+   "source_text": "\\begin{example}[Pairing strategy] Consider positions $(a,a,b,b,c,c,\\dots)$ consisting of pairs of equal heaps. The second player can mirror the first player’s move on the matching heap, maintaining the paired structure until termination, hence winning. The checked binary selector finds the first unequal pair and reduces its larger heap to match its partner. It has constant depth and polynomial size, and wins against every legal opponent from the paired family when playing second. For the first-player role every paired initial board is losing, so weak mastery there would be vacuous. \\end{example}"
+  },
+  "x-remark-negations": {
+   "block": "x-remark-negations",
+   "lines": [
+    1437,
+    1440
+   ],
+   "source_sha256": "26b89f049e4573358b9f65f4343a913048adc2904f148db4e91f5d592f5e6582",
+   "source_text": "\\begin{remark}[Negations] If some inputs are negated before weighting, i.e.\\ $(z_j\\oplus \\eta_j)$, this simply replaces $z_j$ by either $z_j$ or $\\neg z_j$ in each conjunction term. Since $\\AC^0$ allows NOT gates, Lemma~\\ref{lem:unit-ac0} still applies. \\end{remark}"
+  },
+  "x-remark-scope-of-the-simulation": {
+   "block": "x-remark-scope-of-the-simulation",
+   "lines": [
+    1387,
+    1390
+   ],
+   "source_sha256": "82541bf3466ed597168b473feb2d4f7dadd476b8ca445451b5a5ab1068a03cb8",
+   "source_text": "\\begin{remark}[Scope of the simulation] Theorem~\\ref{thm:sim-ac0} applies because $L,T,W,D$ are constants and each unit’s parameters come from a finite set independent of $n$. Appendix~\\ref{app:ac0proof} gives an explicit circuit construction. \\end{remark}"
+  }
+ },
+ "manuscript_sha256": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333"
+}

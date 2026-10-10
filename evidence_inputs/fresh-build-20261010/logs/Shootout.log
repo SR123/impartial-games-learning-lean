@@ -1,0 +1,158 @@
+/root/interactive/lean/phase7/Shootout.lean:311:96: warning: This simp argument is unused:
+  hh
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵,̵ ̵i̵f̵_̵t̵r̵u̵e̵,̵ ̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵a̵n̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵B̵o̵o̵l̵.̵a̵n̵d̵_̵f̵a̵l̵s̵e̵,̵ ̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵,̵ ̵B̵o̵o̵l̵.̵n̵o̵t̵_̵f̵a̵l̵s̵e̵,̵ ̵B̵o̵o̵l̵.̵n̵o̵t̵_̵t̵r̵u̵e̵,̵ ̵B̵o̵o̵l̵.̵o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵B̵o̵o̵l̵.̵a̵n̵d̵_̵t̵r̵u̵e̵,̵ ̵h̵h̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲B̲o̲o̲l̲.̲f̲a̲l̲s̲e̲_̲a̲n̲d̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲f̲a̲l̲s̲e̲,̲ ̲B̲o̲o̲l̲.̲t̲r̲u̲e̲_̲a̲n̲d̲,̲ ̲B̲o̲o̲l̲.̲n̲o̲t̲_̲f̲a̲l̲s̲e̲,̲ ̲B̲o̲o̲l̲.̲n̲o̲t̲_̲t̲r̲u̲e̲,̲ ̲B̲o̲o̲l̲.̲o̲r̲_̲f̲a̲l̲s̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:312:79: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:386:81: warning: unused variable `hP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/root/interactive/lean/phase7/Shootout.lean:400:17: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [i̵f̵_̵f̵a̵l̵s̵e̵,̵ ̵Bool.false_and, Bool.false_or]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:448:8: warning: This simp argument is unused:
+  eval_input
+
+Hint: Omit it from the simp argument list.
+  simp only [runF, eval_mux, hr0, eval_and, eval_not, List.all_cons, List.all_nil,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Bool.and_true, hstop,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵v̵a̵l̵_̵i̵n̵p̵u̵t̵,̵ ̵Bool.false_eq_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:453:57: warning: This simp argument is unused:
+  eval_input
+
+Hint: Omit it from the simp argument list.
+  simp only [decF, eval_mux, hr0, eval_or, eval_and, List.any_cons, List.any_nil, List.all_cons,
+          List.all_nil, Bool.and_true, Bool.or_false, hcs, e̵v̵a̵l̵_̵i̵n̵p̵u̵t̵,̵ ̵Bool.false_eq_true, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:497:69: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Bool.false_eq_true, Bool.true_eq_false, if_false,̵ ̵i̵f̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/root/interactive/lean/phase7/Shootout.lean:607:63: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Bool.true_eq_false, Bool.false_eq_true, if_false,̵ ̵i̵f̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Shootout.cForms_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_board' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_mid' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_par' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_halt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_run' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_dec' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_j' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cF_o' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_low' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_par' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_halt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_run' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_dec' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_j' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_o' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_rst' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.z_P' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eval_isH_bits' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eval_isH' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eval_incB' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eval_hstep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.eval_mstep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ostep_flat' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_low' depends on axioms: [propext]
+'NimAudit.Shootout.rsBits_board' depends on axioms: [propext]
+'NimAudit.Shootout.rsBits_par' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.rsBits_halt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_run' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_dec' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_j' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_o' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.enc_high' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.wire_cases' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cstep_reset' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cstep_enc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.initOS_valid' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ostep_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.arun_add' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.brun_enc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.arun_one' does not depend on any axioms
+'NimAudit.Shootout.ostep_hold' depends on axioms: [propext]
+'NimAudit.Shootout.arun_hold' depends on axioms: [propext]
+'NimAudit.Shootout.arun_untilHalt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.roll_phase' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.query_step' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ee_run' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eeR_shootout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.eeR_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eeT_sum' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.eeT_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ee_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.impl_enc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.nimSum_width0' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ee_impl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ee_impl_padded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.loopRun_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ee_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ah_run' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ahT_sum' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ahT_total' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ahT_le' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.reconstruct_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ahMove_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ahSel_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.early_exit_not_move' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.nstep_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.nimpl_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ee_net' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.and_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.or_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.R3_mono' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.not_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.inp3' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.cst3' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.mux3' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.S1_pos' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.hstep_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.isH_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.mstep_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.cForms_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.shLen_pos' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.sh_leaves' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.shF_tsize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.sh_ac0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.sh_net' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.sum_plus_two' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ee_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ah_counts' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.tick_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ticks_unbounded' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.nimSum_bits' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.no_ac0_classifier' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.no_ac0_ahMove' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.reset_valid' depends on axioms: [propext, Quot.sound]
+'NimAudit.Shootout.ahMoveN_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ah_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ahMoveL_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.ahL_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Shootout.run_work' depends on axioms: [propext, Classical.choice, Quot.sound]

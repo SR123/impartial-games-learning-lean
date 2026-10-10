@@ -1,0 +1,50 @@
+{
+ "results": [
+  {
+   "check": "input snapshots match site.config.yaml",
+   "status": "PASS",
+   "detail": "canonical source, JMLR source and PDF as pinned",
+   "data": []
+  },
+  {
+   "check": "input/source_manifest.json names the current snapshots",
+   "status": "PASS",
+   "detail": "canonical, JMLR and PDF hashes match",
+   "data": []
+  },
+  {
+   "check": "snapshots equal the upstream manuscript",
+   "status": "WARN",
+   "detail": "upstream not reachable from this folder, so the snapshots in input/ are the boundary of what this check can confirm: canonical_tex: /Users/sorenriis/Documents/02_working_copy/candidate/paper_revised_final.tex; jmlr_tex: /Users/sorenriis/Documents/07_jmlr_review/source/paper_jmlr.tex; pdf: /Users/sorenriis/Documents/07_jmlr_review/paper_jmlr.pdf",
+   "data": [
+    "canonical_tex: /Users/sorenriis/Documents/02_working_copy/candidate/paper_revised_final.tex",
+    "jmlr_tex: /Users/sorenriis/Documents/07_jmlr_review/source/paper_jmlr.tex",
+    "pdf: /Users/sorenriis/Documents/07_jmlr_review/paper_jmlr.pdf"
+   ]
+  },
+  {
+   "check": "reference compile matches source and PDF",
+   "status": "PASS",
+   "detail": "94 labels; the log reports this PDF's 46 pages and 608968 bytes",
+   "data": []
+  },
+  {
+   "check": "proof correspondence names the current manuscript",
+   "status": "PASS",
+   "detail": "manuscript and JMLR hashes current",
+   "data": []
+  },
+  {
+   "check": "claims, illustrations and Lean reference match their reviewed locks",
+   "status": "PASS",
+   "detail": "check passed: 161 claim records and 5 illustrations match their reviewed locks; the illustration engine agrees with all Lean reference cases",
+   "data": null
+  },
+  {
+   "check": "dist/ is up to date",
+   "status": "PASS",
+   "detail": "351 files, built from the current inputs, content and tools",
+   "data": []
+  }
+ ]
+}

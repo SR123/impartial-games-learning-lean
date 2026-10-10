@@ -1,0 +1,27 @@
+[>=Latex, node distance=16mm and 18mm, font=\small]
+\tikzset{
+  state/.style={draw, rounded corners, minimum height=8mm, minimum width=20mm, align=center},
+  term/.style={draw, rounded corners, thick, minimum height=8mm, minimum width=28mm, align=center},
+  arrow/.style={->, thick}
+}
+
+\node[state] (q0) {$q_0$\\ use $\pi_0$};
+\node[state, right=of q0] (q1) {$q_1$\\ use $\pi_1$};
+\node[inner sep=0pt, right=of q1] (dots) {\Large$\cdots$};
+\node[state, right=of dots] (qB) {$q_{B-1}$\\ use $\pi_{B-1}$};
+
+\node[term, above=12mm of dots] (nonzero) {$\sigma(P)\neq 0$\\ (declare $N$)};
+\node[term, below=12mm of qB] (zero) {$\sigma(P)=0$\\ (declare $P$)};
+
+\draw[arrow] (q0) -- node[below] {$r_0=0$} (q1);
+\draw[arrow] (q0) to[bend left=25] node[left] {$r_0=1$} (nonzero);
+
+\draw[arrow] (q1) -- node[below] {$r_1=0$} (dots);
+\draw[arrow] (q1) to[bend left=18] node[above left] {$r_1=1$} (nonzero);
+
+\draw[arrow] (dots) -- node[below] {$r_j=0$} (qB);
+\draw[arrow, dashed] (dots) to[bend left=15] node[above] {$\exists j:\ r_j=1$} (nonzero);
+
+\draw[arrow] (qB) to[bend left=15] node[above right] {$r_{B-1}=1$} (nonzero);
+\draw[arrow] (qB) -- node[right] {$r_{B-1}=0$} (zero);
+

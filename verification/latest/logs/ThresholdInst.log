@@ -1,0 +1,70 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/ThresholdInst.lean:75:47: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [outAt, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/ThresholdInst.lean:77:47: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [outAt, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/ThresholdInst.lean:79:47: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp (disch := omega) only [outAt, if_neg, i̵f̵_̵p̵o̵s̵,̵ ̵↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/ThresholdInst.lean:288:97: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [prevN, mux,
+  ̲  ̲ ̲ ̲Rc, W̵c̵,̵ ̵Ec, Mc, listMax]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase5/ThresholdInst.lean:289:93: warning: This simp argument is unused:
+  Wc
+
+Hint: Omit it from the simp argument list.
+  simp [validN, Rc,
+  ̲ W̵c̵,̵  ̲ ̲Ec, Mc, listMax]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.ThresholdInst.ofBits_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.outDecode_congr' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.outDecode_eval' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.outAt_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.ctrlForms_get' depends on axioms: [propext]
+'NimAudit.ThresholdInst.ctrlForms_length' depends on axioms: [propext]
+'NimAudit.ThresholdInst.tstep_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_stream' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.tstep_reset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_games' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.crunStates_prefix' depends on axioms: [propext]
+'NimAudit.ThresholdInst.trun_states_fit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.trun_one_board' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.ctrlForms_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.ctrlForms_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.ctrlNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.ctrl_counts' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.summaryForms_res' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.summaryForms_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.summaryNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.map_range_eq' depends on axioms: [propext, Quot.sound]
+'NimAudit.ThresholdInst.binNet_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.binNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.restNet_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.restNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.mhNet_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.mhNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.polNet_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.polNet_res' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.ThresholdInst.attainNet_correct' depends on axioms: [propext, Classical.choice, Quot.sound]

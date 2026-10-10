@@ -1,0 +1,16 @@
+[
+  {
+    "source": "/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Computer_Experiments/runs/nim_rest_sup_H20_k4_D1000000_E200_C10_seed0_20260214_120801_cd18fc9f/train_history_nim_rest_sup_H20_k4_D1000000_E200_C10_seed0_20260214_120801_cd18fc9f.csv",
+    "sha256": "705b6d5d031acf747a51233082c331fd9fc7dd7298b4bf0590c1c6a4c33a57cd",
+    "rows": 400,
+    "output": "figValAccH20k4.pdf",
+    "change": "Replot identical CSV values with readable fonts and vector output; no smoothing, subsampling or new experiment."
+  },
+  {
+    "source": "/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/01_review/evidence/test_accuracy_nim_rest_sup_H20_k4_D1000000_E200_C10_seed0_20260214_120801_cd18fc9f.csv",
+    "sha256": "766f9934272dd5f73b23e6eaa17defec2ea2d9399b7dffd094fc432f3f8e5b3d",
+    "rows": 20,
+    "output": "figTestAccCkptsH20k4.pdf",
+    "change": "Replot identical CSV values with readable fonts and vector output; no smoothing, subsampling or new experiment."
+  }
+]

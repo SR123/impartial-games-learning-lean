@@ -1,0 +1,41 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase4/Foundation.lean:302:89: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [maskW, ones, zeros, List.filter_cons, Bool.not_false, if_true, B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵if_false,
+          List.length_cons, Rat.pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase4/Foundation.lean:303:8: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [maskW, ones, zeros, List.filter_cons, Bool.not_false, if_true,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲Bool.false_eq_true,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵i̵f̵_̵f̵a̵l̵s̵e̵,̵ ̵List.length_cons, Rat.pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Foundation.rsum_zero'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.ind_eval_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.leaves_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.Foundation.rsum_flip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.par_flipAt' depends on axioms: [propext]
+'NimAudit.Foundation.vfun_flipAt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Foundation.sgn_not' depends on axioms: [propext]
+'NimAudit.Foundation.pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.exists_not_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.sat_congr' depends on axioms: [propext]
+'NimAudit.Foundation.dtree_corr_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.par_merge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.sgn_xor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.inner_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.ind_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.mask_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.maskW_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.pow_nonneg'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.maskW_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.two_pow_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.mask_bound_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.restriction_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.premise_of_switching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Foundation.corr_zero_of_tree' depends on axioms: [propext, Classical.choice, Quot.sound]

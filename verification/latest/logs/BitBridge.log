@@ -1,0 +1,43 @@
+/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/05_revision_cycle/interactive/lean/phase3/BitBridge.lean:320:50: warning: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  simp [ones, zeros,̵ ̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵] at *
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'NimAudit.Bridge.mem_bitvecs_length' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.rsum_bitvecs_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.rsum_bitvecs_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.count_bitvecs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.toNatBE_lt' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.rsum_range_bitvecs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.testBit_toNatBE' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.rsum_boards_bitvecs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.length_decodeBoard' depends on axioms: [propext]
+'NimAudit.Bridge.decodeBoard_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.mem_bitvecs_of_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.length_toBitsBE' depends on axioms: [propext]
+'NimAudit.Bridge.pm_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.length_maskU' depends on axioms: [propext]
+'NimAudit.Bridge.dotB_zero_right' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.length_bitvecs' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.dotB_congr_right' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.dot_toNatBE' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.chi_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.ones_append' depends on axioms: [propext]
+'NimAudit.Bridge.true_mem_toBitsBE' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.ones_pos_of_mem' depends on axioms: [propext]
+'NimAudit.Bridge.ones_toBitsBE_pos' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.ones_le_length' depends on axioms: [propext]
+'NimAudit.Bridge.ones_maskU' depends on axioms: [propext]
+'NimAudit.Bridge.ones_add_zeros' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.rsum_bitvecs_merge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.pm_merge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.length_merge' depends on axioms: [propext]
+'NimAudit.Bridge.merge_getD' depends on axioms: [propext]
+'NimAudit.Bridge.rankT_lt' depends on axioms: [propext]
+'NimAudit.Bridge.restrict_leaf' does not depend on any axioms
+'NimAudit.Bridge.restrictC_resources' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.eval_restrictC' depends on axioms: [propext, Quot.sound]
+'NimAudit.Bridge.two_pow_pos'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NimAudit.Bridge.masked_correlation' depends on axioms: [propext, Classical.choice, Quot.sound]
