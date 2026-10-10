@@ -6,6 +6,7 @@
 - [Download the same paper as a PDF](https://sr123.github.io/impartial-games-learning-lean/paper/paper_jmlr.pdf).
 - [Explore the proof coverage](https://sr123.github.io/impartial-games-learning-lean/coverage.html).
 - [Browse the Lean sources](lean/).
+- [Archived release v1.0.0 — DOI: 10.5281/zenodo.23289503](https://doi.org/10.5281/zenodo.23289503).
 
 The interactive edition contains the complete paper, optional explanations, illustrations of the three constructions, and links from mathematical claims to formal statements and Lean source. The author's personal account is on a separate, optional page.
 
@@ -91,3 +92,5 @@ After any manuscript edit, regenerate the PDF and interactive edition together. 
 KaTeX's MIT licence is retained in `docs/assets/katex/LICENSE`. Mathlib is an external Apache-2.0 dependency. The JMLR style retains its original notices. The project-specific Lean and website code and tools are licensed under Apache-2.0. The manuscript, explanatory prose and personal history are excluded from that software licence; see [NOTICE.md](NOTICE.md).
 
 Citation metadata is supplied in `CITATION.cff`. Contact: [s.riis@qmul.ac.uk](mailto:s.riis@qmul.ac.uk).
+
+The DOI identifies the immutable v1.0.0 archive. As with the term-coding releases, that archive precedes the addition of its own DOI to the manuscript; the current PDF and live edition include the DOI citation. The mathematical content and Lean sources are unchanged.

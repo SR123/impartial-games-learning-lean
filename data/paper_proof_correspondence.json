@@ -1,5 +1,5 @@
 {
-  "manuscript_sha256": "1e960385bd466e9ecf174d4800ca29e4b391bafb071b627ca9e81b026bfb6551",
+  "manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
   "date": "2026-10-10",
   "description": "Audited statement correspondence; exact source references, not generated live website links. Includes auxiliary formal definitions and empirical/external boundaries.",
   "rows": [
@@ -1657,12 +1657,12 @@
       "hypotheses_and_boundary": "Numerical baseline theorem does not certify checkpoints or the causal mechanism of the 0.54 plateau. Saved-data diagnostics remain empirical."
     }
   ],
-  "jmlr_source_sha256": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce",
+  "jmlr_source_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
   "jmlr_note": "Formatting-derived copy. All mathematical statement/proof blocks unchanged after normalising citep to cite; all labels retained.",
   "jmlr_format_bridge": "Generated from the canonical manuscript; all 94 labels and 47 formal statement/proof blocks preserved, normalizing citation commands only.",
   "previous_manuscript_sha256": "451c08fbcd85613a059bb5d0a8846d679c3bef39313340b9ceb22e6d960af870",
   "previous_jmlr_source_sha256": "beda87cedf93a23f694334bc98c1983619dbd6e46201b54ff2e1085672e3a449",
-  "revision_review": "2026-10-11: Moved the interactive-edition and Lean-source URLs into two bibliographic entries; cited both at the end of the abstract and individually in Section 10. All 47 formal blocks, 94 labels and Lean sources unchanged. No DOI has yet been assigned.",
+  "revision_review": "2026-10-11: Added the issued DOI 10.5281/zenodo.23289503 to the archived Lean/interactive-edition bibliography entry. All 47 formal blocks, 94 labels and Lean sources unchanged. The current manuscript adds the DOI after the immutable v1.0.0 archive was created.",
   "revision_history": [
     {
       "manuscript_sha256": "76c745c68f0fee84a6e27520d6eab0ca9a788a08f3bed09a03185f8780ab5feb",
@@ -1702,6 +1702,11 @@
     {
       "manuscript_sha256": "d5255a3216f67d99289bfdce1c043fb3ca1c13bec92b5f7848b73db603c1917a",
       "jmlr_source_sha256": "20904a018bbbcda870b5349db8565697b4cd429ae6d0a3573d2d10caf1832897",
+      "revision_review": "2026-10-11: Moved the interactive-edition and Lean-source URLs into two bibliographic entries; cited both at the end of the abstract and individually in Section 10. All 47 formal blocks, 94 labels and Lean sources unchanged. No DOI has yet been assigned."
+    },
+    {
+      "manuscript_sha256": "1e960385bd466e9ecf174d4800ca29e4b391bafb071b627ca9e81b026bfb6551",
+      "jmlr_source_sha256": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce",
       "revision_review": "2026-10-11: Moved the interactive-edition and Lean-source URLs into two bibliographic entries; cited both at the end of the abstract and individually in Section 10. All 47 formal blocks, 94 labels and Lean sources unchanged. No DOI has yet been assigned."
     }
   ]

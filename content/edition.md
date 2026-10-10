@@ -84,3 +84,7 @@ operation without JavaScript and small screens. The results are in `validation/`
 KaTeX 0.16.11 and its fonts are bundled under the MIT licence, included as
 `assets/katex/LICENSE`. Mathlib is an Apache-2.0-licensed, pinned build dependency;
 its source and compiled libraries are downloaded separately when rebuilding the proofs.
+
+## Archived release
+
+The paper and complete Lean development are preserved in [release v1.0.0 on Zenodo](https://doi.org/10.5281/zenodo.23289503). This DOI identifies the released snapshot. The current paper and interactive edition add the DOI citation after it was issued; their mathematical content and Lean sources are unchanged from that archive.

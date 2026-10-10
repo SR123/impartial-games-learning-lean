@@ -1,0 +1,10 @@
+{
+  "doi": "10.5281/zenodo.23289503",
+  "conceptdoi": "10.5281/zenodo.23289502",
+  "release": "v1.0.0",
+  "commit": "a1d133688cf60eada20919e53c16da38ca6c6d74",
+  "checksum": "md5:7b4a2eed7687024937db6f50e3adda9b",
+  "checksum_verified": true,
+  "lean_modules_byte_identical": 38,
+  "archived_pdf_copies_identical": true
+}

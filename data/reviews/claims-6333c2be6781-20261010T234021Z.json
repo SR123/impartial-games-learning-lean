@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T23:40:12Z",
+ "context": {
+  "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
+  "locked_manuscript_sha256": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce",
+   "new": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Only the Lean/archive bibliography entry changed: issued Zenodo DOI, release version and expanded resource title. All mathematical statements, proof blocks and labels remain unchanged; no Lean edits."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}
