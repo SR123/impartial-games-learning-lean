@@ -7,17 +7,17 @@ build_label: "10 October 2026"
 inputs:
   jmlr_tex:
     path: input/jmlr_source/paper_jmlr.tex
-    sha256: 60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333
+    sha256: 1c4983fe3fb0a6c3585cc312c9e8abbec32319e16738241b77bf4cb5d9cde1d8
   canonical_tex:
     path: input/canonical_paper.tex
-    sha256: 8a0b7988139c177c5af5d7a8c7682a7936823dfd9010fa559a993610814c4f35
+    sha256: cc0e349113a1afec7e67a12f1d2f30ed150c88fba2a6d173cdec9d67771604c4
     note: >-
       Convenience snapshot of ../../02_working_copy/candidate/paper_revised_final.tex (the
       authoritative manuscript, outside this folder); its hash is recorded in the current source manifest and reviewed correspondence map.
       Earlier audit snapshots retain their original hashes.
   pdf:
     path: input/paper_jmlr.pdf
-    sha256: f18f5c9bccec2e2f11d58d77dfa5bc943c470b788884733fa1880f8f6783ce72
+    sha256: 53634d3a2a6b0dc83050309285cc3c2f94bd77f062adef915fd86b176f6de55c
   correspondence: data/paper_proof_correspondence.json
   declaration_index: data/declaration_index.json
   lean_export: data/lean_export.json

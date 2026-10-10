@@ -1,0 +1,40 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T22:59:31Z",
+ "context": {
+  "manuscript_sha256": "1c4983fe3fb0a6c3585cc312c9e8abbec32319e16738241b77bf4cb5d9cde1d8",
+  "locked_manuscript_sha256": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333",
+   "new": "1c4983fe3fb0a6c3585cc312c9e8abbec32319e16738241b77bf4cb5d9cde1d8",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Inspected the abstract-only editorial change and its updated explanation: final sentence links directly to the interactive proofs and Lean source. Both links verified in PDF page 1. All 47 mathematical blocks unchanged; no Lean-source changes."
+  },
+  {
+   "id": "c-abstract",
+   "change": "statement source changed",
+   "old": "db5dd8fb9b9f0be03f0aa11841ec9268fdd78d11dacbf4f42ab902754e0b6063",
+   "new": "91d865c881fb162fec6b15bc3f391d6a6ed3996b09f39c5d60d901ade7d2c585",
+   "block": "abstract",
+   "lines": [
+    64,
+    68
+   ],
+   "content": [
+    "explain/c-abstract",
+    "formal/c-abstract"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "\\begin{abstract} Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\\AC^0$ does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. An \\href{https://sr123.github.io/impartial-games-learning-lean/}{interactive edition with linked proofs} and the \\href{https://github.com/SR123/impartial-games-learning-lean/tree/main/lean}{complete Lean formalisation} are available online. \\end{abstract}",
+   "reviewed": true,
+   "note": "Inspected the abstract-only editorial change and its updated explanation: final sentence links directly to the interactive proofs and Lean source. Both links verified in PDF page 1. All 47 mathematical blocks unchanged; no Lean-source changes."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

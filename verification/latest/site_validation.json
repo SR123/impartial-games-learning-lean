@@ -1,5 +1,5 @@
 {
- "date_utc": "2026-10-10T22:47:41Z",
+ "date_utc": "2026-10-10T23:01:22Z",
  "all_passed": true,
  "passed": 29,
  "total": 29,
@@ -100,7 +100,7 @@
   {
    "check": "article text equals the independent source-derived text (normalised words)",
    "ok": true,
-   "detail": "17846 HTML words, 17846 source words, similarity 1.00000, 0 unexplained differences",
+   "detail": "17847 HTML words, 17847 source words, similarity 1.00000, 0 unexplained differences",
    "data": []
   },
   {
@@ -127,7 +127,7 @@
   {
    "check": "every internal link and asset resolves (files and fragment ids)",
    "ok": true,
-   "detail": "50842 references in 208 pages; 0 broken; 13 external links (not fetched)",
+   "detail": "50846 references in 208 pages; 0 broken; 14 external links (not fetched)",
    "data": {
     "broken": [],
     "external": [
@@ -142,6 +142,7 @@
      "https://fomarchive.ugent.be/2017-October/020648.html",
      "https://fomarchive.ugent.be/2017-September/020612.html",
      "https://fomarchive.ugent.be/2017-September/020619.html",
+     "https://github.com/SR123/impartial-games-learning-lean/tree/main/lean",
      "https://library.slmath.org/books/Book71/files/GONC6-04.pdf",
      "https://sr123.github.io/impartial-games-learning-lean/"
     ]

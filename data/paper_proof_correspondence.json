@@ -1,5 +1,5 @@
 {
-  "manuscript_sha256": "8a0b7988139c177c5af5d7a8c7682a7936823dfd9010fa559a993610814c4f35",
+  "manuscript_sha256": "cc0e349113a1afec7e67a12f1d2f30ed150c88fba2a6d173cdec9d67771604c4",
   "date": "2026-10-10",
   "description": "Audited statement correspondence; exact source references, not generated live website links. Includes auxiliary formal definitions and empirical/external boundaries.",
   "rows": [
@@ -1657,12 +1657,12 @@
       "hypotheses_and_boundary": "Numerical baseline theorem does not certify checkpoints or the causal mechanism of the 0.54 plateau. Saved-data diagnostics remain empirical."
     }
   ],
-  "jmlr_source_sha256": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333",
+  "jmlr_source_sha256": "1c4983fe3fb0a6c3585cc312c9e8abbec32319e16738241b77bf4cb5d9cde1d8",
   "jmlr_note": "Formatting-derived copy. All mathematical statement/proof blocks unchanged after normalising citep to cite; all labels retained.",
   "jmlr_format_bridge": "Generated from the canonical manuscript; all 94 labels and 47 formal statement/proof blocks preserved, normalizing citation commands only.",
   "previous_manuscript_sha256": "451c08fbcd85613a059bb5d0a8846d679c3bef39313340b9ceb22e6d960af870",
   "previous_jmlr_source_sha256": "beda87cedf93a23f694334bc98c1983619dbd6e46201b54ff2e1085672e3a449",
-  "revision_review": "2026-10-10: Added the GitHub Pages hyperlink to the existing phrase interactive edition in Section 10. No prose or mathematics changed; all 47 formal blocks and 94 labels retained. Lean sources unchanged.",
+  "revision_review": "2026-10-10: Abstract now links directly to the interactive edition with linked proofs and the complete Lean formalisation. Related abstract explanation updated. All 47 formal blocks and 94 labels unchanged. Lean sources unchanged.",
   "revision_history": [
     {
       "manuscript_sha256": "76c745c68f0fee84a6e27520d6eab0ca9a788a08f3bed09a03185f8780ab5feb",
@@ -1683,6 +1683,11 @@
       "manuscript_sha256": "449ea948936f911f3d5c647922ca0c11dc56833dde100942990eea13cdbb6723",
       "jmlr_source_sha256": "6bfc4748195c77de365b3de99bffc5be426a67122324ebdcd730818b062f659d",
       "revision_review": "2026-10-10: Editorial cleanup removes author-review and missing-link placeholders, updates the interactive-edition description to present tense and removes the unconfirmed competing-interest prompt (without asserting an answer). All 47 mathematical statement/proof blocks and 94 labels unchanged. Explanations updated for the revised abstract. Lean sources unchanged."
+    },
+    {
+      "manuscript_sha256": "8a0b7988139c177c5af5d7a8c7682a7936823dfd9010fa559a993610814c4f35",
+      "jmlr_source_sha256": "60e99153fd1ff77e4d9ac934f65d3dd982550739734b9a5b4a4ba340ef37d333",
+      "revision_review": "2026-10-10: Added the GitHub Pages hyperlink to the existing phrase interactive edition in Section 10. No prose or mathematics changed; all 47 formal blocks and 94 labels retained. Lean sources unchanged."
     }
   ]
 }

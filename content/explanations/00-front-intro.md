@@ -18,7 +18,7 @@ inside the paper, and several of them carry conditions that the abstract can onl
 - the experiments are single saved supervised and imitation runs ([[sec:supervised-restoration]],
   [[sec:exp-fsm-shootout]]).
 
-The final sentences say what is *not* claimed: the constructions are representational possibilities, not
+The learnability qualification says what is *not* claimed: the constructions are representational possibilities, not
 guarantees that training will find them, and AC⁰ membership is not a test of learnability.
 
 <!-- formal: c-abstract -->
@@ -28,7 +28,7 @@ Lean with classical complexity results as explicit external inputs, is reflected
 [coverage page](coverage.html): conditional results name their classical input, `HastadNegl`, and empirical
 results are marked as such.
 
-The interactive edition reproduces the manuscript text and supplies the linked explanations and formal statements.
+The abstract links directly to the interactive edition with its explanations and formal statements, and to the complete Lean source repository.
 
 <!-- explain: c-intro-zhou -->
 This paragraph places the paper in the author's earlier work. Zhou and Riis trained AlphaZero-style agents on
