@@ -1,9 +1,9 @@
 {
   "canonical_source": "/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10-09/02_working_copy/candidate/paper_revised_final.tex",
-  "canonical_sha256": "cc0e349113a1afec7e67a12f1d2f30ed150c88fba2a6d173cdec9d67771604c4",
-  "jmlr_sha256": "1c4983fe3fb0a6c3585cc312c9e8abbec32319e16738241b77bf4cb5d9cde1d8",
+  "canonical_sha256": "f4c2df940c19a8aaf36d4aab78124318108f8649ff31280d9a564e844afa7367",
+  "jmlr_sha256": "c71cc2cfef99112bfb4280ff6b32efe198d1dffc07bf446a4f5d88b58528679c",
   "style_sha256": "a430a875d561235951800e4e21d2631e18ddf0b369646ec276f43ea5080f27c3",
   "style_url": "https://raw.githubusercontent.com/JmlrOrg/jmlr-style-file/master/jmlr2e.sty",
   "changes": "Formatting adapter only: title, address, style, running heads, citation labels/order, reference placement, figure/table typography; author funding declaration included.",
-  "pdf_sha256": "53634d3a2a6b0dc83050309285cc3c2f94bd77f062adef915fd86b176f6de55c"
+  "pdf_sha256": "ea0ab19362e72b5c4c28750ccd11110be95eaacf700f8c0913ef49c6c1cd73db"
 }

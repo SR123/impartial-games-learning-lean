@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  10 OCT 2026 23:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 OCT 2026 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -835,8 +835,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
 [1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -877,11 +879,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 [15]
 
 [16]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 
 [17]
 
@@ -900,13 +897,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 [24]
 
 [25]
-<./figures/figValAccH20k4.pdf, id=640, 411.939pt x 195.129pt>
+<./figures/figValAccH20k4.pdf, id=637, 411.939pt x 195.129pt>
 File: ./figures/figValAccH20k4.pdf Graphic file (type pdf)
 <use ./figures/figValAccH20k4.pdf>
 Package pdftex.def Info: ./figures/figValAccH20k4.pdf  used on input line 1109.
 
 (pdftex.def)             Requested size: 411.93767pt x 195.12851pt.
-<./figures/figTestAccCkptsH20k4.pdf, id=641, 411.939pt x 195.129pt>
+<./figures/figTestAccCkptsH20k4.pdf, id=638, 411.939pt x 195.129pt>
 File: ./figures/figTestAccCkptsH20k4.pdf Graphic file (type pdf)
 <use ./figures/figTestAccCkptsH20k4.pdf>
 Package pdftex.def Info: ./figures/figTestAccCkptsH20k4.pdf  used on input line
@@ -971,11 +968,11 @@ Package rerunfilecheck Info: File `paper_jmlr.out' has not changed.
 (rerunfilecheck)             Checksum: F451C0D296478A0DEDA8A0745A3F3322;14984.
  ) 
 Here is how much of TeX's memory you used:
- 25948 strings out of 474662
- 484111 string characters out of 5751110
- 889047 words of memory out of 5000000
+ 25952 strings out of 474662
+ 484143 string characters out of 5751110
+ 890035 words of memory out of 5000000
  48027 multiletter control sequences out of 15000+600000
- 590675 words of font info for 286 fonts, out of 8000000 for 9000
+ 590777 words of font info for 288 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  90i,13n,93p,1007b,888s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/sorenriis/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknapp
@@ -1010,11 +1007,11 @@ pe1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025basic/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Ast
-ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (46 pages, 608958 byte
+ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (46 pages, 609198 byte
 s).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
- 876 compressed objects within 9 object streams
+ 990 PDF objects out of 1000 (max. 8388607)
+ 872 compressed objects within 9 object streams
  202 named destinations out of 1000 (max. 500000)
  72207 words of extra memory for PDF output out of 74296 (max. 10000000)
 

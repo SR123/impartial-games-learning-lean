@@ -225,7 +225,7 @@ def source_text_words(texfile):
     s = re.sub(r"\\\[.*?\\\]", " ", s, flags=re.S)
     s = re.sub(r"(?<!\\)\$.*?(?<!\\)\$", " ", s, flags=re.S)
     s = re.sub(r"\\href\{[^}]*\}\{([^}]*)\}", r" \1 ", s)
-    s = re.sub(r"\\url\{([^}]*)\}", r" \1 ", s)
+    s = re.sub(r"\\(?:url|nolinkurl)\{([^}]*)\}", r" \1 ", s)
     s = re.sub(r"\\(ref|citep|label|includegraphics|bibitem)(\[[^\]]*\])?\{[^}]*\}", " ", s)
     s = re.sub(r"\\begin\{(tabular|tabularx)\}(\{[^}]*\})?\{([^{}]|\{[^{}]*\}|\{[^{}]*\{[^{}]*\}[^{}]*\})*\}", " ", s)
     s = re.sub(r"\\begin\{(itemize|enumerate|figure|table|thebibliography|minipage)\}(\[[^\]]*\])?(\{[^}]*\})?", " ", s)

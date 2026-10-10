@@ -25,7 +25,7 @@
   {
    "check": "reference compile matches source and PDF",
    "status": "PASS",
-   "detail": "94 labels; the log reports this PDF's 46 pages and 608958 bytes",
+   "detail": "94 labels; the log reports this PDF's 46 pages and 609198 bytes",
    "data": []
   },
   {

@@ -28,7 +28,7 @@ Lean with classical complexity results as explicit external inputs, is reflected
 [coverage page](coverage.html): conditional results name their classical input, `HastadNegl`, and empirical
 results are marked as such.
 
-The abstract links directly to the interactive edition with its explanations and formal statements, and to the complete Lean source repository.
+The abstract prints the addresses of the interactive edition and the complete Lean source repository. These addresses are plain text in both the PDF and the interactive article.
 
 <!-- explain: c-intro-zhou -->
 This paragraph places the paper in the author's earlier work. Zhou and Riis trained AlphaZero-style agents on

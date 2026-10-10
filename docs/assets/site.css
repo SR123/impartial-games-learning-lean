@@ -463,3 +463,6 @@ li.nv-lane dl { margin: 0; } li.nv-lane dt { font-size: .7rem; color: var(--mute
   figure, .stmt, .equation, table { break-inside: avoid; }
   .sec-h { break-after: avoid; }
 }
+
+/* Literal manuscript addresses remain readable in print and are not links. */
+.printed-url { font-family: monospace; overflow-wrap: anywhere; }

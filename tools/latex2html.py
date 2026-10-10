@@ -101,7 +101,7 @@ CMD = {
     "emph": (False, ["n"]), "textbf": (False, ["n"]), "textit": (False, ["n"]),
     "texttt": (False, ["n"]), "textsc": (False, ["n"]), "textup": (False, ["n"]),
     "textnormal": (False, ["n"]), "texorpdfstring": (False, ["n", "r"]),
-    "url": (False, ["r"]), "href": (False, ["r", "n"]), "ref": (False, ["r"]), "citep": (True, ["r"]),
+    "url": (False, ["r"]), "nolinkurl": (False, ["r"]), "href": (False, ["r", "n"]), "ref": (False, ["r"]), "citep": (True, ["r"]),
     "label": (False, ["r"]),
     # sectioning
     "section": (True, ["n"]), "subsection": (True, ["n"]), "subsubsection": (True, ["n"]),
@@ -622,6 +622,8 @@ class Renderer:
         if n == "href":
             h, labels = self.inline(nd.args[1], ctx)
             return f'<a href="{html.escape(nd.args[0], quote=True)}">{h}</a>', labels
+        if n == "nolinkurl":
+            return f'<span class="printed-url">{html.escape(nd.args[0])}</span>', []
         if n == "url":
             u = nd.args[0]
             return f'<a class="url" href="{html.escape(u)}">{html.escape(u)}</a>', []
