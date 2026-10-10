@@ -1,0 +1,28 @@
+{
+  "title": "Overcoming a Learning Bottleneck in Impartial Games: A Circuit Complexity Approach — interactive paper and Lean formalisation",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Riis, Søren",
+      "affiliation": "Queen Mary University of London"
+    }
+  ],
+  "description": "<p>Interactive edition of the paper by Søren Riis, together with its PDF and LaTeX source, complete local Lean 4.26.0 development, pinned dependencies, build instructions and verification evidence.</p><p>The development comprises 38 Lean modules, 1,588 theorem and lemma declarations and 24,493 source lines. It connects the restricted network model, parity reduction, conditional probability claims and three constructions to explicit circuits and game strategies. Classical complexity results remain external inputs; experimental measurements and training runs are not Lean theorems. The live edition distinguishes these boundaries and connects paper statements to their formal definitions, hypotheses and proofs.</p><p>Apache-2.0 applies to the project software. The manuscript, explanatory prose, personal history and third-party material retain their respective licensing status as described in NOTICE.md.</p>",
+  "version": "1.0.0",
+  "publication_date": "2026-10-11",
+  "keywords": [
+    "impartial games",
+    "Nim",
+    "circuit complexity",
+    "Lean 4",
+    "formal verification",
+    "interactive paper"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://sr123.github.io/impartial-games-learning-lean/",
+      "relation": "isDocumentedBy"
+    }
+  ],
+  "license": "Apache-2.0"
+}

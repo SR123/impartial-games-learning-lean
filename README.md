@@ -88,6 +88,6 @@ After any manuscript edit, regenerate the PDF and interactive edition together. 
 | `evidence_inputs/` | Historical build/audit evidence used by the edition |
 | `verification/` | Latest release checks and fresh Lean rebuild evidence |
 
-KaTeX's MIT licence is retained in `docs/assets/katex/LICENSE`. Mathlib is an external Apache-2.0 dependency. The JMLR style retains its original notices. No project-wide reuse licence for the original material is assigned by this upload.
+KaTeX's MIT licence is retained in `docs/assets/katex/LICENSE`. Mathlib is an external Apache-2.0 dependency. The JMLR style retains its original notices. The project-specific Lean and website code and tools are licensed under Apache-2.0. The manuscript, explanatory prose and personal history are excluded from that software licence; see [NOTICE.md](NOTICE.md).
 
 Citation metadata is supplied in `CITATION.cff`. Contact: [s.riis@qmul.ac.uk](mailto:s.riis@qmul.ac.uk).

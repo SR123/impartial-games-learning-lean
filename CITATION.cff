@@ -15,3 +15,6 @@ keywords:
   - formal verification
 repository-code: "https://github.com/SR123/impartial-games-learning-lean"
 url: "https://sr123.github.io/impartial-games-learning-lean/"
+version: "1.0.0"
+date-released: "2026-10-11"
+license: Apache-2.0
