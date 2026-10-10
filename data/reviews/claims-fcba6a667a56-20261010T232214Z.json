@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T23:22:06Z",
+ "context": {
+  "manuscript_sha256": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce",
+  "locked_manuscript_sha256": "20904a018bbbcda870b5349db8565697b4cd429ae6d0a3573d2d10caf1832897"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "20904a018bbbcda870b5349db8565697b4cd429ae6d0a3573d2d10caf1832897",
+   "new": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Added year suffixes 2026a and 2026b to the two bibliography entries so they visibly match their citation labels. No statement or explanation changed."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

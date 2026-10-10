@@ -33,6 +33,7 @@ Impartial games; NIM; circuit complexity; quantised inference; learning bottlene
 s=s.replace(r'\cite{',r'\citep{')
 # Preserve all entries, add natbib metadata and alphabetise; references follow appendices.
 labels={
+'riis2026interactive':'Riis(2026a)', 'riis2026lean':'Riis(2026b)',
 'friedman2017challenge':'Friedman(2017a)', 'friedman2017deeplearning':'Friedman(2017b)',
 'cizek2026sprouts':r'\v{C}{\'i}\v{z}ek et~al.(2026)\v{C}{\'i}\v{z}ek, Balko, and Schmid',
 'nowakowski2025unsolved':'Nowakowski(2025)',

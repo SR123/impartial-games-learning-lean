@@ -2,22 +2,22 @@
 # The build refuses to run if any pinned input hash differs.
 
 status_line: "Interactive edition · paper, explanations and Lean proofs."
-build_label: "10 October 2026"
+build_label: "11 October 2026"
 
 inputs:
   jmlr_tex:
     path: input/jmlr_source/paper_jmlr.tex
-    sha256: c71cc2cfef99112bfb4280ff6b32efe198d1dffc07bf446a4f5d88b58528679c
+    sha256: fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce
   canonical_tex:
     path: input/canonical_paper.tex
-    sha256: f4c2df940c19a8aaf36d4aab78124318108f8649ff31280d9a564e844afa7367
+    sha256: 1e960385bd466e9ecf174d4800ca29e4b391bafb071b627ca9e81b026bfb6551
     note: >-
       Convenience snapshot of ../../02_working_copy/candidate/paper_revised_final.tex (the
       authoritative manuscript, outside this folder); its hash is recorded in the current source manifest and reviewed correspondence map.
       Earlier audit snapshots retain their original hashes.
   pdf:
     path: input/paper_jmlr.pdf
-    sha256: ea0ab19362e72b5c4c28750ccd11110be95eaacf700f8c0913ef49c6c1cd73db
+    sha256: 943eeb6e10515c859172632bc519dd3e0d955292b6c3b74b718926152a935d9c
   correspondence: data/paper_proof_correspondence.json
   declaration_index: data/declaration_index.json
   lean_export: data/lean_export.json

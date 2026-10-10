@@ -64,7 +64,7 @@ Mile End Road, London E1 4NS, United Kingdom}
 \begin{abstract}
 Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model.
 The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\AC^0$ does not characterise practical learnability.
-Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. Interactive paper and proofs: \nolinkurl{https://sr123.github.io/impartial-games-learning-lean/}. Lean formalisation: \nolinkurl{https://github.com/SR123/impartial-games-learning-lean/tree/main/lean}.
+Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. The interactive edition and complete Lean sources are available online \citep{riis2026interactive,riis2026lean}.
 \end{abstract}
 
 \begin{keywords}
@@ -1283,13 +1283,13 @@ The contribution is a separation of the information and computation needed for a
 \label{sec:verification}
 The earlier version of this paper was developed solely by the author, with editorial feedback from AI assistants. The present version was developed interactively with the AI assistants Astra and Claude. Extensive feedback from the Lean formalisation and its audits helped to improve the presentation, clarify definitions and hypotheses, and make the scope of the claims more precise. The author takes sole responsibility for the paper, including its arguments, interpretation and use of AI assistance.
 
-The accompanying Lean development connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves.
+The accompanying Lean development \citep{riis2026lean} connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves.
 
 The boundary of this verification is explicit. Classical complexity results, notably H{\aa}stad's parity hardness and correlation bounds and the Linial--Mansour--Nisan/Tal spectral bounds, remain external inputs \citep{hastad1986thesis,hastad2014correlation,linial1993constant,tal2015tight}. The single-channel result is checked conditional on a stated negligible parity-correlation theorem, including its application to the readout and its probability calculation. The spectral discussion uses a separate Fourier-tail premise; its connection to the exact conventions of a published tail theorem is not part of the checked development. The conditional implication from a tail bound to small parity correlation is checked. Empirical measurements and training runs are supported by experimental code and saved results, rather than by Lean proofs.
 
 The author's review of the formalisation focused on the interface between the paper and Lean: whether the formal definitions, hypotheses and conclusions express the intended mathematical claims. The author did not manually inspect every theorem or lemma declaration or every line of Lean source. Mechanical checking verifies the formal proofs relative to their definitions and stated hypotheses; it does not independently certify the correspondence with the prose, the suitability of the modelling assumptions, or the experimental results.
 
-The accompanying interactive edition reproduces the paper text and links individual statements to their definitions, hypotheses and proofs, with optional explanations alongside them. The paper's arguments remain self-contained at the level of its stated classical inputs; the interactive material supplies further detail rather than replacing a proof needed to understand a claim. Stable statement labels and a versioned correspondence record identify the formal results and any external assumptions. The edition includes the complete local Lean sources, pinned dependency information and reproducible build instructions.
+The accompanying interactive edition \citep{riis2026interactive} reproduces the paper text and links individual statements to their definitions, hypotheses and proofs, with optional explanations alongside them. The paper's arguments remain self-contained at the level of its stated classical inputs; the interactive material supplies further detail rather than replacing a proof needed to understand a claim. Stable statement labels and a versioned correspondence record identify the formal results and any external assumptions. The edition includes the complete local Lean sources, pinned dependency information and reproducible build instructions.
 
 Neither the mathematical verification nor the experiments establish that gradient descent or self-play will discover the constructions in general.
 
@@ -1832,6 +1832,18 @@ Nasim Rahaman, Aristide Baratin, Devansh Arpit, et~al.
 Alexander~A. Razborov.
 \newblock Lower bounds on the size of bounded depth circuits over a complete basis with logical addition.
 \newblock \emph{Mat. Zametki}, 41(4):598--607, 1987.
+
+\bibitem[Riis(2026a)]{riis2026interactive}
+S{\o}ren Riis.
+\newblock Overcoming a learning bottleneck in impartial games: Interactive edition.
+\newblock 2026a.
+\newblock \nolinkurl{https://sr123.github.io/impartial-games-learning-lean/}.
+
+\bibitem[Riis(2026b)]{riis2026lean}
+S{\o}ren Riis.
+\newblock Overcoming a learning bottleneck in impartial games: Lean formalisation.
+\newblock 2026b.
+\newblock \nolinkurl{https://github.com/SR123/impartial-games-learning-lean/tree/main/lean}.
 
 \bibitem[Schaefer(1978)]{schaefer1978games}
 Thomas~J. Schaefer.

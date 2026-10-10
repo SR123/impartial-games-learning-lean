@@ -42,8 +42,8 @@
     64,
     68
    ],
-   "source_sha256": "a58f5ad5f390dfb4d27b789cdfb548cecd557e4fc97eaa3d49fdba309205501e",
-   "source_text": "\\begin{abstract} Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\\AC^0$ does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. Interactive paper and proofs: \\nolinkurl{https://sr123.github.io/impartial-games-learning-lean/}. Lean formalisation: \\nolinkurl{https://github.com/SR123/impartial-games-learning-lean/tree/main/lean}. \\end{abstract}"
+   "source_sha256": "fc9bca0c3cea0bc0d18ea138352d5801ad2da2744961e8b8b34ae380801044ec",
+   "source_text": "\\begin{abstract} Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\\AC^0$ does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. The interactive edition and complete Lean sources are available online \\citep{riis2026interactive,riis2026lean}. \\end{abstract}"
   },
   "c-arbitrary-starts": {
    "block": "sec:search-gap-p3",
@@ -915,8 +915,8 @@
     1286,
     1286
    ],
-   "source_sha256": "36e1495090c90b70b5ffc5b84d2cd4e5e9d9abf08c1f347e8dd205b7b4ec0394",
-   "source_text": "The accompanying Lean development connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves."
+   "source_sha256": "6c61a275b1dc1c78803be9607f597a3d3edd85bde095ae7078d25b8942a72f04",
+   "source_text": "The accompanying Lean development \\citep{riis2026lean} connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves."
   },
   "c-weak-mastery-histories": {
    "block": "sec-mastery-notions-p2",
@@ -1450,5 +1450,5 @@
    "source_text": "\\begin{remark}[Scope of the simulation] Theorem~\\ref{thm:sim-ac0} applies because $L,T,W,D$ are constants and each unit’s parameters come from a finite set independent of $n$. Appendix~\\ref{app:ac0proof} gives an explicit circuit construction. \\end{remark}"
   }
  },
- "manuscript_sha256": "c71cc2cfef99112bfb4280ff6b32efe198d1dffc07bf446a4f5d88b58528679c"
+ "manuscript_sha256": "fcba6a667a567097c54e967a37d47cca6adb30f85f28c7e1d64f8aac5ef75cce"
 }

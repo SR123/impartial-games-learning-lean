@@ -1,3 +1,3 @@
-Reference labels and log from the complete JMLR project build after expanding Appendix C with construction diagrams, 2026-10-10.
-Built with latexmk/pdfTeX: 46 pages, 94 labels. This build supplies input/paper_jmlr.pdf.
-Earlier sources and PDF are preserved in 11_construction_appendix_2026-10-10/before.
+Reference labels and log from the complete JMLR project build, 11 October 2026.
+Built with latexmk/pdfTeX 1.40.27: 47 pages and 94 labels. This is the build used for input/paper_jmlr.pdf.
+The interactive-edition and Lean-source addresses are printed in the bibliography, with citations in the abstract and Section 10.

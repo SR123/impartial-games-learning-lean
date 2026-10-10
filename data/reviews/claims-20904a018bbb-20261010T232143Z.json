@@ -1,0 +1,60 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-10T23:21:21Z",
+ "context": {
+  "manuscript_sha256": "20904a018bbbcda870b5349db8565697b4cd429ae6d0a3573d2d10caf1832897",
+  "locked_manuscript_sha256": "c71cc2cfef99112bfb4280ff6b32efe198d1dffc07bf446a4f5d88b58528679c"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "c71cc2cfef99112bfb4280ff6b32efe198d1dffc07bf446a4f5d88b58528679c",
+   "new": "20904a018bbbcda870b5349db8565697b4cd429ae6d0a3573d2d10caf1832897",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Reviewed editorial relocation of the two URLs to bibliography entries and citations in abstract/Section 10; 47 formal blocks and 94 labels unchanged; no Lean edits."
+  },
+  {
+   "id": "c-abstract",
+   "change": "statement source changed",
+   "old": "a58f5ad5f390dfb4d27b789cdfb548cecd557e4fc97eaa3d49fdba309205501e",
+   "new": "fc9bca0c3cea0bc0d18ea138352d5801ad2da2744961e8b8b34ae380801044ec",
+   "block": "abstract",
+   "lines": [
+    64,
+    68
+   ],
+   "content": [
+    "explain/c-abstract",
+    "formal/c-abstract"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "\\begin{abstract} Why can neural networks struggle to learn optimal play in a game with a simple, efficient solution algorithm? Motivated by empirical difficulties with parity in impartial games, we use NIM to study a representational bottleneck and three ways around it. We show that a restricted model of shallow, fixed-scale quantised networks lies in $\\AC^0$, a circuit class unable to compute parity on arbitrarily large inputs. This prevents optimal single-position play across all board sizes within the model. The obstruction also guides architectural design: two-frame inputs allow restoration from a known zero-nim-sum position; complementary rollout policies reveal the missing invariant; and persistent recurrence accumulates it row by row. Each route retains shallow network components while supplying additional information or processing time. Supervised experiments illustrate the benefits of two-frame restoration and multiple rollout heads; recurrence is a theoretical construction. These results establish representational possibilities, not guarantees of successful training: $\\AC^0$ does not characterise practical learnability. Core mathematical results and constructions have been checked in Lean, with classical complexity results as explicit external inputs. The interactive edition and complete Lean sources are available online \\citep{riis2026interactive,riis2026lean}. \\end{abstract}",
+   "reviewed": true,
+   "note": "Replaced the two printed URLs by citations to their bibliography entries; mathematical and verification qualifications unchanged. Updated explanation to describe citations and printed reference addresses."
+  },
+  {
+   "id": "c-verification-extent",
+   "change": "statement source changed",
+   "old": "36e1495090c90b70b5ffc5b84d2cd4e5e9d9abf08c1f347e8dd205b7b4ec0394",
+   "new": "6c61a275b1dc1c78803be9607f597a3d3edd85bde095ae7078d25b8942a72f04",
+   "block": "sec:development-p2",
+   "lines": [
+    1286,
+    1286
+   ],
+   "content": [
+    "explain/c-verification-extent",
+    "formal/c-verification-extent"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "The accompanying Lean development \\citep{riis2026lean} connects the mathematical results to explicit Boolean circuits, fixed-scale networks and complete game strategies. It checks the parity reduction, the finite probability bound and its attainability, move selection with binary outputs, the rollout executors and both shootout schedules, and the recurrent protocols with replay or board storage. The general weak-mastery definition, Fourier expansion and the real-parameter noise calculation are also formalised. An independent rebuild checks 1,588 theorem and lemma declarations across 38 local Lean files, comprising 24,493 source lines; these counts include auxiliary results and exclude Lean and Mathlib themselves.",
+   "reviewed": true,
+   "note": "Only added the citation to the complete Lean-source entry; counts, scope and associated explanation unchanged."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}
