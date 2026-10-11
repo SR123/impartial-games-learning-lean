@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-11",
+  "audited_commit": "bf9160af2fa9b582b93e04c1842c04c4d68534b0",
+  "paper": "docs/paper/paper_jmlr.pdf",
+  "paper_sha256": "0439c62af7637329f4b23b31166f1bb36163b9f0ac452c3fcc992067e6c1af7d",
+  "paper_pages": 48,
+  "homepage_routes": [
+    "https://webspace.eecs.qmul.ac.uk/s.riis/#impartial-games-paper",
+    "https://sr123.github.io/qmul-webpage-mirror/#impartial-games-paper"
+  ],
+  "interactive_paper": "https://sr123.github.io/impartial-games-learning-lean/paper.html",
+  "figures": [
+    {"number": 1, "id": "fig:barrier-blueprint", "pdf_page": 3, "asset": "assets/figures/barrier-blueprint.svg", "sha256": "3d5abfa07dc910ab7e439b58ec720be53b39570f693d1b7607768362d473388f", "rendered": true},
+    {"number": 2, "id": "fig:restoration-example", "pdf_page": 12, "asset": "assets/figures/restoration-example.svg", "sha256": "22b5cf79f25a2bdc07c2c4584291bd8214a62444f66024d8e978650db75f3b82", "rendered": true},
+    {"number": 3, "id": "fig:fsm-shootout-controller", "pdf_page": 15, "asset": "assets/figures/fsm-shootout-controller.svg", "sha256": "8893f4bd14b99818ad1d6fd9cad96938ab34acc98f6e8cf3ec342467c28b06d4", "rendered": true},
+    {"number": 4, "id": "fig:rollout_gap", "pdf_page": 17, "representation": "HTML table", "table_rows_including_header": 5, "rendered": true},
+    {"number": 5, "id": "fig:valacc-H20k4", "pdf_page": 27, "asset": "assets/figures/valacc-H20k4.svg", "sha256": "06a1b5b6271ca8a21ed5edf26c6db900ee0f64c04dfe47b6bb1a4af5bcfc62e4", "rendered": true},
+    {"number": 6, "id": "fig:testacc-H20k4", "pdf_page": 28, "asset": "assets/figures/testacc-H20k4.svg", "sha256": "728f307f66ee034ffa2c410ac9f2cf669518edfb8fea83db2b923b2e29008bc0", "rendered": true},
+    {"number": 7, "id": "fig:construction-pipeline", "pdf_page": 39, "asset": "assets/figures/construction-pipeline.svg", "sha256": "00330147883db5230d53eea15fc8fe989efd4c468e41596d335349da31e42b1e", "rendered": true},
+    {"number": 8, "id": "fig:threshold-compilation", "pdf_page": 40, "asset": "assets/figures/threshold-compilation.svg", "sha256": "e59c0c02b171e74ddb1267081dda3353245b4911169cbec4d6f216c6be704af5", "rendered": true}
+  ],
+  "checks": {
+    "pdf_figures_visually_reviewed": 8,
+    "live_figures_rendered_before_change": 8,
+    "live_pdf_and_svg_assets_equal_local_bytes": true,
+    "rebuilt_images_loaded_without_scrolling": 7,
+    "desktop_viewport": [1280, 720],
+    "mobile_viewport": [390, 844],
+    "all_figure_images_fit_mobile_article_width": true,
+    "figure_4_table_visible_on_mobile": true,
+    "extra_illustrations_opened_inline": ["restore", "rollout", "recurrence", "bypasses", "compile"],
+    "existing_static_fidelity_reference_http_checks_passed": 29,
+    "claim_records_checked": 165,
+    "additional_illustration_types_checked": 5,
+    "additional_illustration_sections_checked": 37,
+    "source_formulas_preserved": 1055,
+    "source_labels_preserved": 94
+  },
+  "observations": [
+    "No numbered figure was absent from the original published paper.",
+    "Offscreen lazy-loaded images initially had zero intrinsic width and loaded when brought into view. Brief caption-only views were observed while images loaded.",
+    "Intermittent in-app automation navigation timeouts occurred; subsequent DOM inspection showed the requested page had loaded. This does not establish the cause of the user's reported experience.",
+    "The reference to Figure 3 on PDF page 29 is prose, not a ninth figure."
+  ],
+  "change": "Use eager loading for the seven paper image figures in the converter and regenerated article and figure-record pages.",
+  "preserved": ["PDF bytes", "SVG bytes", "mathematical manuscript sources", "Lean sources", "claim records", "figure captions and anchors", "interactive illustration engines"],
+  "generated_source_reconciliation": "Rebuilding aligned a previously stale generated TikZ label with the already-current manuscript, PDF and SVG wording; the diagram served to readers did not change.",
+  "scope": "Diagram completeness and rendering against the supplied current PDF; this is not a new mathematical proof audit."
+}

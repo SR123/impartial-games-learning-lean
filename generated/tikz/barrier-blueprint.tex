@@ -52,7 +52,7 @@
     \node[block] (input1) {Input $P_t$\\ \textit{(Global)}};
     \node[block, right=of input1] (net1) {Single-Head\\ Network};
     \node[barrier, right=of net1] (out1) {\Large $\times$};
-    \node[right=0.1cm of out1, align=left, font=\footnotesize, text width=2.5cm] {Cannot compute\\ global parity\\ under FSQI/$\AC^0$};
+    \node[right=0.1cm of out1, align=left, font=\footnotesize, text width=2.5cm] {Cannot compute\\ global parity\\ in this model};
 
     \path[line] (input1) -- (net1);
     \path[line] (net1) -- (out1);

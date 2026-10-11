@@ -10,6 +10,8 @@
 
 The interactive edition contains the complete paper, optional explanations, illustrations of the three constructions, and links from mathematical claims to formal statements and Lean source. The author's personal account is on a separate, optional page.
 
+All eight numbered paper figures are included in their corresponding article positions: seven SVG diagrams/charts and Figure 4 as an HTML table. The images load when the paper opens, without waiting for scrolling. The five additional explanatory illustrations remain available through the explanation controls. The [figure audit](verification/figure-parity-2026-10-11.json) records the PDF comparison and browser checks.
+
 ## Verification
 
 The development contains **38 Lean modules, 1,588 theorem/lemma declarations and 24,493 source lines**. A fresh isolated rebuild with Lean 4.26.0 succeeded for every module. Axiom reports use only `propext`, `Classical.choice` and `Quot.sound`. The [latest build record](verification/latest/fresh_build.json), [source scan](verification/latest/source_scan.json) and [module logs](verification/latest/logs/) are included.

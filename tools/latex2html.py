@@ -1240,7 +1240,7 @@ class Renderer:
             asset = f"assets/figures/{name}.svg"
             alt = html.escape(meta["alt"])
             inner.append(f'<img class="fig-img fig-{name}" src="{asset}" alt="{alt}" '
-                         f'width="{meta.get("width", 760)}" loading="lazy">')
+                         f'width="{meta.get("width", 760)}" loading="eager">')
             self.figures.append({"label": labels[0], "number": number, "kind": t,
                                  "source": srcfile, "asset": asset,
                                  "lines": [self.line_of(nd.start), self.line_of(nd.end - 1)]})
