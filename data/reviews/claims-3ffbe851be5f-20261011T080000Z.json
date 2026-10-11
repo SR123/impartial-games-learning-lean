@@ -1,0 +1,20 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-11T07:59:21Z",
+ "context": {
+  "manuscript_sha256": "3ffbe851be5f4f4b07c0daef486571fc191b64938234485f9a42b56c6656988d",
+  "locked_manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "new": "3ffbe851be5f4f4b07c0daef486571fc191b64938234485f9a42b56c6656988d",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Reviewed disclosure-only addition to Section 10 paragraph 5: Claude generation, Astra audit, author cross-checking scope, automated audit count and distinction between navigation and semantic checks. No claim statement, mathematical block, label, explanation or Lean source changed."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

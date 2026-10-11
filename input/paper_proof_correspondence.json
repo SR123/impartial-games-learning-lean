@@ -1,5 +1,5 @@
 {
-  "manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+  "manuscript_sha256": "296d5ac45e258bd1b88d7d9194c4ad50524328cf98d8a93892d2e9c058b2894a",
   "date": "2026-10-10",
   "description": "Audited statement correspondence; exact source references, not generated live website links. Includes auxiliary formal definitions and empirical/external boundaries.",
   "rows": [
@@ -1657,12 +1657,12 @@
       "hypotheses_and_boundary": "Numerical baseline theorem does not certify checkpoints or the causal mechanism of the 0.54 plateau. Saved-data diagnostics remain empirical."
     }
   ],
-  "jmlr_source_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+  "jmlr_source_sha256": "3ffbe851be5f4f4b07c0daef486571fc191b64938234485f9a42b56c6656988d",
   "jmlr_note": "Formatting-derived copy. All mathematical statement/proof blocks unchanged after normalising citep to cite; all labels retained.",
   "jmlr_format_bridge": "Generated from the canonical manuscript; all 94 labels and 47 formal statement/proof blocks preserved, normalizing citation commands only.",
   "previous_manuscript_sha256": "451c08fbcd85613a059bb5d0a8846d679c3bef39313340b9ceb22e6d960af870",
   "previous_jmlr_source_sha256": "beda87cedf93a23f694334bc98c1983619dbd6e46201b54ff2e1085672e3a449",
-  "revision_review": "2026-10-11 reader revision: clarified NIM rules, impartiality and Sprague-Grundy equivalence; normal-play ending encodings are explanatory, not newly Lean checked; clarified history as computational context, effective precision, literal weights, attention and board-size scope, FSQI and TC0; shortened parity proof retaining two-bit encoding/extraction; distinguished constructive layer upper bounds from necessary depth and learning claims. All theorem statements and 94 labels retained; only the equivalent wording of the impartial-game definition and the parity reduction proof changed among 47 formal blocks. Lean sources unchanged.",
+  "revision_review": "2026-10-11 disclosure-only update: Section 10 records Claude generation, detailed Astra audit and extensive author cross-checks of the interactive edition, without claiming individual manual inspection of all 50,970 internal link and asset references. Clarifies that target validation does not establish semantic correspondence. All 47 formal blocks and all 94 labels unchanged; Lean unchanged. Audit: all 408 disclosure controls passed in a browser against the published build served locally; all 212 published HTML pages and site.js matched local bytes; 50,970 internal references resolved.",
   "revision_history": [
     {
       "manuscript_sha256": "76c745c68f0fee84a6e27520d6eab0ca9a788a08f3bed09a03185f8780ab5feb",
@@ -1713,6 +1713,11 @@
       "manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
       "jmlr_source_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
       "revision_review": "2026-10-11: Added the issued DOI 10.5281/zenodo.23289503 to the archived Lean/interactive-edition bibliography entry. All 47 formal blocks, 94 labels and Lean sources unchanged. The current manuscript adds the DOI after the immutable v1.0.0 archive was created."
+    },
+    {
+      "manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+      "jmlr_source_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+      "revision_review": "2026-10-11 reader revision: clarified NIM rules, impartiality and Sprague-Grundy equivalence; normal-play ending encodings are explanatory, not newly Lean checked; clarified history as computational context, effective precision, literal weights, attention and board-size scope, FSQI and TC0; shortened parity proof retaining two-bit encoding/extraction; distinguished constructive layer upper bounds from necessary depth and learning claims. All theorem statements and 94 labels retained; only the equivalent wording of the impartial-game definition and the parity reduction proof changed among 47 formal blocks. Lean sources unchanged."
     }
   ]
 }

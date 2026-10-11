@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 OCT 2026 08:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 OCT 2026 08:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,7 +932,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [32]
 
 [33]
-Underfull \vbox (badness 2865) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -981,7 +981,7 @@ Here is how much of TeX's memory you used:
  48033 multiletter control sequences out of 15000+600000
  590675 words of font info for 286 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 90i,13n,93p,1007b,888s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,93p,1159b,888s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/sorenriis/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknapp
 en/ec/tcrm1095.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/p
@@ -1014,7 +1014,7 @@ pe1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025basic/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Ast
-ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (48 pages, 614226 byte
+ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (48 pages, 614586 byte
 s).
 PDF statistics:
  1011 PDF objects out of 1200 (max. 8388607)

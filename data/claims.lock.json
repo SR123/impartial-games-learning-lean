@@ -1486,5 +1486,5 @@
    "source_text": "\\begin{remark}[Scope of the simulation] Theorem~\\ref{thm:sim-ac0} applies because $L,T,W,D$ are constants and each unit’s parameters come from a finite set independent of $n$. Appendix~\\ref{app:ac0proof} gives an explicit circuit construction. \\end{remark}"
   }
  },
- "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10"
+ "manuscript_sha256": "3ffbe851be5f4f4b07c0daef486571fc191b64938234485f9a42b56c6656988d"
 }
