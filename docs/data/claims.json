@@ -1,8 +1,8 @@
 {
  "generated_from": {
-  "jmlr_tex_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-  "canonical_tex_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
-  "pdf_sha256": "e4e98528c2b962912a8857c3acba073a35cf9cd20adb09e21be75a79e8a201c3"
+  "jmlr_tex_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+  "canonical_tex_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+  "pdf_sha256": "fe9f84a5d549ab2b4015a4d455a1435ae2d15a047979edbae0d95bc0b0cdd123"
  },
  "categories": {
   "checked-theorem": "Checked theorem",
@@ -31,8 +31,8 @@
     68
    ],
    "source_sha256": "fc9bca0c3cea0bc0d18ea138352d5801ad2da2744961e8b8b34ae380801044ec",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-abstract",
     "formal/c-abstract"
@@ -67,7 +67,7 @@
    "anchor": "c-intro-zhou",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 1, paragraph 2",
+   "displayed": "Section 1, paragraph 4",
    "part": null,
    "section": "Section 1",
    "short_claim": "Earlier experiments (Zhou and Riis) found AlphaZero-style learning deteriorating on larger NIM boards",
@@ -75,12 +75,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    86,
-    86
+    89,
+    89
    ],
    "source_sha256": "786121a9079b86bf94b832dc8b16a2c7e592da87928297f59e48afe70047dbfe",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-intro-zhou",
     "formal/c-intro-zhou"
@@ -106,7 +106,7 @@
    "anchor": "c-intro-ac0",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 1, paragraph 3",
+   "displayed": "Section 1, paragraph 5",
    "part": null,
    "section": "Section 1",
    "short_claim": "AC⁰ circuits cannot compute global parity; the connection is made for an explicitly restricted model",
@@ -114,12 +114,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    88,
-    88
+    91,
+    91
    ],
    "source_sha256": "c91a30a19032e1c3be927bffd6491f03b2d982e32b769aea66afe2137a13c778",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-intro-ac0",
     "formal/c-intro-ac0"
@@ -148,7 +148,7 @@
    "anchor": "c-intro-necessary",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 1, paragraph 4",
+   "displayed": "Section 1, paragraph 6",
    "part": null,
    "section": "Section 1",
    "short_claim": "AC⁰ representability is necessary within the restricted model, not sufficient for training and not universal",
@@ -156,12 +156,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    90,
-    90
+    93,
+    93
    ],
    "source_sha256": "65533ae04feda29aa5501a69314e96f2bbc253a50767108365a69b96687cd6eb",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-intro-necessary",
     "formal/c-intro-necessary"
@@ -189,7 +189,7 @@
    "anchor": "c-intro-transition",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 1, paragraph 5",
+   "displayed": "Section 1, paragraph 8",
    "part": null,
    "section": "Section 1",
    "short_claim": "Shallow components versus the complete sequential computation in the three bypasses",
@@ -197,12 +197,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    92,
-    97
+    97,
+    102
    ],
    "source_sha256": "8dcd11f9c9d1749da3cf2abc245db7dec766251629ddbe40eb0ed277965f63aa",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-intro-transition",
     "formal/c-intro-transition"
@@ -240,12 +240,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    99,
-    210
+    104,
+    215
    ],
-   "source_sha256": "8be67364875748f59d92baa4cd28af96b7d73254a3e1f7218d25c3fe84aa1b0e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "06f62014098be66f98621f10ccc27ad918fb2609ffab0ea01f28c3dd820d133d",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:barrier-blueprint",
     "formal/fig:barrier-blueprint"
@@ -284,12 +284,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    217,
-    238
+    222,
+    243
    ],
-   "source_sha256": "0dd4657db4edf4f4743891903c5b9e72cf33b0958ede1413dfc3378796fcf637",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "03adfbffd008a552152402fd9a39868dd9ec81f060bf8915540daa1491475095",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-contributions",
     "formal/c-contributions"
@@ -334,12 +334,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    246,
-    261
+    251,
+    266
    ],
    "source_sha256": "0143b886c8a0923205b32e99e95cac916ec2678d4f3fe78f9c3ec2fb9e164344",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-scope",
     "formal/c-scope"
@@ -369,7 +369,7 @@
    "anchor": "c-qset",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 2.1, paragraph 3",
+   "displayed": "Section 2.1, paragraph 4",
    "part": null,
    "section": "Section 2.1",
    "short_claim": "The fixed grid Q_{W,D}; rewriting a negative term as a literal raises the threshold",
@@ -377,12 +377,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    287,
-    293
+    294,
+    300
    ],
-   "source_sha256": "f3f940a9a022ec9f3f31b707854293a163dc4f1da8781df0c03df910c1319682",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "8a3e62d1a6032e9667c2a8c1f22c4cefd684653c8a12c8054a91320cc217b2d2",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-qset",
     "formal/c-qset"
@@ -497,12 +497,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    297,
-    302
+    304,
+    309
    ],
    "source_sha256": "2f122daa6a7ac5c1d7e9929ec8f67d1eee074e9d0542c309b6d1f71c3297e8ef",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:quantised-inference",
     "formal/def:quantised-inference"
@@ -656,7 +656,7 @@
    "anchor": "c-window-insufficient",
    "anchor_kind": "website",
    "label": null,
-   "displayed": "Section 2.1, paragraph 5",
+   "displayed": "Section 2.1, paragraph 6",
    "part": null,
    "section": "Section 2.1",
    "short_claim": "A one-step recurrence h_{r+1}=h_r⊕x_r accumulates parity over an arbitrarily long stream",
@@ -664,12 +664,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    304,
-    304
+    311,
+    311
    ],
    "source_sha256": "48c9b9aa622c4a84e85f2433396a4caf0ba92d1bbc8336651bf4dc5a53140086",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-window-insufficient",
     "formal/c-window-insufficient"
@@ -776,12 +776,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    306,
-    309
+    313,
+    316
    ],
    "source_sha256": "dd57d703abbd1d21cc924a1b6a2b2d293323fffd37d615f22a6c8c79ebbb58bd",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-witness",
     "formal/c-witness"
@@ -904,12 +904,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    311,
-    312
+    318,
+    319
    ],
-   "source_sha256": "13eb347596d58fb301c6557fa8fd8ca1b1ef2f2295e1ee262325a68ae68248d7",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "1ff774847c3d248d9a15a87cd3fd896b2980cca37b71ffa020f8b8593a841b51",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-not-floating",
     "formal/c-not-floating"
@@ -945,12 +945,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    313,
-    320
+    320,
+    327
    ],
    "source_sha256": "988fb4fd7142b64bc78ef89f060b21dc0e413ddeaf3f1d307fe9f88d6581ce3d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:ac0-scope.model",
     "formal/rem:ac0-scope.model"
@@ -1016,12 +1016,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    313,
-    320
+    320,
+    327
    ],
    "source_sha256": "988fb4fd7142b64bc78ef89f060b21dc0e413ddeaf3f1d307fe9f88d6581ce3d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:ac0-scope.tc0",
     "formal/rem:ac0-scope.tc0"
@@ -1055,12 +1055,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    322,
-    327
+    329,
+    334
    ],
    "source_sha256": "521cad39a13ca6cb72c3cf8f0a8f399ba05f8883f6c644be9f84a620608544c1",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:local-vs-global-parity.local",
     "formal/rem:local-vs-global-parity.local"
@@ -1166,12 +1166,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    322,
-    327
+    329,
+    334
    ],
    "source_sha256": "521cad39a13ca6cb72c3cf8f0a8f399ba05f8883f6c644be9f84a620608544c1",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:local-vs-global-parity.global",
     "formal/rem:local-vs-global-parity.global"
@@ -1244,12 +1244,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    329,
-    343
+    336,
+    350
    ],
    "source_sha256": "995cbe39b401240a1284c8c65a83fc5f5bb66d236571c7bc0d2e5f262e675b15",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-model-table",
     "formal/c-model-table"
@@ -1287,12 +1287,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    348,
-    349
+    355,
+    356
    ],
    "source_sha256": "93fabe384e22e9ff3bc7c9ce22474b98c1090a19e3b1bc5ba213ffef3f819e13",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-primer",
     "formal/c-primer"
@@ -1329,12 +1329,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    356,
-    366
+    363,
+    373
    ],
    "source_sha256": "43ef59ca27f65af5b6e4a8cc4a677c74ee612db12ab46942d70d92440ed56bc2",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:sim-ac0",
     "formal/thm:sim-ac0"
@@ -1650,12 +1650,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    373,
-    376
+    380,
+    383
    ],
    "source_sha256": "e47d558f65a93f014192666cae23ac1bdecca500f0cfd9906cd850419309e66b",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-rw-circuits",
     "formal/c-rw-circuits"
@@ -1689,12 +1689,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    378,
-    379
+    385,
+    386
    ],
    "source_sha256": "7b9c887654f17fed1652842a6ad2869920678d023fb6e30c8b811cf56bd0db1a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-rw-quant",
     "formal/c-rw-quant"
@@ -1730,12 +1730,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    381,
-    384
+    388,
+    391
    ],
    "source_sha256": "7ec0fd7179c570fe7b3ba29e8de592ceb8ddf97f9d2b4d1d0033ed380eda3f59",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-rw-rl",
     "formal/c-rw-rl"
@@ -1769,12 +1769,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    386,
-    389
+    393,
+    396
    ],
    "source_sha256": "15c33f2f9ded8365bb02e3cd4ca4674ed52160892b64b36b9faf96a72f92325d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-rw-history",
     "formal/c-rw-history"
@@ -1811,12 +1811,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    399,
-    402
+    406,
+    409
    ],
-   "source_sha256": "752f4c49fe94626af8e36c4c5c2c3f08d0d4ded769414232fd3984754409f377",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "f5e8a5a354d70532a8c0405a48e5f213cb393a09723bcba21c4b9e7c79f7f9dc",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:impartial",
     "formal/def:impartial"
@@ -1852,12 +1852,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    404,
-    404
+    411,
+    411
    ],
    "source_sha256": "f4e009f7b01f0a247b6afcbbb899ec30130ff3aa98aceba0d44328a62ded37b3",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-terminal",
     "formal/c-terminal"
@@ -1918,12 +1918,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    407,
-    410
+    416,
+    419
    ],
    "source_sha256": "a7ecd52cdc483f243d221a6ec0acb05188db1433577daa2c4f8753c65ad40c6e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:nim",
     "formal/def:nim"
@@ -1997,12 +1997,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    412,
-    413
+    421,
+    422
    ],
-   "source_sha256": "c1ac82165acb58cda7c27c56776abc3a5b47873fd1702348450c2564761eca3f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "8a1ce9610f0ac932e997c4021c0c740cfb8d172321e6f0d60fec397485933323",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-sprague-grundy",
     "formal/c-sprague-grundy"
@@ -2038,12 +2038,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    415,
-    422
+    424,
+    431
    ],
    "source_sha256": "c868301621191346a67abfa7fbc07313c1f9ca2552c57013140e6581b9817339",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:nimsum",
     "formal/def:nimsum"
@@ -2117,12 +2117,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    424,
-    427
+    433,
+    436
    ],
    "source_sha256": "b7a02420951e1b1e682a46dcd95a9d0f6ec2d27c3cb85a19d1fe0065cc383add",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:nim-win",
     "formal/thm:nim-win"
@@ -2267,12 +2267,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    429,
-    431
+    438,
+    440
    ],
-   "source_sha256": "65f940e93e1d06858daa1668075d04c54414e175b5217fe92b31274f5175a635",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "fc9b51e83d97cdd096914183ef722f40ba682b96c204f5fa3e3581aaffc09809",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-why-nim",
     "formal/c-why-nim"
@@ -2306,12 +2306,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    442,
-    449
+    451,
+    458
    ],
    "source_sha256": "b54757884d24e1f8514787b6f042f402157a72a5c65de3e1aa507be5fe64357a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:mastery",
     "formal/def:mastery"
@@ -2513,12 +2513,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    451,
-    452
+    460,
+    461
    ],
    "source_sha256": "277a6851ee46eef13129a2ae53e7f1a978b8905c64fd10287e144015f12ed495",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-weak-mastery-histories",
     "formal/c-weak-mastery-histories"
@@ -2696,12 +2696,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    460,
-    465
+    469,
+    474
    ],
    "source_sha256": "a21606992573ea17d648f3b62cebdbf0dda69b41441351fa0722b9d1c8031854",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:singleframe-impossible.a",
     "formal/thm:singleframe-impossible.a"
@@ -2883,12 +2883,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    460,
-    465
+    469,
+    474
    ],
    "source_sha256": "a21606992573ea17d648f3b62cebdbf0dda69b41441351fa0722b9d1c8031854",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:singleframe-impossible.b",
     "formal/thm:singleframe-impossible.b"
@@ -3074,12 +3074,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    487,
-    493
+    488,
+    494
    ],
    "source_sha256": "787b3d99be2e32502ad1e77335aa80e7b33bbeb7a1f583e70ac7abf243e40e97",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:nimber-difference",
     "formal/def:nimber-difference"
@@ -3142,12 +3142,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    495,
-    499
+    496,
+    500
    ],
    "source_sha256": "da1455481e81fc889e815b3f5049ccd0587e1e8c04b37c6d5500c59443a32bb4",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-delta-local",
     "formal/c-delta-local"
@@ -3233,12 +3233,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    501,
-    506
+    502,
+    507
    ],
    "source_sha256": "f7c70f3c55b3196c1fb79ddb33564056aeec3b2c426c29ef7a6ef4242ba91866",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/lem:nimber-diff-ac0",
     "formal/lem:nimber-diff-ac0"
@@ -3407,12 +3407,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    517,
-    526
+    520,
+    529
    ],
    "source_sha256": "a8eb6954cec14e2320d180a27755f9519e26bdeb9961392aac2ec52e3987d90c",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:restore",
     "formal/prop:restore"
@@ -3497,12 +3497,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    539,
-    539
+    542,
+    542
    ],
    "source_sha256": "f0cd9ede2be2bf3905824e7563dbb3672dfd58781ebaa578b37df11d3a913ad6",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-restore-selector",
     "formal/c-restore-selector"
@@ -3713,12 +3713,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    541,
-    601
+    544,
+    604
    ],
    "source_sha256": "1a6ca1c763d12d3e42113b2d5a0798fc08d0d1e62e32a70c9f074582ac1dca9f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:restoration-example",
     "formal/fig:restoration-example"
@@ -3780,12 +3780,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    607,
-    607
+    610,
+    610
    ],
    "source_sha256": "8d048be4dc49977c2ed06b779c60dacdaaf2053d57acc947efa899b96984f17a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-mirror-delta",
     "formal/c-mirror-delta"
@@ -3876,12 +3876,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    609,
-    609
+    612,
+    612
    ],
    "source_sha256": "5b4c91a026ba8def86c1dfa21974a67606be49b22c93e45957362afad0239d66",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-mcts-sentence",
     "formal/c-mcts-sentence"
@@ -3918,12 +3918,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    613,
-    618
+    616,
+    621
    ],
    "source_sha256": "a80358fba4a0a3f9a40c847bac069d7f38fc4a063bda7dd866a2b5759a315b43",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-impl-overview",
     "formal/c-impl-overview"
@@ -4123,12 +4123,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    624,
-    625
+    627,
+    628
    ],
    "source_sha256": "a5063fd156793c216e2185c1916cecbb5f570cd6eddac7220c5cd68e52e56216",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-search-intro",
     "formal/c-search-intro"
@@ -4164,12 +4164,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    630,
-    634
+    633,
+    637
    ],
    "source_sha256": "4edfadc2a395e22424e668893e42508821081f5a2fffa2cf343d34a29d0783d3",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:rollout-policy",
     "formal/def:rollout-policy"
@@ -4292,12 +4292,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    636,
-    641
+    639,
+    644
    ],
    "source_sha256": "8064cbf4f0ed779a125edf05e4d1f9b833e311399269da4fbd5dee21d82250f8",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:agent-types",
     "formal/def:agent-types"
@@ -4447,12 +4447,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    643,
-    643
+    646,
+    646
    ],
    "source_sha256": "66e6302b0b41babe68f104013d03acb869d107eeba97ad87fcab06e6d150a5b0",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-arbitrary-starts",
     "formal/c-arbitrary-starts"
@@ -4538,12 +4538,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    647,
-    653
+    650,
+    656
    ],
    "source_sha256": "f4008ef5ce03a22badc231e5a0833ef4a526ee67a17099087acb178cfad5df9f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:why-multi-head",
     "formal/rem:why-multi-head"
@@ -4679,12 +4679,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    655,
-    658
+    658,
+    661
    ],
    "source_sha256": "2f827b0e7a8341dcb393866d478a2001f3e3f0a01c63cb763d143739445453e0",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/par:shootout-controller",
     "formal/par:shootout-controller"
@@ -4844,12 +4844,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    660,
-    669
+    663,
+    672
    ],
    "source_sha256": "ebdfa283f8e224f789291dd6735ad0067771a27b37028b3aa5b1c59950dbe92d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-definition",
     "formal/c-fsm-definition"
@@ -4942,12 +4942,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    671,
-    673
+    674,
+    676
    ],
    "source_sha256": "44c71a19cbbf238e836385b8a0c865ab02ce4d7c60e0a8bb25d00ab440d4ee78",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-power",
     "formal/c-fsm-power"
@@ -4983,12 +4983,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    675,
-    675
+    678,
+    678
    ],
    "source_sha256": "f57af1853d04e970399dad9d59473b73e5711bb972080695db7939a3ae9ed541",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-outer-controller",
     "formal/c-outer-controller"
@@ -5312,12 +5312,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    677,
-    715
+    680,
+    718
    ],
    "source_sha256": "330e81321971be455c42bb24c22575c684d5c6f8cba94ae3146702c606bc2c9e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:fsm-shootout-controller",
     "formal/fig:fsm-shootout-controller"
@@ -5415,12 +5415,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    717,
-    722
+    720,
+    725
    ],
    "source_sha256": "889c23c816bd602113f3a16f074b6ff7313392a19bae7ff6982baeb2e3a0f03e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-integration",
     "formal/c-integration"
@@ -5457,12 +5457,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    724,
-    726
+    727,
+    729
    ],
    "source_sha256": "fd2ef06aa48f35541fa8dac72a40d77ad76d81c7ee67d2f8abf277f99ba46e3f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-depth-amplification",
     "formal/c-depth-amplification"
@@ -5501,12 +5501,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    728,
-    731
+    731,
+    734
    ],
    "source_sha256": "4a1c0cfcc79921907eb043c73a5dd3f92131cbb7752d4fe8488549b54d881457",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:rollout-sufficiency",
     "formal/prop:rollout-sufficiency"
@@ -5777,12 +5777,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    750,
-    760
+    753,
+    763
    ],
    "source_sha256": "587bf4faeead2458f47b5c7b4e12d9588f2ea878ed1a7c5a300f1442a045ecd9",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:single-policy-bound",
     "formal/prop:single-policy-bound"
@@ -5908,12 +5908,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    767,
-    776
+    770,
+    779
    ],
    "source_sha256": "90ba4a3ec1e636427f3d3621af69e44b4b01842aae4260336e221b3e966f1451",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/rem:noisy-rollout-decay",
     "formal/rem:noisy-rollout-decay"
@@ -6208,12 +6208,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    778,
-    781
+    781,
+    784
    ],
    "source_sha256": "0044397e1e8f5fe70930a81dad3f44db893a63796f2b3a62b16bef90e5116625",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-init-boundary",
     "formal/c-init-boundary"
@@ -6318,12 +6318,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    783,
-    797
+    786,
+    800
    ],
    "source_sha256": "c144c2a208289732394eb3590bfdf055d077262dc66166a9cfda9053bff39e44",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:rollout_gap",
     "formal/fig:rollout_gap"
@@ -6363,12 +6363,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    799,
-    811
+    802,
+    814
    ],
    "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:search-gap.i",
     "formal/thm:search-gap.i"
@@ -6610,12 +6610,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    799,
-    811
+    802,
+    814
    ],
    "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:search-gap.ii",
     "formal/thm:search-gap.ii"
@@ -6750,12 +6750,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    799,
-    811
+    802,
+    814
    ],
    "source_sha256": "6a8c9a4107356a1433fe18680471d58536471bb5d2a5127dfb5b4401c998519a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/thm:search-gap.iii",
     "formal/thm:search-gap.iii"
@@ -6909,12 +6909,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    824,
-    831
+    827,
+    834
    ],
    "source_sha256": "1b991b2a8d9d385c2587be5c31b7f6cb84567e56081c0f81e6eecce053661560",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-stream",
     "formal/c-stream"
@@ -7078,12 +7078,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    833,
-    836
+    836,
+    839
    ],
    "source_sha256": "bacb9fc36383f7880f966bdbeb259e41090d4c758af9ca08a36d5d54b0d43be7",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:streaming-nimsum",
     "formal/prop:streaming-nimsum"
@@ -7396,12 +7396,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    847,
-    857
+    850,
+    860
    ],
    "source_sha256": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-replay",
     "formal/c-replay"
@@ -7800,12 +7800,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    847,
-    857
+    850,
+    860
    ],
    "source_sha256": "96c224147ee6fabe28848891aaf83ba56225e573080ee75ecc61313a735715fa",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-board-storage",
     "formal/c-board-storage"
@@ -8161,12 +8161,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    859,
-    867
+    862,
+    870
    ],
-   "source_sha256": "c85879e3d34832e31203782f9a350b331a97304634bc7087b0822bd6f1549cba",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "source_sha256": "c43d305b98d3cb2323e14d1ac860e709e754083e476d21a27aa39a7bcb9e2663",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-recurrence-history",
     "formal/c-recurrence-history"
@@ -8368,12 +8368,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    869,
-    871
+    872,
+    874
    ],
    "source_sha256": "f609eee9d30337f1c344784b48de08ee18b710d1270893c1fb9d91125ef4f785",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-lower-bound-respected",
     "formal/c-lower-bound-respected"
@@ -8537,12 +8537,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    876,
-    885
+    879,
+    888
    ],
    "source_sha256": "42524208a19b28cfe7bf26ac3f5a8d5d11617294704462771cb55aaeca75a484",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:bypass-interfaces",
     "formal/prop:bypass-interfaces"
@@ -8879,12 +8879,12 @@
    "category_label": "Open or deferred item",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    876,
-    885
+    879,
+    888
    ],
    "source_sha256": "42524208a19b28cfe7bf26ac3f5a8d5d11617294704462771cb55aaeca75a484",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-replay-bridge-open",
     "formal/c-replay-bridge-open"
@@ -8921,12 +8921,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    891,
-    891
+    894,
+    894
    ],
    "source_sha256": "d43e7103cb5d359153fc05836f7766e6ba240de3f418d33398ae87dca868cb62",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-bypass-not-ac0",
     "formal/c-bypass-not-ac0"
@@ -9232,12 +9232,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1286,
-    1286
+    1289,
+    1289
    ],
    "source_sha256": "6c61a275b1dc1c78803be9607f597a3d3edd85bde095ae7078d25b8942a72f04",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-verification-extent",
     "formal/c-verification-extent"
@@ -9271,12 +9271,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1288,
-    1288
+    1291,
+    1291
    ],
    "source_sha256": "8027624b08756a3b8ccb7d44405d5cc3e5378c0bad4fdac6021cbadd68777613",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-verification-boundary",
     "formal/c-verification-boundary"
@@ -9313,12 +9313,12 @@
    "category_label": "Open or deferred item",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1288,
-    1288
+    1291,
+    1291
    ],
    "source_sha256": "8027624b08756a3b8ccb7d44405d5cc3e5378c0bad4fdac6021cbadd68777613",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-tailpremise-open",
     "formal/c-tailpremise-open"
@@ -9354,12 +9354,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1294,
-    1294
+    1297,
+    1297
    ],
    "source_sha256": "b19a441740a849b44c769628af72663c603a901ab3f7c923b423c20fe8622423",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-no-discovery",
     "formal/c-no-discovery"
@@ -9393,12 +9393,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    900,
-    909
+    903,
+    912
    ],
    "source_sha256": "bfc0ef68af439c5f98197e6f15773b6894a49b8ebb033c92a74c3c27574d3285",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-takeaways",
     "formal/c-takeaways"
@@ -9435,12 +9435,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    914,
-    916
+    917,
+    919
    ],
    "source_sha256": "1ab56c68163ed39869bdf7c968e94456385f27ac8ccca35fc8c91c8323dc3e86",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-noisy-teacher",
     "formal/c-noisy-teacher"
@@ -9474,12 +9474,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    921,
-    922
+    924,
+    925
    ],
    "source_sha256": "05a789dd205282b05592d242ffd384014f7b8f4ddd02d7db8c081795521e61ae",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-majority-objection",
     "formal/c-majority-objection"
@@ -9513,12 +9513,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    924,
-    928
+    927,
+    931
    ],
    "source_sha256": "eceec6bc4e5101e2a4307964e01a5779e8e2d7c8341a0cafdaab0fd045e14168",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-majority-regime",
     "formal/c-majority-regime"
@@ -9554,12 +9554,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    933,
-    945
+    936,
+    948
    ],
    "source_sha256": "9234e1d1315bf7278d6c0e64277197645670747df8be2f71d07ae8e52376614e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fourier-basis",
     "formal/c-fourier-basis"
@@ -9765,12 +9765,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    947,
-    954
+    950,
+    957
    ],
    "source_sha256": "4323de922f0b06668a6a9d1b5d846f41298f09a2445ec0dd2f96d7f74c2d51ab",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:fourier-tail",
     "formal/def:fourier-tail"
@@ -9882,12 +9882,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    956,
-    964
+    959,
+    967
    ],
    "source_sha256": "2a3991e3eaeca2962791e0c69f5c9f47527aadfa6b643ac6cd40d3f088ca0220",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/eq:tail-correlation",
     "formal/eq:tail-correlation"
@@ -10014,12 +10014,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    966,
-    969
+    969,
+    972
    ],
    "source_sha256": "cc00adcaa05b249d1de9030ab042d0f6c4d59b613764cf3c21b9f21d708ce737",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-lmn",
     "formal/c-lmn"
@@ -10055,12 +10055,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    971,
-    978
+    974,
+    981
    ],
    "source_sha256": "5228c8bfadd11fe224fd0a68a64871ed9b05607352db9927d9b4d9365697a152",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-nim-bit-character",
     "formal/c-nim-bit-character"
@@ -10252,12 +10252,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    971,
-    978
+    974,
+    981
    ],
    "source_sha256": "5228c8bfadd11fe224fd0a68a64871ed9b05607352db9927d9b4d9365697a152",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/eq:delta-extension",
     "formal/eq:delta-extension"
@@ -10562,12 +10562,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    980,
-    982
+    983,
+    985
    ],
    "source_sha256": "9f45932aaafe7ffd2a7bc7a99187f5cf1ba50f0bbbae093845649b90844d7806",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-spectral-bias",
     "formal/c-spectral-bias"
@@ -10601,12 +10601,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    984,
-    986
+    987,
+    989
    ],
    "source_sha256": "73cb6f5d6a547c7797787f4b0d71e2fef9472321b969acdcd7a444a1f93ad076",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-local-checks",
     "formal/c-local-checks"
@@ -10643,12 +10643,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    992,
-    992
+    995,
+    995
    ],
    "source_sha256": "7c0f87c46de57174f3b330f0c60783c5be3a27236bdef2768b6dc680db9ad6ce",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-goal",
     "formal/c-exp-goal"
@@ -10682,12 +10682,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1000,
-    1002
+    1003,
+    1005
    ],
    "source_sha256": "ac95f39a8f37d56cffd7c3ccf3d2d15d19551bbb4a1b52a29dc2cb8d98f6e2cc",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-repr",
     "formal/c-exp-repr"
@@ -10721,12 +10721,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1009,
-    1024
+    1012,
+    1027
    ],
    "source_sha256": "0463fce4170d5fb3f9e7f75a0ec2988bfcdcb258b90903a2dfdbef7b9bbad750",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/table:arch",
     "formal/table:arch"
@@ -10760,12 +10760,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1026,
-    1029
+    1029,
+    1032
    ],
    "source_sha256": "68aa8bd326b0ab98f67d963e712238f27dcadc0f0ff70f973bdfc75817302406",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-loss",
     "formal/c-exp-loss"
@@ -10799,12 +10799,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1031,
-    1035
+    1034,
+    1038
    ],
    "source_sha256": "0280938a752c87628921e08b44e0a0db0c760c73ca4f2c1c0f07f61f9e1c3fcc",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-criteria",
     "formal/c-exp-criteria"
@@ -10840,12 +10840,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1041,
-    1043
+    1044,
+    1046
    ],
    "source_sha256": "267c518dee953357e4fe672ebc4494461650426cbc1d994355db5d15e33cb586",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-restoration-equivalence",
     "formal/c-restoration-equivalence"
@@ -10960,12 +10960,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1059,
-    1064
+    1062,
+    1067
    ],
    "source_sha256": "f46d017456d5a006c8029a1860c12ced80e920a2d1d4da1fa0717b449be5ffe9",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-data",
     "formal/c-exp-data"
@@ -10999,12 +10999,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1086,
-    1090
+    1089,
+    1093
    ],
    "source_sha256": "f02efd47ec196f3cda053df6a903ed632380b11e2a4fa579503cc7d6c63c71c8",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-training",
     "formal/c-exp-training"
@@ -11038,12 +11038,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1095,
-    1097
+    1098,
+    1100
    ],
    "source_sha256": "85fa97c8ca049d322aa3b4fe735f63b12d6bfcecb3e7ae99a838f520accb4279",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-metric",
     "formal/c-exp-metric"
@@ -11077,12 +11077,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1101,
-    1105
+    1104,
+    1108
    ],
    "source_sha256": "d8e7638567036e612229ea3fcecc413ad533fd1a9a44ee6cd8fc8a0ad84d6697",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-result-1f2f",
     "formal/c-exp-result-1f2f"
@@ -11118,12 +11118,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1107,
-    1113
+    1110,
+    1116
    ],
    "source_sha256": "1a2357a8e3237237edcce96170c629ac67210998957c25ca5b2aed78468cf1e6",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:valacc-H20k4",
     "formal/fig:valacc-H20k4"
@@ -11157,12 +11157,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1115,
-    1121
+    1118,
+    1124
    ],
    "source_sha256": "b7b14ba64b1c6ca5491d19f32169e593c4d2b178fc794a686d31675170a1f24b",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:testacc-H20k4",
     "formal/fig:testacc-H20k4"
@@ -11196,12 +11196,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1123,
-    1124
+    1126,
+    1127
    ],
    "source_sha256": "f1dd8351bd9a64baf1612a6905bfdf0d59b867ba8fc7532d97b0c28d5df34016",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-plateau",
     "formal/c-plateau"
@@ -11235,12 +11235,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1126,
-    1126
+    1129,
+    1129
    ],
    "source_sha256": "9749a9392e996382f009da630d495f229f3182521f1a83bad97b9aa5049383d6",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-diagnostic",
     "formal/c-diagnostic"
@@ -11274,12 +11274,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1128,
-    1128
+    1131,
+    1131
    ],
    "source_sha256": "6fd5cea90e31d3d6ce57317c875e7b11bfd53bc0c1277d68554949f19ed09b97",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-plateau-interpretation",
     "formal/c-plateau-interpretation"
@@ -11316,12 +11316,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1130,
-    1132
+    1133,
+    1135
    ],
    "source_sha256": "2d632590847724c514031b68f17bd38aa84741a79823b9565274c2a338711af9",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-exp-provenance",
     "formal/c-exp-provenance"
@@ -11355,12 +11355,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1142,
-    1144
+    1145,
+    1147
    ],
    "source_sha256": "2a05cec9d17cbecb8261c4e54dd549c0c526794cfbee84f84556d524c178a255",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-setup",
     "formal/c-fsm-setup"
@@ -11394,12 +11394,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1146,
-    1151
+    1149,
+    1154
    ],
    "source_sha256": "373eb3c467bdb24040310a856bde811c5186258d4ef69b073ab297749e910f63",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-tie-breaking",
     "formal/c-tie-breaking"
@@ -11494,12 +11494,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1153,
-    1154
+    1156,
+    1157
    ],
    "source_sha256": "e6f5aa9a0ee2ccb692336eaa35b95f1fcee81a5e29943a84aca588e1f0f81f16",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-training",
     "formal/c-fsm-training"
@@ -11533,12 +11533,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1161,
-    1162
+    1164,
+    1165
    ],
    "source_sha256": "c3bf990959c12836087a308903cbc2c6870ab8d10c70062ba6ea67e9742a3d98",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-metric",
     "formal/c-fsm-metric"
@@ -11575,12 +11575,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1174,
-    1176
+    1177,
+    1179
    ],
    "source_sha256": "157360d919881b5cdad55bdf1da919c742b72a986ac350a9fbe269f478844afd",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-fsm-results",
     "formal/c-fsm-results"
@@ -11616,12 +11616,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1178,
-    1184
+    1181,
+    1187
    ],
    "source_sha256": "e23068ca456c51b6529f2f4882044c4c0b91fc3ae0c27a1fa61d2cc36952e309",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-baseline-arith",
     "formal/c-baseline-arith"
@@ -11754,12 +11754,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1178,
-    1184
+    1181,
+    1187
    ],
    "source_sha256": "e23068ca456c51b6529f2f4882044c4c0b91fc3ae0c27a1fa61d2cc36952e309",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-baseline-observed",
     "formal/c-baseline-observed"
@@ -11795,12 +11795,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1186,
-    1187
+    1189,
+    1190
    ],
    "source_sha256": "9423c80bcc4f5067914f87f5826e494f83e49b8aa4bf449ba7e21ad0446278de",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-different-metrics",
     "formal/c-different-metrics"
@@ -11834,12 +11834,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1189,
-    1192
+    1192,
+    1195
    ],
    "source_sha256": "2f5c7c88e0e815198ecfd653914d3e0cd9048b660cceb6b529ba85301d91b78f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-early-stopping",
     "formal/c-early-stopping"
@@ -11873,12 +11873,12 @@
    "category_label": "Empirical result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1194,
-    1209
+    1197,
+    1212
    ],
    "source_sha256": "cca551d958baf8649f49e0067fb3018d24f58c2b2f7d2157daf651e5378dbc90",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/tab:fsm-shootout",
     "formal/tab:fsm-shootout"
@@ -11912,12 +11912,12 @@
    "category_label": "Open or deferred item",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1214,
-    1215
+    1217,
+    1218
    ],
    "source_sha256": "e5b5112a55a7de580ab17530d91bdf50b809067ecf0eda834357b125954f1ed1",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-reproducibility",
     "formal/c-reproducibility"
@@ -11951,12 +11951,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1220,
-    1220
+    1223,
+    1223
    ],
    "source_sha256": "893b4b62c9dff25a0b86eb9659c64b1ae68251fc00e371fdc0c5836ffb7d29fb",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-discussion",
     "formal/c-discussion"
@@ -11992,12 +11992,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1222,
-    1225
+    1225,
+    1228
    ],
    "source_sha256": "d46857718fdf6b1d8368886aa3c81537594c59aa9f7ab39a8e2c1fad16505e4e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-idealisation",
     "formal/c-idealisation"
@@ -12031,12 +12031,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1227,
-    1229
+    1230,
+    1232
    ],
    "source_sha256": "9ea6ac4eb126427c72c8a298ae40ee0388d6b665b5d0fdec61a7a4d33890816f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-condorcet",
     "formal/c-condorcet"
@@ -12070,12 +12070,12 @@
    "category_label": "External cited result",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1234,
-    1234
+    1237,
+    1237
    ],
    "source_sha256": "c1573656b15b22b2b9e4fbdd6626705ef6a7def9c9557e8cbaff0d43970610fc",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-geography",
     "formal/c-geography"
@@ -12109,12 +12109,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1236,
-    1236
+    1239,
+    1239
    ],
    "source_sha256": "27041a576294ab72758be2dc8f84b4cb587e70c69c5bce545941019f8e0dc670",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-othergames-scope",
     "formal/c-othergames-scope"
@@ -12148,12 +12148,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1238,
-    1242
+    1241,
+    1245
    ],
    "source_sha256": "79d3df280f7f68aace988ea770167274676b903dcbfec336bd0fd18d122c0e3f",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-harder-benchmarks",
     "formal/c-harder-benchmarks"
@@ -12187,12 +12187,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1244,
-    1244
+    1247,
+    1247
    ],
    "source_sha256": "813c3e1ba321f20590e6a0ddbda8f12ea1c59814851f48628224285b82cd5ad6",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-benchmark-evaluation",
     "formal/c-benchmark-evaluation"
@@ -12228,12 +12228,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1281,
-    1284
+    1284,
+    1287
    ],
    "source_sha256": "e62d4f2243d331049dfd6fbcb4ee3e18657682a69c8be8e66d875ff6636893a2",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-development-disclosure",
     "formal/c-development-disclosure"
@@ -12267,12 +12267,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1290,
-    1290
+    1293,
+    1293
    ],
    "source_sha256": "a2e1e1836ed74897b9b9befdb621e425e1dd4d2ca38cc023a084f1c4b5be10ec",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-author-verification-scope",
     "formal/c-author-verification-scope"
@@ -12306,12 +12306,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1246,
-    1249
+    1249,
+    1252
    ],
    "source_sha256": "1d5275c69af4bff543a371a83ac88c310bb9981cacbaef108c59abb1cd3f40ba",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-rollout-separation",
     "formal/c-rollout-separation"
@@ -12347,12 +12347,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1254,
-    1254
+    1257,
+    1257
    ],
    "source_sha256": "c782d009bceb3860f2c4064b4ed1799ebab9123791c947620c8d225b7ed7e809",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-opt-gap",
     "formal/c-opt-gap"
@@ -12386,12 +12386,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1256,
-    1256
+    1259,
+    1259
    ],
    "source_sha256": "0acee1d20e77ffe484671ce554518dd4a500aa1a67d1a8788d281cd0bdca6216",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-opt-gap-evidence",
     "formal/c-opt-gap-evidence"
@@ -12428,12 +12428,12 @@
    "category_label": "Open or deferred item",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1258,
-    1258
+    1261,
+    1261
    ],
    "source_sha256": "8e6dfe8ac49a39a78e26b681f2dac494eae0fae78d6e9ca716c1017998ba6fba",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-selfplay-open",
     "formal/c-selfplay-open"
@@ -12467,12 +12467,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1263,
-    1267
+    1266,
+    1270
    ],
    "source_sha256": "c2849a5801d391ba308602ce927d709cdefc392943cc41bd1c949b4bfadef44d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-significance",
     "formal/c-significance"
@@ -12506,12 +12506,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1271,
-    1273
+    1274,
+    1276
    ],
    "source_sha256": "4821796746fb25bd1e471167836672c98813984c35e9da1e0d09888ba03d20f0",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-conclusion",
     "formal/c-conclusion"
@@ -12548,12 +12548,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1275,
-    1275
+    1278,
+    1278
    ],
    "source_sha256": "1a0bd11281cdd2078990f02412b931fa513f96fa1dd0625d69b64cccb52e2616",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-conclusion-bypasses",
     "formal/c-conclusion-bypasses"
@@ -12592,12 +12592,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1277,
-    1277
+    1280,
+    1280
    ],
    "source_sha256": "1c97c652320cd6f4ca553d358491c523a91f5b83ac31a17afd1e493aad22a983",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-conclusion-experiments",
     "formal/c-conclusion-experiments"
@@ -12634,12 +12634,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1314,
-    1314
+    1317,
+    1317
    ],
    "source_sha256": "c9e050abbdbc68da04b124576f304d103165fbce80838c0ab5d3853d8df0ff43",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/app:precision",
     "formal/app:precision"
@@ -12737,12 +12737,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1332,
-    1351
+    1335,
+    1354
    ],
    "source_sha256": "8abbcb663c2c85e168dc83d6730809cb44ef2c1f042240fc1df2a2d6b986560a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:NN-formal",
     "formal/def:NN-formal"
@@ -12942,12 +12942,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1356,
-    1370
+    1359,
+    1373
    ],
    "source_sha256": "8cf36150201875f280fc69c64a3a2375c56802743abd6a283ea52ffbbc37ee32",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:RNN-formal",
     "formal/def:RNN-formal"
@@ -13130,12 +13130,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1375,
-    1385
+    1378,
+    1388
    ],
    "source_sha256": "98c0d52ef13438725fbdc53d89d871bc51440759289ae518355c84f432bfbb62",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/def:LTST-formal",
     "formal/def:LTST-formal"
@@ -13223,12 +13223,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1387,
-    1390
+    1390,
+    1393
    ],
    "source_sha256": "82541bf3466ed597168b473feb2d4f7dadd476b8ca445451b5a5ab1068a03cb8",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/x-remark-scope-of-the-simulation",
     "formal/x-remark-scope-of-the-simulation"
@@ -13264,12 +13264,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1403,
-    1412
+    1406,
+    1415
    ],
    "source_sha256": "aab403d1ce88322105271d5a34b95cd310bfaffc26697a48f3c0f6fecddde648",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/lem:unit-ac0",
     "formal/lem:unit-ac0"
@@ -13439,12 +13439,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1437,
-    1440
+    1440,
+    1443
    ],
    "source_sha256": "26b89f049e4573358b9f65f4343a913048adc2904f148db4e91f5d592f5e6582",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/x-remark-negations",
     "formal/x-remark-negations"
@@ -13573,12 +13573,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1445,
-    1449
+    1448,
+    1452
    ],
    "source_sha256": "97b5b3b24707126b57f0affcff529f37a992a2f07c8ad29dc0459393e1535a67",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/lem:layer-ac0",
     "formal/lem:layer-ac0"
@@ -13737,12 +13737,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1464,
-    1464
+    1467,
+    1467
    ],
    "source_sha256": "5173677bae34efd78f4473799d93aabb6bd30fb68fe92e3471bc2edfe3f37ac7",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/app:impl",
     "formal/app:impl"
@@ -13999,12 +13999,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1491,
-    1496
+    1494,
+    1499
    ],
    "source_sha256": "35e6316fb7699da7b36bd42c0dfe8540ba793d5db8fdddc1a29ae2acfcc4e77a",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-candidate-moves",
     "formal/c-candidate-moves"
@@ -14236,12 +14236,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1498,
-    1505
+    1501,
+    1508
    ],
    "source_sha256": "979453a04f351f49be147daaa2c52b4f4d041bfb5e2b7f2f8ab51d9053c0003d",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-binary-index",
     "formal/c-binary-index"
@@ -14550,12 +14550,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1507,
-    1508
+    1510,
+    1511
    ],
    "source_sha256": "9ef288e7140f8527118ef088d0f9b8ebee504219410133d406409b3ad7c6f3b0",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-recurrent-update",
     "formal/c-recurrent-update"
@@ -14881,12 +14881,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1510,
-    1512
+    1513,
+    1515
    ],
    "source_sha256": "34cc9a8cd7d7624c1a344450a0cc41fbb8290f6b3e0cf27608a76fc5c8ee80da",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-threshold-realisation",
     "formal/c-threshold-realisation"
@@ -15077,12 +15077,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1528,
-    1540
+    1531,
+    1543
    ],
    "source_sha256": "8bc8f4451c54e341f3005c453f7f654bf647aee92bff22f16f54d7748ea70c55",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-depth-table",
     "formal/c-depth-table"
@@ -15581,12 +15581,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1549,
-    1551
+    1552,
+    1554
    ],
    "source_sha256": "739b9626e71ac7a86599b2f76e1a63c302ee252e5d49f79e9941750770ac798b",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/par:controller-costs",
     "formal/par:controller-costs"
@@ -15842,12 +15842,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1553,
-    1553
+    1556,
+    1556
    ],
    "source_sha256": "8c0ab472930a121fc8b88a2eba018c4c998ae8da934aa7ae9756622589e76171",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-controller-evals",
     "formal/c-controller-evals"
@@ -16000,12 +16000,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1559,
-    1561
+    1562,
+    1564
    ],
    "source_sha256": "ae050acb1c51530d6dc464519de6977c891e96015f6358bc4ff66e47c6151802",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/x-example-pairing-strategy",
     "formal/x-example-pairing-strategy"
@@ -16262,12 +16262,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1563,
-    1563
+    1566,
+    1566
    ],
    "source_sha256": "5203245c88a18003f6a9410c1a33d35d570544e71a2fa76d1167f4c13b7767a7",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-weak-vs-strong",
     "formal/c-weak-vs-strong"
@@ -16425,12 +16425,12 @@
    "category_label": "Checked definition or construction",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1602,
-    1602
+    1605,
+    1605
    ],
    "source_sha256": "58e52d25b7c88cb1815565aca89fa5e8a6cb8b03a2ef3de79e61e9606eea3e56",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-noise-model",
     "formal/c-noise-model"
@@ -16575,12 +16575,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1604,
-    1612
+    1607,
+    1615
    ],
    "source_sha256": "31604b6f79fa704b65e19dde0c25b0a3622e4329de515b1ade66c1bd0c60cdee",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/prop:noise-samples",
     "formal/prop:noise-samples"
@@ -16772,12 +16772,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1622,
-    1622
+    1625,
+    1625
    ],
    "source_sha256": "1c8c7d52ef64b0b267b1e071660ce14dd1ccd09b437559586c4c278010c973de",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/c-flip-cases",
     "formal/c-flip-cases"
@@ -17016,12 +17016,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1624,
-    1624
+    1627,
+    1627
    ],
    "source_sha256": "7c7a6d65cdea358268961b856ce3e977317e8a8175551ef40cef3ca0e3be2062",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/app:rollout-proofs",
     "formal/app:rollout-proofs"
@@ -17239,12 +17239,12 @@
    "category_label": "Checked conditional theorem using named classical input",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1656,
-    1656
+    1659,
+    1659
    ],
    "source_sha256": "7e8cd3062b734b54014e67b1b987f305a4dbc2f2ec30ca0110e1173da8b41f41",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/app:search-gap-proof",
     "formal/app:search-gap-proof"
@@ -17467,12 +17467,12 @@
    "category_label": "Checked theorem",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1659,
-    1708
+    1662,
+    1711
    ],
    "source_sha256": "a172e3ca2d1bb0963709c68d0c3efb9643068909c7670619828771674d4a5aaa",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/eq:finite-correlation-bound",
     "formal/eq:finite-correlation-bound"
@@ -17545,12 +17545,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1469,
-    1471
+    1472,
+    1474
    ],
    "source_sha256": "c1a74bbbea9021c2576f6c25cbbde771fd80216e4d3f71559cd3930ad28a3119",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/par:construction-example",
     "formal/par:construction-example"
@@ -17589,12 +17589,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1473,
-    1487
+    1476,
+    1490
    ],
    "source_sha256": "907077765feb76ade17f5192ca0b1cd92843354d463ae4231a385b60c435b61e",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:construction-pipeline",
     "formal/fig:construction-pipeline"
@@ -17634,12 +17634,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1515,
-    1526
+    1518,
+    1529
    ],
    "source_sha256": "815371b5ff9a6c8ab6010f997afbcf822d56d2065d426ac0082dd1334d725f57",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/fig:threshold-compilation",
     "formal/fig:threshold-compilation"
@@ -17677,12 +17677,12 @@
    "category_label": "Informal interpretation",
    "source_file": "input/jmlr_source/paper_jmlr.tex",
    "source_lines": [
-    1543,
-    1545
+    1546,
+    1548
    ],
    "source_sha256": "0c5047726ffa41efb1dfed6c226af8170906c5ec1e68d2af34867c13063d6c47",
-   "manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
-   "canonical_manuscript_sha256": "edf6acddcd18a59378cc0b67d57bf60f274f8afca598533106596ad946f193d7",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
    "explanation_ids": [
     "explain/par:depth-accounting",
     "formal/par:depth-accounting"
@@ -17707,6 +17707,177 @@
     "audit_date": "2026-10-10"
    },
    "page": "claims/par__depth-accounting.html"
+  },
+  {
+   "id": "c-intro-games",
+   "anchor": "c-intro-games",
+   "anchor_kind": "website",
+   "label": null,
+   "displayed": "Section 1, paragraph 2",
+   "part": null,
+   "section": "Section 1",
+   "short_claim": "NIM rules, impartiality and why NIM is central",
+   "category": "informal",
+   "category_label": "Informal interpretation",
+   "source_file": "input/jmlr_source/paper_jmlr.tex",
+   "source_lines": [
+    85,
+    85
+   ],
+   "source_sha256": "0ec57899a55792f1c48f749fa205d6d2744a236027a81cd18517468dffab5cf0",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+   "explanation_ids": [
+    "explain/c-intro-games",
+    "formal/c-intro-games"
+   ],
+   "lean": [],
+   "lean_definitions": [],
+   "named_classical_inputs": [],
+   "assumptions_and_domain": null,
+   "correspondence_notes": null,
+   "depends_on": [
+    "def:impartial",
+    "def:nim",
+    "c-sprague-grundy"
+   ],
+   "audit_rows": [],
+   "illustrations": [],
+   "build_evidence": {
+    "fresh_build": "evidence/fresh-build/summary.json",
+    "fresh_build_started_utc": "2026-10-10T15:21:56Z",
+    "audit_report": "evidence/audit/AUDIT_REPORT.txt",
+    "audit_date": "2026-10-10"
+   },
+   "page": "claims/c-intro-games.html"
+  },
+  {
+   "id": "c-history-context",
+   "anchor": "c-history-context",
+   "anchor_kind": "website",
+   "label": null,
+   "displayed": "Section 1, paragraph 7",
+   "part": null,
+   "section": "Section 1",
+   "short_claim": "History supplies computational context without changing optimal play",
+   "category": "informal",
+   "category_label": "Informal interpretation",
+   "source_file": "input/jmlr_source/paper_jmlr.tex",
+   "source_lines": [
+    95,
+    95
+   ],
+   "source_sha256": "0979e94a91f39f8d4b76f0a9da263cc9fcf4dc691715036bf4c12fe04363edde",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+   "explanation_ids": [
+    "explain/c-history-context",
+    "formal/c-history-context"
+   ],
+   "lean": [],
+   "lean_definitions": [],
+   "named_classical_inputs": [],
+   "assumptions_and_domain": null,
+   "correspondence_notes": null,
+   "depends_on": [
+    "prop:restore",
+    "prop:streaming-nimsum",
+    "c-recurrence-history"
+   ],
+   "audit_rows": [],
+   "illustrations": [],
+   "build_evidence": {
+    "fresh_build": "evidence/fresh-build/summary.json",
+    "fresh_build_started_utc": "2026-10-10T15:21:56Z",
+    "audit_report": "evidence/audit/AUDIT_REPORT.txt",
+    "audit_date": "2026-10-10"
+   },
+   "page": "claims/c-history-context.html"
+  },
+  {
+   "id": "c-ending-encodings",
+   "anchor": "c-ending-encodings",
+   "anchor_kind": "website",
+   "label": null,
+   "displayed": "Section 4.1, paragraph 2",
+   "part": null,
+   "section": "Section 4.1",
+   "short_claim": "Encoding decisive endings using terminal positions and a forced last move",
+   "category": "informal",
+   "category_label": "Informal interpretation",
+   "source_file": "input/jmlr_source/paper_jmlr.tex",
+   "source_lines": [
+    413,
+    413
+   ],
+   "source_sha256": "1f85407c35f08576fbb072adbe0b1cd9484032c8b6edd4f3c160fa81d1d7b036",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+   "explanation_ids": [
+    "explain/c-ending-encodings",
+    "formal/c-ending-encodings"
+   ],
+   "lean": [],
+   "lean_definitions": [],
+   "named_classical_inputs": [],
+   "assumptions_and_domain": null,
+   "correspondence_notes": null,
+   "depends_on": [
+    "def:impartial",
+    "def:nim",
+    "thm:nim-win"
+   ],
+   "audit_rows": [],
+   "illustrations": [],
+   "build_evidence": {
+    "fresh_build": "evidence/fresh-build/summary.json",
+    "fresh_build_started_utc": "2026-10-10T15:21:56Z",
+    "audit_report": "evidence/audit/AUDIT_REPORT.txt",
+    "audit_date": "2026-10-10"
+   },
+   "page": "claims/c-ending-encodings.html"
+  },
+  {
+   "id": "c-depth-learning",
+   "anchor": "c-depth-learning",
+   "anchor_kind": "website",
+   "label": null,
+   "displayed": "Section 5.3, paragraph 3",
+   "part": null,
+   "section": "Section 5.3",
+   "short_claim": "Explicit layer bounds, depth versus size, and remaining learning difficulties",
+   "category": "informal",
+   "category_label": "Informal interpretation",
+   "source_file": "input/jmlr_source/paper_jmlr.tex",
+   "source_lines": [
+    513,
+    513
+   ],
+   "source_sha256": "e0ad234d0e79392a632957d15152d11940b306c143ff95c268613714fa903bd4",
+   "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "canonical_manuscript_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+   "explanation_ids": [
+    "explain/c-depth-learning",
+    "formal/c-depth-learning"
+   ],
+   "lean": [],
+   "lean_definitions": [],
+   "named_classical_inputs": [],
+   "assumptions_and_domain": null,
+   "correspondence_notes": null,
+   "depends_on": [
+    "c-depth-table",
+    "par:depth-accounting"
+   ],
+   "audit_rows": [],
+   "illustrations": [],
+   "build_evidence": {
+    "fresh_build": "evidence/fresh-build/summary.json",
+    "fresh_build_started_utc": "2026-10-10T15:21:56Z",
+    "audit_report": "evidence/audit/AUDIT_REPORT.txt",
+    "audit_date": "2026-10-10"
+   },
+   "page": "claims/c-depth-learning.html"
   }
  ]
 }

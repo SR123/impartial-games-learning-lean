@@ -10,6 +10,8 @@ returns every register, validity included, to its initial value. The board-stora
 and pointer and keeps the stored board. The third protocol shows the summary mechanism of
 [[prop:streaming-nimsum]] alone: it reports summaries and differences but chooses no move.
 
+The current NIM board already determines optimal play. The memory shown here makes that answer computationally accessible by retaining partial results across rows; an earlier game position is needed only for the optional comparison of consecutive positions.
+
 <!-- notes -->
 **How this relates to the Lean proof.** Each update is one step of {{lean:NimAudit.Controller.cstep}} (replay) or
 {{lean:NimAudit.BoardStore.bsStep}} (board storage) on the token streams {{lean:NimAudit.Controller.dtoks}} and

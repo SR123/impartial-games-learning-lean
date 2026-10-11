@@ -91,6 +91,8 @@ $O(B+\log N)$. This matters for streams where each position is supplied only onc
   depth at most $16$ and polynomial size; as a $\{0,1\}$-weight network, at most $34$ layers.
 
 <!-- explain: c-recurrence-history -->
+NIM's legal moves and optimal play depend only on the current board. Memory supplies computational context, rather than missing game-theoretic information. Accumulating the current board row by row is already sufficient to compute its nim-sum; retaining an earlier position additionally supports transition comparisons.
+
 **Connecting to the two-frame idea.** The retained summaries give $\sigma_{t-1}\oplus\sigma_t=\Delta(P_{t-1},P_t)$
 for consecutive *supplied* boards. If one heap changed from $a$ to $b$, this is $a\oplus b$.
 

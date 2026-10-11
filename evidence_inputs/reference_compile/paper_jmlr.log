@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 OCT 2026 00:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 OCT 2026 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -835,26 +835,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
-
 
 [1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [2]
 
 [3]
 
 [4]
+
+[5]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-
-[5]
 
 [6]
 
@@ -877,13 +877,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 [15]
 
 [16]
+
+[17]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-
-[17]
 
 [18]
 
@@ -900,28 +900,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 [24]
 
 [25]
-<./figures/figValAccH20k4.pdf, id=642, 411.939pt x 195.129pt>
+
+[26]
+<./figures/figValAccH20k4.pdf, id=649, 411.939pt x 195.129pt>
 File: ./figures/figValAccH20k4.pdf Graphic file (type pdf)
 <use ./figures/figValAccH20k4.pdf>
-Package pdftex.def Info: ./figures/figValAccH20k4.pdf  used on input line 1109.
+Package pdftex.def Info: ./figures/figValAccH20k4.pdf  used on input line 1112.
 
 (pdftex.def)             Requested size: 411.93767pt x 195.12851pt.
-<./figures/figTestAccCkptsH20k4.pdf, id=643, 411.939pt x 195.129pt>
+<./figures/figTestAccCkptsH20k4.pdf, id=650, 411.939pt x 195.129pt>
 File: ./figures/figTestAccCkptsH20k4.pdf Graphic file (type pdf)
 <use ./figures/figTestAccCkptsH20k4.pdf>
 Package pdftex.def Info: ./figures/figTestAccCkptsH20k4.pdf  used on input line
- 1117.
+ 1120.
 (pdftex.def)             Requested size: 411.93767pt x 195.12851pt.
 
 
-[26 <./figures/figValAccH20k4.pdf>]
+[27 <./figures/figValAccH20k4.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[27 <./figures/figTestAccCkptsH20k4.pdf>]
-
-[28]
+[28 <./figures/figTestAccCkptsH20k4.pdf>]
 
 [29]
 
@@ -930,11 +930,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [31]
 
 [32]
+
+[33]
 Underfull \vbox (badness 2865) has occurred while \output is active []
 
 
-
-[33]
 
 [34]
 
@@ -963,6 +963,8 @@ Underfull \vbox (badness 2865) has occurred while \output is active []
 [46]
 
 [47]
+
+[48]
 (/Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Astra_Review_2026-10
 -09/07_jmlr_review/build/paper_jmlr.aux)
  ***********
@@ -973,9 +975,9 @@ Package rerunfilecheck Info: File `paper_jmlr.out' has not changed.
 (rerunfilecheck)             Checksum: F451C0D296478A0DEDA8A0745A3F3322;14984.
  ) 
 Here is how much of TeX's memory you used:
- 25957 strings out of 474662
- 484300 string characters out of 5751110
- 889077 words of memory out of 5000000
+ 25958 strings out of 474662
+ 484307 string characters out of 5751110
+ 889255 words of memory out of 5000000
  48033 multiletter control sequences out of 15000+600000
  590675 words of font info for 286 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -1012,11 +1014,11 @@ pe1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025basic/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on /Users/sorenriis/Documents/ChatGpt_codex_folder/NIM_paper/Ast
-ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (47 pages, 610427 byte
+ra_Review_2026-10-09/07_jmlr_review/build/paper_jmlr.pdf (48 pages, 614226 byte
 s).
 PDF statistics:
- 1004 PDF objects out of 1200 (max. 8388607)
- 885 compressed objects within 9 object streams
- 205 named destinations out of 1000 (max. 500000)
+ 1011 PDF objects out of 1200 (max. 8388607)
+ 891 compressed objects within 9 object streams
+ 206 named destinations out of 1000 (max. 500000)
  72207 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="../">
+<title>Section 1, paragraph 7: History supplies computational context without changing optimal play</title>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
+
+</head>
+<body class="page-claim">
+<a class="skip" href="claims/c-history-context.html#main">Skip to content</a>
+<header class="site-bar">
+<a class="site-home" href="index.html">NIM paper · interactive edition</a>
+<nav class="site-nav" aria-label="Edition"><a href="paper.html">Paper</a> <a href="paper/paper_jmlr.pdf">PDF</a> <a href="coverage.html">Proof coverage</a> <a href="source/index.html">Lean sources</a> <a href="build.html">Build</a> <a href="edition.html">About this edition</a></nav>
+<span class="build-flag">Interactive edition · paper, explanations and Lean proofs.</span>
+</header>
+<main id="main" class="claim-page">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="paper.html#c-history-context">Back to Section 1, paragraph 7 in the paper</a>
+· <a href="coverage.html#c-c-history-context">Coverage table</a></nav>
+<h1 data-title="Section 1, paragraph 7: History supplies computational context without changing optimal play">Section 1, paragraph 7<span class="claim-h-short">History supplies computational context without changing optimal play</span></h1>
+<p class="cat-line"><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span> <span class="cat-desc">Motivation, interpretation or scope; not a formal claim.</span></p>
+<section class="level" id="paper" aria-labelledby="h-paper"><h2 id="h-paper"><span class="lvl-n">1</span> Paper text</h2>
+<div class="paper-excerpt"><p id="x-sec:intro-p7">NIM itself does not depend on game history: the current position completely determines its legal moves and optimal play. History can nevertheless supply useful <em>computational context</em> to a restricted network. The first and third bypasses use such context in different ways: an earlier board exposes a local change, while recurrent memory retains information accumulated during row processing and across positions.</p></div>
+<p class="src-note">Generated from <code>paper_jmlr.tex</code>, lines 95–95.</p></section>
+<section class="level" id="explain" aria-labelledby="h-explain"><h2 id="h-explain"><span class="lvl-n">2</span> Explain this</h2><div class="lvl-body"><p>History does not change what the correct move is in NIM. It can change how easily a restricted computation finds it. With a preceding zero-nim-sum board, unchanged heaps cancel and a local difference supplies the current nim-sum. A recurrent scanner instead accumulates the current nim-sum over time, and can retain earlier summaries to compare positions.</p>
+<p>The recurrent route does not require an earlier game position for initialisation: remembering the partial result while scanning the current board already suffices.</p></div></section><section class="level" id="formal" aria-labelledby="h-formal"><h2 id="h-formal"><span class="lvl-n">3</span> How this is formalised</h2><div class="lvl-body"><p>This is an interpretation of <a class="claim-ref" href="claims/prop__restore.html">Proposition 5.5</a>, <a class="claim-ref" href="claims/prop__streaming-nimsum.html">Proposition 5.13</a> and <a class="claim-ref" href="claims/c-recurrence-history.html">Section 5.5, “Connecting recurrence to the history bypass”</a>. The game state and legal moves are defined in <a class="claim-ref" href="claims/def__nim.html">Definition 4.2</a>. No theorem claims that past positions are necessary for every optimal recurrent strategy.</p><table class="record"><caption>Coverage record</caption><tbody><tr><th scope="row">Paper anchor</th><td><a href="paper.html#c-history-context"><code>c-history-context</code></a> (website anchor; the manuscript has no label here)</td></tr><tr><th scope="row">Displayed as</th><td>Section 1, paragraph 7</td></tr><tr><th scope="row">Claim</th><td>History supplies computational context without changing optimal play</td></tr><tr><th scope="row">Coverage category</th><td><span class="cat cat-informal" title="Motivation, interpretation or scope; not a formal claim.">Informal interpretation</span></td></tr><tr><th scope="row">Statement source</th><td>paper_jmlr.tex lines 95–95; SHA-256 of the normalised block source <code class="hash">0979e94a91f39f8d…</code></td></tr><tr><th scope="row">Depends on</th><td><a href="claims/prop__restore.html">Proposition 5.5</a>, <a href="claims/prop__streaming-nimsum.html">Proposition 5.13</a>, <a href="claims/c-recurrence-history.html">Section 5.5, “Connecting recurrence to the history bypass”</a></td></tr><tr><th scope="row">Explanations</th><td><code>explain/c-history-context</code>, <code>formal/c-history-context</code></td></tr><tr><th scope="row">Build evidence</th><td><a href="build.html">fresh isolated rebuild</a>, <a href="evidence/audit/AUDIT_REPORT.txt">audit report</a></td></tr></tbody></table></div></section><section class="level" id="lean" aria-labelledby="h-lean"><h2 id="h-lean"><span class="lvl-n">4</span> Lean statement and source</h2><div class="lvl-body"><p class="no-lean">No Lean statement corresponds to this claim. This is interpretation or motivation, not a formal mathematical claim.</p><p class="evidence">Build evidence: fresh isolated rebuild of all 38 bundled modules with Lean (version 4.26.0, started 2026-10-10T15:21:56Z, finished 2026-10-10T15:27:00Z: 38/38 modules compiled, 1588 axiom reports, no errors. See <a href="build.html">Build</a> for the commands and <a href="evidence/audit/AUDIT_REPORT.txt">the independent audit of 2026-10-10</a> (dated evidence).</p></div></section>
+</main>
+<footer class="site-foot">
+<p>Interactive edition of a manuscript by Søren Riis (11 October 2026). The paper text is generated
+from <code>paper_jmlr.tex</code>; the PDF is the exact layout reference. Explanations, coverage records and
+source pages are additions of this edition and are not part of the paper.</p>
+</footer>
+</body>
+</html>

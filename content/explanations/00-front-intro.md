@@ -102,6 +102,8 @@ An overview paragraph. Its precise counterparts are {{claim:prop:restore}} (with
 multi-head and recurrent board-to-move maps are not AC⁰ families.
 
 <!-- explain: fig:barrier-blueprint -->
+**Terminology.** FSQI means fixed-scale quantised inference. Fixed latency means that the number of sequential computation steps stays bounded as the board grows, rather than a fixed measured running time in seconds.
+
 The figure is a map of the paper. Row (a) is the obstruction: a single network that sees one board cannot
 compute global parity under the fixed-scale model. Rows (b)–(d) are the three bypasses, each supplying something
 different: (b) the transition between two boards, given a zero-nim-sum predecessor; (c) the outcomes of complete rollouts under several policy
@@ -115,6 +117,8 @@ A schematic, not a formal statement. Each row corresponds to checked results: (a
 {{claim:prop:rollout-sufficiency}}; (d) {{claim:prop:streaming-nimsum}} and {{claim:c-replay}}.
 
 <!-- explain: c-contributions -->
+The first item distinguishes gate restrictions from input layout: attention operations must be built from the permitted gates, while board sizes can grow across the family of networks. Within a play sequence, aligned heap rows and fixed bit width make consecutive boards comparable.
+
 The list names six contributions. Read with the paper, each item is a pointer: the first four are theorems or
 propositions (simulation, barrier, two-frame bypass, rollout analysis), the fifth is the recurrent construction,
 and the sixth is the controlled experiments plus a discussion of the modelling choice. The wording in the list is
@@ -140,3 +144,19 @@ This list states what kind of results the paper contains:
 Scope statements, not claims to be proved. They match the hypotheses of the formal results: the gate model of
 {{claim:def:NN-formal}}, the interface of {{claim:def:agent-types}}, and the empirical status of the experiments
 ({{claim:c-exp-result-1f2f}}).
+
+<!-- explain: c-intro-games -->
+NIM has heaps of tokens. On each turn, remove at least one token from one heap; taking the last token wins. For example, $(3,5,6)$ can become $(3,4,6)$, but a single move cannot alter both the first and second heaps.
+
+Impartial games allow the same moves to either player. Shared pieces are a useful intuition; the formal condition concerns legal moves, not ownership. Chess is partisan because the players move different colours. The striking link to NIM is explained in {{claim:c-sprague-grundy}}: every finite terminating normal-play impartial position can be replaced, in sums, by one NIM heap. This is a structural statement, not an efficient method for solving every impartial game.
+
+<!-- formal: c-intro-games -->
+This introduction combines the classical impartial-game definition, {{claim:def:impartial}}, with the NIM rules, {{claim:def:nim}}, and the external Sprague–Grundy theorem, {{claim:c-sprague-grundy}}. The Lean development checks NIM, rather than the general Sprague–Grundy theorem.
+
+<!-- explain: c-history-context -->
+History does not change what the correct move is in NIM. It can change how easily a restricted computation finds it. With a preceding zero-nim-sum board, unchanged heaps cancel and a local difference supplies the current nim-sum. A recurrent scanner instead accumulates the current nim-sum over time, and can retain earlier summaries to compare positions.
+
+The recurrent route does not require an earlier game position for initialisation: remembering the partial result while scanning the current board already suffices.
+
+<!-- formal: c-history-context -->
+This is an interpretation of {{claim:prop:restore}}, {{claim:prop:streaming-nimsum}} and {{claim:c-recurrence-history}}. The game state and legal moves are defined in {{claim:def:nim}}. No theorem claims that past positions are necessary for every optimal recurrent strategy.

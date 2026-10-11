@@ -14,7 +14,7 @@ The interactive edition contains the complete paper, optional explanations, illu
 
 The development contains **38 Lean modules, 1,588 theorem/lemma declarations and 24,493 source lines**. A fresh isolated rebuild with Lean 4.26.0 succeeded for every module. Axiom reports use only `propext`, `Classical.choice` and `Quot.sound`. The [latest build record](verification/latest/fresh_build.json), [source scan](verification/latest/source_scan.json) and [module logs](verification/latest/logs/) are included.
 
-The paper-to-proof interface comprises 161 claim records and an audited correspondence map. The site distinguishes checked theorems, conditional results, definitions, classical external results, empirical observations, interpretation and open questions. Classical parity lower bounds remain explicit external inputs. Experimental training results are not Lean proofs; this repository does not contain a complete experimental retraining package.
+The paper-to-proof interface comprises 165 claim records and an audited correspondence map. The site distinguishes checked theorems, conditional results, definitions, classical external results, empirical observations, interpretation and open questions. Classical parity lower bounds remain explicit external inputs. Experimental training results are not Lean proofs; this repository does not contain a complete experimental retraining package.
 
 Each shallow component is distinguished from a whole sequential computation. The constructions establish representational possibilities under their stated promises and resource bounds; they do not guarantee discovery through self-play.
 

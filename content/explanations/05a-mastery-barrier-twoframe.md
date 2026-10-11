@@ -60,6 +60,8 @@ That lets a simple strategy master a family without solving positions it never m
   second player iff it is zero).
 
 <!-- explain: thm:singleframe-impossible.a -->
+The winning move therefore removes **two tokens for even parity** and **one token for odd parity** from the first heap. The concise proof in the paper uses this observation; the encoding and extraction below explain why it gives a circuit reduction.
+
 **The reduction.** Look at boards $(2,b_1,\dots,b_m)$ where each $b_i$ is $0$ or $1$. The nim-sum is
 $2\oplus(b_1\oplus\cdots\oplus b_m)$, which is $2$ or $3$, so every such board is winning. Only the first heap has
 the $2$s bit, so a winning move must change the first heap, and the only value that makes the nim-sum zero is
@@ -157,7 +159,7 @@ heaps differ in bit $q$" counters (valid because at most $t$ heaps differ).
 - {{lean:NimAudit.LocalRestore.bdC_res}}: depth at most $2t+8$, size at most $(2t+6)(N+t+11)^{3t+6}$, reading only the
   two frames.
 
-The construction differs in detail from the subset enumeration of Appendix E (it counts instead of enumerating
+The construction differs in detail from the subset enumeration in [[app:nimberdiff]] (it counts instead of enumerating
 subsets) but proves the same lemma with explicit bounds.
 
 <!-- explain: prop:restore -->
@@ -259,3 +261,13 @@ Each item has a checked counterpart: changed-heap detection {{lean:NimAudit.Loca
 {{lean:NimAudit.LocalRestore.localDelta_eq}} (one change) and {{claim:lem:nimber-diff-ac0}} (at most $t$ changes);
 the variable-target selector {{lean:NimAudit.SelectCircuit.varSel_correct}} (the target arrives on input wires);
 binary output via the priority encoder {{lean:NimAudit.PriorityEncoder.encode_correct}}.
+
+<!-- explain: c-depth-learning -->
+An AC⁰ construction can still be large and inconvenient to train. The paper's uniform compiler gives **at most 42 threshold layers for the complete two-frame move selector**, and **at most 70 for a shootout-controller tick**. These bounds include more than computing a bounded-change difference alone. They do not say that 42 or 70 layers are necessary, or that all instantiated circuits reach those bounds.
+
+Any Boolean function can be written as a depth-two AND–OR circuit with negated inputs by listing all satisfying assignments. But that representation may be exponentially large. AC⁰ requires polynomial size as the input grows, so depth and size must be considered together. The construction does not optimise this trade-off or prove that training will find its weights. The observed learning plateaus require separate empirical explanation.
+
+See {{claim:c-depth-table}} for checked bounds and {{claim:par:depth-accounting}} for their derivation.
+
+<!-- formal: c-depth-learning -->
+The numerical upper bounds are checked in {{lean:NimAudit.Family.rest_net}} and {{lean:NimAudit.Shootout.sh_net}}, as described in {{claim:c-depth-table}}. The discussion of training is an interpretation, not a formal learning theorem. The general depth-two truth-table observation is standard Boolean algebra and is not a new claim of Lean coverage.

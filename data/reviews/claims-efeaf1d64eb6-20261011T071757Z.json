@@ -1,0 +1,271 @@
+{
+ "gate": "claims",
+ "written_utc": "2026-10-11T07:17:26Z",
+ "context": {
+  "manuscript_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+  "locked_manuscript_sha256": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528"
+ },
+ "items": [
+  {
+   "id": "(manuscript)",
+   "change": "manuscript changed",
+   "old": "6333c2be6781c794a28f2c5863610961c0639b88dc847326bf224061d2c22528",
+   "new": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+   "detail": "the converted JMLR source differs from the pinned one; the claims listed below (if any) changed statement text",
+   "reviewed": true,
+   "note": "Reviewed complete canonical diff: all theorem statements and labels retained; impartial definition equivalent; shortened parity proof preserves encoding/extraction; explanations updated. New context does not expand Lean coverage."
+  },
+  {
+   "id": "fig:barrier-blueprint",
+   "change": "statement source changed",
+   "old": "8be67364875748f59d92baa4cd28af96b7d73254a3e1f7218d25c3fe84aa1b0e",
+   "new": "06f62014098be66f98621f10ccc27ad918fb2609ffab0ea01f28c3dd820d133d",
+   "block": "fig:barrier-blueprint",
+   "lines": [
+    104,
+    215
+   ],
+   "content": [
+    "explain/fig:barrier-blueprint",
+    "formal/fig:barrier-blueprint"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "\\begin{figure}[t] \\centering \\begin{tikzpicture}[ node distance=0.8cm and 1.2cm, auto, block/.style={ rectangle, draw, fill=blue!5, text width=2.2cm, align=center, rounded corners, minimum height=1.0cm, font=\\small }, head/.style={ rectangle, draw, fill=yellow!10, text width=1.8cm, align=center, rounded corners, minimum height=0.6cm, font=\\footnotesize }, line/.style={ draw, -{Latex[length=2.5mm]}, thick, gray!80 }, barrier/.style={ circle, draw=red!80, fill=red!10, very thick, minimum size=0.6cm, inner sep=0pt }, success/.style={ circle, draw=green!60!black, fill=green!10, very thick, minimum size=0.6cm, inner sep=0pt }, labelnode/.style={ font=\\bfseries\\small, anchor=west } ] \\node[block] (input1) {Input $P_t$\\\\ \\textit{(Global)}}; \\node[block, right=of input1] (net1) {Single-Head\\\\ Network}; \\node[barrier, right=of net1] (out1) {\\Large $\\times$}; \\node[right=0.1cm of out1, align=left, font=\\footnotesize, text width=2.5cm] {Cannot compute\\\\ global parity\\\\ in this model}; \\path[line] (input1) -- (net1); \\path[line] (net1) -- (out1); \\node[above=0.45cm of input1, labelnode] {(a) Barrier: Single-Frame, Single-Head}; \\node[block, below=1.3cm of input1] (input2) {Input $(P_{t-1}, P_t)$\\\\ \\textit{(Transition)}}; \\node[block, right=of input2] (net2) {Single-Head\\\\ Network}; \\node[success, right=of net2] (out2) {\\Large $\\checkmark$}; \\node[right=0.1cm of out2, align=left, font=\\footnotesize, text width=2.5cm] {Computes Local\\\\ Difference $\\Delta$}; \\path[line] (input2) -- (net2); \\path[line] (net2) -- (out2); \\node[above=0.45cm of input2, labelnode] {(b) Bypass 1: Multi-Frame Input}; \\node[block, below=1.3cm of input2] (input3) {Input $P_t$\\\\ \\textit{(Global)}}; \\node[right=of input3, text width=0cm, inner sep=0] (split) {}; \\node[head, right=0.2cm of split, yshift=0.4cm] (head1) {Head $\\pi_0$}; \\node[head, right=0.2cm of split, yshift=-0.4cm] (head2) {Head $\\pi_{B-1}$}; \\node[font=\\footnotesize] at ($(head1)!0.5!(head2)$) {$\\vdots$}; \\node[success, right=0.8cm of head1, yshift=-0.4cm] (out3) {\\Large $\\checkmark$}; \\node[right=0.1cm of out3, align=left, font=\\footnotesize, text width=2.5cm] {Rollout outcomes\\\\ recover $B$ bits}; \\path[line] (input3) -- (split); \\draw[line] (split.center) |- (head1.west); \\draw[line] (split.center) |- (head2.west); \\draw[line] (head1.east) -| (out3.north); \\draw[line] (head2.east) -| (out3.south); \\node[above=0.45cm of input3, labelnode] {(c) Bypass 2: Multiple Rollout Heads}; \\node[block, below=1.3cm of input3] (input4) {Rows of $P_t$\\\\ then $P_{t+1}$}; \\node[block, right=of input4] (net4) {Recurrent State\\\\ $s\\leftarrow s\\oplus x_i$}; \\node[success, right=of net4] (out4) {\\Large $\\checkmark$}; \\node[right=0.1cm of out4, align=left, font=\\footnotesize, text width=2.5cm] {Nim-sum after\\\\ $N$ row updates\\\\ (growing latency)}; \\path[line] (input4) -- (net4); \\path[line] (net4) -- (out4); \\node[above=0.45cm of input4, labelnode] {(d) Bypass 3: Persistent Recurrence}; \\end{tikzpicture} \\caption{The parity barrier and three structural bypasses. (a) Fixed-scale quantised inference (FSQI) with fixed latency cannot compute global parity across arbitrarily large boards. Here fixed latency means a bounded number of sequential computation steps, independent of board size. (b) Two frames expose $\\Delta$ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$.} \\label{fig:barrier-blueprint} \\end{figure}",
+   "reviewed": true,
+   "note": "Replaced unexplained acronym in artwork with plain wording; caption and explanation define FSQI and fixed latency. All three mechanisms unchanged."
+  },
+  {
+   "id": "c-contributions",
+   "change": "statement source changed",
+   "old": "0dd4657db4edf4f4743891903c5b9e72cf33b0958ede1413dfc3378796fcf637",
+   "new": "03adfbffd008a552152402fd9a39868dd9ec81f060bf8915540daa1491475095",
+   "block": "sec:contrib-list1",
+   "lines": [
+    222,
+    243
+   ],
+   "content": [
+    "explain/c-contributions",
+    "formal/c-contributions"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "\\begin{itemize}[leftmargin=*] \\item \\textbf{$\\AC^0$ containment for fixed-scale quantised inference.} We formalise a fixed-grid Boolean literal-threshold model and its bounded-unrolling recurrent extension. Both are simulable by $\\AC^0$ circuits (Theorem~\\ref{thm:sim-ac0}). An attention-style extension is covered only if its scoring, selection and aggregation operations can each be implemented by the permitted Boolean threshold gates. This is a restriction on the computation, not a requirement that every game have the same board size. Within a play sequence we use a fixed layout of $N$ heap rows and $B$ bits per heap, retaining empty heaps as zero rows. The asymptotic statements concern families of networks for growing input lengths $NB$. \\item \\textbf{Single-frame impossibility for strong mastery.} Under this model, no single-frame policy/value network can strongly master NIM in the worst case (Theorem~\\ref{thm:singleframe-impossible}). \\item \\textbf{Two-frame bypass via local differences and restoration.} With two consecutive frames, the agent can compute $\\Delta(P,P')$ in $\\AC^0$ (Lemma~\\ref{lem:nimber-diff-ac0}). When $P$ has nim-sum zero, an $\\AC^0$ move selector restores zero after the opponent's move (Proposition~\\ref{prop:restore}). This is conditional restoration mastery, not an arbitrary-start verifier. \\item \\textbf{Planning analysis and the single-policy bottleneck.} We analyse a restricted measurement interface inspired by rollouts, rather than a general model of MCTS. With $B$ structured policies one can recover all nim-sum bits (Proposition~\\ref{prop:rollout-sufficiency}). Root and one-heap-modification queries to one fixed member of that family expose only one unknown linear functional (Proposition~\\ref{prop:single-policy-bound}). With an explicitly bounded readout, this yields the distributional bound in Theorem~\\ref{thm:search-gap}. \\item \\textbf{Persistent recurrence via sequential row updates.} A constant-depth recurrent update accumulates the nim-sum over $N$ heap rows and retains a summary across position separators (Proposition~\\ref{prop:streaming-nimsum}). With a replay of the current board or stored heap rows, this supports optimal move selection. The construction relaxes fixed total latency, not fixed-scale quantisation (Section~\\ref{sec:recurrent-bypass}). \\item \\textbf{Controlled empirical comparison and learnability discussion.} On 20-heap, 4-bit NIM with $10^6$ supervised restoration examples, a one-frame model has low restoration accuracy while a two-frame model learns restoration (Section~\\ref{sec:supervised-restoration}). In a complementary single-frame experiment, multi-head FSM-controlled shootouts achieve perfect win/loss position classification while the single-head baseline remains bottlenecked by one-bit information (Section~\\ref{sec:exp-fsm-shootout}). We also discuss why $\\AC^0$ is a useful abstraction for what is robustly feasible under fixed-scale quantised inference (Section~\\ref{sec:majority-vs-parity}). \\end{itemize}",
+   "reviewed": true,
+   "note": "Gate restriction clarified independently of board layout; aligned N,B fixed within a game and variable across asymptotic families. Updated contribution and simulation explanations."
+  },
+  {
+   "id": "c-qset",
+   "change": "statement source changed",
+   "old": "f3f940a9a022ec9f3f31b707854293a163dc4f1da8781df0c03df910c1319682",
+   "new": "8a3e62d1a6032e9667c2a8c1f22c4cefd684653c8a12c8054a91320cc217b2d2",
+   "block": "sec:framework-fixedprecision-p4",
+   "lines": [
+    294,
+    300
+   ],
+   "content": [
+    "explain/c-qset",
+    "formal/c-qset"
+   ],
+   "lean": [
+    "NimAudit.AC0.Gate.Valid",
+    "NimAudit.AC0.gate_rat_iff",
+    "NimAudit.Windows.literal_shift"
+   ],
+   "illustrations": [],
+   "excerpt": "We define \\[ \\Qset_{W,D} \\;=\\; \\Big\\{ \\frac{\\ell}{D}\\ :\\ \\ell\\in\\{0,1,2,\\dots,W\\}\\Big\\}, \\] a finite set independent of input length. The threshold bound applies \\emph{after} choosing the literal representation. Replacing a signed term $-a x$ by $a(1-x)$ raises the threshold by $a$. With many such terms, the adjusted threshold may grow with the input length. What matters is the amount of evidence needed to activate a gate: our model bounds the number of satisfied input literals that suffice, whereas an unrestricted majority gate needs a number that grows with its inputs. Negative coefficients themselves are not the obstruction; the bound on the adjusted threshold is essential to the simulation.",
+   "reviewed": true,
+   "note": "Grid and literal-shift identity unchanged; added bounded-witness versus majority interpretation, consistent with bounded_witness and majGate_not_valid. Inhibitory effects explanation added."
+  },
+  {
+   "id": "c-not-floating",
+   "change": "statement source changed",
+   "old": "13eb347596d58fb301c6557fa8fd8ca1b1ef2f2295e1ee262325a68ae68248d7",
+   "new": "1ff774847c3d248d9a15a87cd3fd896b2980cca37b71ffa020f8b8593a841b51",
+   "block": "par-why-fixed-scale-quantisation-suggests-an-ac0-abstraction-p2",
+   "lines": [
+    318,
+    319
+   ],
+   "content": [
+    "explain/c-not-floating",
+    "formal/c-not-floating"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "We emphasise that this is not a statement about floating-point arithmetic per se. The abstraction intentionally excludes \\emph{scale-adaptive} regimes where thresholds/biases grow with fan-in or where weights shrink with dimension (e.g.\\ $1/n$ or $1/\\sqrt{n}$ normalisations), which move the analysis toward threshold-circuit classes such as $\\TC^0$. This class allows constant-depth, polynomial-size circuits with general threshold gates, including majority gates; unlike $\\AC^0$, it can compute parity.",
+   "reviewed": true,
+   "note": "Added definition of TC0 and majority gates; still explicitly outside restricted model. Explanation updated; no new formalisation claim."
+  },
+  {
+   "id": "def:impartial",
+   "change": "statement source changed",
+   "old": "752f4c49fe94626af8e36c4c5c2c3f08d0d4ded769414232fd3984754409f377",
+   "new": "f5e8a5a354d70532a8c0405a48e5f213cb393a09723bcba21c4b9e7c79f7f9dc",
+   "block": "def:impartial",
+   "lines": [
+    406,
+    409
+   ],
+   "content": [
+    "explain/def:impartial",
+    "formal/def:impartial"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "\\begin{definition}[Impartial game] \\label{def:impartial} A finite terminating impartial game is a pair $(\\mathcal{P},\\mathcal{M})$ where $\\mathcal{P}$ is a nonempty set of positions and $\\mathcal{M}(p)\\subseteq \\mathcal{P}$ is the (finite) set of legal moves from $p$, with the property that the move relation does not depend on which player is to play (symmetry). We assume the move relation is acyclic and play terminates. We use the last-move-wins convention, usually called normal play: a player with no legal move loses. \\end{definition}",
+   "reviewed": true,
+   "note": "Last-move-wins restated as no-legal-move loses; no change to mathematical convention. Broader ending encodings are a separate informal record."
+  },
+  {
+   "id": "c-sprague-grundy",
+   "change": "statement source changed",
+   "old": "c1ac82165acb58cda7c27c56776abc3a5b47873fd1702348450c2564761eca3f",
+   "new": "8a1ce9610f0ac932e997c4021c0c740cfb8d172321e6f0d60fec397485933323",
+   "block": "sec-sprague-grundy-theory-and-nim-sum-p1",
+   "lines": [
+    421,
+    422
+   ],
+   "content": [
+    "explain/c-sprague-grundy",
+    "formal/c-sprague-grundy"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "The breadth of impartial games makes the Sprague--Grundy theorem remarkable: every finite terminating impartial position under normal play is equivalent to a single NIM heap of some size, called its \\emph{nimber} or Grundy value. Equivalence here means that replacing the position by that heap preserves the winning or losing status of its sum with any other such game. In a \\emph{disjunctive sum}, a move is made in exactly one component. The nimber of a sum is the bitwise XOR of the component nimbers; in particular, the nimber of a NIM board is the XOR of its heap sizes.",
+   "reviewed": true,
+   "note": "Explained equivalence under disjunctive sums; retained termination and normal-play assumptions. Still classical external background, not newly Lean checked."
+  },
+  {
+   "id": "c-why-nim",
+   "change": "statement source changed",
+   "old": "65f940e93e1d06858daa1668075d04c54414e175b5217fe92b31274f5175a635",
+   "new": "fc9b51e83d97cdd096914183ef722f40ba682b96c204f5fa3e3581aaffc09809",
+   "block": "par-why-nim-is-a-useful-barrier-example-p1",
+   "lines": [
+    438,
+    440
+   ],
+   "content": [
+    "explain/c-why-nim",
+    "formal/c-why-nim"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "For a disjunctive sum of independent impartial components, the Grundy value is the XOR of the component nimbers. If these nimbers can vary independently so that their aggregation contains an unbounded parity subproblem, NIM isolates the resulting aggregation obstruction. Learning NIM would therefore address a fundamental component of impartial-game play, but would not by itself solve self-play learning for the wider class: determining component nimbers can be computationally difficult (Section~\\ref{sec:othergames}). Nor does every impartial game contain a hard parity aggregation task. Our unconditional lower bound concerns NIM; extensions require an explicit encoding and reduction.",
+   "reviewed": true,
+   "note": "Clarified that learning NIM does not solve nimber computation for other games; cross-reference to existing discussion avoids repeating Geography examples."
+  },
+  {
+   "id": "c-recurrence-history",
+   "change": "statement source changed",
+   "old": "c85879e3d34832e31203782f9a350b331a97304634bc7087b0822bd6f1549cba",
+   "new": "c43d305b98d3cb2323e14d1ac860e709e754083e476d21a27aa39a7bcb9e2663",
+   "block": "par-connecting-recurrence-to-the-history-bypass-p1",
+   "lines": [
+    862,
+    870
+   ],
+   "content": [
+    "explain/c-recurrence-history",
+    "formal/c-recurrence-history"
+   ],
+   "lean": [
+    "NimAudit.Bypass.diff_of_transition",
+    "NimAudit.Bypass.diff_with_postMove",
+    "NimAudit.Bypass.diff_decision_only",
+    "NimAudit.Recurrent.stream_reports_delta"
+   ],
+   "illustrations": [
+    "recurrence"
+   ],
+   "excerpt": "The retained summaries allow the agent to compare consecutive positions through \\[ \\sigma_{t-1}\\oplus\\sigma_t =\\operatorname{nim}(P_{t-1})\\oplus\\operatorname{nim}(P_t) =\\Delta(P_{t-1},P_t). \\] When one heap changes from $a$ to $b$, this equals $a\\oplus b$. If the preceding position has nim-sum zero, the difference is exactly the invariant that the restoration rule must cancel. Storing the preceding board additionally permits direct row-by-row comparison as the new board arrives. A summary of $O(B)$ bits preserves the invariant, rather than the full game history; arbitrary access to old positions requires additional storage or replay. The difference always refers to consecutive completed boards actually supplied to the controller. If these are only the boards at the player's decision times, they usually span two game moves. Comparing just the opponent's move instead requires the player's own post-move board as the preceding frame. The initial scan also computes the invariant from an arbitrary starting position, without assuming an earlier zero-nim-sum frame. Thus memory across row updates is sufficient for this route; an earlier game position is useful for transition comparisons but is not required to compute the current nim-sum. This initialisation uses the growing recurrent horizon and is therefore an additional resource beyond the fixed-latency two-frame construction.",
+   "reviewed": true,
+   "note": "Explicitly distinguished row memory from prior-game-position memory; initial scan sufficient without predecessor. Existing accumulator and initialisation theorems apply unchanged; illustration explanation updated."
+  },
+  {
+   "id": "c-intro-games",
+   "change": "new claim",
+   "old": null,
+   "new": "0ec57899a55792f1c48f749fa205d6d2744a236027a81cd18517468dffab5cf0",
+   "block": "sec:intro-p2",
+   "lines": [
+    85,
+    85
+   ],
+   "content": [
+    "explain/c-intro-games",
+    "formal/c-intro-games"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "In NIM, two players take turns removing any positive number of tokens from a single heap; the player taking the last token wins. It belongs to the broad class of \\emph{impartial games}: both players have the same legal moves from a given position. Many such board games can be thought of as games with shared pieces, whereas in \\emph{partisan games}, such as chess, legal moves depend on which player is to move. NIM is central to impartial-game theory because every finite terminating impartial position under the last-move-wins convention is equivalent, in sums of games, to a single NIM heap (Section~\\ref{sec:impartial}).",
+   "reviewed": true,
+   "note": "New introductory explanation of NIM and impartial games, linked to existing definitions and classical Sprague-Grundy record; labelled informal."
+  },
+  {
+   "id": "c-history-context",
+   "change": "new claim",
+   "old": null,
+   "new": "0979e94a91f39f8d4b76f0a9da263cc9fcf4dc691715036bf4c12fe04363edde",
+   "block": "sec:intro-p7",
+   "lines": [
+    95,
+    95
+   ],
+   "content": [
+    "explain/c-history-context",
+    "formal/c-history-context"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "NIM itself does not depend on game history: the current position completely determines its legal moves and optimal play. History can nevertheless supply useful \\emph{computational context} to a restricted network. The first and third bypasses use such context in different ways: an earlier board exposes a local change, while recurrent memory retains information accumulated during row processing and across positions.",
+   "reviewed": true,
+   "note": "New interpretation separates current-state game semantics from computational benefit of memory; links to restoration and recurrence with their respective promises."
+  },
+  {
+   "id": "c-ending-encodings",
+   "change": "new claim",
+   "old": null,
+   "new": "1f85407c35f08576fbb072adbe0b1cd9484032c8b6edd4f3c160fa81d1d7b036",
+   "block": "sec-impartial-games-p2",
+   "lines": [
+    413,
+    413
+   ],
+   "content": [
+    "explain/c-ending-encodings",
+    "formal/c-ending-encodings"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "The last-move-wins convention also provides a convenient encoding of other decisive endings. A move that wins by capturing a designated piece or creating a specified configuration can simply lead to a position with no further legal moves. If instead reaching a special position loses for the player who made the move, give the opponent one forced move to a new terminal position. These encodings preserve the winner of the individual play; they must retain player-independent move rules to remain impartial. The theory below concerns the resulting normal-play game.",
+   "reviewed": true,
+   "note": "New informal encoding observation: terminal win, forced opponent move for loss; explanation distinguishes individual-play winner preservation from equivalence under sums and from impartiality. No new Lean coverage asserted."
+  },
+  {
+   "id": "c-depth-learning",
+   "change": "new claim",
+   "old": null,
+   "new": "e0ad234d0e79392a632957d15152d11940b306c143ff95c268613714fa903bd4",
+   "block": "sec:multiframe-p3",
+   "lines": [
+    513,
+    513
+   ],
+   "content": [
+    "explain/c-depth-learning",
+    "formal/c-depth-learning"
+   ],
+   "lean": [],
+   "illustrations": [],
+   "excerpt": "Membership in $\\AC^0$ does not guarantee a small or readily learnable network. For the complete two-frame move selector built on this difference computation, our modular construction gives an upper bound of 42 threshold layers; one shootout-controller step has a bound of 70 (Appendix~\\ref{app:impl}). These are constructive bounds, not necessary depths. Any Boolean function has a depth-two AND--OR representation with negated inputs, but its size can be exponential; $\\AC^0$ requires polynomial size as the input grows. We have not optimised this depth--size trade-off. Removing the expressivity obstruction therefore leaves practical network design, training procedures and hyperparameter choices open. The layer bounds do not establish the cause of the experimental learning plateaus.",
+   "reviewed": true,
+   "note": "42 and 70 verified as upper bounds for complete selector and controller tick, not delta alone or necessary depths. Polynomial size caveat retained; no causal explanation of training plateaus claimed."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin."
+}

@@ -1,6 +1,8 @@
 <!-- Section 4: impartial games and NIM. -->
 
 <!-- explain: def:impartial -->
+The phrase “shared pieces” is a useful board-game intuition. The precise condition is that the same position permits the same moves for either player; it also covers games without physical pieces. In partisan games the available moves can depend on the player's identity.
+
 An impartial game is one in which both players have the same moves from every position (unlike chess, where each
 player moves their own pieces). "Finite terminating" means play always ends; under *normal play* the player who
 makes the last move wins.
@@ -32,6 +34,8 @@ strictly decreases and the heap positions stay aligned. {{lean:NimAudit.Game.mov
 lowers the total number of stones, which is how termination is proved throughout.
 
 <!-- explain: c-sprague-grundy -->
+**What equivalence means.** In a disjunctive sum, each turn changes exactly one component. Replacing a component by its equivalent NIM heap preserves the winning or losing status with every other normal-play impartial component. This makes NIM central to the theory of a very broad class of games, even though computing the equivalent heap size can be difficult.
+
 The Sprague–Grundy theorem says that every finite impartial game position behaves, in sums of games, like a single
 NIM heap of some size (its nimber or Grundy value). For NIM itself, the Grundy value of a position is the XOR of
 its heap sizes.
@@ -94,3 +98,11 @@ explicit encoding and reduction.
 <!-- formal: c-why-nim -->
 A motivating paragraph. The only formal statement is about NIM, {{claim:thm:singleframe-impossible.b}}; no claim
 about other games is made or checked.
+
+<!-- explain: c-ending-encodings -->
+“Normal play” means that a player with no legal move loses. Many other decisive endings can be expressed with this convention. If a move wins by achieving a configuration, declare that configuration terminal. If the player making the move instead loses on reaching it, give the opponent one forced move to a new terminal position, so the opponent makes the last move.
+
+This preserves the winner of the individual play, provided the encoding tracks the decisive event correctly. To obtain an impartial game, the resulting move rule must still be independent of player identity. It does not make chess impartial or resolve draws and infinite play. Nor does preserving an isolated game's winner imply that its sums under the original ending rule are equivalent: Sprague–Grundy theory applies to the resulting normal-play rules.
+
+<!-- formal: c-ending-encodings -->
+This is an explanatory encoding observation, not a new Lean-checked theorem. The formalisation checks NIM with its usual last-move-wins rule; see {{claim:def:nim}} and {{claim:thm:nim-win}}. General impartial games and their Sprague–Grundy theory remain classical background.

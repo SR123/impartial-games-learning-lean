@@ -1,6 +1,8 @@
 <!-- Section 2 (framework) and Section 3 (related work). -->
 
 <!-- explain: c-qset -->
+**Inhibitory effects are allowed.** Negating an input makes a positive literal weight act negatively on the original input. The restriction is the fixed bound on the threshold after this rewriting. A firing gate then has a bounded-size witness of satisfied literals; a general majority gate does not. This is why the threshold bound matters computationally.
+
 **The grid.** Every weight and threshold is a multiple of $1/D$ between $0$ and $W/D$: for example, with $D=4$
 and $W=8$ the allowed values are $0, 0.25, 0.5, \dots, 2$. The point is that this set is *fixed*: it does not grow
 when the input gets longer.
@@ -21,6 +23,8 @@ The remark about signed terms is the identity {{lean:NimAudit.Windows.literal_sh
 $\theta\le s-a x \iff \theta+a\le s+a(1-x)$.
 
 <!-- explain: def:quantised-inference -->
+**Effective precision.** The motivation is the scale of distinctions a computation can use reliably, potentially limited by noise and much coarser than float32 rounding. Ordinary finite-precision storage alone does not establish the model's hypotheses. Noise does not automatically imply a Boolean literal-threshold implementation either.
+
 This definition fixes the class of networks the lower bound is about:
 
 - **constant depth** (a fixed number of layers, independent of the input length);
@@ -85,6 +89,8 @@ length at most the integer threshold $b\le W$ already has coefficient sum at lea
 bounds. See {{claim:lem:unit-ac0}} for the full lemma.
 
 <!-- explain: c-not-floating -->
+TC⁰ means constant-depth, polynomial-size circuits with general threshold gates, including majority gates. It can compute parity, so constant depth alone cannot support the paper's lower bound.
+
 The result is about **fixed scale**, not about floating-point formats as such. What breaks the argument is
 *scale adaptation*: thresholds or biases that grow with the fan-in, or weights that shrink like $1/n$ or
 $1/\sqrt n$ (as in many normalisation schemes). Those regimes behave like threshold circuits ($\mathrm{TC}^0$),
@@ -164,6 +170,8 @@ input `HastadNegl`, {{claim:rem:local-vs-global-parity.global}}). The collapse s
 {{claim:thm:sim-ac0}}.
 
 <!-- explain: thm:sim-ac0 -->
+**Board sizes and attention.** Within a game the input layout stays aligned: $N$ heap rows with $B$ bits each, including zero rows for emptied heaps. The theorem concerns a family of these layouts as $NB$ grows. An attention extension must implement scoring, coefficient selection and aggregation using the permitted gates; alignment alone does not establish this.
+
 **What it says.** Take any family of networks, one for each input length $n$, in which: the number of units is
 polynomial in $n$; the number of layers is a fixed constant (and recurrent or attention-style models run for at
 most $T$ steps in total); every operation is a literal-threshold gate with weights and threshold on the fixed

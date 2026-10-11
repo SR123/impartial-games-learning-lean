@@ -4,7 +4,7 @@ construction diagrams, formal statements and the complete Lean development.
 
 ## What the edition contains
 
-- **The paper**, generated as semantic HTML from `paper_jmlr.tex`, the exact source of the 47-page JMLR reading copy.
+- **The paper**, generated as semantic HTML from `paper_jmlr.tex`, the exact source of the 48-page JMLR reading copy.
   Wording, section order, numbering of sections, statements, equations, figures and tables, all 94 LaTeX labels,
   captions, appendices and bibliography are reproduced. The PDF is offered unchanged as the exact layout reference.
 - **Three further levels per claim**, opened beneath a statement or on the claim's own page: *Explain this* (intuition,

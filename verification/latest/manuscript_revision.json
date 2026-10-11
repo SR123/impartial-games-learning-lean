@@ -1,0 +1,20 @@
+{
+  "formal_blocks_total": 47,
+  "formal_blocks_changed": [
+    {
+      "index": 4,
+      "before": "\\begin{definition}[Impartial game]\n\\label{def:impartial}\nA finite terminating impartial game is a pair $(\\mathcal{P},\\mathcal{M})$ where $\\mathcal{P}$ is a nonempty set of positions and $\\mathcal{M}(p)\\subseteq \\mathcal{P}$ is the (finite) set of legal moves from $p$, with the property that the move relation does not depend on which player is to play (symmetry). We assume the move relation is acyclic and play terminates. Under normal play, the player who makes the last move wins.\n\\end{definition}",
+      "after": "\\begin{definition}[Impartial game]\n\\label{def:impartial}\nA finite terminating impartial game is a pair $(\\mathcal{P},\\mathcal{M})$ where $\\mathcal{P}$ is a nonempty set of positions and $\\mathcal{M}(p)\\subseteq \\mathcal{P}$ is the (finite) set of legal moves from $p$, with the property that the move relation does not depend on which player is to play (symmetry). We assume the move relation is acyclic and play terminates. We use the last-move-wins convention, usually called normal play: a player with no legal move loses.\n\\end{definition}"
+    },
+    {
+      "index": 10,
+      "before": "\\begin{proof}\nLet $s = \\operatorname{nim}(2,b_1,\\dots,b_m)=2\\oplus(b_1\\oplus\\cdots\\oplus b_m)$.\nEvery position in this family is winning, since $s\\in\\{2,3\\}$; hence strong mastery requires a winning move on every input in the reduction.\nThe most significant bit of $s$ is $2$ (the $2^1$ bit), and among the heaps only the first heap has that bit set. Therefore, any move that makes the nim-sum zero must change the first heap.\nThe unique choice that makes the new nim-sum zero is\n\\[\nx_1' \\;=\\; 2 \\oplus s \\;=\\; b_1\\oplus\\cdots\\oplus b_m \\in \\{0,1\\},\n\\]\nso the winning move is uniquely determined by the parity of $(b_1,\\dots,b_m)$.\n\nUse two bits per heap: the encoding fixes the first heap to $10$ and maps each input bit $b_i$ to the heap $0b_i$, using only constants and wiring. The least significant bit of the selected replacement for the first heap is then the input parity. Thus both encoding and decoding preserve polynomial size and constant depth, with Boolean input length $n=2(m+1)$. This is a reduction to winning-move selection even though all encoded positions have the same win/loss classification.\n\\end{proof}",
+      "after": "\\begin{proof}\nSince each $b_i\\in\\{0,1\\}$, these positions have nimber $2\\oplus(b_1\\oplus\\cdots\\oplus b_m)$, which is either $2$ or $3$. A winning move must change the first heap: changing any other heap leaves the leading binary digit of the nim-sum unchanged. To obtain nimber zero, the first heap must be reduced to $b_1\\oplus\\cdots\\oplus b_m$. Thus the unique winning move removes two tokens when this parity is zero and one when it is one.\nEncoding each heap in two bits uses only constants and wiring, and the low bit of the replacement heap is the input parity. This gives a constant-depth, polynomial-size reduction to winning-move selection, although every encoded position is winning.\n\\end{proof}"
+    }
+  ],
+  "labels_retained": 94,
+  "review": "2026-10-11 reader revision: clarified NIM rules, impartiality and Sprague-Grundy equivalence; normal-play ending encodings are explanatory, not newly Lean checked; clarified history as computational context, effective precision, literal weights, attention and board-size scope, FSQI and TC0; shortened parity proof retaining two-bit encoding/extraction; distinguished constructive layer upper bounds from necessary depth and learning claims. All theorem statements and 94 labels retained; only the equivalent wording of the impartial-game definition and the parity reduction proof changed among 47 formal blocks. Lean sources unchanged.",
+  "canonical_sha256": "c7eba0964f043d4f3d093dfe07ccd98384128c12a63aab918b236238dee69a14",
+  "jmlr_sha256": "efeaf1d64eb6c6bcca4308646ffe69d29a0c4743051f7a021e5bf3e9e36a0c10",
+  "pdf_sha256": "fe9f84a5d549ab2b4015a4d455a1435ae2d15a047979edbae0d95bc0b0cdd123"
+}

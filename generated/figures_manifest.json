@@ -2,16 +2,16 @@
  {
   "label": "fig:barrier-blueprint",
   "kind": "tikz",
-  "source": "paper_jmlr.tex lines 101-203",
-  "source_sha256": "0efd3bd91e7b36f409b2c5898ea3cd2a1ed75877d5066aafba66f832afb74c3b",
+  "source": "paper_jmlr.tex lines 106-208",
+  "source_sha256": "de1a45a6ecb3aeda5d951253990742138472e175b04282dd6431d497b5b614b6",
   "output": "assets/figures/barrier-blueprint.svg",
-  "output_sha256": "9b8f0bd717619a1399a7409b2c8140aa437dbb210257eeb935f232cf977206f3",
+  "output_sha256": "3d5abfa07dc910ab7e439b58ec720be53b39570f693d1b7607768362d473388f",
   "method": "pdflatex (measured picture, 6pt border, paper macros) + pdftocairo -svg"
  },
  {
   "label": "fig:restoration-example",
   "kind": "tikz",
-  "source": "paper_jmlr.tex lines 543-596",
+  "source": "paper_jmlr.tex lines 546-599",
   "source_sha256": "c9b342121869e97d0461047f4426ffaada54acf2c4243aeedbe6a652f5d681fb",
   "output": "assets/figures/restoration-example.svg",
   "output_sha256": "22b5cf79f25a2bdc07c2c4584291bd8214a62444f66024d8e978650db75f3b82",
@@ -20,7 +20,7 @@
  {
   "label": "fig:fsm-shootout-controller",
   "kind": "tikz",
-  "source": "paper_jmlr.tex lines 679-709",
+  "source": "paper_jmlr.tex lines 682-712",
   "source_sha256": "994ebfe6f0144ebb6993f7e61f76ebc4dcceab5f2ccd6baf4e612060cef13500",
   "output": "assets/figures/fsm-shootout-controller.svg",
   "output_sha256": "8893f4bd14b99818ad1d6fd9cad96938ab34acc98f6e8cf3ec342467c28b06d4",
@@ -29,7 +29,7 @@
  {
   "label": "fig:construction-pipeline",
   "kind": "tikz",
-  "source": "paper_jmlr.tex lines 1475-1484",
+  "source": "paper_jmlr.tex lines 1478-1487",
   "source_sha256": "0a8b03a8ff456fc6026455f8829252d9f83067aa1ad67cc2b75ab537ab2cab2c",
   "output": "assets/figures/construction-pipeline.svg",
   "output_sha256": "00330147883db5230d53eea15fc8fe989efd4c468e41596d335349da31e42b1e",
@@ -38,7 +38,7 @@
  {
   "label": "fig:threshold-compilation",
   "kind": "tikz",
-  "source": "paper_jmlr.tex lines 1517-1523",
+  "source": "paper_jmlr.tex lines 1520-1526",
   "source_sha256": "96881cc32a449aba164ae8f80227ab97fe7d6cd7c91c8ebb0a0b2dc78264d4fc",
   "output": "assets/figures/threshold-compilation.svg",
   "output_sha256": "e59c0c02b171e74ddb1267081dda3353245b4911169cbec4d6f216c6be704af5",

@@ -7,7 +7,7 @@
   alt: >-
     Four rows of boxes and arrows. (a) Barrier, single-frame, single-head: input P_t (global)
     feeds a single-head network whose output is marked with a cross, labelled "Cannot compute
-    global parity under FSQI/AC0". (b) Bypass 1, multi-frame input: input (P_{t-1}, P_t)
+    global parity in this model". (b) Bypass 1, multi-frame input: input (P_{t-1}, P_t)
     (transition) feeds a single-head network whose output is marked with a check, labelled
     "Computes local difference Delta". (c) Bypass 2, multiple rollout heads: input P_t splits
     into heads pi_0 through pi_{B-1}, which join at a check mark labelled "Rollout outcomes

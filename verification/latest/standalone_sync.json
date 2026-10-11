@@ -25,7 +25,7 @@
   {
    "check": "reference compile matches source and PDF",
    "status": "PASS",
-   "detail": "94 labels; the log reports this PDF's 47 pages and 610427 bytes",
+   "detail": "94 labels; the log reports this PDF's 48 pages and 614226 bytes",
    "data": []
   },
   {
@@ -37,13 +37,13 @@
   {
    "check": "claims, illustrations and Lean reference match their reviewed locks",
    "status": "PASS",
-   "detail": "check passed: 161 claim records and 5 illustrations match their reviewed locks; the illustration engine agrees with all Lean reference cases",
+   "detail": "check passed: 165 claim records and 5 illustrations match their reviewed locks; the illustration engine agrees with all Lean reference cases",
    "data": null
   },
   {
    "check": "dist/ is up to date",
    "status": "PASS",
-   "detail": "351 files, built from the current inputs, content and tools",
+   "detail": "355 files, built from the current inputs, content and tools",
    "data": []
   }
  ]

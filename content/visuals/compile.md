@@ -19,3 +19,5 @@ construction. It is not a lower bound, not a layer count measured in an experime
 networks training finds. A more economical network may use fewer layers: for the small boards in the table,
 the selector formulas Lean builds have depth 15, so even the uniform compiler produces 32 layers, below the bound of 42.
 Proving a sharper general bound would need a separate construction and proof.
+
+A truth-table expansion can reduce Boolean depth to two AND–OR levels with negated inputs, but may require exponentially many gates. The polynomial-size condition is therefore essential when comparing these depth bounds.

@@ -1,10 +1,10 @@
 {
- "date_utc": "2026-10-10T23:40:51Z",
+ "date_utc": "2026-10-11T07:21:06Z",
  "all_passed": true,
  "passed": 29,
  "total": 29,
  "claim_counts": {
-  "informal": 47,
+  "informal": 51,
   "classical-external": 12,
   "checked-definition": 19,
   "checked-theorem": 53,
@@ -88,7 +88,7 @@
   {
    "check": "formula inventory: every source formula rendered once with its exact TeX",
    "ok": true,
-   "detail": "1053 source formulas, 1053 rendered annotations",
+   "detail": "1055 source formulas, 1055 rendered annotations",
    "data": null
   },
   {
@@ -100,13 +100,13 @@
   {
    "check": "article text equals the independent source-derived text (normalised words)",
    "ok": true,
-   "detail": "17904 HTML words, 17904 source words, similarity 1.00000, 0 unexplained differences",
+   "detail": "18594 HTML words, 18594 source words, similarity 1.00000, 0 unexplained differences",
    "data": []
   },
   {
    "check": "article text against pdftotext of the supplied PDF: every difference classified",
    "ok": true,
-   "detail": "similarity 0.9089; classified {'hyphenation': 11, 'math': 2457, 'math_adjacency': 1, 'figure_text': 130, 'reordered_words': 502} (reordered words: float and table placement); 0 unexplained words",
+   "detail": "similarity 0.9176; classified {'hyphenation': 11, 'math': 2449, 'math_adjacency': 1, 'figure_text': 130, 'reordered_words': 389} (reordered words: float and table placement); 0 unexplained words",
    "data": {
     "pdf_only_words": [],
     "html_only_words": []
@@ -127,7 +127,7 @@
   {
    "check": "every internal link and asset resolves (files and fragment ids)",
    "ok": true,
-   "detail": "50849 references in 208 pages; 0 broken; 13 external links (not fetched)",
+   "detail": "50970 references in 212 pages; 0 broken; 13 external links (not fetched)",
    "data": {
     "broken": [],
     "external": [
@@ -150,7 +150,7 @@
   {
    "check": "claim records: required fields, anchors, pages, Lean names in their source ranges, audited hashes",
    "ok": true,
-   "detail": "161 records; by category {'informal': 47, 'classical-external': 12, 'checked-definition': 19, 'checked-theorem': 53, 'checked-conditional': 6, 'open': 4, 'empirical': 20}",
+   "detail": "165 records; by category {'informal': 51, 'classical-external': 12, 'checked-definition': 19, 'checked-theorem': 53, 'checked-conditional': 6, 'open': 4, 'empirical': 20}",
    "data": []
   },
   {
@@ -204,7 +204,7 @@
   {
    "check": "site crawled over HTTP under the non-root prefix /nim-interactive/: every resource returns 200",
    "ok": true,
-   "detail": "320 resources fetched; 0 failures",
+   "detail": "324 resources fetched; 0 failures",
    "data": []
   }
  ]

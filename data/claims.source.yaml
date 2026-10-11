@@ -1125,3 +1125,32 @@ claims:
   short: "Origin and limitations of the 20-to-42 layer bound"
   category: informal
   depends_on: [c-depth-table, c-threshold-realisation]
+
+# Reader-facing context added with the 11 October manuscript revision.
+- id: c-intro-games
+  snippet: "In NIM, two players take turns removing any positive number of tokens"
+  in: sec:intro
+  short: "NIM rules, impartiality and why NIM is central"
+  category: informal
+  depends_on: [def:impartial, def:nim, c-sprague-grundy]
+
+- id: c-history-context
+  snippet: "NIM itself does not depend on game history"
+  in: sec:intro
+  short: "History supplies computational context without changing optimal play"
+  category: informal
+  depends_on: [prop:restore, prop:streaming-nimsum, c-recurrence-history]
+
+- id: c-ending-encodings
+  snippet: "The last-move-wins convention also provides a convenient encoding"
+  in: sec-impartial-games
+  short: "Encoding decisive endings using terminal positions and a forced last move"
+  category: informal
+  depends_on: [def:impartial, def:nim, thm:nim-win]
+
+- id: c-depth-learning
+  snippet: 'Membership in $\AC^0$ does not guarantee a small or readily learnable network.'
+  in: sec:multiframe
+  short: "Explicit layer bounds, depth versus size, and remaining learning difficulties"
+  category: informal
+  depends_on: [c-depth-table, par:depth-accounting]

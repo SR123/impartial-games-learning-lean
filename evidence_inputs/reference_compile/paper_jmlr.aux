@@ -7,243 +7,243 @@
 \citation{silver2016alphago,silver2017alphagozero,silver2018alphazero,schrittwieser2020muzero}
 \citation{minsky1969perceptrons}
 \citation{friedman2017challenge}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{}{section.1}{}}
 \citation{zhou2022impartial}
 \citation{zhou2023parity}
 \citation{zhou2024phd}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
-\newlabel{sec:intro}{{1}{1}{}{section.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Contributions}{2}{subsection.1.1}\protected@file@percent }
-\newlabel{sec:contrib}{{1.1}{2}{}{subsection.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The parity barrier and three structural bypasses. (a) Fixed-latency FSQI inference cannot compute global parity. (b) Two frames expose $\Delta $ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$.}}{3}{figure.1}\protected@file@percent }
-\newlabel{fig:barrier-blueprint}{{1}{3}{The parity barrier and three structural bypasses. (a) Fixed-latency FSQI inference cannot compute global parity. (b) Two frames expose $\Delta $ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The parity barrier and three structural bypasses. (a) Fixed-scale quantised inference (FSQI) with fixed latency cannot compute global parity across arbitrarily large boards. Here fixed latency means a bounded number of sequential computation steps, independent of board size. (b) Two frames expose $\Delta $ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:barrier-blueprint}{{1}{3}{The parity barrier and three structural bypasses. (a) Fixed-scale quantised inference (FSQI) with fixed latency cannot compute global parity across arbitrarily large boards. Here fixed latency means a bounded number of sequential computation steps, independent of board size. (b) Two frames expose $\Delta $ for restoration when the predecessor has nim-sum zero. (c) Distinct policy heads recover complementary information through complete rollouts. (d) Persistent recurrence accumulates the nim-sum row by row and retains summaries across positions. Each update has constant depth; the full scan has depth growing with $N$}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Contributions}{3}{subsection.1.1}\protected@file@percent }
+\newlabel{sec:contrib}{{1.1}{3}{}{subsection.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Scope and limitations}{4}{subsection.1.2}\protected@file@percent }
 \newlabel{sec:scope}{{1.2}{4}{}{subsection.1.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Paper organisation}{4}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Paper organisation}{5}{subsection.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Theoretical framework and neural network models}{5}{section.2}\protected@file@percent }
 \newlabel{sec:framework}{{2}{5}{}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Fixed-scale quantised inference and $\mathrm  {AC}^0$ simulation}{5}{subsection.2.1}\protected@file@percent }
 \newlabel{sec:framework-fixedprecision}{{2.1}{5}{}{subsection.2.1}{}}
-\newlabel{def:quantised-inference}{{2.1}{5}{Quantised inference}{theorem.2.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Why fixed-scale quantisation suggests an $\mathrm  {AC}^0$ abstraction.}{5}{theorem.2.1}\protected@file@percent }
+\newlabel{def:quantised-inference}{{2.1}{6}{Quantised inference}{theorem.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why fixed-scale quantisation suggests an $\mathrm  {AC}^0$ abstraction.}{6}{theorem.2.1}\protected@file@percent }
 \newlabel{rem:ac0-scope}{{2.2}{6}{Scope of the $\AC ^0$ abstraction}{theorem.2.2}{}}
-\newlabel{rem:local-vs-global-parity}{{2.3}{6}{Local vs.\ global parity}{theorem.2.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Notation convention (input length).}{6}{theorem.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Circuit complexity primer.}{6}{theorem.2.3}\protected@file@percent }
+\newlabel{rem:local-vs-global-parity}{{2.3}{7}{Local vs.\ global parity}{theorem.2.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Notation convention (input length).}{7}{theorem.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Circuit complexity primer.}{7}{theorem.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation by circuits}{7}{subsection.2.2}\protected@file@percent }
+\newlabel{sec:simulation}{{2.2}{7}{}{subsection.2.2}{}}
+\newlabel{thm:sim-ac0}{{2.4}{7}{Simulation by $\AC ^0$}{theorem.2.4}{}}
 \citation{furst1984parity,hastad1986thesis}
 \citation{hao2022hardattention}
 \citation{merrill2021transformer}
 \citation{jacob2018integeronly,dettmers2022llmint8}
 \citation{zhou2022impartial,zhou2023parity}
 \citation{mnih2015humanlevel}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation by circuits}{7}{subsection.2.2}\protected@file@percent }
-\newlabel{sec:simulation}{{2.2}{7}{}{subsection.2.2}{}}
-\newlabel{thm:sim-ac0}{{2.4}{7}{Simulation by $\AC ^0$}{theorem.2.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{7}{section.3}\protected@file@percent }
-\newlabel{sec:related}{{3}{7}{}{section.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Circuit complexity and neural networks.}{7}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Quantised inference and deployment constraints.}{7}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Reinforcement learning in combinatorial games.}{7}{section.3}\protected@file@percent }
 \citation{berlekamp2001winningways}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{8}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{8}{}{section.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Circuit complexity and neural networks.}{8}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Quantised inference and deployment constraints.}{8}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Reinforcement learning in combinatorial games.}{8}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{History and memory in RL.}{8}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Impartial games and NIM}{8}{section.4}\protected@file@percent }
-\newlabel{sec:impartial}{{4}{8}{}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Impartial games}{8}{subsection.4.1}\protected@file@percent }
-\newlabel{def:impartial}{{4.1}{8}{Impartial game}{theorem.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}NIM}{8}{subsection.4.2}\protected@file@percent }
-\newlabel{def:nim}{{4.2}{8}{NIM}{theorem.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Sprague--Grundy theory and nim-sum}{8}{subsection.4.3}\protected@file@percent }
-\newlabel{def:nimsum}{{4.3}{8}{Nim-sum}{theorem.4.3}{}}
-\newlabel{thm:nim-win}{{4.4}{8}{Classical NIM characterisation}{theorem.4.4}{}}
-\citation{furst1984parity,hastad1986thesis,smolensky1987algebraic,razborov1987lower}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Impartial games and NIM}{9}{section.4}\protected@file@percent }
+\newlabel{sec:impartial}{{4}{9}{}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Impartial games}{9}{subsection.4.1}\protected@file@percent }
+\newlabel{def:impartial}{{4.1}{9}{Impartial game}{theorem.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}NIM}{9}{subsection.4.2}\protected@file@percent }
+\newlabel{def:nim}{{4.2}{9}{NIM}{theorem.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Sprague--Grundy theory and nim-sum}{9}{subsection.4.3}\protected@file@percent }
+\newlabel{def:nimsum}{{4.3}{9}{Nim-sum}{theorem.4.3}{}}
+\newlabel{thm:nim-win}{{4.4}{9}{Classical NIM characterisation}{theorem.4.4}{}}
 \@writefile{toc}{\contentsline {paragraph}{Why NIM is a useful barrier example.}{9}{theorem.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Main results: impossibility and possibility}{9}{section.5}\protected@file@percent }
-\newlabel{sec:main}{{5}{9}{}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Mastery notions}{9}{subsection.5.1}\protected@file@percent }
-\newlabel{def:mastery}{{5.1}{9}{Strong, weak, and restoration mastery}{theorem.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Single-frame impossibility results}{9}{subsection.5.2}\protected@file@percent }
-\newlabel{sec:impossibility}{{5.2}{9}{}{subsection.5.2}{}}
-\newlabel{thm:singleframe-impossible}{{5.2}{10}{Single-frame parity barrier}{theorem.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}First bypass: two-frame restoration}{10}{subsection.5.3}\protected@file@percent }
-\newlabel{sec:multiframe}{{5.3}{10}{}{subsection.5.3}{}}
-\newlabel{def:nimber-difference}{{5.3}{10}{Nimber difference}{theorem.5.3}{}}
-\newlabel{lem:nimber-diff-ac0}{{5.4}{10}{Bounded-change differences}{theorem.5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A worked restoration example (three heaps). Starting from a $P$-position $Q$ (green), the opponent changes heap 2 ($5\to 4$), creating a nimber difference $\delta =1$. The agent instantly restores the $P$-position by changing heap 1 ($3\to 2$), which imposes the matching difference $3\oplus 2 = 1$.}}{11}{figure.2}\protected@file@percent }
-\newlabel{fig:restoration-example}{{2}{11}{A worked restoration example (three heaps). Starting from a $P$-position $Q$ (green), the opponent changes heap 2 ($5\to 4$), creating a nimber difference $\delta =1$. The agent instantly restores the $P$-position by changing heap 1 ($3\to 2$), which imposes the matching difference $3\oplus 2 = 1$}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Two-frame local restoration rule}{11}{subsubsection.5.3.1}\protected@file@percent }
-\newlabel{sec:restoration}{{5.3.1}{11}{}{subsubsection.5.3.1}{}}
-\newlabel{prop:restore}{{5.5}{11}{Local restoration principle}{theorem.5.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Interpretation (``mirror the delta'').}{11}{figure.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Implementation overview}{12}{subsubsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Second bypass: structured rollout policies}{12}{subsection.5.4}\protected@file@percent }
-\newlabel{sec:search-gap}{{5.4}{12}{}{subsection.5.4}{}}
-\newlabel{def:rollout-policy}{{5.6}{12}{Rollout policy and rollout outcome}{theorem.5.6}{}}
-\newlabel{def:agent-types}{{5.7}{12}{Restricted rollout measurements and readout}{theorem.5.7}{}}
-\newlabel{rem:why-multi-head}{{5.8}{13}{Why multiple heads are not redundant}{theorem.5.8}{}}
-\newlabel{par:shootout-controller}{{5.4}{13}{}{theorem.5.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Finite-state shootout controller (FSM over policy heads).}{13}{theorem.5.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A simple finite-state shootout controller for deciding whether $\sigma (P)=\operatorname  {nim}(P)$ is zero using the $B$ rollout heads of Proposition~\ref {prop:rollout-sufficiency}. The controller queries heads sequentially and halts as soon as it can certify $\sigma (P)\neq  0$. Reaching the final transition to $\sigma (P)=0$ implicitly means $r_0=\cdots  =r_{B-1}=0$. }}{14}{figure.3}\protected@file@percent }
-\newlabel{fig:fsm-shootout-controller}{{3}{14}{A simple finite-state shootout controller for deciding whether $\sigma (P)=\operatorname {nim}(P)$ is zero using the $B$ rollout heads of Proposition~\ref {prop:rollout-sufficiency}. The controller queries heads sequentially and halts as soon as it can certify $\sigma (P)\neq 0$. Reaching the final transition to $\sigma (P)=0$ implicitly means $r_0=\cdots =r_{B-1}=0$}{figure.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Depth amplification.}{14}{figure.3}\protected@file@percent }
-\newlabel{prop:rollout-sufficiency}{{5.9}{14}{Structured rollout sufficiency}{theorem.5.9}{}}
-\@writefile{toc}{\contentsline {paragraph}{A single policy head yields only one bit.}{15}{theorem.5.9}\protected@file@percent }
-\newlabel{prop:single-policy-bound}{{5.10}{15}{Single-policy information bound}{theorem.5.10}{}}
-\newlabel{rem:noisy-rollout-decay}{{5.11}{15}{An illustrative independent outcome-flip model}{theorem.5.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The three bypasses use different resources. Conditional restoration does not classify arbitrary starting positions; the rollout and recurrent constructions supply additional sequential computation.}}{16}{figure.4}\protected@file@percent }
-\newlabel{fig:rollout_gap}{{4}{16}{The three bypasses use different resources. Conditional restoration does not classify arbitrary starting positions; the rollout and recurrent constructions supply additional sequential computation}{figure.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{The initialisation boundary for restoration.}{16}{theorem.5.11}\protected@file@percent }
-\newlabel{thm:search-gap}{{5.12}{16}{Restricted bound and bypasses}{theorem.5.12}{}}
+\citation{furst1984parity,hastad1986thesis,smolensky1987algebraic,razborov1987lower}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Main results: impossibility and possibility}{10}{section.5}\protected@file@percent }
+\newlabel{sec:main}{{5}{10}{}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Mastery notions}{10}{subsection.5.1}\protected@file@percent }
+\newlabel{def:mastery}{{5.1}{10}{Strong, weak, and restoration mastery}{theorem.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Single-frame impossibility results}{10}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:impossibility}{{5.2}{10}{}{subsection.5.2}{}}
+\newlabel{thm:singleframe-impossible}{{5.2}{11}{Single-frame parity barrier}{theorem.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}First bypass: two-frame restoration}{11}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:multiframe}{{5.3}{11}{}{subsection.5.3}{}}
+\newlabel{def:nimber-difference}{{5.3}{11}{Nimber difference}{theorem.5.3}{}}
+\newlabel{lem:nimber-diff-ac0}{{5.4}{11}{Bounded-change differences}{theorem.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A worked restoration example (three heaps). Starting from a $P$-position $Q$ (green), the opponent changes heap 2 ($5\to 4$), creating a nimber difference $\delta =1$. The agent instantly restores the $P$-position by changing heap 1 ($3\to 2$), which imposes the matching difference $3\oplus 2 = 1$.}}{12}{figure.2}\protected@file@percent }
+\newlabel{fig:restoration-example}{{2}{12}{A worked restoration example (three heaps). Starting from a $P$-position $Q$ (green), the opponent changes heap 2 ($5\to 4$), creating a nimber difference $\delta =1$. The agent instantly restores the $P$-position by changing heap 1 ($3\to 2$), which imposes the matching difference $3\oplus 2 = 1$}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Two-frame local restoration rule}{12}{subsubsection.5.3.1}\protected@file@percent }
+\newlabel{sec:restoration}{{5.3.1}{12}{}{subsubsection.5.3.1}{}}
+\newlabel{prop:restore}{{5.5}{12}{Local restoration principle}{theorem.5.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Interpretation (``mirror the delta'').}{12}{figure.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Implementation overview}{13}{subsubsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Second bypass: structured rollout policies}{13}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:search-gap}{{5.4}{13}{}{subsection.5.4}{}}
+\newlabel{def:rollout-policy}{{5.6}{13}{Rollout policy and rollout outcome}{theorem.5.6}{}}
+\newlabel{def:agent-types}{{5.7}{13}{Restricted rollout measurements and readout}{theorem.5.7}{}}
+\newlabel{rem:why-multi-head}{{5.8}{14}{Why multiple heads are not redundant}{theorem.5.8}{}}
+\newlabel{par:shootout-controller}{{5.4}{14}{}{theorem.5.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Finite-state shootout controller (FSM over policy heads).}{14}{theorem.5.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A simple finite-state shootout controller for deciding whether $\sigma (P)=\operatorname  {nim}(P)$ is zero using the $B$ rollout heads of Proposition~\ref {prop:rollout-sufficiency}. The controller queries heads sequentially and halts as soon as it can certify $\sigma (P)\neq  0$. Reaching the final transition to $\sigma (P)=0$ implicitly means $r_0=\cdots  =r_{B-1}=0$. }}{15}{figure.3}\protected@file@percent }
+\newlabel{fig:fsm-shootout-controller}{{3}{15}{A simple finite-state shootout controller for deciding whether $\sigma (P)=\operatorname {nim}(P)$ is zero using the $B$ rollout heads of Proposition~\ref {prop:rollout-sufficiency}. The controller queries heads sequentially and halts as soon as it can certify $\sigma (P)\neq 0$. Reaching the final transition to $\sigma (P)=0$ implicitly means $r_0=\cdots =r_{B-1}=0$}{figure.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Depth amplification.}{15}{figure.3}\protected@file@percent }
+\newlabel{prop:rollout-sufficiency}{{5.9}{15}{Structured rollout sufficiency}{theorem.5.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{A single policy head yields only one bit.}{16}{theorem.5.9}\protected@file@percent }
+\newlabel{prop:single-policy-bound}{{5.10}{16}{Single-policy information bound}{theorem.5.10}{}}
+\newlabel{rem:noisy-rollout-decay}{{5.11}{16}{An illustrative independent outcome-flip model}{theorem.5.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The three bypasses use different resources. Conditional restoration does not classify arbitrary starting positions; the rollout and recurrent constructions supply additional sequential computation.}}{17}{figure.4}\protected@file@percent }
+\newlabel{fig:rollout_gap}{{4}{17}{The three bypasses use different resources. Conditional restoration does not classify arbitrary starting positions; the rollout and recurrent constructions supply additional sequential computation}{figure.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{The initialisation boundary for restoration.}{17}{theorem.5.11}\protected@file@percent }
+\newlabel{thm:search-gap}{{5.12}{17}{Restricted bound and bypasses}{theorem.5.12}{}}
 \citation{friedman2017deeplearning}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Third bypass: persistent row-wise recurrence}{17}{subsection.5.5}\protected@file@percent }
-\newlabel{sec:recurrent-bypass}{{5.5}{17}{}{subsection.5.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Serialising positions and retaining state.}{17}{subsection.5.5}\protected@file@percent }
-\newlabel{prop:streaming-nimsum}{{5.13}{17}{Sequential nim-sum accumulation}{theorem.5.13}{}}
-\@writefile{toc}{\contentsline {paragraph}{From a summary to a move.}{18}{theorem.5.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Connecting recurrence to the history bypass.}{18}{theorem.5.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Why the lower bound is respected.}{19}{theorem.5.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}What the three bypasses establish}{19}{subsection.5.6}\protected@file@percent }
-\newlabel{sec:bypass-scope}{{5.6}{19}{}{subsection.5.6}{}}
-\newlabel{prop:bypass-interfaces}{{5.14}{19}{Shallow components and complete strategies}{theorem.5.14}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Learning impartial games with neural networks}{20}{section.6}\protected@file@percent }
-\newlabel{sec:learnability}{{6}{20}{}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Practical takeaways}{20}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Teacher-guided data as a controlled source of transitions}{20}{subsection.6.2}\protected@file@percent }
-\newlabel{sec:teacher}{{6.2}{20}{}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Third bypass: persistent row-wise recurrence}{18}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:recurrent-bypass}{{5.5}{18}{}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Serialising positions and retaining state.}{18}{subsection.5.5}\protected@file@percent }
+\newlabel{prop:streaming-nimsum}{{5.13}{18}{Sequential nim-sum accumulation}{theorem.5.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{From a summary to a move.}{19}{theorem.5.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Connecting recurrence to the history bypass.}{19}{theorem.5.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why the lower bound is respected.}{20}{theorem.5.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}What the three bypasses establish}{20}{subsection.5.6}\protected@file@percent }
+\newlabel{sec:bypass-scope}{{5.6}{20}{}{subsection.5.6}{}}
+\newlabel{prop:bypass-interfaces}{{5.14}{20}{Shallow components and complete strategies}{theorem.5.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Learning impartial games with neural networks}{21}{section.6}\protected@file@percent }
+\newlabel{sec:learnability}{{6}{21}{}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Practical takeaways}{21}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Teacher-guided data as a controlled source of transitions}{21}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:teacher}{{6.2}{21}{}{subsection.6.2}{}}
 \citation{ajtai1993approxcount}
 \citation{furst1984parity,hastad1986thesis,smolensky1987algebraic,razborov1987lower}
 \citation{thornton1996parity,thornton1996bp,daniely2020parities}
 \citation{linial1993constant}
 \citation{tal2015tight}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Approximate majority, parity, and the $\mathrm  {AC}^0$ abstraction}{21}{subsection.6.3}\protected@file@percent }
-\newlabel{sec:majority-vs-parity}{{6.3}{21}{}{subsection.6.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}A spectral viewpoint: low-degree Fourier mass vs.\ parity}{21}{subsection.6.4}\protected@file@percent }
-\newlabel{sec:spectral-view}{{6.4}{21}{}{subsection.6.4}{}}
-\newlabel{def:fourier-tail}{{6.1}{21}{Fourier tail / spectral bandwidth}{theorem.6.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Parity is a pure high-frequency character.}{21}{theorem.6.1}\protected@file@percent }
-\newlabel{eq:tail-correlation}{{6.1}{21}{}{equation.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Approximate majority, parity, and the $\mathrm  {AC}^0$ abstraction}{22}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:majority-vs-parity}{{6.3}{22}{}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}A spectral viewpoint: low-degree Fourier mass vs.\ parity}{22}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:spectral-view}{{6.4}{22}{}{subsection.6.4}{}}
+\newlabel{def:fourier-tail}{{6.1}{22}{Fourier tail / spectral bandwidth}{theorem.6.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Parity is a pure high-frequency character.}{22}{theorem.6.1}\protected@file@percent }
+\newlabel{eq:tail-correlation}{{6.1}{22}{}{equation.6.1}{}}
 \citation{rahaman2019spectral,xu2019frequency}
-\@writefile{toc}{\contentsline {paragraph}{$\mathrm  {AC}^0$ has little high-frequency mass.}{22}{equation.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Local vs.\ global parity in NIM.}{22}{equation.6.1}\protected@file@percent }
-\newlabel{eq:delta-extension}{{6.2}{22}{}{equation.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Connection to optimisation (informal).}{22}{equation.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}From global invariants to local checks}{22}{subsection.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Experiments}{22}{section.7}\protected@file@percent }
-\newlabel{sec:experiments}{{7}{22}{}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Neural architecture and training objective}{23}{subsection.7.1}\protected@file@percent }
-\newlabel{sec:arch}{{7.1}{23}{}{subsection.7.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}State and action representation}{23}{subsubsection.7.1.1}\protected@file@percent }
-\newlabel{sec:state-action-repr}{{7.1.1}{23}{}{subsubsection.7.1.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Network architecture}{23}{subsubsection.7.1.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Neural network architecture used in the experiments. $H$ denotes the hidden width (a fixed hyperparameter).}}{23}{table.1}\protected@file@percent }
-\newlabel{table:arch}{{1}{23}{Neural network architecture used in the experiments. $H$ denotes the hidden width (a fixed hyperparameter)}{table.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.3}Training targets and loss}{23}{subsubsection.7.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{$\mathrm  {AC}^0$ has little high-frequency mass.}{23}{equation.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Local vs.\ global parity in NIM.}{23}{equation.6.1}\protected@file@percent }
+\newlabel{eq:delta-extension}{{6.2}{23}{}{equation.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Connection to optimisation (informal).}{23}{equation.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}From global invariants to local checks}{23}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Experiments}{23}{section.7}\protected@file@percent }
+\newlabel{sec:experiments}{{7}{23}{}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Neural architecture and training objective}{24}{subsection.7.1}\protected@file@percent }
+\newlabel{sec:arch}{{7.1}{24}{}{subsection.7.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}State and action representation}{24}{subsubsection.7.1.1}\protected@file@percent }
+\newlabel{sec:state-action-repr}{{7.1.1}{24}{}{subsubsection.7.1.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Network architecture}{24}{subsubsection.7.1.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Neural network architecture used in the experiments. $H$ denotes the hidden width (a fixed hyperparameter).}}{24}{table.1}\protected@file@percent }
+\newlabel{table:arch}{{1}{24}{Neural network architecture used in the experiments. $H$ denotes the hidden width (a fixed hyperparameter)}{table.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.3}Training targets and loss}{24}{subsubsection.7.1.3}\protected@file@percent }
 \citation{zhou2022impartial,zhou2023parity}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.4}Evaluation criteria in this version}{24}{subsubsection.7.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Supervised restoration learning from teacher--random transitions}{24}{subsection.7.2}\protected@file@percent }
-\newlabel{sec:supervised-restoration}{{7.2}{24}{}{subsection.7.2}{}}
-\newlabel{sec:exp-restoration}{{7.2}{24}{}{subsection.7.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Game and representations}{24}{subsubsection.7.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Dataset generation (teacher--random--teacher)}{24}{subsubsection.7.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.4}Evaluation criteria in this version}{25}{subsubsection.7.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Supervised restoration learning from teacher--random transitions}{25}{subsection.7.2}\protected@file@percent }
+\newlabel{sec:supervised-restoration}{{7.2}{25}{}{subsection.7.2}{}}
+\newlabel{sec:exp-restoration}{{7.2}{25}{}{subsection.7.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Game and representations}{25}{subsubsection.7.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Dataset generation (teacher--random--teacher)}{25}{subsubsection.7.2.2}\protected@file@percent }
 \citation{zhou2022impartial,zhou2023parity}
-\@writefile{toc}{\contentsline {paragraph}{Why teacher--random--teacher?}{25}{Item.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Training and checkpoints}{25}{subsubsection.7.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.4}Evaluation metrics}{25}{subsubsection.7.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Restoration accuracy (validation/test).}{25}{subsubsection.7.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.5}Results}{25}{subsubsection.7.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{One-frame does not learn restoration; two-frame eventually does.}{25}{subsubsection.7.2.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation restoration accuracy vs.\ epoch on the restoration dataset ($N=20$, $k=4$, $D=10^6$). In this saved run, the 1F model has low accuracy while the 2F model passes through an intermediate plateau around 0.54 before improving sharply towards near-perfect accuracy. The transition suggests a learning bottleneck that training eventually overcomes; it is distinct from the representational lower bound. Values use the saved batch-mean metric.}}{26}{figure.5}\protected@file@percent }
-\newlabel{fig:valacc-H20k4}{{5}{26}{Validation restoration accuracy vs.\ epoch on the restoration dataset ($N=20$, $k=4$, $D=10^6$). In this saved run, the 1F model has low accuracy while the 2F model passes through an intermediate plateau around 0.54 before improving sharply towards near-perfect accuracy. The transition suggests a learning bottleneck that training eventually overcomes; it is distinct from the representational lower bound. Values use the saved batch-mean metric}{figure.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Learning in stages: the plateau and subsequent improvement.}{26}{figure.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Test restoration accuracy of checkpointed agents ($N=20$, $k=4$, $D=10^6$). Checkpoints are saved at epochs $\{1,23,45,67,89,112,134,156,178,200\}$. The 2F checkpoints confirm the improvement beyond the intermediate plateau; the more densely sampled validation curve in Figure~\ref {fig:valacc-H20k4} shows its timing.}}{27}{figure.6}\protected@file@percent }
-\newlabel{fig:testacc-H20k4}{{6}{27}{Test restoration accuracy of checkpointed agents ($N=20$, $k=4$, $D=10^6$). Checkpoints are saved at epochs $\{1,23,45,67,89,112,134,156,178,200\}$. The 2F checkpoints confirm the improvement beyond the intermediate plateau; the more densely sampled validation curve in Figure~\ref {fig:valacc-H20k4} shows its timing}{figure.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scope and provenance of the reported result.}{27}{figure.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Single-frame evaluation via FSM-controlled shootouts (multi-head)}{27}{subsection.7.3}\protected@file@percent }
-\newlabel{sec:exp-fsm-shootout}{{7.3}{27}{}{subsection.7.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Purpose.}{27}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Setup.}{28}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Training the rollout heads.}{28}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Rollout evaluation.}{28}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{FSM-controlled shootout evaluation.}{28}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Results.}{28}{subsection.7.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Single-frame $P/N$ evaluation by FSM-controlled shootouts ($N=20$, $k=4$), reporting overall $P/N$ accuracy and $N$-position recall.}}{29}{table.2}\protected@file@percent }
-\newlabel{tab:fsm-shootout}{{2}{29}{Single-frame $P/N$ evaluation by FSM-controlled shootouts ($N=20$, $k=4$), reporting overall $P/N$ accuracy and $N$-position recall}{table.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Reproducibility status.}{29}{table.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion and broader implications}{29}{section.8}\protected@file@percent }
-\newlabel{sec:discussion}{{8}{29}{}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why teacher--random--teacher?}{26}{Item.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Training and checkpoints}{26}{subsubsection.7.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.4}Evaluation metrics}{26}{subsubsection.7.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Restoration accuracy (validation/test).}{26}{subsubsection.7.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.5}Results}{26}{subsubsection.7.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{One-frame does not learn restoration; two-frame eventually does.}{26}{subsubsection.7.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Validation restoration accuracy vs.\ epoch on the restoration dataset ($N=20$, $k=4$, $D=10^6$). In this saved run, the 1F model has low accuracy while the 2F model passes through an intermediate plateau around 0.54 before improving sharply towards near-perfect accuracy. The transition suggests a learning bottleneck that training eventually overcomes; it is distinct from the representational lower bound. Values use the saved batch-mean metric.}}{27}{figure.5}\protected@file@percent }
+\newlabel{fig:valacc-H20k4}{{5}{27}{Validation restoration accuracy vs.\ epoch on the restoration dataset ($N=20$, $k=4$, $D=10^6$). In this saved run, the 1F model has low accuracy while the 2F model passes through an intermediate plateau around 0.54 before improving sharply towards near-perfect accuracy. The transition suggests a learning bottleneck that training eventually overcomes; it is distinct from the representational lower bound. Values use the saved batch-mean metric}{figure.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Learning in stages: the plateau and subsequent improvement.}{27}{figure.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Test restoration accuracy of checkpointed agents ($N=20$, $k=4$, $D=10^6$). Checkpoints are saved at epochs $\{1,23,45,67,89,112,134,156,178,200\}$. The 2F checkpoints confirm the improvement beyond the intermediate plateau; the more densely sampled validation curve in Figure~\ref {fig:valacc-H20k4} shows its timing.}}{28}{figure.6}\protected@file@percent }
+\newlabel{fig:testacc-H20k4}{{6}{28}{Test restoration accuracy of checkpointed agents ($N=20$, $k=4$, $D=10^6$). Checkpoints are saved at epochs $\{1,23,45,67,89,112,134,156,178,200\}$. The 2F checkpoints confirm the improvement beyond the intermediate plateau; the more densely sampled validation curve in Figure~\ref {fig:valacc-H20k4} shows its timing}{figure.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scope and provenance of the reported result.}{28}{figure.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Single-frame evaluation via FSM-controlled shootouts (multi-head)}{28}{subsection.7.3}\protected@file@percent }
+\newlabel{sec:exp-fsm-shootout}{{7.3}{28}{}{subsection.7.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Purpose.}{28}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Setup.}{29}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Training the rollout heads.}{29}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Rollout evaluation.}{29}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{FSM-controlled shootout evaluation.}{29}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{29}{subsection.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Single-frame $P/N$ evaluation by FSM-controlled shootouts ($N=20$, $k=4$), reporting overall $P/N$ accuracy and $N$-position recall.}}{30}{table.2}\protected@file@percent }
+\newlabel{tab:fsm-shootout}{{2}{30}{Single-frame $P/N$ evaluation by FSM-controlled shootouts ($N=20$, $k=4$), reporting overall $P/N$ accuracy and $N$-position recall}{table.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Reproducibility status.}{30}{table.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion and broader implications}{30}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{8}{30}{}{section.8}{}}
 \citation{karpov2023setalternating,zhou2024cdl,zhou2024phd}
 \citation{schaefer1978games}
 \citation{cizek2026sprouts}
 \citation{berlekamp2001winningways}
 \citation{nowakowski2025unsolved}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Theoretical idealisation vs.\ practical architecture}{30}{subsection.8.1}\protected@file@percent }
-\newlabel{sec:idealisation}{{8.1}{30}{}{subsection.8.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Local information in combinatorial search}{30}{subsection.8.2}\protected@file@percent }
-\newlabel{sec:math}{{8.2}{30}{}{subsection.8.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Beyond NIM: harder impartial games as benchmarks}{30}{subsection.8.3}\protected@file@percent }
-\newlabel{sec:othergames}{{8.3}{30}{}{subsection.8.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Theoretical idealisation vs.\ practical architecture}{31}{subsection.8.1}\protected@file@percent }
+\newlabel{sec:idealisation}{{8.1}{31}{}{subsection.8.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Local information in combinatorial search}{31}{subsection.8.2}\protected@file@percent }
+\newlabel{sec:math}{{8.2}{31}{}{subsection.8.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Beyond NIM: harder impartial games as benchmarks}{31}{subsection.8.3}\protected@file@percent }
+\newlabel{sec:othergames}{{8.3}{31}{}{subsection.8.3}{}}
 \citation{nowakowski2025unsolved}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}What the rollout separation establishes}{31}{subsection.8.4}\protected@file@percent }
-\newlabel{sec:multipolicy-discussion}{{8.4}{31}{}{subsection.8.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Learning bottlenecks after the representational barrier}{31}{subsection.8.5}\protected@file@percent }
-\newlabel{sec:opt-gap}{{8.5}{31}{}{subsection.8.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Significance and impact}{32}{subsection.8.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{32}{section.9}\protected@file@percent }
-\newlabel{sec:conclusion}{{9}{32}{}{section.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}What the rollout separation establishes}{32}{subsection.8.4}\protected@file@percent }
+\newlabel{sec:multipolicy-discussion}{{8.4}{32}{}{subsection.8.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Learning bottlenecks after the representational barrier}{32}{subsection.8.5}\protected@file@percent }
+\newlabel{sec:opt-gap}{{8.5}{32}{}{subsection.8.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Significance and impact}{33}{subsection.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{33}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{33}{}{section.9}{}}
 \citation{riis2026lean}
 \citation{hastad1986thesis,hastad2014correlation,linial1993constant,tal2015tight}
 \citation{riis2026interactive}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Development, verification and author responsibility}{33}{section.10}\protected@file@percent }
-\newlabel{sec:development}{{10}{33}{}{section.10}{}}
-\newlabel{sec:verification}{{10}{33}{}{section.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Formal definitions of fixed-scale quantised neural models}{34}{appendix.A}\protected@file@percent }
-\newlabel{app:defs}{{A}{34}{}{appendix.A}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Preliminaries: fixed-scale quantisation and representable parameters}{34}{subsection.A.1}\protected@file@percent }
-\newlabel{app:precision}{{A.1}{34}{}{subsection.A.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Feedforward model}{34}{subsection.A.2}\protected@file@percent }
-\newlabel{app:NN}{{A.2}{34}{}{subsection.A.2}{}}
-\newlabel{def:NN-formal}{{A.1}{34}{Literal-threshold network}{theorem.A.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Recurrent model (finite window)}{34}{subsection.A.3}\protected@file@percent }
-\newlabel{app:RNN}{{A.3}{34}{}{subsection.A.3}{}}
-\newlabel{def:RNN-formal}{{A.2}{34}{Bounded-unrolling recurrence}{theorem.A.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Attention-style model (finite window)}{35}{subsection.A.4}\protected@file@percent }
-\newlabel{app:LTST}{{A.4}{35}{}{subsection.A.4}{}}
-\newlabel{def:LTST-formal}{{A.3}{35}{Gate-realised attention-style model}{theorem.A.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}An $\mathrm  {AC}^0$ construction for simulating fixed-scale quantised networks}{35}{appendix.B}\protected@file@percent }
-\newlabel{app:ac0proof}{{B}{35}{}{appendix.B}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}One threshold unit is in $\mathrm  {AC}^0$ under fixed-scale quantisation}{36}{subsection.B.1}\protected@file@percent }
-\newlabel{app:oneunit}{{B.1}{36}{}{subsection.B.1}{}}
-\newlabel{lem:unit-ac0}{{B.1}{36}{Fixed-scale quantised threshold gate $\in \AC ^0$}{theorem.B.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}From one unit to a full network}{36}{subsection.B.2}\protected@file@percent }
-\newlabel{app:network}{{B.2}{36}{}{subsection.B.2}{}}
-\newlabel{lem:layer-ac0}{{B.3}{36}{One layer of fixed-scale quantised units is in $\AC ^0$}{theorem.B.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Implementation details: shallow circuits and fixed-scale networks}{37}{appendix.C}\protected@file@percent }
-\newlabel{app:impl}{{C}{37}{}{appendix.C}{}}
-\newlabel{par:construction-example}{{C}{37}{}{appendix.C}{}}
-\@writefile{toc}{\contentsline {paragraph}{From a game rule to a network.}{37}{appendix.C}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A schematic of the checked two-frame construction on one legal transition. Boxes group operations, not individual network layers. The general selector also handles multiple candidates, fallback moves and terminal boards.}}{37}{figure.7}\protected@file@percent }
-\newlabel{fig:construction-pipeline}{{7}{37}{A schematic of the checked two-frame construction on one legal transition. Boxes group operations, not individual network layers. The general selector also handles multiple candidates, fallback moves and terminal boards}{figure.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{Local differences and candidate moves.}{38}{figure.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{A binary index is part of the circuit.}{38}{figure.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{The recurrent update.}{38}{figure.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Realisation with fixed-scale threshold gates.}{38}{figure.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The checked Boolean-to-threshold compiler, shown schematically. Negated input literals are permitted. AND uses an OR of negated inputs followed by negation, keeping weights and thresholds in $\{0,1\}$. Copying and output stages give a uniform depth bound.}}{39}{figure.8}\protected@file@percent }
-\newlabel{fig:threshold-compilation}{{8}{39}{The checked Boolean-to-threshold compiler, shown schematically. Negated input literals are permitted. AND uses an OR of negated inputs followed by negation, keeping weights and thresholds in $\{0,1\}$. Copying and output stages give a uniform depth bound}{figure.8}{}}
-\newlabel{par:depth-accounting}{{C}{39}{}{figure.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Where the layer counts come from.}{39}{figure.8}\protected@file@percent }
-\newlabel{par:controller-costs}{{C}{40}{}{figure.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Outer-controller storage and time.}{40}{figure.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {D}Weak mastery examples}{40}{appendix.D}\protected@file@percent }
-\newlabel{app:weak}{{D}{40}{}{appendix.D}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {E}Proof of Lemma~\ref {lem:nimber-diff-ac0}}{40}{appendix.E}\protected@file@percent }
-\newlabel{app:nimberdiff}{{E}{40}{}{appendix.E}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {F}Independent noise and repetition}{41}{appendix.F}\protected@file@percent }
-\newlabel{app:noise-samples}{{F}{41}{}{appendix.F}{}}
-\newlabel{prop:noise-samples}{{F.1}{41}{Repetitions needed for a weakly informative bit}{theorem.F.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {G}Additional proofs for the rollout analysis}{42}{appendix.G}\protected@file@percent }
-\newlabel{app:rollout-proofs}{{G}{42}{}{appendix.G}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {H}Proof of Theorem~\ref {thm:search-gap}}{42}{appendix.H}\protected@file@percent }
-\newlabel{app:search-gap-proof}{{H}{42}{}{appendix.H}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Development, verification and author responsibility}{34}{section.10}\protected@file@percent }
+\newlabel{sec:development}{{10}{34}{}{section.10}{}}
+\newlabel{sec:verification}{{10}{34}{}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Formal definitions of fixed-scale quantised neural models}{35}{appendix.A}\protected@file@percent }
+\newlabel{app:defs}{{A}{35}{}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Preliminaries: fixed-scale quantisation and representable parameters}{35}{subsection.A.1}\protected@file@percent }
+\newlabel{app:precision}{{A.1}{35}{}{subsection.A.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Feedforward model}{35}{subsection.A.2}\protected@file@percent }
+\newlabel{app:NN}{{A.2}{35}{}{subsection.A.2}{}}
+\newlabel{def:NN-formal}{{A.1}{35}{Literal-threshold network}{theorem.A.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Recurrent model (finite window)}{35}{subsection.A.3}\protected@file@percent }
+\newlabel{app:RNN}{{A.3}{35}{}{subsection.A.3}{}}
+\newlabel{def:RNN-formal}{{A.2}{35}{Bounded-unrolling recurrence}{theorem.A.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Attention-style model (finite window)}{36}{subsection.A.4}\protected@file@percent }
+\newlabel{app:LTST}{{A.4}{36}{}{subsection.A.4}{}}
+\newlabel{def:LTST-formal}{{A.3}{36}{Gate-realised attention-style model}{theorem.A.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}An $\mathrm  {AC}^0$ construction for simulating fixed-scale quantised networks}{36}{appendix.B}\protected@file@percent }
+\newlabel{app:ac0proof}{{B}{36}{}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}One threshold unit is in $\mathrm  {AC}^0$ under fixed-scale quantisation}{37}{subsection.B.1}\protected@file@percent }
+\newlabel{app:oneunit}{{B.1}{37}{}{subsection.B.1}{}}
+\newlabel{lem:unit-ac0}{{B.1}{37}{Fixed-scale quantised threshold gate $\in \AC ^0$}{theorem.B.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}From one unit to a full network}{37}{subsection.B.2}\protected@file@percent }
+\newlabel{app:network}{{B.2}{37}{}{subsection.B.2}{}}
+\newlabel{lem:layer-ac0}{{B.3}{37}{One layer of fixed-scale quantised units is in $\AC ^0$}{theorem.B.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Implementation details: shallow circuits and fixed-scale networks}{38}{appendix.C}\protected@file@percent }
+\newlabel{app:impl}{{C}{38}{}{appendix.C}{}}
+\newlabel{par:construction-example}{{C}{38}{}{appendix.C}{}}
+\@writefile{toc}{\contentsline {paragraph}{From a game rule to a network.}{38}{appendix.C}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A schematic of the checked two-frame construction on one legal transition. Boxes group operations, not individual network layers. The general selector also handles multiple candidates, fallback moves and terminal boards.}}{38}{figure.7}\protected@file@percent }
+\newlabel{fig:construction-pipeline}{{7}{38}{A schematic of the checked two-frame construction on one legal transition. Boxes group operations, not individual network layers. The general selector also handles multiple candidates, fallback moves and terminal boards}{figure.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Local differences and candidate moves.}{39}{figure.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{A binary index is part of the circuit.}{39}{figure.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The recurrent update.}{39}{figure.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Realisation with fixed-scale threshold gates.}{39}{figure.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The checked Boolean-to-threshold compiler, shown schematically. Negated input literals are permitted. AND uses an OR of negated inputs followed by negation, keeping weights and thresholds in $\{0,1\}$. Copying and output stages give a uniform depth bound.}}{40}{figure.8}\protected@file@percent }
+\newlabel{fig:threshold-compilation}{{8}{40}{The checked Boolean-to-threshold compiler, shown schematically. Negated input literals are permitted. AND uses an OR of negated inputs followed by negation, keeping weights and thresholds in $\{0,1\}$. Copying and output stages give a uniform depth bound}{figure.8}{}}
+\newlabel{par:depth-accounting}{{C}{40}{}{figure.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Where the layer counts come from.}{40}{figure.8}\protected@file@percent }
+\newlabel{par:controller-costs}{{C}{41}{}{figure.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Outer-controller storage and time.}{41}{figure.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {D}Weak mastery examples}{41}{appendix.D}\protected@file@percent }
+\newlabel{app:weak}{{D}{41}{}{appendix.D}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}Proof of Lemma~\ref {lem:nimber-diff-ac0}}{41}{appendix.E}\protected@file@percent }
+\newlabel{app:nimberdiff}{{E}{41}{}{appendix.E}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Independent noise and repetition}{42}{appendix.F}\protected@file@percent }
+\newlabel{app:noise-samples}{{F}{42}{}{appendix.F}{}}
+\newlabel{prop:noise-samples}{{F.1}{42}{Repetitions needed for a weakly informative bit}{theorem.F.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {G}Additional proofs for the rollout analysis}{43}{appendix.G}\protected@file@percent }
+\newlabel{app:rollout-proofs}{{G}{43}{}{appendix.G}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {H}Proof of Theorem~\ref {thm:search-gap}}{43}{appendix.H}\protected@file@percent }
+\newlabel{app:search-gap-proof}{{H}{43}{}{appendix.H}{}}
 \citation{hastad1986thesis,hastad2014correlation}
-\newlabel{eq:finite-correlation-bound}{{H.1}{43}{}{equation.H.1}{}}
+\newlabel{eq:finite-correlation-bound}{{H.1}{44}{}{equation.H.1}{}}
 \bibcite{ajtai1993approxcount}{{1}{1993}{{Ajtai}}{{}}}
 \bibcite{berlekamp2001winningways}{{2}{2001--2004}{{Berlekamp et~al.}}{{Berlekamp, Conway, and Guy}}}
 \bibcite{cizek2026sprouts}{{3}{2026}{{\v {C}{\'i}\v {z}ek et~al.}}{{\v {C}{\'i}\v {z}ek, Balko, and Schmid}}}
@@ -282,4 +282,4 @@
 \bibcite{zhou2024cdl}{{36}{2024}{{Zhou et~al.}}{{Zhou, Markstr{\"o}m, and Riis}}}
 \bibcite{zhou2023parity}{{37}{2023}{{Zhou and Riis}}{{}}}
 \bibcite{zhou2022impartial}{{38}{2026}{{Zhou and Riis}}{{}}}
-\gdef \@abspage@last{47}
+\gdef \@abspage@last{48}

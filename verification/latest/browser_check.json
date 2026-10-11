@@ -1,0 +1,15 @@
+{
+  "browser": "Codex in-app browser, local non-root deployment prefix",
+  "checked": [
+    "all four new Explain panels load matching content",
+    "Escape closes history panel",
+    "no captured warning/error logs during panel checks"
+  ],
+  "scripted_browser_suite": "Unavailable: Python Playwright not installed. Existing full validator passed static, mathematical-reference, mutation/staleness and HTTP checks before reaching this dependency. Final report records 29/29 static/HTTP/computation checks; focused CUA browser checks recorded separately.",
+  "new_claim_ids": [
+    "c-intro-games",
+    "c-history-context",
+    "c-ending-encodings",
+    "c-depth-learning"
+  ]
+}

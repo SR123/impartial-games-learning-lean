@@ -1,0 +1,17 @@
+{
+ "gate": "visuals",
+ "written_utc": "2026-10-11T07:17:57Z",
+ "context": {},
+ "items": [
+  {
+   "id": "recurrence",
+   "change": "inputs changed",
+   "old": "c519e32523f5c1c8cf905e34cf8a207aa49421c9b351e2b3843c45ea5a322e92",
+   "new": "41e1c8dcdba506f322c045f944383dd6c1d5c53c545f81c310d78c7008ecd221",
+   "detail": "claim c-recurrence-history: changed",
+   "reviewed": true,
+   "note": "Reviewed recurrence illustration and exact reference inputs: no controller or Lean changes. Added explanation that partial results across rows suffice for current-board nim-sum; previous boards support optional differences. Protocol diagrams and zero initial state already implement this distinction."
+  }
+ ],
+ "instructions": "Update the affected content, then set reviewed: true and a note for every item, and run python3 tools/build_site.py --pin-visuals."
+}
